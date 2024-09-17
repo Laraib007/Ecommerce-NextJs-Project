@@ -10,7 +10,7 @@ const Allproduct = () => {
     <div className="flex flex-wrap -m-4">
       <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
         <a className="block relative h-48 rounded overflow-hidden">
-          <Image width={100} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src="https://dummyImage width={100} height={100}.com/420x260"/>
+          <Image width={100} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src="/Img/420x260.png"/>
         </a>
         <div className="mt-4">
           <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -20,7 +20,7 @@ const Allproduct = () => {
       </div>
       <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
         <a className="block relative h-48 rounded overflow-hidden">
-          <Image width={100} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src="https://dummyImage width={100} height={100}.com/421x261"/>
+          <Image width={100} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src="/Img/420x260.png"/>
         </a>
         <div className="mt-4">
           <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -30,7 +30,7 @@ const Allproduct = () => {
       </div>
       <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
         <a className="block relative h-48 rounded overflow-hidden">
-          <Image width={100} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src="https://dummyImage width={100} height={100}.com/422x262"/>
+          <Image width={100} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src="/component/Img/420x260.png"/>
         </a>
         <div className="mt-4">
           <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -40,7 +40,7 @@ const Allproduct = () => {
       </div>
       <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
         <a className="block relative h-48 rounded overflow-hidden">
-          <Image width={100} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src="https://dummyImage width={100} height={100}.com/423x263"/>
+          <Image width={100} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src="/Img/420x260.png"/>
         </a>
         <div className="mt-4">
           <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -50,7 +50,7 @@ const Allproduct = () => {
       </div>
       <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
         <a className="block relative h-48 rounded overflow-hidden">
-          <Image width={100} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src="https://dummyImage width={100} height={100}.com/424x264"/>
+          <Image width={100} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src="/Img/420x260.png"/>
         </a>
         <div className="mt-4">
           <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -60,7 +60,7 @@ const Allproduct = () => {
       </div>
       <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
         <a className="block relative h-48 rounded overflow-hidden">
-          <Image width={100} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src="https://dummyImage width={100} height={100}.com/425x265" />
+          <Image width={100} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src="/Img/420x260.png" />
         </a>
         <div className="mt-4">
           <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -70,7 +70,7 @@ const Allproduct = () => {
       </div>
       <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
         <a className="block relative h-48 rounded overflow-hidden">
-          <Image width={100} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src="https://dummyImage width={100} height={100}.com/427x267"/>
+          <Image width={100} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src="/Img/420x260.png"/>
         </a>
         <div className="mt-4">
           <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -80,7 +80,7 @@ const Allproduct = () => {
       </div>
       <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
         <a className="block relative h-48 rounded overflow-hidden">
-          <Image width={100} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src="https://dummyImage width={100} height={100}.com/428x268"/>
+          <Image width={100} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src="/Img/420x260.png"/>
         </a>
         <div className="mt-4">
           <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
