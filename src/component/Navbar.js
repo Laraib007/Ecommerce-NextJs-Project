@@ -11,7 +11,7 @@ const Navbar = () => {
       </svg>
       <span className="ml-3 text-xl">Tailblocks</span>
     </a>
-    <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+    <nav className="md:ml-auto md:mr-auto flex flex-wrap text-gray-900 font-medium items-center text-base justify-center">
       <a className="mr-5 hover:text-gray-900">First Link</a>
       <a className="mr-5 hover:text-gray-900">Second Link</a>
       <a className="mr-5 hover:text-gray-900">Third Link</a>
