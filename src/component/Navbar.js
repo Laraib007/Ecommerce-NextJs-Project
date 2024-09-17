@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react'
 import { FaCartShopping } from "react-icons/fa6";
 
@@ -12,15 +13,16 @@ const Navbar = () => {
       </svg>
       <span className="ml-3 text-xl">Tailblocks</span>
     </a>
-    <nav className="md:ml-auto md:mr-auto flex flex-wrap text-gray-900 font-medium items-center text-base justify-center">
-      <a className="mr-5 hover:text-gray-900">First Link</a>
-      <a className="mr-5 hover:text-gray-900">Second Link</a>
-      <a className="mr-5 hover:text-gray-900">Third Link</a>
-      <a className="mr-5 hover:text-gray-900">Fourth Link</a>
+    <nav className="md:ml-auto md:mr-auto flex flex-wrap cursor-pointer text-gray-900 font-medium items-center text-base justify-center">
+      <Link href={'/tshirt'} className="mr-5 hover:text-gray-900">Tshirts</Link>
+      <Link href={'/mugs'}className="mr-5 hover:text-gray-900">Mugs</Link>
+      <Link href={'/hoodies'} className="mr-5 hover:text-gray-900">Hoodies</Link>
+      <Link href={'/stickers'} className="mr-5 hover:text-gray-900">Stickers</Link>
     </nav>
-    <FaCartShopping className='text-xl' />
-   
+    
+    <FaCartShopping  className='text-xl absolute right-0 mx-4 top-6' />
   </div>
+ 
 </header>
     </div>
   )

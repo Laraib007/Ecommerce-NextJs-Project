@@ -15,7 +15,7 @@ const Allproduct = () => {
                 </div>
                 <div className="container px-5 py-7 mx-auto">
                     <div className="flex flex-wrap -m-4">
-                        <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+                        <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md  ">
                             <a className="block relative h-48 rounded overflow-hidden">
                                 <Image width={500} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src={IMG} />
                             </a>
@@ -25,7 +25,7 @@ const Allproduct = () => {
                                 <p className="mt-1">$16.00</p>
                             </div>
                         </div>
-                        <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+                        <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md ">
                             <a className="block relative h-48 rounded overflow-hidden">
                                 <Image width={500} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src={IMG} />
                             </a>
@@ -35,7 +35,7 @@ const Allproduct = () => {
                                 <p className="mt-1">$21.15</p>
                             </div>
                         </div>
-                        <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+                        <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md ">
                             <a className="block relative h-48 rounded overflow-hidden">
                                 <Image width={500} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src={IMG} />
                             </a>
@@ -45,7 +45,7 @@ const Allproduct = () => {
                                 <p className="mt-1">$12.00</p>
                             </div>
                         </div>
-                        <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+                        <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md ">
                             <a className="block relative h-48 rounded overflow-hidden">
                                 <Image width={500} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src={IMG} />
                             </a>
@@ -55,7 +55,7 @@ const Allproduct = () => {
                                 <p className="mt-1">$18.40</p>
                             </div>
                         </div>
-                        <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+                        <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md ">
                             <a className="block relative h-48 rounded overflow-hidden">
                                 <Image width={500} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src={IMG} />
                             </a>
@@ -65,7 +65,7 @@ const Allproduct = () => {
                                 <p className="mt-1">$16.00</p>
                             </div>
                         </div>
-                        <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+                        <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md ">
                             <a className="block relative h-48 rounded overflow-hidden">
                                 <Image width={500} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src={IMG} />
                             </a>
@@ -75,7 +75,7 @@ const Allproduct = () => {
                                 <p className="mt-1">$21.15</p>
                             </div>
                         </div>
-                        <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+                        <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md ">
                             <a className="block relative h-48 rounded overflow-hidden">
                                 <Image width={500} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src={IMG} />
                             </a>
@@ -85,7 +85,7 @@ const Allproduct = () => {
                                 <p className="mt-1">$12.00</p>
                             </div>
                         </div>
-                        <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+                        <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md ">
                             <a className="block relative h-48 rounded overflow-hidden">
                                 <Image width={500} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src={IMG} />
                             </a>
