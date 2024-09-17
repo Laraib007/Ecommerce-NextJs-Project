@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import React from 'react'
-
+import IMG from './Img/420x260.png'
 
 const Allproduct = () => {
-    const imgUrl = "https://dummyimage.com/420x260"
+    
   return (
     <div>
         <section className="text-gray-600 body-font">
@@ -11,7 +11,7 @@ const Allproduct = () => {
     <div className="flex flex-wrap -m-4">
       <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
         <a className="block relative h-48 rounded overflow-hidden">
-          <Image width={100} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src="/Img/420x260.png"/>
+          <Image width={500} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src={IMG}/>
         </a>
         <div className="mt-4">
           <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -21,7 +21,7 @@ const Allproduct = () => {
       </div>
       <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
         <a className="block relative h-48 rounded overflow-hidden">
-          <Image width={100} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src={imgUrl}/>
+          <Image width={500} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src={IMG}/>
         </a>
         <div className="mt-4">
           <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -31,7 +31,7 @@ const Allproduct = () => {
       </div>
       <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
         <a className="block relative h-48 rounded overflow-hidden">
-          <Image width={100} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src="/component/Img/420x260.png"/>
+          <Image width={500} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src={IMG}/>
         </a>
         <div className="mt-4">
           <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -41,7 +41,7 @@ const Allproduct = () => {
       </div>
       <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
         <a className="block relative h-48 rounded overflow-hidden">
-          <Image width={100} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src="/Img/420x260.png"/>
+          <Image width={500} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src={IMG}/>
         </a>
         <div className="mt-4">
           <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -51,7 +51,7 @@ const Allproduct = () => {
       </div>
       <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
         <a className="block relative h-48 rounded overflow-hidden">
-          <Image width={100} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src="/Img/420x260.png"/>
+          <Image width={500} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src={IMG}/>
         </a>
         <div className="mt-4">
           <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -61,7 +61,7 @@ const Allproduct = () => {
       </div>
       <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
         <a className="block relative h-48 rounded overflow-hidden">
-          <Image width={100} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src="/Img/420x260.png" />
+          <Image width={500} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src={IMG} />
         </a>
         <div className="mt-4">
           <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -71,7 +71,7 @@ const Allproduct = () => {
       </div>
       <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
         <a className="block relative h-48 rounded overflow-hidden">
-          <Image width={100} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src="/Img/420x260.png"/>
+          <Image width={500} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src={IMG}/>
         </a>
         <div className="mt-4">
           <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -81,7 +81,7 @@ const Allproduct = () => {
       </div>
       <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
         <a className="block relative h-48 rounded overflow-hidden">
-          <Image width={100} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src="/Img/420x260.png"/>
+          <Image width={500} height={100} alt="ecommerce" className="object-cover object-center w-full h-full block" src={IMG}/>
         </a>
         <div className="mt-4">
           <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
