@@ -11,11 +11,11 @@ const Tshirt = () => {
             <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p>
         </div>
         <div className="container px-5 py-7 mx-auto">
-            <div className="flex flex-wrap -m-4">
-                <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md  ">
-                    <a className="block relative h-48 rounded overflow-hidden">
+            <div className="flex flex-wrap -m-4 justify-center">
+                <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4  ">
+                    <a className="block relative rounded overflow-hidden">
                       
-          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260"/>
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://m.media-amazon.com/images/I/614rbIVRUJL._AC_SX522_.jpg"/>
                     </a>
                     <div className="mt-4">
                         <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -23,10 +23,10 @@ const Tshirt = () => {
                         <p className="mt-1">$16.00</p>
                     </div>
                 </div>
-                <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md ">
-                    <a className="block relative h-48 rounded overflow-hidden">
+                <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4 ">
+                    <a className="block relative rounded overflow-hidden">
                       
-          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260"/>
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://m.media-amazon.com/images/I/614rbIVRUJL._AC_SX522_.jpg"/>
                     </a>
                     <div className="mt-4">
                         <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -34,10 +34,10 @@ const Tshirt = () => {
                         <p className="mt-1">$21.15</p>
                     </div>
                 </div>
-                <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md ">
-                    <a className="block relative h-48 rounded overflow-hidden">
+                <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4 ">
+                    <a className="block relative rounded overflow-hidden">
                       
-          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260"/>
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://m.media-amazon.com/images/I/614rbIVRUJL._AC_SX522_.jpg"/>
                     </a>
                     <div className="mt-4">
                         <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -45,10 +45,10 @@ const Tshirt = () => {
                         <p className="mt-1">$12.00</p>
                     </div>
                 </div>
-                <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md ">
-                    <a className="block relative h-48 rounded overflow-hidden">
+                <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4 ">
+                    <a className="block relative rounded overflow-hidden">
                       
-          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260"/>
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://m.media-amazon.com/images/I/614rbIVRUJL._AC_SX522_.jpg"/>
                     </a>
                     <div className="mt-4">
                         <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -56,10 +56,10 @@ const Tshirt = () => {
                         <p className="mt-1">$18.40</p>
                     </div>
                 </div>
-                <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md ">
-                    <a className="block relative h-48 rounded overflow-hidden">
+                <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4 ">
+                    <a className="block relative rounded overflow-hidden">
                       
-          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260"/>
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://m.media-amazon.com/images/I/614rbIVRUJL._AC_SX522_.jpg"/>
                     </a>
                     <div className="mt-4">
                         <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -67,10 +67,10 @@ const Tshirt = () => {
                         <p className="mt-1">$16.00</p>
                     </div>
                 </div>
-                <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md ">
-                    <a className="block relative h-48 rounded overflow-hidden">
+                <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4 ">
+                    <a className="block relative rounded overflow-hidden">
                       
-          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260"/>
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://m.media-amazon.com/images/I/614rbIVRUJL._AC_SX522_.jpg"/>
                     </a>
                     <div className="mt-4">
                         <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -78,10 +78,10 @@ const Tshirt = () => {
                         <p className="mt-1">$21.15</p>
                     </div>
                 </div>
-                <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md ">
-                    <a className="block relative h-48 rounded overflow-hidden">
+                <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4 ">
+                    <a className="block relative rounded overflow-hidden">
                       
-          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260"/>
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://m.media-amazon.com/images/I/614rbIVRUJL._AC_SX522_.jpg"/>
                     </a>
                     <div className="mt-4">
                         <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -89,10 +89,10 @@ const Tshirt = () => {
                         <p className="mt-1">$12.00</p>
                     </div>
                 </div>
-                <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md ">
-                    <a className="block relative h-48 rounded overflow-hidden">
+                <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4 ">
+                    <a className="block relative rounded overflow-hidden">
                       
-          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260"/>
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://m.media-amazon.com/images/I/614rbIVRUJL._AC_SX522_.jpg"/>
                     </a>
                     <div className="mt-4">
                         <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
