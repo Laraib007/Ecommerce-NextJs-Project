@@ -14,7 +14,7 @@ const Hoodies = () => {
                 <div className="lg:w-1/4 md:w-1/2 p-4 w-full h-2/3 shadow-md m-4">
                     <a className="block relative rounded overflow-hidden">
                       
-          <img alt="ecommerce" class="object-cover w-56 object-center h-full block" src="https://m.media-amazon.com/images/I/9112xNSIlqL._AC_SX522_.jpg"/>
+          <img alt="ecommerce" class="object-cover w-56 object-center ml-6 h-full block" src="https://m.media-amazon.com/images/I/9112xNSIlqL._AC_SX522_.jpg"/>
                     </a>
                     <div className="mt-4">
                         <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -25,7 +25,7 @@ const Hoodies = () => {
                 <div className="lg:w-1/4 md:w-1/2 p-4 w-full h-2/3 shadow-md m-4">
                     <a className="block relative rounded overflow-hidden">
                       
-          <img alt="ecommerce" class="object-cover w-56 object-center h-full block" src="https://m.media-amazon.com/images/I/9112xNSIlqL._AC_SX522_.jpg"/>
+          <img alt="ecommerce" class="object-cover w-56 object-center ml-6 h-full block" src="https://m.media-amazon.com/images/I/9112xNSIlqL._AC_SX522_.jpg"/>
                     </a>
                     <div className="mt-4">
                         <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -36,7 +36,7 @@ const Hoodies = () => {
                 <div className="lg:w-1/4 md:w-1/2 p-4 w-full h-2/3 shadow-md m-4">
                     <a className="block relative rounded overflow-hidden">
                       
-          <img alt="ecommerce" class="object-cover w-56 object-center h-full block" src="https://m.media-amazon.com/images/I/9112xNSIlqL._AC_SX522_.jpg"/>
+          <img alt="ecommerce" class="object-cover w-56 object-center ml-6 h-full block" src="https://m.media-amazon.com/images/I/9112xNSIlqL._AC_SX522_.jpg"/>
                     </a>
                     <div className="mt-4">
                         <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -47,7 +47,7 @@ const Hoodies = () => {
                 <div className="lg:w-1/4 md:w-1/2 p-4 w-full h-2/3 shadow-md m-4">
                     <a className="block relative rounded overflow-hidden">
                       
-          <img alt="ecommerce" class="object-cover w-56 object-center h-full block" src="https://m.media-amazon.com/images/I/9112xNSIlqL._AC_SX522_.jpg"/>
+          <img alt="ecommerce" class="object-cover w-56 object-center ml-6 h-full block" src="https://m.media-amazon.com/images/I/9112xNSIlqL._AC_SX522_.jpg"/>
                     </a>
                     <div className="mt-4">
                         <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -58,7 +58,7 @@ const Hoodies = () => {
                 <div className="lg:w-1/4 md:w-1/2 p-4 w-full h-2/3 shadow-md m-4">
                     <a className="block relative rounded overflow-hidden">
                       
-          <img alt="ecommerce" class="object-cover w-56 object-center h-full block" src="https://m.media-amazon.com/images/I/9112xNSIlqL._AC_SX522_.jpg"/>
+          <img alt="ecommerce" class="object-cover w-56 object-center ml-6 h-full block" src="https://m.media-amazon.com/images/I/9112xNSIlqL._AC_SX522_.jpg"/>
                     </a>
                     <div className="mt-4">
                         <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -69,7 +69,7 @@ const Hoodies = () => {
                 <div className="lg:w-1/4 md:w-1/2 p-4 w-full h-2/3 shadow-md m-4">
                     <a className="block relative rounded overflow-hidden">
                       
-          <img alt="ecommerce" class="object-cover w-56 object-center h-full block" src="https://m.media-amazon.com/images/I/9112xNSIlqL._AC_SX522_.jpg"/>
+          <img alt="ecommerce" class="object-cover w-56 object-center ml-6 h-full block" src="https://m.media-amazon.com/images/I/9112xNSIlqL._AC_SX522_.jpg"/>
                     </a>
                     <div className="mt-4">
                         <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -80,7 +80,7 @@ const Hoodies = () => {
                 <div className="lg:w-1/4 md:w-1/2 p-4 w-full h-2/3 shadow-md m-4">
                     <a className="block relative rounded overflow-hidden">
                       
-          <img alt="ecommerce" class="object-cover w-56 object-center h-full block" src="https://m.media-amazon.com/images/I/9112xNSIlqL._AC_SX522_.jpg"/>
+          <img alt="ecommerce" class="object-cover w-56 object-center ml-6 h-full block" src="https://m.media-amazon.com/images/I/9112xNSIlqL._AC_SX522_.jpg"/>
                     </a>
                     <div className="mt-4">
                         <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -91,7 +91,7 @@ const Hoodies = () => {
                 <div className="lg:w-1/4 md:w-1/2 p-4 w-full h-2/3 shadow-md m-4">
                     <a className="block relative rounded overflow-hidden">
                       
-          <img alt="ecommerce" class="object-cover w-56 object-center h-full block" src="https://m.media-amazon.com/images/I/9112xNSIlqL._AC_SX522_.jpg"/>
+          <img alt="ecommerce" class="object-cover w-56 object-center ml-6 h-full block" src="https://m.media-amazon.com/images/I/9112xNSIlqL._AC_SX522_.jpg"/>
                     </a>
                     <div className="mt-4">
                         <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -102,7 +102,7 @@ const Hoodies = () => {
                 <div className="lg:w-1/4 md:w-1/2 p-4 w-full h-2/3 shadow-md m-4">
                     <a className="block relative rounded overflow-hidden">
                       
-          <img alt="ecommerce" class="object-cover w-56 object-center h-full block" src="https://m.media-amazon.com/images/I/9112xNSIlqL._AC_SX522_.jpg"/>
+          <img alt="ecommerce" class="object-cover w-56 object-center ml-6 h-full block" src="https://m.media-amazon.com/images/I/9112xNSIlqL._AC_SX522_.jpg"/>
                     </a>
                     <div className="mt-4">
                         <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
