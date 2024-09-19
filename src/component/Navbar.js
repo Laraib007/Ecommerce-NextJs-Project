@@ -8,16 +8,9 @@ import Image from 'next/image';
 const Navbar = () => {
   
   const toggleCart =()=>{
-    if(ref.current.classList.contains('translate-x-full')){
-      ref.current.classList.remove('translate-x-full')
-      ref.current.classList.add('translate-x-0')
+    
       alert("clicked")
-    } 
-    else if(!ref.current.classList.contains('translate-x-full')){
-      ref.current.classList.remove('translate-x-0')
-      ref.current.classList.add('translate-x-full')
-      alert("clicked")
-    }
+   
     
   }
   const ref = useRef()
@@ -37,8 +30,8 @@ const Navbar = () => {
       <Link href={'/hoodies'} className="mr-4 hover:text-gray-900">Hoodies</Link>
       <Link href={'/stickers'} className="mr-4 hover:text-gray-900">Stickers</Link>
     </nav>
-    <div  >
-    <FaCartShopping onClick={toggleCart} className=' bg-red-800 text-xl absolute right-0 mx-4 top-6' />
+    <div onClick={toggleCart} className='border-t-blue-800 text-xl absolute right-0 mx-4 top-6'  >
+    <FaCartShopping  />
     </div>
     <div ref={ref}   className='absolute top-0 right-0 p-10 bg-pink-300  transform transition-transform translate-x-full'>
    <h1 className='text-lg font-bold'>This is Store Cart</h1> 
