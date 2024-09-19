@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 const Navbar = () => {
   
-  const toggleCart =()=>{
+  const toggleCart = ()=>{
     
       alert("clicked")
    
@@ -30,8 +30,9 @@ const Navbar = () => {
       <Link href={'/hoodies'} className="mr-4 hover:text-gray-900">Hoodies</Link>
       <Link href={'/stickers'} className="mr-4 hover:text-gray-900">Stickers</Link>
     </nav>
-    <div onClick={toggleCart} className='border-t-blue-800 text-xl absolute right-0 mx-4 top-6'  >
-    <FaCartShopping  />
+    <button onClick={toggleCart} >Click</button>
+    <div onClick={toggleCart} className='bg-blue-800  absolute right-0 mx-4 top-6'  >
+    <FaCartShopping className='text-xl ' />
     </div>
     <div ref={ref}   className='absolute top-0 right-0 p-10 bg-pink-300  transform transition-transform translate-x-full'>
    <h1 className='text-lg font-bold'>This is Store Cart</h1> 
