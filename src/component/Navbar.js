@@ -6,7 +6,7 @@ import Logo from "../component/Img/HLogo.png"
 import Image from 'next/image';
 
 const Navbar = () => {
-  
+  const click =()=> console.log("ok")
   const toggleCart = ()=>{
     
       alert("clicked")
@@ -30,7 +30,7 @@ const Navbar = () => {
       <Link href={'/hoodies'} className="mr-4 hover:text-gray-900">Hoodies</Link>
       <Link href={'/stickers'} className="mr-4 hover:text-gray-900">Stickers</Link>
     </nav>
-    <button onClick={toggleCart} >Click</button>
+    <button onClick={click} >Click</button>
     <div onClick={toggleCart} className='bg-blue-800  absolute right-0 mx-4 top-6'  >
     <FaCartShopping className='text-xl ' />
     </div>
