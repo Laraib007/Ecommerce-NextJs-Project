@@ -6,8 +6,17 @@ import Logo from "../component/Img/HLogo.png"
 import Image from 'next/image';
 
 const Navbar = () => {
-  const clo = () => alert("okkk")
-  const click =()=> console.log("oko")
+  const toggleCart = ()=>{
+    if(ref.current.classList.contains('translate-x-full')){
+      ref.current.classList.remove('translate-x-full')
+      ref.current.classList.add('translate-x-0')
+      return
+    } else if(!ref.current.classList.contains('translate-x-full')){
+      ref.current.classList.remove('translate-x-0')
+      ref.current.classList.add('translate-x-0=full')
+      return
+    }
+  }
  
   const ref = useRef()
   return (
