@@ -21,8 +21,12 @@ const Navbar = () => {
       <Link href={'/hoodies'} className="mr-4 hover:text-gray-900">Hoodies</Link>
       <Link href={'/stickers'} className="mr-4 hover:text-gray-900">Stickers</Link>
     </nav>
-    
     <FaCartShopping  className='text-xl absolute right-0 mx-4 top-6' />
+    <div className='absolute top-0 right-0 p-10 bg-pink-500'>
+    This is Store Cart
+    <div><span>T-shirt - Stylish tshirt</span></div>
+    
+    </div>
   </div>
  
 </header>
