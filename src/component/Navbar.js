@@ -1,11 +1,19 @@
 import Link from 'next/link';
-import React from 'react'
+import React, { useRef } from 'react'
 import { FaCartShopping } from "react-icons/fa6";
 import { MdCancel } from "react-icons/md";
 import Logo from "../component/Img/HLogo.png"
 import Image from 'next/image';
 
 const Navbar = () => {
+  const ref = useRef()
+  const toggleCart =()=>{
+    if(ref.current.classList.contain('translate-x-full')){
+      ref.current.classList.remove('translate-x-full')
+      ref.current.classList.add('translate-x-0')
+    }
+    
+  }
   return (
     <div>
         <header className="text-gray-600 bg-slate-100 body-font">
@@ -22,8 +30,8 @@ const Navbar = () => {
       <Link href={'/hoodies'} className="mr-4 hover:text-gray-900">Hoodies</Link>
       <Link href={'/stickers'} className="mr-4 hover:text-gray-900">Stickers</Link>
     </nav>
-    <FaCartShopping  className='text-xl absolute right-0 mx-4 top-6' />
-    <div className='absolute top-0 right-0 p-10 bg-pink-300  transform transition-transform translate-x-full '>
+    <FaCartShopping className='text-xl absolute right-0 mx-4 top-6' />
+    <div ref={ref} onClick={toggleCart}  className='absolute top-0 right-0 p-10 bg-pink-300  transform transition-transform translate-x-full '>
    <div className='text-lg font-bold'>This is Store Cart</div> 
     <div><span>T-shirt - Stylish tshirt</span></div>
     <div className='absolute top-2 right-4'><MdCancel className='text-xl text-pink-600' /></div>
