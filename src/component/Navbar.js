@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React from 'react'
 import { FaCartShopping } from "react-icons/fa6";
+import { MdCancel } from "react-icons/md";
 import Logo from "../component/Img/HLogo.png"
 import Image from 'next/image';
 
@@ -23,8 +24,9 @@ const Navbar = () => {
     </nav>
     <FaCartShopping  className='text-xl absolute right-0 mx-4 top-6' />
     <div className='absolute top-0 right-0 p-10 bg-pink-500'>
-    This is Store Cart
+   <div className='text-lg font-bold'>This is Store Cart</div> 
     <div><span>T-shirt - Stylish tshirt</span></div>
+    <div className='absolute top-2 right-4'><MdCancel /></div>
     
     </div>
   </div>
