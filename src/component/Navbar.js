@@ -39,7 +39,13 @@ const Navbar = () => {
     <div ref={ref}   className='absolute top-0 right-0 p-10 bg-pink-300  transform transition-transform translate-x-full'>
    <h1 className='text-lg font-bold'>This is Store Cart</h1> 
     <span onClick={toggleCart} className='absolute top-2 right-4'><MdCancel className='text-xl text-pink-600' /></span>
-    
+    <ol>
+      <li>
+        <div className='item flex'></div>
+        <div className='w-2/3 font-semibold'>This T-shirt is very useFull </div>
+        <div className='w-2/3 font-semibold'>This T-shirt is very useFull </div>
+      </li>
+    </ol>
     </div>
   </div>
 
