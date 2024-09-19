@@ -11,10 +11,10 @@ const Mugs = () => {
         </div>
         <div className="container px-5 py-7 mx-auto">
             <div className="flex flex-wrap m-4 justify-center">
-                <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4 ">
-                    <a className="block relative rounded overflow-hidden">
+           <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4  ">
+                    <a className=" relative rounded overflow-hidden contents">
                       
-          <img alt="ecommerce" className="object-cover object-center w-full h-full block" src="https://m.media-amazon.com/images/I/71o36DccmvL.__AC_SX300_SY300_QL70_FMwebp_.jpg"/>
+          <img alt="ecommerce" className="object-cover object-center w-72 h-42 block "src="https://m.media-amazon.com/images/I/71o36DccmvL.__AC_SX300_SY300_QL70_FMwebp_.jpg"/>
                     </a>
                     <div className="mt-4">
                         <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -22,81 +22,55 @@ const Mugs = () => {
                         <p className="mt-1">$16.00</p>
                     </div>
                 </div>
-                <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4">
-                    <a className="block relative rounded overflow-hidden">
+                <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4  ">
+                    <a className=" relative rounded overflow-hidden contents">
                       
-          <img alt="ecommerce" className="object-cover object-center w-full h-full block" src="https://m.media-amazon.com/images/I/71o36DccmvL.__AC_SX300_SY300_QL70_FMwebp_.jpg"/>
-                    </a>
-                    <div className="mt-4">
-                        <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                        <h2 className="text-gray-900 title-font text-lg font-medium">Shooting Stars</h2>
-                        <p className="mt-1">$21.15</p>
-                    </div>
-                </div>
-                <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4">
-                    <a className="block relative rounded overflow-hidden">
-                      
-          <img alt="ecommerce" className="object-cover object-center w-full h-full block" src="https://m.media-amazon.com/images/I/71o36DccmvL.__AC_SX300_SY300_QL70_FMwebp_.jpg"/>
-                    </a>
-                    <div className="mt-4">
-                        <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                        <h2 className="text-gray-900 title-font text-lg font-medium">Neptune</h2>
-                        <p className="mt-1">$12.00</p>
-                    </div>
-                </div>
-                <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4">
-                    <a className="block relative rounded overflow-hidden">
-                      
-          <img alt="ecommerce" className="object-cover object-center w-full h-full block" src="https://m.media-amazon.com/images/I/71o36DccmvL.__AC_SX300_SY300_QL70_FMwebp_.jpg"/>
-                    </a>
-                    <div className="mt-4">
-                        <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                        <h2 className="text-gray-900 title-font text-lg font-medium">The 400 Blows</h2>
-                        <p className="mt-1">$18.40</p>
-                    </div>
-                </div>
-                <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4">
-                    <a className="block relative rounded overflow-hidden">
-                      
-          <img alt="ecommerce" className="object-cover object-center w-full h-full block" src="https://m.media-amazon.com/images/I/71o36DccmvL.__AC_SX300_SY300_QL70_FMwebp_.jpg"/>
+          <img alt="ecommerce" className="object-cover object-center w-72 h-42 block "src="https://m.media-amazon.com/images/I/71o36DccmvL.__AC_SX300_SY300_QL70_FMwebp_.jpg"/>
                     </a>
                     <div className="mt-4">
                         <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
                         <h2 className="text-gray-900 title-font text-lg font-medium">The Catalyzer</h2>
                         <p className="mt-1">$16.00</p>
                     </div>
-                </div>
-                <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4">
-                    <a className="block relative rounded overflow-hidden">
+                </div><div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4  ">
+                    <a className=" relative rounded overflow-hidden contents">
                       
-          <img alt="ecommerce" className="object-cover object-center w-full h-full block" src="https://m.media-amazon.com/images/I/71o36DccmvL.__AC_SX300_SY300_QL70_FMwebp_.jpg"/>
+          <img alt="ecommerce" className="object-cover object-center w-72 h-42 block "src="https://m.media-amazon.com/images/I/71o36DccmvL.__AC_SX300_SY300_QL70_FMwebp_.jpg"/>
                     </a>
                     <div className="mt-4">
                         <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                        <h2 className="text-gray-900 title-font text-lg font-medium">Shooting Stars</h2>
-                        <p className="mt-1">$21.15</p>
+                        <h2 className="text-gray-900 title-font text-lg font-medium">The Catalyzer</h2>
+                        <p className="mt-1">$16.00</p>
                     </div>
-                </div>
-                <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4">
-                    <a className="block relative rounded overflow-hidden">
+                </div><div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4  ">
+                    <a className=" relative rounded overflow-hidden contents">
                       
-          <img alt="ecommerce" className="object-cover object-center w-full h-full block" src="https://m.media-amazon.com/images/I/71o36DccmvL.__AC_SX300_SY300_QL70_FMwebp_.jpg"/>
+          <img alt="ecommerce" className="object-cover object-center w-72 h-42 block "src="https://m.media-amazon.com/images/I/71o36DccmvL.__AC_SX300_SY300_QL70_FMwebp_.jpg"/>
                     </a>
                     <div className="mt-4">
                         <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                        <h2 className="text-gray-900 title-font text-lg font-medium">Neptune</h2>
-                        <p className="mt-1">$12.00</p>
+                        <h2 className="text-gray-900 title-font text-lg font-medium">The Catalyzer</h2>
+                        <p className="mt-1">$16.00</p>
                     </div>
-                </div>
-                <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4">
-                    <a className="block relative rounded overflow-hidden">
+                </div><div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4  ">
+                    <a className=" relative rounded overflow-hidden contents">
                       
-          <img alt="ecommerce" className="object-cover object-center w-full h-full block" src="https://m.media-amazon.com/images/I/71o36DccmvL.__AC_SX300_SY300_QL70_FMwebp_.jpg"/>
+          <img alt="ecommerce" className="object-cover object-center w-72 h-42 block "src="https://m.media-amazon.com/images/I/71o36DccmvL.__AC_SX300_SY300_QL70_FMwebp_.jpg"/>
                     </a>
                     <div className="mt-4">
                         <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                        <h2 className="text-gray-900 title-font text-lg font-medium">The 400 Blows</h2>
-                        <p className="mt-1">$18.40</p>
+                        <h2 className="text-gray-900 title-font text-lg font-medium">The Catalyzer</h2>
+                        <p className="mt-1">$16.00</p>
+                    </div>
+                </div><div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4  ">
+                    <a className=" relative rounded overflow-hidden contents">
+                      
+          <img alt="ecommerce" className="object-cover object-center w-72 h-42 block "src="https://m.media-amazon.com/images/I/71o36DccmvL.__AC_SX300_SY300_QL70_FMwebp_.jpg"/>
+                    </a>
+                    <div className="mt-4">
+                        <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                        <h2 className="text-gray-900 title-font text-lg font-medium">The Catalyzer</h2>
+                        <p className="mt-1">$16.00</p>
                     </div>
                 </div>
             </div>
