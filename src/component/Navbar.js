@@ -38,18 +38,20 @@ const Navbar = () => {
     <div onClick={toggleCart} className='absolute right-0 mx-4 top-6'  >
     <FaCartShopping className='text-xl ' />
     </div>
-    <div ref={ref}   className='absolute w-72 top-0 right-0 py-6 px-8 bg-pink-300 transform transition-transform translate-x-full'>
+    <div ref={ref}   className='absolute w-72 h-full top-0 right-0 py-6 px-8 bg-pink-300 transform transition-transform translate-x-full'>
    <h1 className='text-lg text-center font-bold'>This is Store Cart</h1> 
     <span onClick={toggleCart} className='absolute top-2 right-4'><MdCancel className='text-xl text-pink-600' /></span>
     <ol className='list-decimal'>
       <li>
         <div className='item flex '>
         <div className='w-2/3 font-semibold '>This T-shirt is very useFull </div>
-        <div className='font-bold flex justify-center items-center  w-1/3 '><FaMinusCircle className='text-sm mx-1' />1<FaPlusCircle className='text-sm mx-1' />
+        <div className='font-bold flex justify-center items-center  w-1/3 '><FaMinusCircle className='text-pink-600 text-sd mx-1' />1<FaPlusCircle className='text-pink-600 text-sd mx-1' />
         </div>
         </div>
       </li>
     </ol>
+    <button class="flex mx-auto mt-16 text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg">Button</button>
+
     </div>
   </div>
 
