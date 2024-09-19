@@ -36,14 +36,14 @@ const Navbar = () => {
     <div onClick={toggleCart} className='bg-blue-800  absolute right-0 mx-4 top-6'  >
     <FaCartShopping className='text-xl ' />
     </div>
-    <div ref={ref}   className='absolute top-0 right-0 p-10 bg-pink-300  transform transition-transform translate-x-full'>
-   <h1 className='text-lg font-bold'>This is Store Cart</h1> 
+    <div ref={ref}   className='absolute w-72 top-0 right-0 py-6 px-8 bg-pink-300 transform transition-transform translate-x-full'>
+   <h1 className='text-lg text-center font-bold'>This is Store Cart</h1> 
     <span onClick={toggleCart} className='absolute top-2 right-4'><MdCancel className='text-xl text-pink-600' /></span>
-    <ol>
+    <ol className='list-decimal'>
       <li>
-        <div className='item flex'></div>
-        <div className='w-2/3 font-semibold'>This T-shirt is very useFull </div>
-        <div className='w-2/3 font-semibold'>This T-shirt is very useFull </div>
+        <div className='item flex '></div>
+        <span className='w-2/3 font-semibold bg-red-600'>This T-shirt is very useFull </span>
+        <span className='font-semibold flex justify-center items-center bg-green-500 w-1/3 '>1</span>
       </li>
     </ol>
     </div>
