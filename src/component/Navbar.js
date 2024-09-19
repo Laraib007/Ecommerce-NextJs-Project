@@ -35,7 +35,7 @@ const Navbar = () => {
       <Link href={'/hoodies'} className="mr-4 hover:text-gray-900">Hoodies</Link>
       <Link href={'/stickers'} className="mr-4 hover:text-gray-900">Stickers</Link>
     </nav>
-    <div onClick={toggleCart} className='  absolute right-0 mx-4 top-6'  >
+    <div onClick={toggleCart} className='absolute right-0 mx-4 top-6'  >
     <FaCartShopping className='text-xl ' />
     </div>
     <div ref={ref}   className='absolute w-72 top-0 right-0 py-6 px-8 bg-pink-300 transform transition-transform translate-x-full'>
@@ -45,8 +45,7 @@ const Navbar = () => {
       <li>
         <div className='item flex '>
         <div className='w-2/3 font-semibold '>This T-shirt is very useFull </div>
-        <div className='font-bold flex justify-center items-center  w-1/3 '><FaPlusCircle className='text-sm mx-1' />
-        1<FaMinusCircle className='text-sm mx-1' />
+        <div className='font-bold flex justify-center items-center  w-1/3 '><FaMinusCircle className='text-sm mx-1' />1<FaPlusCircle className='text-sm mx-1' />
         </div>
         </div>
       </li>
