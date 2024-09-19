@@ -13,7 +13,7 @@ const Tshirt = () => {
         </div>
         <div className="container px-5 py-7 mx-auto">
             <div className="flex flex-wrap -m-4 justify-center">
-                <div onClick={clo} className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4  ">
+                <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4  ">
                     <a className="block relative rounded overflow-hidden">
                       
           <img alt="ecommerce" className="object-cover object-center w-full h-full block" src="https://m.media-amazon.com/images/I/614rbIVRUJL._AC_SX522_.jpg"/>

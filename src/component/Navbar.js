@@ -6,17 +6,13 @@ import Logo from "../component/Img/HLogo.png"
 import Image from 'next/image';
 
 const Navbar = () => {
-  const click =()=> console.log("ok")
-  const toggleCart = ()=>{
-    
-      alert("clicked")
-   
-    
-  }
+  const clo = () => alert("okkk")
+  const click =()=> console.log("oko")
+ 
   const ref = useRef()
   return (
-    <div>
-        <header className="text-gray-600 bg-slate-100 body-font">
+    <div className="text-gray-600 bg-slate-100 body-font">
+      
   <div className=" mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center md:mr-60 ">
     <Link href={'/'}className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
         <Image src={Logo} height={10} width={100}  />
@@ -30,18 +26,17 @@ const Navbar = () => {
       <Link href={'/hoodies'} className="mr-4 hover:text-gray-900">Hoodies</Link>
       <Link href={'/stickers'} className="mr-4 hover:text-gray-900">Stickers</Link>
     </nav>
-    <button onClick={click} >Click</button>
-    <div onClick={toggleCart} className='bg-blue-800  absolute right-0 mx-4 top-6'  >
+    <button onClick={clo} >Click</button>
+    <div onClick={click} className='bg-blue-800  absolute right-0 mx-4 top-6'  >
     <FaCartShopping className='text-xl ' />
     </div>
     <div ref={ref}   className='absolute top-0 right-0 p-10 bg-pink-300  transform transition-transform translate-x-full'>
    <h1 className='text-lg font-bold'>This is Store Cart</h1> 
-    <span onClick={toggleCart} className='absolute top-2 right-4'><MdCancel className='text-xl text-pink-600' /></span>
+    <span onClick={click} className='absolute top-2 right-4'><MdCancel className='text-xl text-pink-600' /></span>
     
     </div>
   </div>
- 
-</header>
+
     </div>
   )
 }
