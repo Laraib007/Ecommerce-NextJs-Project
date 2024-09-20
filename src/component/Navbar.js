@@ -64,8 +64,10 @@ const Navbar = () => {
         </div>
       </li>
     </ol>
-    <button class="flex mx-auto mt-16 text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg"><FaCartShopping className='text-xl m-1 ' />Checkout</button>
-    <button class="flex mx-auto mt-16 text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg">Clear Cart</button>
+    <div className='flex'>
+    <button class="flex mt-8  text-white bg-pink-500 border-0 py-1 px-4 focus:outline-none hover:bg-pink-600 rounded text-sm"><FaCartShopping className='text-sd m-1 ' />Checkout</button>
+    <button class="flex mt-8 ml-2 text-white bg-pink-500 border-0 py-1 px-4 focus:outline-none hover:bg-pink-600 rounded text-sm">Clear Cart</button>
+    </div>
     </div>
   </div>
 
