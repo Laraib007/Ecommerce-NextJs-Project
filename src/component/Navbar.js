@@ -3,6 +3,7 @@ import React, { useRef } from 'react'
 import { FaCartShopping } from "react-icons/fa6";
 import { MdCancel } from "react-icons/md";
 import { FaPlusCircle, FaMinusCircle } from "react-icons/fa"
+import { IoBagCheck } from "react-icons/io5";
 
 import Logo from "../component/Img/HLogo.png"
 import Image from 'next/image';
@@ -65,7 +66,7 @@ const Navbar = () => {
       </li>
     </ol>
     <div className='flex'>
-    <button class="flex mt-8  text-white bg-pink-500 border-0 py-1 px-4 focus:outline-none hover:bg-pink-600 rounded text-sm"><FaCartShopping className='text-sd m-1 ' />Checkout</button>
+    <button class="flex mt-8  text-white bg-pink-500 border-0 py-1.5 px-4 focus:outline-none hover:bg-pink-600 rounded text-sm"><IoBagCheck className='text-lg md-1 mr-1 ' />Checkout</button>
     <button class="flex mt-8 ml-2 text-white bg-pink-500 border-0 py-1 px-4 focus:outline-none hover:bg-pink-600 rounded text-sm">Clear Cart</button>
     </div>
     </div>
