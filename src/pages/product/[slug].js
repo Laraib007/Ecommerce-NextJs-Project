@@ -103,8 +103,11 @@ const [service, setService] = useState()
         </div>
         <div className='flex m-3 '>
         <input onChange={onChange} placeholder='Enter you Zipcode' className='border-2 rounded border-gray-400'></input>
-        <button class="flex ml-2 text-white bg-pink-500 border-0 py-2 px-6 focus:outline-none hover:bg-pink-600 rounded">Check</button>
-        </div> <h1>Sorry! we can't deliver in your area</h1>
+        <button onClick={zipChecker} class="flex ml-2 text-white bg-pink-500 border-0 py-2 px-6 focus:outline-none hover:bg-pink-600 rounded">Check</button>
+        </div>
+        {!service && service != null && <h1 className='text-red-600 font-semibold'>Sorry! we can't deliver in your area</h1>}
+         {service && service != null && <h1 className='text-green-600 font-semibold'>Yay! we can deliver this item in your state</h1>}
+         
       </div>
     </div>
   </div>
