@@ -2,7 +2,21 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
  
 const Slugs =()=> {
-  const src = "https://m.media-amazon.com/images/I/9112xNSIlqL._AC_SX522_.jpg"
+  "https://m.media-amazon.com/images/I/9112xNSIlqL._AC_SX522_.jpg"
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'm.media-amazon.com',
+        port: '',
+        pathname: 'images/I/9112xNSIlqL._AC_SX522_.jpg',
+      }
+    ]
+  }
+
+
+
+
   const router = useRouter()
   return <>
   <section class="text-gray-600 body-font overflow-hidden">
