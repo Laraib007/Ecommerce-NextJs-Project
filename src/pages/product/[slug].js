@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { useRouter } from 'next/router'
+import { useState } from 'react'
  
 const Slugs = ()=> {
 const [pin, setPin] = useState()
@@ -8,8 +9,8 @@ const [service, setService] = useState()
   const pins = await fetch("http://localhost:3000/api/zipcode")
   const pinJson = pins.json;
   if(pinJson && pin){
-    service(true)
-  } else service(false)
+    setService(true)
+  } else setService(false)
 }
   const onChange = (e)=>{
     setPin(e.target.value)
@@ -103,7 +104,7 @@ const [service, setService] = useState()
         <div className='flex m-3 '>
         <input onChange={onChange} placeholder='Enter you Zipcode' className='border-2 rounded border-gray-400'></input>
         <button class="flex ml-2 text-white bg-pink-500 border-0 py-2 px-6 focus:outline-none hover:bg-pink-600 rounded">Check</button>
-        </div>
+        </div> <h1>Sorry! we can't deliver in your area</h1>
       </div>
     </div>
   </div>
