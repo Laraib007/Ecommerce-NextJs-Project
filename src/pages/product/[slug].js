@@ -1,9 +1,24 @@
 import Image from 'next/image'
 import { useRouter } from 'next/router'
  
-const Slugs =()=> {
+const Slugs = ()=> {
+const [pin, setPin] = useState()
+const [service, setService] = useState()
+  const zipChecker = async()=>{
+  const pins = await fetch("http://localhost:3000/api/zipcode")
+  const pinJson = pins.json;
+  if(pinJson && pin){
+    service(true)
+  } else service(false)
+}
+  const onChange = (e)=>{
+    setPin(e.target.value)
+  }
+
+
+
+
   const src = "https://m.media-amazon.com/images/I/71TCI289J4L._AC_SX522_.jpg"
-  const router = useRouter()
   return <>
   <section class="text-gray-600 body-font overflow-hidden">
   <div class="container  px-5 py-24 mx-auto">
@@ -86,7 +101,7 @@ const Slugs =()=> {
           </button>
         </div>
         <div className='flex m-3 '>
-        <input placeholder='Enter you Zipcode' className='border-2 rounded border-gray-400'></input>
+        <input onChange={onChange} placeholder='Enter you Zipcode' className='border-2 rounded border-gray-400'></input>
         <button class="flex ml-2 text-white bg-pink-500 border-0 py-2 px-6 focus:outline-none hover:bg-pink-600 rounded">Check</button>
         </div>
       </div>
