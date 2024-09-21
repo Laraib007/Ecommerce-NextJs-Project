@@ -7,10 +7,11 @@ const [pin, setPin] = useState()
 const [service, setService] = useState()
   const zipChecker = async()=>{
   const pins = await fetch("http://localhost:3000/api/zipcode")
-  const pinJson = await pins.json;
+  const pinJson = pins.json;
   console.log(pinJson)
-  if(pinJson && pin){
+  if(pinJson === pin){
     setService(true)
+    return
   } else setService(false)
 }
   const onChange = (e)=>{
