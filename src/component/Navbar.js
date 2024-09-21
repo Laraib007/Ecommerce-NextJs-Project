@@ -30,13 +30,13 @@ const Navbar = () => {
     
     </Link>
     <nav className="md:ml-auto md:mr-auto flex flex-wrap cursor-pointer text-gray-900 font-medium items-center text-base justify-center">
-      <Link href={'/tshirt'} className="mr-4 hover:text-gray-900">Tshirts</Link>
-      <Link href={'/mugs'}className="mr-4 hover:text-gray-900">Mugs</Link>
-      <Link href={'/hoodies'} className="mr-4 hover:text-gray-900">Hoodies</Link>
-      <Link href={'/stickers'} className="mr-4 hover:text-gray-900">Stickers</Link>
+      <Link href={'/tshirt'} className="mr-4 hover:text-pink-600">Tshirts</Link>
+      <Link href={'/mugs'}className="mr-4 hover:text-pink-600">Mugs</Link>
+      <Link href={'/hoodies'} className="mr-4 hover:text-pink-600">Hoodies</Link>
+      <Link href={'/stickers'} className="mr-4 hover:text-pink-600">Stickers</Link>
     </nav>
     <div onClick={toggleCart} className='absolute right-0 mx-4 top-6'  >
-    <FaCartShopping className='text-xl ' />
+    <FaCartShopping className='text-xl cursor-pointer text-pink-600 ' />
     </div>
     <div ref={ref}   className='absolute w-72 h-full top-0 right-0 py-6 px-8 bg-pink-300 transform transition-transform translate-x-full'>
    <h1 className='text-lg text-center font-bold m-2'>This is Store Cart</h1> 
