@@ -2,27 +2,13 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
  
 const Slugs =()=> {
-  "https://m.media-amazon.com/images/I/9112xNSIlqL._AC_SX522_.jpg"
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'm.media-amazon.com',
-        port: '',
-        pathname: 'images/I/9112xNSIlqL._AC_SX522_.jpg',
-      }
-    ]
-  }
-
-
-
-
+  const src = "https://m.media-amazon.com/images/I/9112xNSIlqL._AC_SX522_.jpg"
   const router = useRouter()
   return <>
   <section class="text-gray-600 body-font overflow-hidden">
-  <div class="container px-5 py-24 mx-auto">
-    <div class="lg:w-4/5 mx-auto flex flex-wrap">
-    <Image alt="ecommerce" width={40} height={50} class=" border-2 lg:w-1/2 w-full lg:h-auto h-74 object-cover object-center rounded " src={src}></Image>
+  <div class="container  px-5 py-24 mx-auto">
+    <div class="lg:w-4/5 mr-8 mx-auto flex flex-wrap">
+    <Image alt="ecommerce" width={380} height={100} class=" border-2 object-cover object-center rounded " loader={() => src} src={src}></Image>
       {/* <img alt="ecommerce" class=" border-2 lg:w-1/2 w-full lg:h-auto h-74 object-cover object-center rounded " src="https://m.media-amazon.com/images/I/9112xNSIlqL._AC_SX522_.jpg" /> */}
       <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
         <h2 class="text-sm title-font text-gray-500 tracking-widest">BRAND NAME</h2>
