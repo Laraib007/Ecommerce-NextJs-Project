@@ -1,4 +1,7 @@
 import React from 'react'
+import Logo from "../component/Img/Clogo.png"
+import Image from 'next/image'
+
 
 const Footer = () => {
   return (
