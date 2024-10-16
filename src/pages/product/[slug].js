@@ -95,7 +95,7 @@ const [service, setService] = useState()
               </span>
             </div>
           </div>
-        </div>
+        </div> 
         <div class="flex">
           <span class="title-font font-medium text-2xl text-gray-900">$58.00</span>
           <button onClick={()=>addToCart(Slugs, "Wear the Code", 499, 1, "XL", "Blue")} class="flex ml-3 text-white bg-pink-500 border-0 py-2 px-3 focus:outline-none hover:bg-pink-600 rounded"><FaCartShopping className='text-sd mt-1 mr-1 cursor-pointer text-white ' />Add to Cart</button>
