@@ -8,7 +8,8 @@ import { IoBagCheck } from "react-icons/io5";
 import Logo from "../component/Img/HLogo.png"
 import Image from 'next/image';
 
-const Navbar = () => {
+const Navbar = (cart, addToCart, clearCart, removeFromCart, subTotal) => {
+  console.log(cart, addToCart, clearCart, removeFromCart, subTotal)
   const toggleCart = ()=>{
     if(ref.current.classList.contains('translate-x-full')){
       ref.current.classList.remove('translate-x-full')
@@ -43,27 +44,13 @@ const Navbar = () => {
    <h1 className='text-lg text-center font-bold m-2'>This is Store Cart</h1> 
     <span onClick={toggleCart} className='absolute top-2 right-4'><MdCancel className='text-xl text-pink-600' /></span>
     <ol className='font-semibold list-decimal'>
-      <li>
+      {<li>
         <div className='item flex '>
         <div className='w-2/3 font-semibold '>This T-shirt is very useFull </div>
         <div className='font-bold flex justify-center items-center  w-1/3 '><FaMinusCircle className='text-pink-600 text-sd mx-1' />1<FaPlusCircle className='text-pink-600 text-sd mx-1' />
         </div>
         </div>
-      </li>
-      <li>
-        <div className='item flex '>
-        <div className='w-2/3 font-semibold '>This T-shirt is very useFull </div>
-        <div className='font-bold flex justify-center items-center  w-1/3 '><FaMinusCircle className='text-pink-600 text-sd mx-1' />1<FaPlusCircle className='text-pink-600 text-sd mx-1' />
-        </div>
-        </div>
-      </li>
-      <li>
-        <div className='item flex '>
-        <div className='w-2/3 font-semibold '>This T-shirt is very useFull </div>
-        <div className='font-bold flex justify-center items-center  w-1/3 '><FaMinusCircle className='text-pink-600 text-sd mx-1' />1<FaPlusCircle className='text-pink-600 text-sd mx-1' />
-        </div>
-        </div>
-      </li>
+      </li>}
     </ol>
     <div className='flex'>
     <button class="flex mt-8  text-white bg-pink-500 border-0 py-1.5 px-4 focus:outline-none hover:bg-pink-600 rounded text-sm"><IoBagCheck className='text-lg md-1 mr-1 ' />Checkout</button>
