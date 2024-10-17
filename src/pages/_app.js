@@ -42,8 +42,10 @@ if(itemCode in cart){
   saveCart(newCart)
 }
 const removeFromCart =(itemCode, qty, name, price, size, varient)=>{
+  
   let newCart = cart;
   if(itemCode in cart){
+    console.log(newCart[itemCode])
     newCart[itemCode].qty = cart[itemCode].qty - qty
   }
   if(newCart[itemCode].qty <= 0){
