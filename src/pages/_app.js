@@ -1,7 +1,7 @@
 import Footer from "@/component/Footer";
 import Navbar from "@/component/Navbar";
 import "@/styles/globals.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function App({ Component, pageProps }) {
   const [cart, setcart] = useState({})
