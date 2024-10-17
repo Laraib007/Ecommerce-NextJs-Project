@@ -22,6 +22,11 @@ export default function App({ Component, pageProps }) {
 
 const saveCart =(myCart)=>{
   localStorage.setItem("cart", myCart)
+  let subt = 0;
+  let keys = Object.keys("cart");
+  for(let i = 0; i <= keys.length; i++){
+    myCart[keys[i]].price * myCart[keys[i]].qty
+  }
 }
 
 const addToCart =(itemCode, name, price, qty, size, varient)=>{
