@@ -24,7 +24,7 @@ const saveCart =(myCart)=>{
   localStorage.setItem("cart", myCart)
   let subt = 0;
   let keys = Object.keys(myCart);
-  for(let i = 0; i <= keys.length; i++){
+  for(let i = 0; i < keys.length; i++){
     subt += myCart[keys[i]].price * myCart[keys[i]].qty
   }
   setsubTotal(subt)
