@@ -56,6 +56,7 @@ setcart({})
 saveCart({})
 }
 
+
   return (
     <>
     <Navbar cart={cart} addToCart={addToCart} clearCart={clearCart} removeFromCart={removeFromCart} subTotal={subTotal} />
