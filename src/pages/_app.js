@@ -8,7 +8,15 @@ export default function App({ Component, pageProps }) {
   const [subTotal, setsubTotal] = useState(0)
   
   useEffect(() => {
-    console.log("Hey I am useEffect from _app.js")
+    try {
+      if(localStorage.getItem("cart")){
+        setcart(JSON.parse(localStorage.getItem("cart")))
+      }
+    } catch (error) {
+      console.log(error)
+     localStorage.clear()
+    }
+   
   }, [])
   
 
