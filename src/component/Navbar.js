@@ -9,7 +9,7 @@ import Logo from "../component/Img/HLogo.png"
 import Image from 'next/image';
 
 const Navbar = (cart, addToCart, clearCart, removeFromCart, subTotal) => {
-  console.log(cart, addToCart, clearCart, removeFromCart, subTotal)
+  console.log(subTotal)
   const toggleCart = ()=>{
     if(ref.current.classList.contains('translate-x-full')){
       ref.current.classList.remove('translate-x-full')
@@ -46,7 +46,7 @@ const Navbar = (cart, addToCart, clearCart, removeFromCart, subTotal) => {
     <ol className='font-semibold list-decimal'>
       {Object.keys(cart).map((k)=>{return <li key={k}>
         <div className='item flex '>
-        <div className='w-2/3 font-semibold '>This T-shirt is very useFull </div>
+        <div className='w-2/3 font-semibold '>{cart[k].name}</div>
         <div className='font-bold flex justify-center items-center  w-1/3 '><FaMinusCircle className='text-pink-600 text-sd mx-1' />1<FaPlusCircle className='text-pink-600 text-sd mx-1' />
         </div>
         </div>

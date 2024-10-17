@@ -27,6 +27,7 @@ const saveCart =(myCart)=>{
   for(let i = 0; i <= keys.length; i++){
     myCart[keys[i]].price * myCart[keys[i]].qty
   }
+  setsubTotal(subt)
 }
 
 const addToCart =(itemCode, name, price, qty, size, varient)=>{
