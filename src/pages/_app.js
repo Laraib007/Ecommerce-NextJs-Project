@@ -6,6 +6,11 @@ import { useState } from "react";
 export default function App({ Component, pageProps }) {
   const [cart, setcart] = useState({})
   const [subTotal, setsubTotal] = useState(0)
+  
+  useEffect(() => {
+    console.log("Hey I am useEffect from _app.js")
+  }, [])
+  
 
 const saveCart =(myCart)=>{
   localStorage.setItem("cart", myCart)
@@ -26,6 +31,9 @@ const removeFromCart =(itemCode, name, price, qty, size, varient)=>{
   let newCart = cart;
   if(itemCode in cart){
     newCart[itemCode].qty = cart[itemCode].qty - qty
+  }
+  if(newCart[itemCode].qty <= 0){
+    delete newCart[itemCode]
   }
     setcart(newCart)
   }
