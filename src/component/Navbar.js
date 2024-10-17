@@ -48,7 +48,7 @@ const Navbar = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
       {Object.keys(cart).map((k)=>{return <li key={k}>
         <div className='item flex '>
         <div className='w-2/3 font-semibold '>{cart[k].name}</div>
-        <div className='font-bold flex justify-center items-center  w-1/3 '><FaMinusCircle className='text-pink-600 text-sd mx-1' />{cart[k].qty}<FaPlusCircle className='text-pink-600 text-sd mx-1' />
+        <div className='font-bold flex justify-center items-center  w-1/3 '><FaMinusCircle onClick={removeFromCart} className='text-pink-600 text-sd mx-1' />{cart[k].qty}<  FaPlusCircle className='text-pink-600 text-sd mx-1' onclick={(addToCart} />
         </div>
         </div>
       </li>})}
