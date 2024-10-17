@@ -7,13 +7,31 @@ export default function App({ Component, pageProps }) {
   const [cart, setcart] = useState({})
   const [subTotal, setsubTotal] = useState(0)
 
-const addToCart =(itemCode, price, qty, size, varrient, color)=>{
+const saveCart =(myCart)=>{
+  localStorage.setItem("cart", myCart)
+}
+
+const addToCart =(itemCode, name, price, qty, size, varient)=>{
 let newCart = cart;
 if(itemCode in cart){
-  newCart[itemCode].qty = newCart[itemCode].qty + qty}
+  newCart[itemCode].qty = cart[itemCode].qty + qty
+}
   else (
-    newCart[itemCode] = {qty: 1, price, size, varrient, color }
+    newCart[itemCode] = {qty: 1, name, price, size, varient, color }
   )
+  setcart(newCart)
+  saveCart(newCart)
+}
+const removeFromCart =(itemCode, name, price, qty, size, varient)=>{
+  let newCart = cart;
+  if(itemCode in cart){
+    newCart[itemCode].qty = cart[itemCode].qty - qty
+  }
+    setcart(newCart)
+  }
+const clearCart = ()=>{
+setcart({})
+saveCart({})
 }
 
   return (
