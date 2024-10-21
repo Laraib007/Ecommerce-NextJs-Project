@@ -57,7 +57,7 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
         </div>
       </li>})}
     </ol>
-    
+    <div className=' text-center font-semibold my-2'>Sub Total: <span className='font-bold'> Rs.{subTotal}</span></div>
     </div>
   </div>
   )
