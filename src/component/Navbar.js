@@ -57,7 +57,7 @@ const Navbar = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
     </ol>
     <div className='font-semibold my-2'>Sub Total: <span className='font-bold'> Rs.{subTotal}</span></div>
     <div className='flex'>
-      <Link to='/checkout'> 
+      <Link href={'/checkout'}> 
     <button class="flex mt-8  text-white bg-pink-500 border-0 py-1.5 px-4 focus:outline-none hover:bg-pink-600 rounded text-sm"><IoBagCheck  className='text-lg md-1 mr-1 ' />Checkout</button> </Link>
     <button onClick={clearCart} class="flex mt-8 ml-2 text-white bg-pink-500 border-0 py-1 px-4 focus:outline-none hover:bg-pink-600 rounded text-sm">Clear Cart</button>
     </div>
