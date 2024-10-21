@@ -11,6 +11,7 @@ export default function App({ Component, pageProps }) {
     try {
       if(localStorage.getItem("cart")){
         setcart(JSON.parse(localStorage.getItem("cart")))
+        saveCart(cart)
       }
     } catch (error) {
       console.log(error)
@@ -64,7 +65,7 @@ saveCart({})
 
   return (
     <>
-    <Navbar cart={cart} addToCart={addToCart} clearCart={clearCart} removeFromCart={removeFromCart} subTotal={subTotal} />
+    <Navbar key={subTotal} cart={cart} addToCart={addToCart} clearCart={clearCart} removeFromCart={removeFromCart} subTotal={subTotal} />
     <Component cart={cart} addToCart={addToCart} clearCart={clearCart} removeFromCart={removeFromCart} subTotal={subTotal} {...pageProps} />;
     <Footer />
     </>
