@@ -43,7 +43,7 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
   </div>
   {/* <-------CART ITEMS------> */}
   </div>
-    <div className=' bg-pink-300 w-2/3 center ml-24'>
+    <div className=' bg-pink-300 w-2/3 center ml-52 px-4 justify-center items-center'>
    <h1 className='text-lg text-center font-bold m-2'>This is Store Cart</h1> 
     <span className='absolute top-2 right-4'><MdCancel className='text-xl text-pink-600' /></span>
     <ol className='font-semibold list-decimal'>
