@@ -46,7 +46,7 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
     <div className=' bg-pink-300 w-2/3 center ml-52 px-1'>
    <h1 className='text-lg text-center font-bold m-2'>This is Store Cart</h1> 
     <ol className='font-semibold list-decimal ml-80'>
-      {Object.keys(cart).length == 0 && <div>Your Cart is Empty!</div>}
+      {Object.keys(cart).length == 0 && <div className='ml-8'>Your Cart is Empty!</div>}
       {Object.keys(cart).map((k)=>{return <li key={k}>
         <div className='item flex '>
         <div className=' font-semibold '>{cart[k].name}</div>
