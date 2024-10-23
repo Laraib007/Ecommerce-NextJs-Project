@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Tshirt = () => {
@@ -12,6 +13,7 @@ const Tshirt = () => {
         </div>
         <div className="container px-5 py-7 mx-auto">
             <div className="flex flex-wrap -m-4 justify-center">
+                
                 <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4  ">
                     <a className=" relative rounded overflow-hidden contents">
                       
@@ -22,7 +24,10 @@ const Tshirt = () => {
                         <h2 className="text-gray-900 title-font text-lg font-medium">The Catalyzer</h2>
                         <p className="mt-1">$16.00</p>
                     </div>
+                    <Link href={'/product/tshirt'}>Buy Now</Link>
                 </div>
+                
+                
                 <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4  ">
                     <a className=" relative rounded overflow-hidden contents">
                       

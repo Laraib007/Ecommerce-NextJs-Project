@@ -28,8 +28,6 @@ const Navbar = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
   <div className=" flex-no-wrap fixed  top-0 flex w-full items-center justify-between bg-[#FBFBFB] py-2 shadow-md shadow-black/5 dark:bg-neutral-600 dark:shadow-black/10 lg:flex-wrap lg:justify-start lg:py-4 mx-auto  flex-wrap p-5 flex-col md:flex-row  md:mr-60 ">
     <Link href={'/'}className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
         <Image src={Logo} height={10} width={100}  />
-     
-      <span className="ml-1 text-xl">FashionWear</span>
     
     </Link>
     <nav className="md:ml-auto md:mr-auto  flex flex-wrap cursor-pointer text-gray-900 font-medium items-center text-base justify-center">
