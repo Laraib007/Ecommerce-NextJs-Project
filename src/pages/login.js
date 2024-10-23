@@ -2,6 +2,7 @@ import React from 'react'
 
 import img from '../component/Img/Clogo.png'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Login = () => {
   return (
@@ -44,7 +45,7 @@ const Login = () => {
 
     <p class="mt-10 text-center text-sm text-gray-500">
       Not a member?
-      <a href="#" class="font-semibold leading-6 text-pink-600 hover:text-pink-500">SIGNUP Now!</a>
+      <Link href="signup" class="font-semibold leading-6 text-pink-600 hover:text-pink-500">Signup Now!</Link>
     </p>
   </div>
 </div>
