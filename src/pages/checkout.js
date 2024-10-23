@@ -43,14 +43,14 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
   </div>
   {/* <-------CART ITEMS------> */}
   </div>
-    <div className=' bg-pink-300 text-center w-full items-center mx-auto my-auto justify-center px-1'>
+    <div className=' bg-pink-300 text-center ml-16 px-1'>
    <h1 className='text-lg text-center text-gray-800 font-bold m-2'>Review Your Cart Items</h1> 
-    <ol className='font-semibold text-center list-decimal '>
+    <ol className='font-semibold  list-decimal '>
       {Object.keys(cart).length == 0 && <div className='ml-8'>Your Cart is Empty!</div>}
       {Object.keys(cart).map((k)=>{return <li key={k}>
-        <div className='item flex '>
-        <div className=' font-semibold '>{cart[k].name}</div>
-        <div className='font-bold flex justify-center items-center  w-1/3 '><FaMinusCircle onClick={()=>removeFromCart(k, 1, cart[k].name, cart[k].price, cart[k].size, cart[k].varient)} 
+        <div className='justify-center list-decimal  items-center flex '>
+        <div className=' font-semibold mr-10'>{cart[k].name}</div>
+        <div className='font-bold flex justify-center items-center  ml-10 '><FaMinusCircle onClick={()=>removeFromCart(k, 1, cart[k].name, cart[k].price, cart[k].size, cart[k].varient)} 
         
         className='text-pink-600 text-sd mx-1' />{cart[k].qty}<  FaPlusCircle className='text-pink-600 text-sd mx-1' onClick={()=>addToCart(k, cart[k].name, cart[k].price, 1, cart[k].size, cart[k].varient)} />
         </div>
