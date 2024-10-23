@@ -65,7 +65,7 @@ saveCart({})
 
   return (
     <>
-    <div>
+    <div className="mt-10">
     <Navbar key={subTotal} cart={cart} addToCart={addToCart} clearCart={clearCart} removeFromCart={removeFromCart} subTotal={subTotal} />
     <Component cart={cart} addToCart={addToCart} clearCart={clearCart} removeFromCart={removeFromCart} subTotal={subTotal} {...pageProps} />;
     <Footer />

@@ -43,7 +43,7 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
   </div>
   {/* <-------CART ITEMS------> */}
   </div>
-    <div className=' bg-pink-300 w-2/3 center ml-52 px-1'>
+    <div className=' bg-pink-300 w-2/3 center  px-1'>
    <h1 className='text-lg text-center text-gray-800 font-bold m-2'>Review Your Cart Items</h1> 
     <ol className='font-semibold list-decimal ml-80'>
       {Object.keys(cart).length == 0 && <div className='ml-8'>Your Cart is Empty!</div>}
@@ -58,6 +58,9 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
       </li>})}
     </ol>
     <div className=' text-center font-semibold my-2'>Sub Total: <span className='font-bold'> Rs.{subTotal}</span></div>
+    </div>
+    <div className='flex justify-center px-1'>
+    <button type="submit" class="flex w-50 text-center  rounded-md bg-pink-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-pink-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-600">Sign in</button>
     </div>
   </div>
   )
