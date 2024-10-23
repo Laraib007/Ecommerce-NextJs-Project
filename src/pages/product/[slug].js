@@ -81,7 +81,7 @@ const [service, setService] = useState()
           </div>
           <div class="flex ml-6 items-center">
             <span class="mr-3">Size</span>
-            <div class="relative">
+            <div class="">
               <select class="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10">
                 <option>SM</option>
                 <option>M</option>
