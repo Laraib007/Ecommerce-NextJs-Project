@@ -2,8 +2,8 @@ import React from 'react'
 
 const orderplaced = () => {
   return (
-    <div>
-        <section class="text-gray-600 body-font overflow-hidden">
+    <div className='h-3/4'>
+        <section class="text-gray-600 body-font overflow-hidden ">
   <div class="container px-5 py-24 mx-auto">
     <div class="lg:w-4/5 mx-auto flex flex-wrap">
       <div class="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
