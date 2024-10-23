@@ -19,7 +19,7 @@ const orderplaced = () => {
         <div class="flex border-t border-gray-200 py-2">
           <span class="text-gray-500">Fashion Wear Black T-Shirt(Xl)</span>
           <span class="ml-auto text-gray-900">02</span>
-          <span class="ml-auto text-gray-900">02</span>
+          <span class="ml-auto text-gray-900">Rs.499</span>
         </div>
         <div class="flex border-t border-gray-200 py-2">
           <span class="text-gray-500">Size</span>
