@@ -45,10 +45,10 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
   </div>
     <div className=' bg-pink-300 text-center ml-16 px-1'>
    <h1 className='text-lg text-center text-gray-800 font-bold m-2'>Review Your Cart Items</h1> 
-    <ol className='font-semibold  list-decimal '>
+    <ol className='font-semibold '>
       {Object.keys(cart).length == 0 && <div className='ml-8'>Your Cart is Empty!</div>}
-      {Object.keys(cart).map((k)=>{return <li key={k}>
-        <div className='justify-center list-decimal  items-center flex '>
+      {Object.keys(cart).map((k)=>{return <li className='list-decimal' key={k}>
+        <div className='justify-center  items-center flex '>
         <div className=' font-semibold mr-10'>{cart[k].name}</div>
         <div className='font-bold flex justify-center items-center  ml-10 '><FaMinusCircle onClick={()=>removeFromCart(k, 1, cart[k].name, cart[k].price, cart[k].size, cart[k].varient)} 
         
