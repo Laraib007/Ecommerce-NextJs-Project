@@ -11,9 +11,9 @@ const orderplaced = () => {
         <h1 class="text-gray-900 text-3xl title-font font-medium mb-4">FASHION FOR ALL</h1>
        
         <p class="leading-relaxed mb-4">Best Quality - Premium Desings - Stylish Look - Better Experience</p>
-        <div class="flex mb-4">
-          <a class="flex-grow text-pink-500 border-b-2 border-pink-500 py-2 text-lg px-1">Description</a>
-          <a class="flex-grow text-pink-500 border-b-2 border-pink-500 py-2 text-lg px-1">Qty</a>
+        <div class="flex text-center mb-4">
+          <a class="flex-grow text-pink-500 border-b-2 border-pink-500 py-2 text-lg px-1 mr-20">Description</a>
+          <a class="flex-grow text-pink-500 border-b-2 border-pink-500 py-2 text-lg px-1 mr-4">Qty</a>
           <a class="flex-grow text-pink-500 border-b-2 border-pink-500 py-2 text-lg px-1">Price</a>
         </div>
         <div class="flex border-t border-gray-200 py-2">
