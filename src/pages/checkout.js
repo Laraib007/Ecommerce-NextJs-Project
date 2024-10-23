@@ -44,7 +44,7 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
   </div>
   {/* <-------CART ITEMS------> */}
   </div>
-    <div className=' bg-pink-300 text-center ml-16 px-1'>
+    <div className=' bg-pink-300 text-center sm:ml-0 md:ml-16 px-1'>
    <h1 className='text-lg text-center text-gray-800 font-bold m-2'>Review Your Cart Items</h1> 
     <ol className='font-semibold '>
       {Object.keys(cart).length == 0 && <div className='ml-8'>Your Cart is Empty!</div>}
