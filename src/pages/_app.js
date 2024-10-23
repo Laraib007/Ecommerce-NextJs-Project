@@ -65,9 +65,9 @@ saveCart({})
 
   return (
     <>
-    <div className="mt-10">
+    <div className="mt-20">
     <Navbar key={subTotal} cart={cart} addToCart={addToCart} clearCart={clearCart} removeFromCart={removeFromCart} subTotal={subTotal} />
-    <Component cart={cart} addToCart={addToCart} clearCart={clearCart} removeFromCart={removeFromCart} subTotal={subTotal} {...pageProps} />;
+    <Component cart={cart} addToCart={addToCart} clearCart={clearCart} removeFromCart={removeFromCart} subTotal={subTotal} {...pageProps} />
     <Footer />
     </div>
     </>
