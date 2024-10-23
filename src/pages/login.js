@@ -11,7 +11,7 @@ const Login = () => {
 
 <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
   <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-  <Image class="mx-auto h-10 w-auto" src={img} height={{100:'px'}} width={100}  />
+  <Image class="mx-auto mt-0 mb-0 h-90 w-auto" src={img} height={100} width={100}  />
     <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Sign in to your account</h2>
   </div>
 
