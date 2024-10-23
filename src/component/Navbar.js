@@ -42,7 +42,7 @@ const Navbar = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
      <Link href={'/login'}><CgProfile  className='text-2xl font-bold cursor-pointer text-pink-600 mr-3' /></Link>
     <FaCartShopping onClick={toggleCart} className='text-2xl cursor-pointer text-pink-600 ' />
     </div>
-    <div ref={ref}   className={`absolute w-72 h-full top-0 right-0 py-6 px-8 bg-pink-300 transform transition-transform  ${Object.keys(cart).length === 0 ? "translate-x-full": "translate-x-0"} `}>
+    <div ref={ref}   className={`absolute w-72 h-[100vh] top-0 right-0 py-6 px-8 bg-pink-300 transform transition-transform  ${Object.keys(cart).length === 0 ? "translate-x-full": "translate-x-0"} `}>
    <h1 className='text-lg text-center font-bold m-2'>This is Store Cart</h1> 
     <span onClick={toggleCart} className='absolute top-2 right-4'><MdCancel className='text-xl text-pink-600' /></span>
     <ol className='font-semibold list-decimal'>
