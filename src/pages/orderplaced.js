@@ -32,7 +32,7 @@ const orderplaced = () => {
           <span class="ml-auto text-gray-900">Rs.499</span>
         </div>
         <div class="flex mt-5">
-          <span class="title-font font-medium text-2xl text-gray-900">TT Rs.1199</span>
+          <span class="title-font font-medium text-2xl text-gray-900">Total Amount Rs.1199</span>
           
         </div>
       </div>
