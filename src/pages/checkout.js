@@ -11,7 +11,7 @@ import Link from 'next/link';
 
 const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
   return (
-    <div className='container'>
+    <div className='container mt-32'>
       
       <h1 className='m-2 font-bold text-center'>CHECKOUT</h1>
       <h1 className='m-2 text-xl font-bold text-gray-700 text-center'>ENTER YOUR COMPELETE DETAILS AND ADDRESS</h1>
