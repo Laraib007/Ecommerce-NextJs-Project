@@ -23,16 +23,16 @@ const Navbar = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
  
   const ref = useRef()
   return (
-    <div className="text-gray-600 bg-slate-100 body-font">
+    <div className=" text-gray-600 bg-slate-100 body-font ">
       
-  <div className=" mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center md:mr-60 ">
+  <div className=" flex-no-wrap fixed  top-0 flex w-full items-center justify-between bg-[#FBFBFB] py-2 shadow-md shadow-black/5 dark:bg-neutral-600 dark:shadow-black/10 lg:flex-wrap lg:justify-start lg:py-4 mx-auto  flex-wrap p-5 flex-col md:flex-row  md:mr-60 ">
     <Link href={'/'}className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
         <Image src={Logo} height={10} width={100}  />
      
       <span className="ml-1 text-xl">FashionWear</span>
     
     </Link>
-    <nav className="md:ml-auto md:mr-auto flex flex-wrap cursor-pointer text-gray-900 font-medium items-center text-base justify-center">
+    <nav className="md:ml-auto md:mr-auto  flex flex-wrap cursor-pointer text-gray-900 font-medium items-center text-base justify-center">
       <Link href={'/tshirt'} className="mr-4 hover:text-pink-600">Tshirts</Link>
       <Link href={'/mugs'}className="mr-4 hover:text-pink-600">Mugs</Link>
       <Link href={'/hoodies'} className="mr-4 hover:text-pink-600">Hoodies</Link>
@@ -42,7 +42,7 @@ const Navbar = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
      <Link href={'/login'}><CgProfile  className='text-2xl font-bold cursor-pointer text-pink-600 mr-3' /></Link>
     <FaCartShopping onClick={toggleCart} className='text-2xl cursor-pointer text-pink-600 ' />
     </div>
-    <div ref={ref}   className={`absolute w-72 h-full top-0 right-0 py-6 px-8 bg-pink-300 transform transition-transform  ${Object.keys(cart).length === 0 ? "translate-x-full": "translate-x-0"} `}>
+    <div ref={ref}   className={`flex w-72 h-full top-0 right-0 py-6 px-8 bg-pink-300 transform transition-transform  ${Object.keys(cart).length === 0 ? "translate-x-full": "translate-x-0"} `}>
    <h1 className='text-lg text-center font-bold m-2'>This is Store Cart</h1> 
     <span onClick={toggleCart} className='absolute top-2 right-4'><MdCancel className='text-xl text-pink-600' /></span>
     <ol className='font-semibold list-decimal'>
