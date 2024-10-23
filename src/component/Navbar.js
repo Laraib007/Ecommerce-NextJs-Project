@@ -4,6 +4,7 @@ import { FaCartShopping } from "react-icons/fa6";
 import { MdCancel } from "react-icons/md";
 import { FaPlusCircle, FaMinusCircle } from "react-icons/fa"
 import { IoBagCheck } from "react-icons/io5";
+import { CgProfile } from "react-icons/cg";
 
 import Logo from "../component/Img/HLogo.png"
 import Image from 'next/image';
@@ -37,8 +38,9 @@ const Navbar = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
       <Link href={'/hoodies'} className="mr-4 hover:text-pink-600">Hoodies</Link>
       <Link href={'/stickers'} className="mr-4 hover:text-pink-600">Stickers</Link>
     </nav>
-    <div onClick={toggleCart} className='absolute right-0 mx-4 top-6'  >
-    <FaCartShopping className='text-xl cursor-pointer text-pink-600 ' />
+    <div  className='absolute flex right-0 mx-4 top-6'  >
+     <Link href={'/login'}><CgProfile  className='text-2xl font-bold cursor-pointer text-pink-600 mr-3' /></Link>
+    <FaCartShopping onClick={toggleCart} className='text-2xl cursor-pointer text-pink-600 ' />
     </div>
     <div ref={ref}   className={`absolute w-72 h-full top-0 right-0 py-6 px-8 bg-pink-300 transform transition-transform  ${Object.keys(cart).length === 0 ? "translate-x-full": "translate-x-0"} `}>
    <h1 className='text-lg text-center font-bold m-2'>This is Store Cart</h1> 
