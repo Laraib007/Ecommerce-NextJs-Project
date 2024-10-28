@@ -8,6 +8,7 @@ const productSchema = new mongoose.Schema({
   amount: {type: Number, required: true},
   category: {type: String},
   size: {type: String},
-  color: {type: String}
+  color: {type: String},
+  avalibleQty: {type: Number, required: true}
 }, {timestamps: true});
 export default mongoose.model("Product", productSchema)
