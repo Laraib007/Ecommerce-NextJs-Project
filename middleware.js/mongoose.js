@@ -7,3 +7,4 @@ const connectDB =async (handler)=>{
     await mongoose.connect(process.env.MONGOSSE_URI)
     return handler(req, res)
 }
+export default connectDB;
