@@ -11,5 +11,5 @@ const productSchema = new mongoose.Schema({
   price: {type: Number, required: true},
   avalibleQty: {type: Number, required: true}
 }, {timestamps: true});
-mongoose.model = {}
+mongoose.models = {};
 export default mongoose.model("Product", productSchema)
