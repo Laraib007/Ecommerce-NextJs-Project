@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const connectDB =async (handler)=>{
-    if(mongoose.connection[0].isReadyState){
+    if(mongoose.connection[0].readyState){
         return handler(req, res)
     }
     await mongoose.connect(process.env.MONGOSSE_URI)
