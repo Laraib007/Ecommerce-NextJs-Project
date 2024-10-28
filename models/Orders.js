@@ -8,6 +8,6 @@ const orderSchema = new mongoose.Schema({
             }],
   address: {type: String, required: true},
   amount: {type: Number, required: true},
-  status: {type: String, default: "pending", },
+  status: {type: String, default: "pending", required: true}
 }, {timestamps: true});
 export default mongoose.model("Order", orderSchema)
