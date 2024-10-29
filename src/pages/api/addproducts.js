@@ -16,10 +16,10 @@ const handler = async (req, res)=>{
                 price:   req.body[i].price,
                 avalibleQty:  req.body[i].avalibleQty,        
         })
-        p.save()
+       await p.save()
     }
        
-        res.status(200).json({ "sucess": p });
+        res.status(200).json({ "sucess": "sucess" });
     } else {
         res.status(400).json({err: "bad request"})
     }
