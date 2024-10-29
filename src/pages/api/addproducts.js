@@ -3,19 +3,23 @@ import connectDB from "../../../middleware.js/mongoose";
 
 const handler = async (req, res)=>{
     if(req.method == "POST"){
+        for (let i = 0; i < req.body.length; i++) {
         let p = new Products({
-            title:  req.body[i].title,
-            slug:  req.body[i].slug,
-            desc:  req.body[i].desc,
-            img:   req.body[i].img,
-            category: req.body[i].category,
-            size: req.body[i].,
-            color: req.body[i].,
-            price:   req.body[i].,
-            avalibleQty:  req.body[i].,
+           
+                title:  req.body[i].title,
+                slug:  req.body[i].slug,
+                desc:  req.body[i].desc,
+                img:   req.body[i].img,
+                category: req.body[i].category,
+                size: req.body[i].size,
+                color: req.body[i].color,
+                price:   req.body[i].price,
+                avalibleQty:  req.body[i].avalibleQty,        
         })
-        let product = await Products.find()
-        res.status(200).json({ product });
+        p.save()
+    }
+       
+        res.status(200).json({ "sucess": p });
     } else {
         res.status(400).json({err: "bad request"})
     }
