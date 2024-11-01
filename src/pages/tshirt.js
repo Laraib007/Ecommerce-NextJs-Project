@@ -27,7 +27,7 @@ const Tshirt = ({products}) => {
                         <h2 className="text-gray-900 title-font text-lg font-medium">{items.title}</h2>
                         <p className="mt-1">Rs.{items.price}</p>
                     </div>
-                    <Link href={'/product/tshirt'}>Buy Now</Link>
+                    <Link href={`/product/${items.slug}`}>Buy Now</Link>
                 </div>
                 })}
                 
