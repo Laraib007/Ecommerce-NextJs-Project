@@ -15,7 +15,7 @@ const Tshirt = ({products}) => {
             <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p>
         </div>
         <div className="container px-5 py-7 mx-auto">
-            {Products.map({items=>())}<div className="flex flex-wrap -m-4 justify-center">
+            {Products.map(items)=>{}}<div className="flex flex-wrap -m-4 justify-center">
                 
                 <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4  ">
                     <a className=" relative rounded overflow-hidden contents">
