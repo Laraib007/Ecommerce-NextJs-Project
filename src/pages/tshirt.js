@@ -23,9 +23,9 @@ const Tshirt = ({products}) => {
           <img alt="ecommerce" className="object-cover object-center w-72 h-72 block " src="https://m.media-amazon.com/images/I/614rbIVRUJL._AC_SX522_.jpg"/>
                     </a>
                     <div className="mt-4">
-                        <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                        <h2 className="text-gray-900 title-font text-lg font-medium">The Catalyzer</h2>
-                        <p className="mt-1">$16.00</p>
+                        <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">{items.title}</h3>
+                        <h2 className="text-gray-900 title-font text-lg font-medium">{items.title}</h2>
+                        <p className="mt-1">Rs.{items.price}</p>
                     </div>
                     <Link href={'/product/tshirt'}>Buy Now</Link>
                 </div>
