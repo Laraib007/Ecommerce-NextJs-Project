@@ -1,8 +1,10 @@
 import Link from 'next/link'
 import React from 'react'
 import mongoose from "mongoose";
+import Products from '../../models/Products';
 
-const Tshirt = () => {
+const Tshirt = ({products}) => {
+    console.log(products)
   return (
     <div>
 
@@ -98,15 +100,12 @@ const Tshirt = () => {
 }
 export async function getServerSideProps(products) {
     
-    if(mongoose.connections[0].readyState){
-        return handler(req, res)
+    if(!mongoose.connections[0].readyState){
+    mongoose.connect(process.env.MONGOSSE_URI)
     }
-    await mongoose.connect(process.env.MONGOSSE_URI)
-    return handler(req, res)
     let product = await Products.find()
-    res.status(200).json({ product });
     return {
-      props: {},
+      props: {products: JSON.parse(JSON.stringify(product))},
     }
   }
 
