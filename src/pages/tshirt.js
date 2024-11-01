@@ -20,7 +20,7 @@ const Tshirt = ({products}) => {
             {products.map((items)=>{ return    <div key={items.slug} className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4  ">
                     <a className=" relative rounded overflow-hidden contents">
                       
-          <img alt="ecommerce" className="object-cover object-center w-72 h-72 block " src="https://m.media-amazon.com/images/I/614rbIVRUJL._AC_SX522_.jpg"/>
+          <img alt="ecommerce" className="object-cover object-center w-72 h-72 block " src={items.img}/>
                     </a>
                     <div className="mt-4">
                         <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">{items.title}</h3>
