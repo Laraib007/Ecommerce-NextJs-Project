@@ -15,9 +15,9 @@ const Tshirt = ({products}) => {
             <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p>
         </div>
         <div className="container px-5 py-7 mx-auto">
-            {products.map((items)=>{<div key={items.name} className="flex flex-wrap -m-4 justify-center">
+            <div className="flex flex-wrap -m-4 justify-center">
                 
-                <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4  ">
+            {products.map((items)=>{ return    <div key={items.slug} className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4  ">
                     <a className=" relative rounded overflow-hidden contents">
                       
           <img alt="ecommerce" className="object-cover object-center w-72 h-72 block " src="https://m.media-amazon.com/images/I/614rbIVRUJL._AC_SX522_.jpg"/>
@@ -29,10 +29,10 @@ const Tshirt = ({products}) => {
                     </div>
                     <Link href={'/product/tshirt'}>Buy Now</Link>
                 </div>
-                
+                })}
                 
               
-                </div>})}
+                </div>
             </div>
     </section>
 </div>
