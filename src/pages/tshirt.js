@@ -95,5 +95,12 @@ const Tshirt = () => {
 </div>
   )
 }
+export async function getServerSideProps({ req, res }) {
+    
+    
+    return {
+      props: {},
+    }
+  }
 
 export default Tshirt
