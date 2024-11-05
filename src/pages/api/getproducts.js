@@ -9,6 +9,7 @@ const handler = async (req, res)=>{
 
     }
     else {
+      tshirts[item.title] = JSON.parse(JSON.stringify(item))
       if(tshirts[item.title])
 
     }
