@@ -40,7 +40,8 @@ const Tshirt = ({products}) => {
                     {products[items].color.includes("yellow") && <button class="border-2 bg-yellow-500 rounded-full w-6 h-6 focus:outline-none"></button>}
                     {products[items].color.includes("purple") && <button class="border-2 bg-purple-500 rounded-full w-6 h-6 focus:outline-none"></button>}
                     {products[items].color.includes("blue") && <button class="border-2 bg-blue-500 rounded-full w-6 h-6 focus:outline-none"></button>}
-                    {products[items].color.includes("green") && <button class="border-2 bg-green-500 rounded-full w-6 h-6 focus:outline-none"></button>}
+                    {products[items].color.includes("red") && <button class="border-2 bg-red-500 rounded-full w-6 h-6 focus:outline-none"></button>}
+                    {products[items].color.includes("black") && <button class="border-2 bg-black rounded-full w-6 h-6 focus:outline-none"></button>}
 
                     </div>
                 </div>
