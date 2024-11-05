@@ -29,7 +29,11 @@ const Tshirt = ({products}) => {
                     </div>
                     <Link href={`/product/${products[items].slug}`}>Buy Now</Link>
                     <div className=''>
-{products[items].size.includes("M") && <span>M</span>}
+                        {products[items].size.includes("S") && <span className='border border-s-gray-300 px-1'>S</span>}
+                        {products[items].size.includes("M") && <span className='border border-s-gray-300 px-1'>M</span>}
+                        {products[items].size.includes("L") && <span className='border border-s-gray-300 px-1'>L</span>}
+                        {products[items].size.includes("XL") && <span className='border border-s-gray-300 px-1'>XL</span>}
+                        {products[items].size.includes("XXL") && <span className='border border-s-gray-300 px-1'>XXL</span>}
                     </div>
                 </div>
                 })}
