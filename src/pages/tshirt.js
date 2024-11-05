@@ -30,10 +30,13 @@ const Tshirt = ({products}) => {
                     <Link href={`/product/${products[items].slug}`}>Buy Now</Link>
                     <div className=''>
                         {products[items].size.includes("S") && <span className='border border-s-gray-300 px-1'>S</span>}
-                        {products[items].size.includes("M") && <span className='border border-s-gray-300 px-1'>M</span>}
-                        {products[items].size.includes("L") && <span className='border border-s-gray-300 px-1'>L</span>}
-                        {products[items].size.includes("XL") && <span className='border border-s-gray-300 px-1'>XL</span>}
-                        {products[items].size.includes("XXL") && <span className='border border-s-gray-300 px-1'>XXL</span>}
+                        {products[items].size.includes("M") && <span className='border border-s-gray-300 px-1 ml-1'>M</span>}
+                        {products[items].size.includes("L") && <span className='border border-s-gray-300 px-1 ml-1'>L</span>}
+                        {products[items].size.includes("XL") && <span className='border border-s-gray-300 px-1 ml-1'>XL</span>}
+                        {products[items].size.includes("XXL") && <span className='border border-s-gray-300 px-1 ml-1'>XXL</span>}
+                    </div>
+                    <div>
+                    <button class="border-2 border-gray-300 ml-1 bg-pink-500 rounded-full w-6 h-6 focus:outline-none"></button>
                     </div>
                 </div>
                 })}
