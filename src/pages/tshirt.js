@@ -28,6 +28,9 @@ const Tshirt = ({products}) => {
                         <p className="mt-1">Rs.{products[items].price}</p>
                     </div>
                     <Link href={`/product/${products[items].slug}`}>Buy Now</Link>
+                    <div className=''>
+{products[items].size.includes("M") && <span>M</span>}
+                    </div>
                 </div>
                 })}
                 
