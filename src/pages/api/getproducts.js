@@ -5,13 +5,14 @@ const handler = async (req, res)=>{
   let product = await Products.find()
   let tshirts = {}
   for(let item in Products){
-    if(!tshirts){
+  
+    if(item.title in tshirts){
 
     }
     else {
       tshirts[item.title] = JSON.parse(JSON.stringify(item))
       if(tshirts[item.title].avalibleQty > 0){
-        
+
       }
 
     }
