@@ -11,8 +11,8 @@ const handler = async (req, res)=>{
     }
     else {
       tshirts[item.title] = JSON.parse(JSON.stringify(item))
-      if(tshirts[item.title].avalibleQty > 0){
-
+      if(item.avalibleQty > 0){
+        tshirts[item.title].size = [item.title].size
       }
 
     }
