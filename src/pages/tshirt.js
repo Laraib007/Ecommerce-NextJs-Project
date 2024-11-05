@@ -17,7 +17,7 @@ const Tshirt = ({products}) => {
         <div className="container px-5 py-7 mx-auto">
             <div className="flex flex-wrap -m-4 justify-center">
                 
-            {products.map((items)=>{ return    <div key={items.slug} className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4  ">
+            {Object.keys(products).map((items)=>{ return    <div key={items.slug} className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4  ">
                     <a className=" relative rounded overflow-hidden contents">
                       
           <img alt="ecommerce" className="object-cover object-center w-72 h-72 block " src={items.img}/>
@@ -44,8 +44,28 @@ export async function getServerSideProps(products) {
     mongoose.connect(process.env.MONGOSSE_URI)
     }
     let product = await Products.find({category: "tshirt"})
+    let tshirts = {}
+  for(let item of product){
+  
+    if(item.title in tshirts){
+        if(!tshirts[item.title].color.includes(item.color) && item.avalibleQty > 0){
+          tshirts[item.title].color.push(item.color)
+        }
+        if(!tshirts[item.title].size.includes(item.size) && item.avalibleQty > 0){
+          tshirts[item.title].size.push(item.size)
+        }
+    }
+    else {
+      tshirts[item.title] = JSON.parse(JSON.stringify(item))
+      if(item.avalibleQty > 0){
+        tshirts[item.title].color = [item.color]
+        tshirts[item.title].size = [item.size]
+      }
+
+    }
+  }
     return {
-      props: {products: JSON.parse(JSON.stringify(product))},
+      props: {products: JSON.parse(JSON.stringify(tshirts))},
     }
   }
 
