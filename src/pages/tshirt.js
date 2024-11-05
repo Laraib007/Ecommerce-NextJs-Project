@@ -17,17 +17,17 @@ const Tshirt = ({products}) => {
         <div className="container px-5 py-7 mx-auto">
             <div className="flex flex-wrap -m-4 justify-center">
                 
-            {Object.keys(products).map((items)=>{ return    <div key={items.slug} className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4  ">
+            {Object.keys(products).map((items)=>{ return    <div key={products[items].slug} className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4  ">
                     <a className=" relative rounded overflow-hidden contents">
                       
-          <img alt="ecommerce" className="object-cover object-center w-72 h-72 block " src={items.img}/>
+          <img alt="ecommerce" className="object-cover object-center w-72 h-72 block " src={products[items].img}/>
                     </a>
                     <div className="mt-4">
-                        <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">{items.title}</h3>
-                        <h2 className="text-gray-900 title-font text-lg font-medium">{items.title}</h2>
-                        <p className="mt-1">Rs.{items.price}</p>
+                        <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">{products[items].title}</h3>
+                        <h2 className="text-gray-900 title-font text-lg font-medium">{products[items].title}</h2>
+                        <p className="mt-1">Rs.{products[items].price}</p>
                     </div>
-                    <Link href={`/product/${items.slug}`}>Buy Now</Link>
+                    <Link href={`/product/${products[items].slug}`}>Buy Now</Link>
                 </div>
                 })}
                 
