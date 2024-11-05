@@ -4,7 +4,7 @@ import connectDB from "../../../middleware.js/mongoose";
 const handler = async (req, res)=>{
   let product = await Products.find()
   let tshirts = {}
-  for(let item in Products){
+  for(let item of product){
   
     if(item.title in tshirts){
         if(!tshirts[item.title].color.includes(item.color) && item.avalibleQty > 0){
@@ -23,7 +23,7 @@ const handler = async (req, res)=>{
 
     }
   }
-  res.status(200).json({ product });
+  res.status(200).json({ tshirts });
 }
 export default connectDB(handler)
  
