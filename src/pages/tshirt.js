@@ -55,7 +55,7 @@ const Tshirt = ({products}) => {
   )
 }
 export async function getServerSideProps(products) {
-    
+    console.log(process.env.MONGOSSE_URI)
     if(!mongoose.connections[0].readyState){
     mongoose.connect(process.env.MONGOSSE_URI)
     }
