@@ -6,9 +6,6 @@ import { IoBagCheck } from "react-icons/io5";
 import Link from 'next/link';
 
 
-
-
-
 const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
   return (
     <div className='container mt-32'>
