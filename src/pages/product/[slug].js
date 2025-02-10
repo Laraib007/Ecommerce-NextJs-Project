@@ -79,8 +79,8 @@ const [size, setSize] = useState(product.size)
         <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
           <div class="flex">
             <span class="mr-3">Color</span>
-            ${Object.keys(varient).includes("green") && Object.keys(varient['green']).includes(size) && <button class="border-2 border-gray-300 bg-green-500 rounded-full w-6 h-6 focus:outline-none"></button>}
-            ${Object.keys(varient).includes("white") && Object.keys(varient['white']).includes(size) && <button class="border-2 border-gray-300 ml-1 bg-gray-700 rounded-full w-6 h-6 focus:outline-none"></button>}
+            ${Object.keys(varient).includes("green") && Object.keys(varient['green']).includes(size) && <button class="border-2 border-gray-300 bg-green-600 rounded-full w-6 h-6 focus:outline-none"></button>}
+            ${Object.keys(varient).includes("white") && Object.keys(varient['white']).includes(size) && <button class="border-2 border-gray-300 ml-1  bg-gray-700 rounded-full w-6 h-6 focus:outline-none"></button>}
             ${Object.keys(varient).includes("white") && Object.keys(varient['white']).includes(size) && <button class="border-2 border-gray-300 ml-1 bg-pink-500 rounded-full w-6 h-6 focus:outline-none"></button>}
           </div>
           <div class="flex ml-6 items-center">
