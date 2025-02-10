@@ -25,7 +25,7 @@ const [service, setService] = useState()
   }
 const [color, setColor] = useState(product.color)
 const [size, setSize] = useState(product.size)
-
+console.log(varient)
 
 
   const src = "https://m.media-amazon.com/images/I/71TCI289J4L._AC_SX522_.jpg"
@@ -79,12 +79,12 @@ const [size, setSize] = useState(product.size)
         <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
           <div class="flex">
             <span class="mr-3">Color</span>
-            ${Object.keys(varient).includes("green") && Object.keys(varient['green']).includes(size) && <button class="border-2 border-gray-300 bg-green-600 rounded-full w-6 h-6 focus:outline-none"></button>}
-            ${Object.keys(varient).includes("yellow") && Object.keys(varient['yellow']).includes(size) && <button class="border-2 border-gray-300 ml-1  bg-yellow-700 rounded-full w-6 h-6 focus:outline-none"></button>}
-            ${Object.keys(varient).includes("purple") && Object.keys(varient['purple']).includes(size) && <button class="border-2 border-gray-300 ml-1 bg-purple-500 rounded-full w-6 h-6 focus:outline-none"></button>}
-            ${Object.keys(varient).includes("blue") && Object.keys(varient['blue']).includes(size) && <button class="border-2 border-gray-300 ml-1 bg-blue-500 rounded-full w-6 h-6 focus:outline-none"></button>}
-            ${Object.keys(varient).includes("red") && Object.keys(varient['red']).includes(size) && <button class="border-2 border-gray-300 ml-1 bg-red-500 rounded-full w-6 h-6 focus:outline-none"></button>}
-            ${Object.keys(varient).includes("black") && Object.keys(varient['black']).includes(size) && <button class="border-2 border-gray-300 ml-1 bg-black-500 rounded-full w-6 h-6 focus:outline-none"></button>}$
+            {Object.keys(varient).includes("green") && Object.keys(varient['green']).includes(size) && <button class="border-2 border-gray-300 bg-green-600 rounded-full w-6 h-6 focus:outline-none"></button>}
+            {Object.keys(varient).includes("yellow") && Object.keys(varient['yellow']).includes(size) && <button class="border-2 border-gray-300 bg-yellow-700 rounded-full w-6 h-6 focus:outline-none"></button>}
+            {Object.keys(varient).includes("purple") && Object.keys(varient['purple']).includes(size) && <button class="border-2 border-gray-300 ml-1 bg-purple-500 rounded-full w-6 h-6 focus:outline-none"></button>}
+            {Object.keys(varient).includes("blue") && Object.keys(varient['blue']).includes(size) && <button class="border-2 border-gray-300 ml-1 bg-blue-500 rounded-full w-6 h-6 focus:outline-none"></button>}
+            {Object.keys(varient).includes("red") && Object.keys(varient['red']).includes(size) && <button class="border-2 border-gray-300 ml-1 bg-red-500 rounded-full w-6 h-6 focus:outline-none"></button>}
+            {Object.keys(varient).includes("black") && Object.keys(varient['black']).includes(size) && <button class="border-2 border-gray-300 ml-1 bg-black-500 rounded-full w-6 h-6 focus:outline-none"></button>}$
           </div>
           <div class="flex ml-6 items-center">
             <span class="mr-3">Size</span>
