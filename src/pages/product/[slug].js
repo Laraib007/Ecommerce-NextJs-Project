@@ -90,10 +90,10 @@ const refreshVariants =(newsize, newcolor)=>{
           <div class="flex ml-6 items-center">
             <span class="mr-3">Size</span>
             <div class="">
-              <select value={size} onChange={(e)=>{refreshVariants(e.target.value, color)}}  class="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10">
+              <select onChange={(e)=>{refreshVariants(e.target.value, color)}}  class="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10">
                {Object.keys(varient[color]).includes('S') && <option value={"S"}>S</option>}
                {Object.keys(varient[color]).includes('M') && <option value={"M"}>M</option>}
-               {Object.keys(varient[color]).includes('L') && <option value={"L"}>L</option>}
+               {Object.keys(varient[color]).includes('L') && <option value={'L'}>L</option>}
                {Object.keys(varient[color]).includes('XL') && <option value={"XL"}>XL</option>}
                {Object.keys(varient[color]).includes('XXL') && <option value={"XL"}>XXL</option>}
                 
