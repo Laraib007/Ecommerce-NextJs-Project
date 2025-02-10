@@ -84,7 +84,7 @@ console.log(varient)
             {Object.keys(varient).includes("purple") && Object.keys(varient['purple']).includes(size) && <button class="border-2 border-gray-300 ml-1 bg-purple-500 rounded-full w-6 h-6 focus:outline-none"></button>}
             {Object.keys(varient).includes("blue") && Object.keys(varient['blue']).includes(size) && <button class="border-2 border-gray-300 ml-1 bg-blue-500 rounded-full w-6 h-6 focus:outline-none"></button>}
             {Object.keys(varient).includes("red") && Object.keys(varient['red']).includes(size) && <button class="border-2 border-gray-300 ml-1 bg-red-500 rounded-full w-6 h-6 focus:outline-none"></button>}
-            {Object.keys(varient).includes("black") && Object.keys(varient['black']).includes(size) && <button class="border-2 border-gray-300 ml-1 bg-black-500 rounded-full w-6 h-6 focus:outline-none"></button>}$
+            {Object.keys(varient).includes("black") && Object.keys(varient['black']).includes(size) && <button class="border-2 border-gray-300 ml-1 bg-black-500 rounded-full w-6 h-6 focus:outline-none"></button>}
           </div>
           <div class="flex ml-6 items-center">
             <span class="mr-3">Size</span>
