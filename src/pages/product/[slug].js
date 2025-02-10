@@ -25,7 +25,9 @@ const [service, setService] = useState()
   }
 const [color, setColor] = useState(product.color)
 const [size, setSize] = useState(product.size)
-console.log(varient)
+const refreshVariants =(newsize, newcoloe)=>{
+  const url = `${``}`
+}
 
 
   const src = "https://m.media-amazon.com/images/I/71TCI289J4L._AC_SX522_.jpg"
@@ -89,7 +91,7 @@ console.log(varient)
           <div class="flex ml-6 items-center">
             <span class="mr-3">Size</span>
             <div class="">
-              <select value={size} class="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10">
+              <select onChange={(e)=>{refreshVariants(e.target.value, color)}} value={size} class="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10">
                {Object.keys(varient[color]).includes("S") && <option value={"S"}>S</option>}
                {Object.keys(varient[color]).includes("M") && <option value={"M"}>M</option>}
                {Object.keys(varient[color]).includes("L") && <option value={"L"}>L</option>}
