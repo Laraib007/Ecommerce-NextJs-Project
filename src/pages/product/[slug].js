@@ -90,7 +90,7 @@ console.log(varient)
             <span class="mr-3">Size</span>
             <div class="">
               <select value={size} class="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10">
-               {Object.keys(var)} <option>SM</option>
+               {Object.keys(varient <option>SM</option>
                 <option>M</option>
                 <option>L</option>
                 <option>XL</option>
