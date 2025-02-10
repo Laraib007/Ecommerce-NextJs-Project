@@ -3,8 +3,11 @@ import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { FaCartShopping } from "react-icons/fa6";
 import { IoBagCheck } from "react-icons/io5";
+import mongoose from 'mongoose';
+import Products from '../../../models/Products';
  
-const Slugs = ({addToCart})=> {
+const Slugs = ({addToCart, product, varient})=> {
+  console.log(product, varient)
 const [pin, setPin] = useState()
 const [service, setService] = useState()
   const zipChecker = async()=>{
@@ -120,5 +123,32 @@ const [service, setService] = useState()
   
   </>
 }
+
+
+export async function getServerSideProps(context) {
+
+    if(!mongoose.connections[0].readyState){
+    mongoose.connect(process.env.MONGOSSE_URI)
+    }
+    let product = await Products.findOne({ Slugs: context.query.Slugs })
+    let varient =  await Products.find({title: product.title})
+    let colorSizeSlug = {}
+    for(let item of varient){
+      if(colorSizeSlug[item.color]){
+        colorSizeSlug[item.color][item.size] = {Slugs: item.slug}
+      }
+      else {
+        colorSizeSlug[item.color] = {}
+        colorSizeSlug[item.color][item.size] = {Slugs: item.slug}
+      }
+    }
+
+    return {
+      props: {product: JSON.parse(JSON.stringify(product)), varient: JSON.parse(JSON.stringify(colorSizeSlug))},
+    }
+  }
+
+
+
 
 export default Slugs
