@@ -7,13 +7,11 @@ import mongoose from 'mongoose';
 import Products from '../../../models/Products';
  
 const Slugs = ({addToCart, product, varient})=> {
-  console.log(product, varient)
 const [pin, setPin] = useState()
 const [service, setService] = useState()
   const zipChecker = async()=>{
   const pins = await fetch("http://localhost:3000/api/zipcode")
   const pinJson = await pins.json();
-  console.log(pinJson)
   if(pinJson.includes(Number(pin))){
     setService(true)
     return
@@ -21,12 +19,13 @@ const [service, setService] = useState()
 }
   const onChange = (e)=>{
     setPin(e.target.value)
-    console.log(e.target.value)
   }
 const [color, setColor] = useState(product.color)
 const [size, setSize] = useState(product.size)
-const refreshVariants =(newsize, newcoloe)=>{
-  const url = `http://localhost:3000/product/${varient[newcolor][newsize]}`
+const refreshVariants =(newsize, newcolor)=>{
+  console.log(newcolor, newsize)
+  const url = `http://localhost:3000/product/${varient[newcolor][newsize]["Slugs"]}`
+  window.location = url
 }
 
 
@@ -81,22 +80,22 @@ const refreshVariants =(newsize, newcoloe)=>{
         <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
           <div class="flex">
             <span class="mr-3">Color</span>
-            {Object.keys(varient).includes("green") && Object.keys(varient['green']).includes(size) && <button class="border-2 border-gray-300 bg-green-600 rounded-full w-6 h-6 focus:outline-none"></button>}
-            {Object.keys(varient).includes("yellow") && Object.keys(varient['yellow']).includes(size) && <button class="border-2 border-gray-300 bg-yellow-700 rounded-full w-6 h-6 focus:outline-none"></button>}
-            {Object.keys(varient).includes("purple") && Object.keys(varient['purple']).includes(size) && <button class="border-2 border-gray-300 ml-1 bg-purple-500 rounded-full w-6 h-6 focus:outline-none"></button>}
-            {Object.keys(varient).includes("blue") && Object.keys(varient['blue']).includes(size) && <button class="border-2 border-gray-300 ml-1 bg-blue-500 rounded-full w-6 h-6 focus:outline-none"></button>}
-            {Object.keys(varient).includes("red") && Object.keys(varient['red']).includes(size) && <button class="border-2 border-gray-300 ml-1 bg-red-500 rounded-full w-6 h-6 focus:outline-none"></button>}
-            {Object.keys(varient).includes("black") && Object.keys(varient['black']).includes(size) && <button class="border-2 border-gray-300 ml-1 bg-black-500 rounded-full w-6 h-6 focus:outline-none"></button>}
+            {Object.keys(varient).includes("green") && Object.keys(varient['green']).includes(size) && <button onClick={()=>{refreshVariants(size, "green")}} class="border-2 border-gray-300 bg-green-600 rounded-full w-6 h-6 focus:outline-none"></button>}
+            {Object.keys(varient).includes("yellow") && Object.keys(varient['yellow']).includes(size) && <button onClick={()=>{refreshVariants(size, "yellow")}} class="border-2 border-gray-300 bg-yellow-700 rounded-full w-6 h-6 focus:outline-none"></button>}
+            {Object.keys(varient).includes("purple") && Object.keys(varient['purple']).includes(size) && <button onClick={()=>{refreshVariants(size, "purple")}} class="border-2 border-gray-300 ml-1 bg-purple-500 rounded-full w-6 h-6 focus:outline-none"></button>}
+            {Object.keys(varient).includes("blue") && Object.keys(varient['blue']).includes(size) && <button onClick={()=>{refreshVariants(size, "blue")}} class="border-2 border-gray-300 ml-1 bg-blue-500 rounded-full w-6 h-6 focus:outline-none"></button>}
+            {Object.keys(varient).includes("red") && Object.keys(varient['red']).includes(size) && <button onClick={()=>{refreshVariants(size, "red")}} class="border-2 border-gray-300 ml-1 bg-red-500 rounded-full w-6 h-6 focus:outline-none"></button>}
+            {Object.keys(varient).includes("black") && Object.keys(varient['black']).includes(size) && <button onClick={()=>{refreshVariants(size, "black")}} class="border-2 border-gray-300 ml-1 bg-black-500 rounded-full w-6 h-6 focus:outline-none"></button>}
           </div>
           <div class="flex ml-6 items-center">
             <span class="mr-3">Size</span>
             <div class="">
-              <select onChange={(e)=>{refreshVariants(e.target.value, color)}} value={size} class="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10">
-               {Object.keys(varient[color]).includes("S") && <option value={"S"}>S</option>}
-               {Object.keys(varient[color]).includes("M") && <option value={"M"}>M</option>}
-               {Object.keys(varient[color]).includes("L") && <option value={"L"}>L</option>}
-               {Object.keys(varient[color]).includes("XL") && <option value={"XL"}>XL</option>}
-               {Object.keys(varient[color]).includes("XXL") && <option value={"XL"}>XXL</option>}
+              <select value={size} onChange={(e)=>{refreshVariants(e.target.value, color)}}  class="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10">
+               {Object.keys(varient[color]).includes('S') && <option value={"S"}>S</option>}
+               {Object.keys(varient[color]).includes('M') && <option value={"M"}>M</option>}
+               {Object.keys(varient[color]).includes('L') && <option value={"L"}>L</option>}
+               {Object.keys(varient[color]).includes('XL') && <option value={"XL"}>XL</option>}
+               {Object.keys(varient[color]).includes('XXL') && <option value={"XL"}>XXL</option>}
                 
               </select>
               <span class="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
