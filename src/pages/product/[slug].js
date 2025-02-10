@@ -90,10 +90,12 @@ console.log(varient)
             <span class="mr-3">Size</span>
             <div class="">
               <select value={size} class="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10">
-               {Object.keys(varient <option>SM</option>
-                <option>M</option>
-                <option>L</option>
-                <option>XL</option>
+               {Object.keys(varient[color].includes("S")) && <option value={"S"}>S</option>}
+               {Object.keys(varient[color].includes("M")) && <option value={"M"}>M</option>}
+               {Object.keys(varient[color].includes("L")) && <option value={"L"}>L</option>}
+               {Object.keys(varient[color].includes("XL")) && <option value={"XL"}>XL</option>}
+               {Object.keys(varient[color].includes("XXL")) && <option value={"XL"}>XXL</option>}
+                
               </select>
               <span class="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4" viewBox="0 0 24 24">
