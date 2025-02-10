@@ -23,7 +23,7 @@ const [service, setService] = useState()
 const [color, setColor] = useState(product.color)
 const [size, setSize] = useState(product.size)
 const refreshVariants =(newsize, newcolor)=>{
-  console.log(newcolor, newsize)
+  console.log(newsize, newcolor)
   const url = `http://localhost:3000/product/${varient[newcolor][newsize]["Slugs"]}`
   window.location = url
 }
@@ -80,11 +80,11 @@ const refreshVariants =(newsize, newcolor)=>{
         <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
           <div class="flex">
             <span class="mr-3">Color</span>
-            {Object.keys(varient).includes("green") && Object.keys(varient['green']).includes(size) && <button onClick={()=>{refreshVariants(size, "green")}} class="border-2 border-gray-300 bg-green-600 rounded-full w-6 h-6 focus:outline-none"></button>}
+            {Object.keys(varient).includes("red") && Object.keys(varient['red']).includes(size) && <button onClick={()=>{refreshVariants(size, "red")}} class="border-2 border-gray-300 bg-red-600 rounded-full w-6 h-6 focus:outline-none"></button>}
             {Object.keys(varient).includes("yellow") && Object.keys(varient['yellow']).includes(size) && <button onClick={()=>{refreshVariants(size, "yellow")}} class="border-2 border-gray-300 bg-yellow-700 rounded-full w-6 h-6 focus:outline-none"></button>}
             {Object.keys(varient).includes("purple") && Object.keys(varient['purple']).includes(size) && <button onClick={()=>{refreshVariants(size, "purple")}} class="border-2 border-gray-300 ml-1 bg-purple-500 rounded-full w-6 h-6 focus:outline-none"></button>}
             {Object.keys(varient).includes("blue") && Object.keys(varient['blue']).includes(size) && <button onClick={()=>{refreshVariants(size, "blue")}} class="border-2 border-gray-300 ml-1 bg-blue-500 rounded-full w-6 h-6 focus:outline-none"></button>}
-            {Object.keys(varient).includes("red") && Object.keys(varient['red']).includes(size) && <button onClick={()=>{refreshVariants(size, "red")}} class="border-2 border-gray-300 ml-1 bg-red-500 rounded-full w-6 h-6 focus:outline-none"></button>}
+            {Object.keys(varient).includes("green") && Object.keys(varient['green']).includes(size) && <button onClick={()=>{refreshVariants(size, "green")}} class="border-2 border-gray-300 ml-1 bg-green-500 rounded-full w-6 h-6 focus:outline-none"></button>}
             {Object.keys(varient).includes("black") && Object.keys(varient['black']).includes(size) && <button onClick={()=>{refreshVariants(size, "black")}} class="border-2 border-gray-300 ml-1 bg-black-500 rounded-full w-6 h-6 focus:outline-none"></button>}
           </div>
           <div class="flex ml-6 items-center">
