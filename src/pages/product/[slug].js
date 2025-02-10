@@ -26,7 +26,7 @@ const [service, setService] = useState()
 const [color, setColor] = useState(product.color)
 const [size, setSize] = useState(product.size)
 const refreshVariants =(newsize, newcoloe)=>{
-  const url = `${``}`
+  const url = `http://localhost:3000/product/${varient[newcolor][newsize]}`
 }
 
 
