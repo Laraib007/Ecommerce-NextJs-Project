@@ -23,7 +23,8 @@ const [service, setService] = useState()
     setPin(e.target.value)
     console.log(e.target.value)
   }
-
+const [color, setColor] = useState(product.color)
+const [size, setSize] = useState(product.size)
 
 
 
@@ -78,9 +79,9 @@ const [service, setService] = useState()
         <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
           <div class="flex">
             <span class="mr-3">Color</span>
-            <button class="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none"></button>
-            <button class="border-2 border-gray-300 ml-1 bg-gray-700 rounded-full w-6 h-6 focus:outline-none"></button>
-            <button class="border-2 border-gray-300 ml-1 bg-pink-500 rounded-full w-6 h-6 focus:outline-none"></button>
+            ${Object.keys(varient).includes("green") && Object.keys(varient['green']).includes(size) && <button class="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none"></button>}
+            ${Object.keys(varient).includes("white") && Object.keys(varient['white']).includes(size) && <button class="border-2 border-gray-300 ml-1 bg-gray-700 rounded-full w-6 h-6 focus:outline-none"></button>}
+            ${Object.keys(varient).includes("white") && Object.keys(varient['white']).includes(size) && <button class="border-2 border-gray-300 ml-1 bg-pink-500 rounded-full w-6 h-6 focus:outline-none"></button>}
           </div>
           <div class="flex ml-6 items-center">
             <span class="mr-3">Size</span>
