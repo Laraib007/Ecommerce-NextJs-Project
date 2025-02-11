@@ -5,6 +5,7 @@ import { FaCartShopping } from "react-icons/fa6";
 import { IoBagCheck } from "react-icons/io5";
 import mongoose from 'mongoose';
 import Products from '../../../models/Products';
+import Link from 'next/link';
  
 const Slugs = ({addToCart, product, varient, price})=> {
 const [pin, setPin] = useState()
@@ -25,10 +26,11 @@ const [size, setSize] = useState(product.size)
 
 const productSlug =varient[color][size]["Slugs"]
 const refreshVariants =(newsize, newcolor)=>{
-  console.log(product.slug)
+  console.log(price)
   const a = setSize(newsize)
   const b = setColor(newcolor)
-  
+  window.history.replaceState(null, "", `http://localhost:3000/product/${varient[newcolor][newsize]["Slugs"]}`)
+
   // let url = `http://localhost:3000/product/${varient[newcolor][newsize]["Slugs"]}`
   // window.location = url
 }
@@ -145,6 +147,11 @@ export async function getServerSideProps(context) {
     let product = await Products.findOne({ Slugs: context.query.Slugs })
     let varient =  await Products.find({title: product.title})
     let price =  await Products.find({price: product.price})
+    let priceAm = {}
+    for(let item of price){
+      priceAm[item.price] = {price: item.slug}
+      }
+    
     let colorSizeSlug = {}
     for(let item of varient){
       if(Object.keys(colorSizeSlug).includes(item.color)){
@@ -157,7 +164,7 @@ export async function getServerSideProps(context) {
     }
 
     return {
-      props: {product: JSON.parse(JSON.stringify(product)), price: JSON.parse(JSON.stringify(price)), varient: JSON.parse(JSON.stringify(colorSizeSlug))},
+      props: {product: JSON.parse(JSON.stringify(product)), price: JSON.parse(JSON.stringify(priceAm)), varient: JSON.parse(JSON.stringify(colorSizeSlug))},
     }
   }
 
