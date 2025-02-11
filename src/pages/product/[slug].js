@@ -25,7 +25,7 @@ const [size, setSize] = useState(product.size)
 const refreshVariants =(newsize, newcolor)=>{
   const a = setSize(newsize)
   const b = setColor(newcolor)
-  console.log(newsize, newcolor)
+  console.log(varient[newcolor][newsize]["Slugs"])
   // let url = `http://localhost:3000/product/${varient[newcolor][newsize]["Slugs"]}`
   // window.location = url
 }
