@@ -24,15 +24,15 @@ const [service, setService] = useState()
 const [color, setColor] = useState(product.color)
 const [size, setSize] = useState(product.size)
 
-const productSlug =varient[color][size]["Slugs"]
+const productSlug =varient[color][size]["slug"]
 const refreshVariants =(newsize, newcolor)=>{
   console.log(product.slug)
   const a = setSize(newsize)
   const b = setColor(newcolor)
-  window.history.replaceState(null, "", `http://localhost:3000/product/${varient[newcolor][newsize]["Slugs"]}`)
+  // window.history.replaceState(null, "", `http://localhost:3000/product/${varient[newcolor][newsize]["slug"]}`)
 
-  // let url = `http://localhost:3000/product/${varient[newcolor][newsize]["Slugs"]}`
-  // window.location = url
+  let url = `http://localhost:3000/product/${varient[newcolor][newsize]["slug"]}`
+  window.location = url
 }
 
 
@@ -142,29 +142,25 @@ const refreshVariants =(newsize, newcolor)=>{
 export async function getServerSideProps(context) { 
 
     if(!mongoose.connections[0].readyState){
-    mongoose.connect(process.env.MONGOSSE_URI)
+    await mongoose.connect(process.env.MONGOSSE_URI)
     }
-    let product = await Products.findOne({ Slugs: context.query.Slug })
+    let product = await Products.findOne({ slug: context.query.slug })
     let varient =  await Products.find({title: product.title})
-    let price =  await Products.find({price: product.price})
-    let priceAm = {}
-    for(let item of price){
-      priceAm[item.price] = {price: item.slug}
-      }
+    
   
     let colorSizeSlug = {}
     for(let item of varient){
       if(Object.keys(colorSizeSlug).includes(item.color)){
-        colorSizeSlug[item.color][item.size] = {Slugs: item.slug}
+        colorSizeSlug[item.color][item.size] = {slug: item.slug}
       }
       else {
         colorSizeSlug[item.color] = {}
-        colorSizeSlug[item.color][item.size] = {Slugs: item.slug}
+        colorSizeSlug[item.color][item.size] = {slug: item.slug}
       }
     }
 
     return {
-      props: {product: JSON.parse(JSON.stringify(product)), price: JSON.parse(JSON.stringify(priceAm)), varient: JSON.parse(JSON.stringify(colorSizeSlug))},
+      props: {product: JSON.parse(JSON.stringify(product)), varient: JSON.parse(JSON.stringify(colorSizeSlug))},
     }
   }
 
