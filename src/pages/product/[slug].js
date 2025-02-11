@@ -87,7 +87,7 @@ const refreshVariants =(newsize, newcolor)=>{
             {Object.keys(varient).includes("purple") && Object.keys(varient['purple']).includes(size) && <button onClick={()=>{refreshVariants(size, "purple")}} class={`border-2 border-gray-300 ml-1 bg-black-500 rounded-full w-6 h-6 focus:outline-none ${color === "purple"? "border-black": "border-gray-300"}`}></button>}
             {Object.keys(varient).includes("blue") && Object.keys(varient['blue']).includes(size) && <button onClick={()=>{refreshVariants(size, "blue")}} class={`border-2 border-gray-300 ml-1 bg-blue-500 rounded-full w-6 h-6 focus:outline-none ${color === "blue"? "border-black": "border-gray-300"}`}></button>}
             {Object.keys(varient).includes("green") && Object.keys(varient['green']).includes(size) && <button onClick={()=>{refreshVariants(size, "green")}} class={`border-2 border-gray-300 ml-1 bg-green-500 rounded-full w-6 h-6 focus:outline-none ${color === "green"? "border-black": "border-gray-300"}`}></button>}
-            {Object.keys(varient).includes("black") && Object.keys(varient['black']).includes(size) && <button onClick={()=>{refreshVariants(size, "black")}} class={`border-2 border-gray-300 ml-1 bg-black-500 rounded-full w-6 h-6 focus:outline-none ${color === "black"? "border-black": "border-gray-300"}`}></button>}
+            {Object.keys(varient).includes("black") && Object.keys(varient['black']).includes(size) && <button onClick={()=>{refreshVariants(size, "black")}} class={`border-2 border-gray-300 ml-1 bg-black rounded-full w-6 h-6 focus:outline-none ${color === "black"? "border-gray-500": ""}`}></button>}
           </div>
           <div class="flex ml-6 items-center">
             <span class="mr-3">Size</span>
