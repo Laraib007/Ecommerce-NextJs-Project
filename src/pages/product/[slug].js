@@ -39,8 +39,8 @@ const refreshVariants =(newsize, newcolor)=>{
     <Image alt="ecommerce" width={380} height={100} class=" border-2 object-cover object-center rounded " loader={() => src} src={src}></Image>
       {/* <img alt="ecommerce" class=" border-2 lg:w-1/2 w-full lg:h-auto h-74 object-cover object-center rounded " src="https://m.media-amazon.com/images/I/9112xNSIlqL._AC_SX522_.jpg" /> */}
       <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-        <h2 class="text-sm title-font text-gray-500 tracking-widest">FASHION WEAR</h2>
-        <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">{product.title}{product.color}{product.size}</h1>
+        <h2 class="text-sm title-font text-gray-500 tracking-widest">FASHION WEARS</h2>
+        <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">{product.title}({size}/{color})</h1>
         <div class="flex mb-4">
           <span class="flex items-center">
             <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-pink-500" viewBox="0 0 24 24">
@@ -78,15 +78,15 @@ const refreshVariants =(newsize, newcolor)=>{
             </a>
           </span>
         </div>
-        <p class="leading-relaxed">{product.desc}</p>
+        <p class="leading-relaxed">Fam locavore kickstarter distillery. Mixtape chillwave tumeric sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo juiceramps cornhole raw denim forage brooklyn. Everyday carry +1 seitan poutine tumeric. Gastropub blue bottle austin listicle pour-over, neutra jean shorts keytar banjo tattooed umami cardigan.</p>
         <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
           <div class="flex">
             <span class="mr-3">Color</span>
-            {Object.keys(varient).includes("red") && Object.keys(varient['red']).includes(size) && <button onClick={()=>{refreshVariants(size, "red")}} class={`border-2 border-gray-300 bg-red-600 rounded-full w-6 h-6 focus:outline-none ${color === "red"? "border-black": "border-gray-300"}`}></button>}
-            {Object.keys(varient).includes("yellow") && Object.keys(varient['yellow']).includes(size) && <button onClick={()=>{refreshVariants(size, "yellow")}} class={`border-2 border-gray-300 bg-yellow-500 rounded-full w-6 h-6 focus:outline-none ${color === "yellow"? "border-black": "border-gray-300"}`}></button>}
-            {Object.keys(varient).includes("purple") && Object.keys(varient['purple']).includes(size) && <button onClick={()=>{refreshVariants(size, "purple")}} class={`border-2 border-gray-300 ml-1 bg-black-500 rounded-full w-6 h-6 focus:outline-none ${color === "purple"? "border-black": "border-gray-300"}`}></button>}
-            {Object.keys(varient).includes("blue") && Object.keys(varient['blue']).includes(size) && <button onClick={()=>{refreshVariants(size, "blue")}} class={`border-2 border-gray-300 ml-1 bg-blue-500 rounded-full w-6 h-6 focus:outline-none ${color === "blue"? "border-black": "border-gray-300"}`}></button>}
-            {Object.keys(varient).includes("green") && Object.keys(varient['green']).includes(size) && <button onClick={()=>{refreshVariants(size, "green")}} class={`border-2 border-gray-300 ml-1 bg-green-500 rounded-full w-6 h-6 focus:outline-none ${color === "green"? "border-black": "border-gray-300"}`}></button>}
+            {Object.keys(varient).includes("red") && Object.keys(varient['red']).includes(size) && <button onClick={()=>{refreshVariants(size, "red")}} class={`border-2 border-gray-300 bg-red-600 rounded-full w-6 h-6 focus:outline-none ${color === "red"? "border-gray-700": "border-gray-300"}`}></button>}
+            {Object.keys(varient).includes("yellow") && Object.keys(varient['yellow']).includes(size) && <button onClick={()=>{refreshVariants(size, "yellow")}} class={`border-2 border-gray-300 bg-yellow-500 rounded-full w-6 h-6 focus:outline-none ${color === "yellow"? "border-gray-700": "border-gray-300"}`}></button>}
+            {Object.keys(varient).includes("purple") && Object.keys(varient['purple']).includes(size) && <button onClick={()=>{refreshVariants(size, "purple")}} class={`border-2 border-gray-300 ml-1 bg-black-500 rounded-full w-6 h-6 focus:outline-none ${color === "purple"? "border-gray-700": "border-gray-300"}`}></button>}
+            {Object.keys(varient).includes("blue") && Object.keys(varient['blue']).includes(size) && <button onClick={()=>{refreshVariants(size, "blue")}} class={`border-2 border-gray-300 ml-1 bg-blue-500 rounded-full w-6 h-6 focus:outline-none ${color === "blue"? "border-gray-700": "border-gray-300"}`}></button>}
+            {Object.keys(varient).includes("green") && Object.keys(varient['green']).includes(size) && <button onClick={()=>{refreshVariants(size, "green")}} class={`border-2 border-gray-300 ml-1 bg-green-500 rounded-full w-6 h-6 focus:outline-none ${color === "green"? "border-gray-700": "border-gray-300"}`}></button>}
             {Object.keys(varient).includes("black") && Object.keys(varient['black']).includes(size) && <button onClick={()=>{refreshVariants(size, "black")}} class={`border-2 border-gray-300 ml-1 bg-black rounded-full w-6 h-6 focus:outline-none ${color === "black"? "border-gray-500": ""}`}></button>}
           </div>
           <div class="flex ml-6 items-center">
