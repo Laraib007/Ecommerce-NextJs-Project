@@ -23,9 +23,11 @@ const [service, setService] = useState()
 const [color, setColor] = useState(product.color)
 const [size, setSize] = useState(product.size)
 const refreshVariants =(newsize, newcolor)=>{
+  const a = setSize(newsize)
+  const b = setColor(newcolor)
   console.log(newsize, newcolor)
-  const url = `http://localhost:3000/product/${varient[newcolor][newsize]["Slugs"]}`
-  window.location = url
+  // let url = `http://localhost:3000/product/${varient[newcolor][newsize]["Slugs"]}`
+  // window.location = url
 }
 
 
@@ -80,8 +82,8 @@ const refreshVariants =(newsize, newcolor)=>{
         <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
           <div class="flex">
             <span class="mr-3">Color</span>
-            {Object.keys(varient).includes("red") && Object.keys(varient['red']).includes(size) && <button onClick={()=>{refreshVariants(size, "red")}} class="border-2 border-gray-300 bg-red-600 rounded-full w-6 h-6 focus:outline-none"></button>}
-            {Object.keys(varient).includes("yellow") && Object.keys(varient['yellow']).includes(size) && <button onClick={()=>{refreshVariants(size, "yellow")}} class="border-2 border-gray-300 bg-yellow-700 rounded-full w-6 h-6 focus:outline-none"></button>}
+            {Object.keys(varient).includes("red") && Object.keys(varient['red']).includes(size) && <button onClick={()=>{refreshVariants(size, "red")}} class="border-2  bg-red-600 rounded-full w-6 h-6 focus:outline-none"></button>}
+            {Object.keys(varient).includes("yellow") && Object.keys(varient['yellow']).includes(size) && <button onClick={()=>{refreshVariants(size, "yellow")}} class="border-2 border-gray-300 bg-yellow-500 rounded-full w-6 h-6 focus:outline-none"></button>}
             {Object.keys(varient).includes("purple") && Object.keys(varient['purple']).includes(size) && <button onClick={()=>{refreshVariants(size, "purple")}} class="border-2 border-gray-300 ml-1 bg-purple-500 rounded-full w-6 h-6 focus:outline-none"></button>}
             {Object.keys(varient).includes("blue") && Object.keys(varient['blue']).includes(size) && <button onClick={()=>{refreshVariants(size, "blue")}} class="border-2 border-gray-300 ml-1 bg-blue-500 rounded-full w-6 h-6 focus:outline-none"></button>}
             {Object.keys(varient).includes("green") && Object.keys(varient['green']).includes(size) && <button onClick={()=>{refreshVariants(size, "green")}} class="border-2 border-gray-300 ml-1 bg-green-500 rounded-full w-6 h-6 focus:outline-none"></button>}
@@ -90,7 +92,7 @@ const refreshVariants =(newsize, newcolor)=>{
           <div class="flex ml-6 items-center">
             <span class="mr-3">Size</span>
             <div class="">
-              <select value={size} onChange={(e)=>{refreshVariants(e.target.value, color)}}  class="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10">
+              <select onChange={(e)=>{refreshVariants(e.target.value, color)}} value={size} class="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10">
                {Object.keys(varient[color]).includes('S') && <option value={"S"}>S</option>}
                {Object.keys(varient[color]).includes('M') && <option value={"M"}>M</option>}
                {Object.keys(varient[color]).includes('L') && <option value={'L'}>L</option>}
@@ -132,7 +134,7 @@ const refreshVariants =(newsize, newcolor)=>{
 }
 
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps(context) { 
 
     if(!mongoose.connections[0].readyState){
     mongoose.connect(process.env.MONGOSSE_URI)
@@ -141,7 +143,7 @@ export async function getServerSideProps(context) {
     let varient =  await Products.find({title: product.title})
     let colorSizeSlug = {}
     for(let item of varient){
-      if(colorSizeSlug[item.color]){
+      if(Object.keys(colorSizeSlug).includes(item.color)){
         colorSizeSlug[item.color][item.size] = {Slugs: item.slug}
       }
       else {
