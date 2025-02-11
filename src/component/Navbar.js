@@ -25,7 +25,7 @@ const Navbar = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
   return (
     <div className=" text-gray-600 bg-slate-100 body-font ">
       
-  <div className=" flex-no-wrap fixed  top-0 flex w-full items-center justify-between bg-[#FBFBFB] py-2 shadow-md shadow-black/5 dark:bg-neutral-600 dark:shadow-black/10 lg:flex-wrap lg:justify-start lg:py-4 mx-auto  flex-wrap p-5 flex-col md:flex-row  md:mr-60 ">
+  <div className=" flex-no-wrap fixed  top-0 flex w-full items-center justify-between bg-[#FBFBFB] py-2 shadow-md shadow-black/5 light:bg-neutral-600 dark:shadow-black/10 lg:flex-wrap lg:justify-start lg:py-4 mx-auto  flex-wrap p-5 flex-col md:flex-row  md:mr-60 ">
     <Link href={'/'}className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
         <Image src={Logo} height={10} width={100}  />
     
