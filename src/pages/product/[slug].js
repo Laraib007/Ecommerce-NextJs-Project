@@ -26,7 +26,7 @@ const [size, setSize] = useState(product.size)
 
 const productSlug =varient[color][size]["Slugs"]
 const refreshVariants =(newsize, newcolor)=>{
-  console.log(product.title)
+  console.log(product.slug)
   const a = setSize(newsize)
   const b = setColor(newcolor)
   window.history.replaceState(null, "", `http://localhost:3000/product/${varient[newcolor][newsize]["Slugs"]}`)
@@ -144,7 +144,7 @@ export async function getServerSideProps(context) {
     if(!mongoose.connections[0].readyState){
     mongoose.connect(process.env.MONGOSSE_URI)
     }
-    let product = await Products.findOne({ Slugs: context.query.slug })
+    let product = await Products.findOne({ Slugs: context.query.Slug })
     let varient =  await Products.find({title: product.title})
     let price =  await Products.find({price: product.price})
     let priceAm = {}
