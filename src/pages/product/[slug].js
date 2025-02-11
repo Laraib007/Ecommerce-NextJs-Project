@@ -25,7 +25,7 @@ const [size, setSize] = useState(product.size)
 
 const productSlug =varient[color][size]["Slugs"]
 const refreshVariants =(newsize, newcolor)=>{
-  console.log(product.price)
+  console.log(product.slug)
   const a = setSize(newsize)
   const b = setColor(newcolor)
   
