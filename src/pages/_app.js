@@ -43,6 +43,11 @@ if(itemCode in cart){
   setcart(newCart)
   saveCart(newCart)
 }
+
+const buyNow =(itemCode, name, price, qty, size, varient)=>{
+
+}
+
 const removeFromCart =(itemCode, qty, name, price, size, varient)=>{
   
   let newCart = cart;
