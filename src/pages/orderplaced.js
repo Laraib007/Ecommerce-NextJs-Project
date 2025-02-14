@@ -1,6 +1,6 @@
 import React from 'react'
 const orderplaced = ({cart, subTotal}) => {
-const a = cart
+const a =  cart.itemCode
 console.log(a)
   return (
     <div className='h-3/4 mb-2'>
