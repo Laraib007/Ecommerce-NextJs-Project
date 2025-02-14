@@ -6,9 +6,24 @@ import { IoBagCheck } from "react-icons/io5";
 import mongoose from 'mongoose';
 import Products from '../../../models/Products';
 import Link from 'next/link';
+import { ToastContainer, toast } from 'react-toastify';
  
 const Slugs = ({ addToCart, buyNow, product, varient, price})=> {
+  toast.success('🦄 Wow so easy!', {
+    position: "top-center",
+    autoClose: 3000,
+    hideProgressBar: false,
+    closeOnClick: false,
+    pauseOnHover: false,
+    draggable: true,
+    progress: 0.1,
+    theme: "colored",
+    transition: Bounce,
+    });
+
+
 const [pin, setPin] = useState()
+
 const [service, setService] = useState()
   const zipChecker = async()=>{
   const pins = await fetch("http://localhost:3000/api/zipcode")
@@ -38,6 +53,20 @@ const refreshVariants =(newsize, newcolor)=>{
 
   const src = "https://m.media-amazon.com/images/I/71TCI289J4L._AC_SX522_.jpg"
   return <>
+
+<ToastContainer
+position="top-center"
+autoClose={3000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick={false}
+rtl={false}
+pauseOnFocusLoss={false}
+draggable
+pauseOnHover={false}
+theme="colored"
+transition={Bounce}
+/>
   <section class="text-gray-600 body-font overflow-hidden">
   <div class="container  px-5 py-24 mx-auto">
     <div class="lg:w-4/5 md:mr-8 mx-auto flex flex-wrap">
