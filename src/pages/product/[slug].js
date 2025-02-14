@@ -7,7 +7,7 @@ import mongoose from 'mongoose';
 import Products from '../../../models/Products';
 import Link from 'next/link';
  
-const Slugs = ({buyNow, addToCart, product, varient, price})=> {
+const Slugs = ({ addToCart, buyNow, product, varient, price})=> {
 const [pin, setPin] = useState()
 const [service, setService] = useState()
   const zipChecker = async()=>{
