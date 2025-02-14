@@ -1,12 +1,7 @@
 import React from 'react'
-import { usePathname } from 'next/navigation'
 const orderplaced = ({cart, subTotal}) => {
-
-
-
-  const pathname = usePathname()
-  console.log(pathname)
-
+const a = cart
+console.log(a)
   return (
     <div className='h-3/4 mb-2'>
         <section class="text-gray-600 body-font overflow-hidden ">
@@ -26,11 +21,11 @@ const orderplaced = ({cart, subTotal}) => {
         <div class="flex border-t border-gray-200 py-2">
           <span class="text-gray-500">{cart[k].name}({cart[k].size}/{cart[k].varient})</span>
           <span class="ml-auto text-gray-900">{cart[k].qty}</span>
-          <span class="ml-auto text-gray-900">{cart[k].price}</span>
+          <span class="ml-auto text-gray-900">Rs.{cart[k].price} </span>
         </div>
         </div>})}
         <div class="flex mt-5">
-          <span class="title-font font-medium text-2xl text-gray-900">Total Amount Rs.1199</span>
+          <span class="title-font font-medium text-2xl text-gray-900">Total Amount Rs.{subTotal}</span>
           
         </div>
       </div>
