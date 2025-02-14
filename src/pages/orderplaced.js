@@ -1,6 +1,6 @@
 import React from 'react'
 
-const orderplaced = () => {
+const orderplaced = ({cart, subTotal}) => {
   return (
     <div className='h-3/4 mb-2'>
         <section class="text-gray-600 body-font overflow-hidden ">
@@ -16,21 +16,13 @@ const orderplaced = () => {
           <a class="flex-grow text-pink-500 border-b-2 border-pink-500 py-2 text-lg px-1 md:mr-6">Qty</a>
           <a class="flex-grow text-pink-500 border-b-2 border-pink-500 py-2 text-lg px-1 ml-8">Price</a>
         </div>
+        {Object.keys(cart).map((k)=>{return <div key={k}>
         <div class="flex border-t border-gray-200 py-2">
-          <span class="text-gray-500">Fashion Wear Black T-Shirt(Xl)</span>
-          <span class="ml-auto text-gray-900">02</span>
-          <span class="ml-auto text-gray-900">Rs.499</span>
+          <span class="text-gray-500">{cart[k].name}({cart[k].size}/{cart[k].varient})</span>
+          <span class="ml-auto text-gray-900">{cart[k].qty}</span>
+          <span class="ml-auto text-gray-900">{cart[k].price}</span>
         </div>
-        <div class="flex border-t border-gray-200 py-2">
-          <span class="text-gray-500">Fashion Wear Black T-Shirt(Xl)</span>
-          <span class="ml-auto text-gray-900">02</span>
-          <span class="ml-auto text-gray-900">Rs.499</span>
-        </div>
-        <div class="flex border-t border-gray-200 py-2">
-          <span class="text-gray-500">Fashion Wear Black T-Shirt(Xl)</span>
-          <span class="ml-auto text-gray-900">02</span>
-          <span class="ml-auto text-gray-900">Rs.499</span>
-        </div>
+        </div>})}
         <div class="flex mt-5">
           <span class="title-font font-medium text-2xl text-gray-900">Total Amount Rs.1199</span>
           
