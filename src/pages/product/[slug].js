@@ -29,10 +29,10 @@ const refreshVariants =(newsize, newcolor)=>{
   console.log(product.price)
   const a = setSize(newsize)
   const b = setColor(newcolor)
-  // window.history.replaceState(null, "", `http://localhost:3000/product/${varient[newcolor][newsize]["slug"]}`)
+  window.history.replaceState(null, "", `http://localhost:3000/product/${varient[newcolor][newsize]["slug"]}`)
 
-  let url = `http://localhost:3000/product/${varient[newcolor][newsize]["slug"]}`
-  window.location = url
+  // let url = `http://localhost:3000/product/${varient[newcolor][newsize]["slug"]}`
+  // window.location = url
 }
 
 
