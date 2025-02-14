@@ -10,15 +10,20 @@ import { ToastContainer, toast } from 'react-toastify';
  
 const Slugs = ({ addToCart, buyNow, product, varient, price})=> {
 const [pin, setPin] = useState()
-toast("Wow so easy!");
+
 const [service, setService] = useState()
   const zipChecker = async()=>{
-  const pins = await fetch("http://localhost:3000/api/zipcode")
+  const pins = await fetch("http://localhost:3000/api/zipCode")
   const pinJson = await pins.json();
+  console.log(pinJson)
   if(pinJson.includes(Number(pin))){
     setService(true)
+    toast("Yay we Deliver!");
     return
-  } else setService(false)
+  } else {
+
+    toast("we are sorry");
+    setService(false)}
 }
   const onChange = (e)=>{
     setPin(e.target.value)
@@ -41,19 +46,7 @@ const refreshVariants =(newsize, newcolor)=>{
   const src = "https://m.media-amazon.com/images/I/71TCI289J4L._AC_SX522_.jpg"
   return <>
 
-  <ToastContainer
-position="top-center"
-autoClose={3000}
-hideProgressBar={false}
-newestOnTop={false}
-closeOnClick={false}
-rtl={false}
-pauseOnFocusLoss={false}
-draggable
-pauseOnHover={false}
-theme="colored"
-transition={Bounce}
-/>
+  <ToastContainer/>
   <section class="text-gray-600 body-font overflow-hidden">
   <div class="container  px-5 py-24 mx-auto">
     <div class="lg:w-4/5 md:mr-8 mx-auto flex flex-wrap">
@@ -141,7 +134,7 @@ transition={Bounce}
         </div>
         <div className='flex m-3 '>
         <input onChange={onChange} placeholder='Enter you Zipcode 12345' className='text-sm font-semibold border-2 rounded border-gray-400'></input>
-        <button onClick={zipChecker} class="flex ml-2 text-white bg-pink-500 border-0 py-2 px-6 focus:outline-none hover:bg-pink-600 rounded">Check</button>
+        <button onClick={()=>{zipChecker()}} class="flex ml-2 text-white bg-pink-500 border-0 py-2 px-6 focus:outline-none hover:bg-pink-600 rounded">Check</button>
         </div>
         {!service && service != null && <h1 className='text-red-600 font-semibold'>Sorry! we can't deliver in your area</h1>}
          {service && service != null && <h1 className='text-green-600 font-semibold'>Yay! we can deliver this item in your state</h1>}
