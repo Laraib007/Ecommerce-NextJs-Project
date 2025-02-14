@@ -1,6 +1,12 @@
 import React from 'react'
-
+import { usePathname } from 'next/navigation'
 const orderplaced = ({cart, subTotal}) => {
+
+
+
+  const pathname = usePathname()
+  console.log(pathname)
+
   return (
     <div className='h-3/4 mb-2'>
         <section class="text-gray-600 body-font overflow-hidden ">
