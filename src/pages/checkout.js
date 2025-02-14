@@ -47,7 +47,7 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
       {Object.keys(cart).length == 0 && <div className='ml-8'>Your Cart is Empty!</div>}
       {Object.keys(cart).map((k)=>{return <li key={k}>
         <div className='justify-center  items-center flex '>
-        <div className=' font-semibold mr-10'>{cart[k].name}</div>
+        <div className=' font-semibold mr-10'>{cart[k].name}({cart[k].size}/{cart[k].varient})</div>
         <div className='font-bold flex justify-center items-center  ml-10 '><FaMinusCircle onClick={()=>removeFromCart(k, 1, cart[k].name, cart[k].price, cart[k].size, cart[k].varient)} 
         
         className='text-pink-600 text-sd mx-1' />{cart[k].qty}<  FaPlusCircle className='text-pink-600 text-sd mx-1' onClick={()=>addToCart(k, cart[k].name, cart[k].price, 1, cart[k].size, cart[k].varient)} />
