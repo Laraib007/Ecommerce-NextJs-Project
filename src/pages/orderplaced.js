@@ -1,5 +1,5 @@
 import React from 'react'
-
+const orderplaced = ({cart, subTotal}) => {
   return (
     <div className='h-3/4 mb-2'>
         <section class="text-gray-600 body-font overflow-hidden ">
