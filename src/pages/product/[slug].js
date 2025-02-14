@@ -9,21 +9,7 @@ import Link from 'next/link';
 import { ToastContainer, toast } from 'react-toastify';
  
 const Slugs = ({ addToCart, buyNow, product, varient, price})=> {
-  toast.success('🦄 Wow so easy!', {
-    position: "top-center",
-    autoClose: 3000,
-    hideProgressBar: false,
-    closeOnClick: false,
-    pauseOnHover: false,
-    draggable: true,
-    progress: 0.1,
-    theme: "colored",
-    transition: Bounce,
-    });
-
-
 const [pin, setPin] = useState()
-
 const [service, setService] = useState()
   const zipChecker = async()=>{
   const pins = await fetch("http://localhost:3000/api/zipcode")
@@ -54,7 +40,7 @@ const refreshVariants =(newsize, newcolor)=>{
   const src = "https://m.media-amazon.com/images/I/71TCI289J4L._AC_SX522_.jpg"
   return <>
 
-<ToastContainer
+  <ToastContainer
 position="top-center"
 autoClose={3000}
 hideProgressBar={false}
