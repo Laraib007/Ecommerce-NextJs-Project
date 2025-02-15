@@ -2,8 +2,10 @@ import Link from 'next/link'
 import React from 'react'
 import mongoose from "mongoose";
 import Products from '../../models/Products';
+import { useRouter } from 'next/router';
 
 const Hoodies = ({products}) => {
+    const router = useRouter()
     console.log(products)
   return (
     <div>
@@ -18,7 +20,7 @@ const Hoodies = ({products}) => {
             <div className="flex flex-wrap -m-4 justify-center">
              {Object.keys(products).length === 0 && <h3 className='font-bold mb-5' >"All Hoodies are out of stock. New Stock coming soon! Stay Tuned "</h3> }
             {Object.keys(products).map((items)=>{ return    <div key={products[items].slug} className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4  ">
-                    <a className=" relative rounded overflow-hidden contents">
+                    <a onClick={()=>router.push(`/product/${products[items].slug}`) } className=" relative rounded overflow-hidden contents">
                       
           <img alt="ecommerce" className="object-cover object-center w-72 h-72 block " src={products[items].img}/>
                     </a>
