@@ -16,7 +16,7 @@ const Hoodies = ({products}) => {
         </div>
         <div className="container px-5 py-7 mx-auto">
             <div className="flex flex-wrap -m-4 justify-center">
-                
+             {Object.keys(products).length === 0 && <h3 className='font-bold mb-5' >"All Hoodies are out of stock. New Stock coming soon! Stay Tuned "</h3> }
             {Object.keys(products).map((items)=>{ return    <div key={products[items].slug} className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md m-4  ">
                     <a className=" relative rounded overflow-hidden contents">
                       
