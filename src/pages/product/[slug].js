@@ -43,7 +43,7 @@ const refreshVariants =(newsize, newcolor)=>{
 }
 
 
-  const src = "https://m.media-amazon.com/images/I/71TCI289J4L._AC_SX522_.jpg"
+  const src = product.img
   return <>
 
   <ToastContainer/>
