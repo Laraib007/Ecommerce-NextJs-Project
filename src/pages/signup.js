@@ -3,11 +3,12 @@ import img from '../component/Img/Clogo.png'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ToastContainer, toast } from 'react-toastify';
+import { useRouter } from 'next/router';
 
 
 const Signup =  () => {
 
-
+const router = useRouter()
 
 
   const [name, setName] = useState()
@@ -61,6 +62,9 @@ if(Object.keys(result)== "sucess"){
     progress: undefined,
     theme: "colored",
     });
+    router.push
+
+
   } else { toast.error('Email Already Exists ', {
     position: "top-left",
     autoClose: 3000,
