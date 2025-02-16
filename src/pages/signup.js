@@ -47,8 +47,8 @@ e.preventDefault()
   });
 
   const result = await response.json();
-  console.log(result);
-
+  console.log(Object.keys(result));
+if(Object.keys(result)=== "sucess"){
   toast.success('Signup Successful', {
     position: "top-left",
     autoClose: 3000,
@@ -59,7 +59,16 @@ e.preventDefault()
     progress: undefined,
     theme: "colored",
     });
-
+  } else { toast.error('Email Already Exists ', {
+    position: "top-left",
+    autoClose: 3000,
+    hideProgressBar: false,
+    closeOnClick: false,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "colored",
+    });}
 
 setName('')
 setEmail('')
