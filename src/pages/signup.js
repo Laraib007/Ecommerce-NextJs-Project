@@ -7,17 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 
 const Signup =  () => {
 
-  toast.success('Signup Successful', {
-    position: "top-left",
-    autoClose: 3000,
-    hideProgressBar: false,
-    closeOnClick: false,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: "colored",
-    transition: Bounce,
-    });
+
 
 
   const [name, setName] = useState()
@@ -58,6 +48,19 @@ e.preventDefault()
 
   const result = await response.json();
   console.log(result);
+
+  toast.success('Signup Successful', {
+    position: "top-left",
+    autoClose: 3000,
+    hideProgressBar: false,
+    closeOnClick: false,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "colored",
+    });
+
+
 setName('')
 setEmail('')
 setPassword('')
@@ -80,7 +83,6 @@ pauseOnFocusLoss
 draggable
 pauseOnHover
 theme="colored"
-transition={Bounce}
 />
        <div>
 
