@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import img from '../component/Img/Clogo.png'
 import Image from 'next/image'
 import Link from 'next/link'
-
+import { ToastContainer, toast } from 'react-toastify';
 
 
 const Signup =  () => {
