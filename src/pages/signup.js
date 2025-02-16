@@ -48,7 +48,9 @@ e.preventDefault()
 
   const result = await response.json();
   console.log(Object.keys(result));
-if(Object.keys(result)=== "sucess"){
+
+
+if(Object.keys(result)== "sucess"){
   toast.success('Signup Successful', {
     position: "top-left",
     autoClose: 3000,
