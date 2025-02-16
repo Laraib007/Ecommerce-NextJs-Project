@@ -6,6 +6,20 @@ import Link from 'next/link'
 
 
 const Signup =  () => {
+
+  toast.success('Signup Successful', {
+    position: "top-left",
+    autoClose: 3000,
+    hideProgressBar: false,
+    closeOnClick: false,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "colored",
+    transition: Bounce,
+    });
+
+
   const [name, setName] = useState()
   const [email, setEmail] = useState()
   const [password, setPassword] = useState()
@@ -55,6 +69,19 @@ setPassword('')
 
   return (
     <div>
+      <ToastContainer
+position="top-left"
+autoClose={3000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick={false}
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="colored"
+transition={Bounce}
+/>
        <div>
 
 
@@ -67,26 +94,22 @@ setPassword('')
 
   <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
     <form class="space-y-6" onSubmit={onFormSubmit} method="POST">
-      <div>
-        <label for="name" class="block text-sm font-medium leading-6 text-gray-900">Full Name</label>
+
         <div class="">
-          <input onChange={handleChange} value={name} id="name" name="name" type="text" autocomplete="name" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-pink-600 sm:text-sm "/>
+          <input onChange={handleChange} value={name} id="name" name="name" type="text" placeholder='  Name' autocomplete="name" required class="block p-2 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-pink-600 sm:text-sm "/>
         </div>
-      </div>
-      <div>
-        <label for="email" class="block text-sm font-medium  text-gray-900">Email address</label>
+
         <div class="">
-          <input onChange={handleChange} value={email} id="email" name="email" type="email" autocomplete="email" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-pink-600 sm:text-sm "/>
+          <input onChange={handleChange} value={email} id="email" name="email" type="email" placeholder='  Email address' autocomplete="email" required class="block p-2 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-pink-600 sm:text-sm "/>
         </div>
-      </div>
+   
 
       <div>
         <div class="flex items-center justify-between">
-          <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Password</label>
          
         </div>
         <div class="">
-          <input onChange={handleChange} value={password} id="password" name="password" type="password" autocomplete="current-password" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-pink-600 sm:text-sm sm:leading-6"/>
+          <input onChange={handleChange} value={password} id="password" name="password" type="password" placeholder='  Password' autocomplete="current-password" required class="block p-2 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-pink-600 sm:text-sm sm:leading-6"/>
         </div>
       </div>
       
