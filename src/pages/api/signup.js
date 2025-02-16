@@ -12,7 +12,7 @@ const handler = async (req, res)=>{
         res.status(200).json({ "sucess": "sucess" });
 
     }
-       
+        else {res.status(404).send( "Email Already Exists" )}
         
     } 
   
