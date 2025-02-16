@@ -62,7 +62,10 @@ if(Object.keys(result)== "sucess"){
     progress: undefined,
     theme: "colored",
     });
-    router.push
+
+
+    setTimeout(router.push("http://localhost:3000/login"), 1500)
+    
 
 
   } else { toast.error('Email Already Exists ', {
