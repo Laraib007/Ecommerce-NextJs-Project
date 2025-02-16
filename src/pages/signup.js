@@ -64,7 +64,7 @@ if(Object.keys(result)== "sucess"){
     });
 
 
-    setTimeout(router.push("http://localhost:3000/login"), 1500)
+    setTimeout(router.push("http://localhost:3000/login"), 4500)
     
 
 
