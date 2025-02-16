@@ -31,7 +31,7 @@ if(e.target.name == "email"){
 
 
 
-
+const onFormSubmit = async ()=>{
 
   let data = {name, email, password}
   const response = await fetch('http://localhost:3000/api/signup', {
@@ -44,8 +44,11 @@ if(e.target.name == "email"){
 
   const result = await response.json();
   console.log(result);
+setName('')
+setEmail('')
+setPassword('')
 
-
+}
 
 
 
