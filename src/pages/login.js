@@ -9,19 +9,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const Login = () => {
-
-
-
-  const [name, setName] = useState()
   const [email, setEmail] = useState()
   const [password, setPassword] = useState()
 
   const handleChange = (e)=> {
-if(e.target.name == "name"){
-setName(e.target.value)
 
-}
-else if(e.target.name == "email"){
+
+ if(e.target.name == "email"){
   setEmail(e.target.value)
   
   }
@@ -39,7 +33,7 @@ else if(e.target.name == "email"){
 
 const onFormSubmit = async (e)=>{
 e.preventDefault()
-  let data = {name, email, password}
+  let data = { email, password}
   let response = await fetch('http://localhost:3000/api/signup', {
     method: 'POST',
     headers: {
@@ -74,7 +68,6 @@ if(Object.keys(result)== "sucess"){
     theme: "colored",
     });}
 
-setName('')
 setEmail('')
 setPassword('')
   }
