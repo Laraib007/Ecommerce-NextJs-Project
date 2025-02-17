@@ -53,23 +53,23 @@ e.preventDefault()
 if(Object.keys(result)== "sucess"){
   toast.success('Signup Successful', {
     position: "top-left",
-    autoClose: 3000,
-    hideProgressBar: false,
-    closeOnClick: false,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: "colored",
+autoClose: 3000,
+hideProgressBar: false,
+closeOnClick: false,
+pauseOnHover: false,
+draggable: true,
+progress: undefined,
+theme: "colored"
     });
   } else { toast.error('Email Already Exists ', {
     position: "top-left",
     autoClose: 3000,
     hideProgressBar: false,
     closeOnClick: false,
-    pauseOnHover: true,
+    pauseOnHover: false,
     draggable: true,
     progress: undefined,
-    theme: "colored",
+    theme: "colored"
     });}
 
 setName('')
