@@ -1,10 +1,84 @@
 import React from 'react'
-
+import React, { useState } from 'react'
+import img from '../component/Img/Clogo.png'
+import Image from 'next/image'
+import Link from 'next/link'
+import { ToastContainer, toast } from 'react-toastify';
 import img from '../component/Img/Clogo.png'
 import Image from 'next/image'
 import Link from 'next/link'
 
 const Login = () => {
+
+
+
+  const [name, setName] = useState()
+  const [email, setEmail] = useState()
+  const [password, setPassword] = useState()
+
+  const handleChange = (e)=> {
+if(e.target.name == "name"){
+setName(e.target.value)
+
+}
+else if(e.target.name == "email"){
+  setEmail(e.target.value)
+  
+  }
+
+  else if(e.target.name == "password"){
+    setPassword(e.target.value)
+    
+    }
+
+  }
+
+
+
+
+
+const onFormSubmit = async (e)=>{
+e.preventDefault()
+  let data = {name, email, password}
+  let response = await fetch('http://localhost:3000/api/signup', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  });
+
+  const result = await response.json();
+  console.log(Object.keys(result));
+
+
+if(Object.keys(result)== "sucess"){
+  toast.success('Signup Successful', {
+    position: "top-left",
+    autoClose: 3000,
+    hideProgressBar: false,
+    closeOnClick: false,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "colored",
+    });
+  } else { toast.error('Email Already Exists ', {
+    position: "top-left",
+    autoClose: 3000,
+    hideProgressBar: false,
+    closeOnClick: false,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "colored",
+    });}
+
+setName('')
+setEmail('')
+setPassword('')
+  }
+
   return (
     <div>
 
