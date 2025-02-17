@@ -1,12 +1,9 @@
-import React from 'react'
 import React, { useState } from 'react'
 import img from '../component/Img/Clogo.png'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ToastContainer, toast } from 'react-toastify';
-import img from '../component/Img/Clogo.png'
-import Image from 'next/image'
-import Link from 'next/link'
+
 
 const Login = () => {
   const [email, setEmail] = useState()
@@ -47,7 +44,7 @@ e.preventDefault()
 
 
 if(Object.keys(result)== "sucess"){
-  toast.success('Signup Successful', {
+  toast.success('You logged in successfully', {
     position: "top-left",
     autoClose: 3000,
     hideProgressBar: false,
@@ -57,7 +54,7 @@ if(Object.keys(result)== "sucess"){
     progress: undefined,
     theme: "colored",
     });
-  } else { toast.error('Email Already Exists ', {
+  } else { toast.error('Wrong Credentials ', {
     position: "top-left",
     autoClose: 3000,
     hideProgressBar: false,
