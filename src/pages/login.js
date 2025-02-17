@@ -81,7 +81,18 @@ setPassword('')
 
   return (
     <div>
-
+ <ToastContainer
+position="top-left"
+autoClose={3000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick={false}
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="colored"
+/>
 
 
 <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
