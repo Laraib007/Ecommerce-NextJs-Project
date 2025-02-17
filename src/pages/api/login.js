@@ -5,11 +5,16 @@ const handler = async (req, res)=>{
     if(req.method == "POST"){
         try {
             let u =  Users.findOne({email: req.body.email})
-                await u.save()
-            res.status(200).json({ sucess: "sucess" });
+                if(u){
+                    if(email == req.body.email && password == req.boy.password){
+                        res.status(200).json({ sucess: "sucess" });
+                    }
+
+                }
+            
     
         } catch (error) {
-            res.status(404).json({ warning: "Email Already Exists" })
+            res.status(404).json({ warning: "Invalid Creditionals" })
         }
        
     }
