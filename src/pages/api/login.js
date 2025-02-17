@@ -9,12 +9,14 @@ const handler = async (req, res)=>{
                     if(email == req.body.email && password == req.boy.password){
                         res.status(200).json({ sucess: "sucess" });
                     }
-
+                    else{
+                        res.status(404).json({ warning: "Invalid Creditionals" })
+                    }
                 }
             
     
         } catch (error) {
-            res.status(404).json({ warning: "Invalid Creditionals" })
+            res.status(404).json({ warning: "User Not Found" })
         }
        
     }
