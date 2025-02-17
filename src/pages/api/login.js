@@ -13,7 +13,7 @@ const handler = async (req, res)=>{
                     else{
                         res.status(404).json({ warning: "Invalid Creditionals" })
                     }
-                }            
+                }     else{res.status(404).json({ warning: "User Not Found" })}       
             
     
         }
