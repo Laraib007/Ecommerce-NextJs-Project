@@ -87,12 +87,12 @@ setPassword('')
 position="top-left"
 autoClose={3000}
 hideProgressBar={false}
-newestOnTop={false}
+newestOnTop
 closeOnClick={false}
 rtl={false}
-pauseOnFocusLoss
+pauseOnFocusLoss={false}
 draggable
-pauseOnHover
+pauseOnHover={false}
 theme="colored"
 />
        <div>
