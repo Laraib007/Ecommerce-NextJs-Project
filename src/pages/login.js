@@ -56,6 +56,10 @@ draggable: true,
 progress: undefined,
 theme: "colored"
     });
+
+    setTimeout(() => {
+      router.push("http://localhost:3000/")
+    }, 1500);
   } else { toast.error('Wrong Credentials ', {
     position: "top-left",
     autoClose: 3000,
@@ -66,9 +70,7 @@ theme: "colored"
     progress: undefined,
     theme: "colored"
     });}
-setTimeout(() => {
-  router.push("http://localhost:3000/")
-}, 1500);
+
 setEmail('')
 setPassword('')
   }
