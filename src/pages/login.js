@@ -46,6 +46,7 @@ e.preventDefault()
 
 
 if(Object.keys(result)== "sucess"){
+  console.log(result)
   toast.success('You logged in successfully', {
     position: "top-left",
 autoClose: 1000,
