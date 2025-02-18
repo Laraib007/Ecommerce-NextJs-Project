@@ -42,10 +42,10 @@ e.preventDefault()
   });
 
   const result = await response.json();
-  console.log(Object.keys(result));
+  console.log(result.sucess);
 
 
-if(Object.keys(result)== "sucess"){
+if(result.sucess){
   console.log(result)
   toast.success('You logged in successfully', {
     position: "top-left",
