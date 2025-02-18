@@ -3,11 +3,13 @@ import img from '../component/Img/Clogo.png'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ToastContainer, toast } from 'react-toastify';
+import { useRouter } from 'next/router';
 
 
 const Signup =  () => {
 
 
+  const router = useRouter()
 
 
   const [name, setName] = useState()
@@ -53,7 +55,7 @@ e.preventDefault()
 if(Object.keys(result)== "sucess"){
   toast.success('Signup Successful', {
     position: "top-left",
-autoClose: 3000,
+autoClose: 1000,
 hideProgressBar: false,
 closeOnClick: false,
 pauseOnHover: false,

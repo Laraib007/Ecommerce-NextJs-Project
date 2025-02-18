@@ -48,7 +48,7 @@ e.preventDefault()
 if(Object.keys(result)== "sucess"){
   toast.success('You logged in successfully', {
     position: "top-left",
-autoClose: 3000,
+autoClose: 1000,
 hideProgressBar: false,
 closeOnClick: false,
 pauseOnHover: false,

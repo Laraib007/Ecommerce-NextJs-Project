@@ -1,10 +1,8 @@
 import Users from "../../../models/Users";
 import connectDB from "../../../middleware.js/mongoose";
-import { useRouter } from "next/router";
 var CryptoJS = require("crypto-js");
 
 const handler = async (req, res)=>{
-    const router = useRouter()
     if(req.method == "POST"){
         try {
             let u = new Users({
