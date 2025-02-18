@@ -10,7 +10,9 @@ const handler = async (req, res)=>{
         var originalText = bytes.toString(CryptoJS.enc.Utf8);
               if(u){
                     if(req.body.email ==  u.email && req.body.password  == originalText){
-                        res.status(200).json({ sucess: "sucess" });
+                        var token = jwt.sign({email:u.email, name:u.name },'shhhhh');
+                        res.status(200).json({ sucess: "sucess", token });
+                        console.log(token)
                     }
                     else{
                         res.status(404).json({ warning: "Invalid Creditionals" })
