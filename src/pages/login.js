@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ToastContainer, toast } from 'react-toastify';
 import { useRouter } from 'next/router';
-
+var jwt = require('jsonwebtoken');
 
 const Login = () => {
   const router = useRouter()
@@ -58,6 +58,8 @@ progress: undefined,
 theme: "colored"
     });
 localStorage.setItem("token", result.token)
+var decoded = jwt.verify(result.token, 'topsecret');
+console.log(decoded)
     setTimeout(() => {
       router.push("http://localhost:3000/")
     }, 1500);
