@@ -3,9 +3,11 @@ import img from '../component/Img/Clogo.png'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ToastContainer, toast } from 'react-toastify';
+import { useRouter } from 'next/router';
 
 
 const Login = () => {
+  const router = useRouter()
   const [email, setEmail] = useState()
   const [password, setPassword] = useState()
 
@@ -64,7 +66,9 @@ theme: "colored"
     progress: undefined,
     theme: "colored"
     });}
-
+setTimeout(() => {
+  router.push("http://localhost:3000/")
+}, 1500);
 setEmail('')
 setPassword('')
   }
