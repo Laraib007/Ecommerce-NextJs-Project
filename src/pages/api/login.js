@@ -10,7 +10,7 @@ const handler = async (req, res)=>{
         var originalText = bytes.toString(CryptoJS.enc.Utf8);
               if(u){
                     if(req.body.email ==  u.email && req.body.password  == originalText){
-                        var token = jwt.sign({email:u.email, name:u.name },'shhhhh');
+                        var token = jwt.sign({email:u.email, name:u.name },'topsecret');
                         res.status(200).json({ sucess: "sucess", token });
                         console.log(token)
                     }
