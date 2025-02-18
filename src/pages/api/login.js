@@ -2,11 +2,13 @@ import Users from "../../../models/Users";
 import connectDB from "../../../middleware.js/mongoose";
 
 const handler = async (req, res)=>{
+    var bytes  = CryptoJS.AES.decrypt(req.body.password, 'secret123');
+    var originalText = bytes.toString(CryptoJS.enc.Utf8);
     if(req.method == "POST"){
         let u = await Users.findOne({email: req.body.email})
        
               if(u){
-                    if(req.body.email ==  u.email && req.body.password  == u.password){
+                    if(req.body.email ==  u.email && originalText  == u.password){
                         res.status(200).json({ sucess: "sucess" });
                     }
                     else{
