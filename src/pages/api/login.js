@@ -7,7 +7,6 @@ const handler = async (req, res)=>{
         let u = await Users.findOne({email: req.body.email})
         var bytes  = CryptoJS.AES.decrypt(u.password, 'secret123');
         var originalText = bytes.toString(CryptoJS.enc.Utf8);
-        console.log(originalText)
               if(u){
                     if(req.body.email ==  u.email && req.body.password  == originalText){
                         res.status(200).json({ sucess: "sucess" });
