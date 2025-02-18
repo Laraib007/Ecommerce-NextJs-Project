@@ -1,5 +1,6 @@
 import Users from "../../../models/Users";
 import connectDB from "../../../middleware.js/mongoose";
+var CryptoJS = require("crypto-js");
 
 const handler = async (req, res)=>{
     if(req.method == "POST"){
