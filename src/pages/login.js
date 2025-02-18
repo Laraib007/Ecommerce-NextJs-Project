@@ -57,7 +57,7 @@ draggable: true,
 progress: undefined,
 theme: "colored"
     });
-
+localStorage.setItem("token", result.token)
     setTimeout(() => {
       router.push("http://localhost:3000/")
     }, 1500);
