@@ -28,7 +28,11 @@ export default function App({ Component, pageProps }) {
     }
   }, [router.query])
   
-
+const logout=()=>{
+  localStorage.removeItem("token")
+  setKey(Math.random())
+  setUser({value: null})
+}
 const saveCart =(myCart)=>{
   localStorage.setItem("cart", JSON.stringify(myCart))
   let subt = 0;
@@ -83,7 +87,7 @@ saveCart({})
   return (
     <>
     <div className="mt-20">
-    <Navbar key={key} user={user} cart={cart} addToCart={addToCart} clearCart={clearCart} removeFromCart={removeFromCart} subTotal={subTotal} />
+    <Navbar key={key} logout={logout} user={user} cart={cart} addToCart={addToCart} clearCart={clearCart} removeFromCart={removeFromCart} subTotal={subTotal} />
     <Component cart={cart} buyNow={buyNow} addToCart={addToCart} clearCart={clearCart} removeFromCart={removeFromCart} subTotal={subTotal} {...pageProps} />
     <Footer />
     </div>
