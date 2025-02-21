@@ -47,8 +47,8 @@ const Navbar = ({key, user, cart, addToCart, clearCart, removeFromCart, subTotal
     <div  className='absolute flex items-center right-0 mx-4 top-6'  >
     {<div id="dropdown" class="absolute  right-9 top-6 bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-pink-600">
     <ul class="py-2  text-sm font-bold text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-      <li> 
-       <a href="#" class="row px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"><IoMdSettings />My Account</a>
+      <li className='ml-2 items-center flex row'> 
+      <IoMdSettings /> <a href="#" class=" px-1 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">My Account</a>
       </li>
       <li>
         <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Orders</a>
