@@ -65,7 +65,7 @@ const logout=()=>{
     
     </ul>
 </div>}
-     {user.value && <CgProfile onMouseOver={mouseHover} onMouseLeave={()=>mouseHover} className='text-2xl font-bold cursor-pointer text-pink-600 mr-3' />}
+     {user.value && <CgProfile onMouseOver={setDropDown(true)} onMouseLeave={setDropDown(false)} className='text-2xl font-bold cursor-pointer text-pink-600 mr-3' />}
      
      {!user.value && <Link href={'/login'}> <button class="flex ml-auto mx-2 text-sm text-white bg-pink-500 border-0 py-0.5 px-1 focus:outline-none hover:bg-pink-600 rounded">Login</button></Link>
           }
