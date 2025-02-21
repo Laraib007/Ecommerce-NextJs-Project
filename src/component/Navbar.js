@@ -13,7 +13,7 @@ import Image from 'next/image';
 const Navbar = ({key, user, cart, addToCart, clearCart, removeFromCart, subTotal}) => {
   const [dropDown, setDropDown] = useState(false)
   const mouseHover = ()=>{
-    setDropDown(dropDown)
+    setDropDown(!dropDown)
   }
 
 
@@ -44,7 +44,23 @@ const Navbar = ({key, user, cart, addToCart, clearCart, removeFromCart, subTotal
       <Link href={'/stickers'} className="mr-4 hover:text-pink-600">Stickers</Link>
     </nav>
     <div  className='absolute flex items-center right-0 mx-4 top-6'  >
-     {user.value && <CgProfile  className='text-2xl font-bold cursor-pointer text-pink-600 mr-3' />}
+    {dropDown && <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
+    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+      <li>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+      </li>
+      <li>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+      </li>
+      <li>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+      </li>
+      <li>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
+      </li>
+    </ul>
+</div>}
+     {user.value && <CgProfile onMouseOver={mouseHover} onMouseLeave={mouseHover} className='text-2xl font-bold cursor-pointer text-pink-600 mr-3' />}
      {!user.value && <Link href={'/login'}> <button class="flex ml-auto mx-2 text-sm text-white bg-pink-500 border-0 py-0.5 px-1 focus:outline-none hover:bg-pink-600 rounded">Login</button></Link>
           }
     <FaCartShopping onClick={toggleCart} className='text-2xl cursor-pointer text-pink-600 ' />
