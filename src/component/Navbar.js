@@ -23,7 +23,9 @@ const Navbar = ({key, user, cart, addToCart, clearCart, removeFromCart, subTotal
     setDropDown(!dropDown)
   }
 
-
+const logout=()=>{
+  localStorage.removeItem("token")
+}
   const currentPath = usePathname()
   const toggleCart = ()=>{
     if(ref.current.classList.contains('translate-x-full')){
@@ -54,15 +56,15 @@ const Navbar = ({key, user, cart, addToCart, clearCart, removeFromCart, subTotal
     {<div id="dropdown" class="absolute  right-9 top-6 bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-pink-600">
     <ul class="py-2  text-sm font-bold text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
       <li className='ml-2 items-center flex row dark:hover:text-gray-300'> 
-      <IoMdSettings /> <Link href={'/stickers'}><a href="#" class=" px-1 py-2 dark:hover:text-gray-300">My Account</a></Link>
+      <IoMdSettings /> <Link href={'/myAccount'} class="px-1 py-2 dark:hover:text-gray-300">My Account</Link>
       </li>
       <li className='ml-2 items-center flex row dark:hover:text-gray-300'>
       <HiShoppingBag />
-      <Link href={'/stickers'}><a href="#" class="px-1 py-2 dark:hover:text-gray-300">Orders</a></Link>
+      <Link href={'/orders'} class="px-1 py-2 dark:hover:text-gray-300">Orders</Link>
       </li >
       <li className='ml-2 items-center flex row dark:hover:text-gray-300'>
       <RiLogoutBoxRFill  />
-      <Link href={'/stickers'}><a href="#" class="px-1 py-2 dark:hover:text-gray-300">Log out</a></Link>
+      <Link onClick={logout} class="px-1 py-2 dark:hover:text-gray-300">Log out</Link>
       </li>
     </ul>
 </div>}
