@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { FaCartShopping } from "react-icons/fa6";
 import { MdCancel } from "react-icons/md";
 import { FaPlusCircle, FaMinusCircle } from "react-icons/fa"
@@ -11,6 +11,12 @@ import Logo from "../component/Img/HLogo.png"
 import Image from 'next/image';
 
 const Navbar = ({key, user, cart, addToCart, clearCart, removeFromCart, subTotal}) => {
+  const [dropDown, setDropDown] = useState(false)
+  const mouseHover = ()=>{
+    setDropDown(dropDown)
+  }
+
+
   const currentPath = usePathname()
   const toggleCart = ()=>{
     if(ref.current.classList.contains('translate-x-full')){
