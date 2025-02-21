@@ -38,7 +38,9 @@ const Navbar = ({key, user, cart, addToCart, clearCart, removeFromCart, subTotal
       <Link href={'/stickers'} className="mr-4 hover:text-pink-600">Stickers</Link>
     </nav>
     <div  className='absolute flex right-0 mx-4 top-6'  >
-     <Link href={'/login'}><CgProfile  className='text-2xl font-bold cursor-pointer text-pink-600 mr-3' /></Link>
+     {user.value && <Link href={'/login'}><CgProfile  className='text-2xl font-bold cursor-pointer text-pink-600 mr-3' /></Link>}
+     {!user && <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Button</button>
+          }
     <FaCartShopping onClick={toggleCart} className='text-2xl cursor-pointer text-pink-600 ' />
     </div>
     <div ref={ref}   className={`absolute overflow-y-scroll w-72 h-[100vh] top-0 right-0 py-6 px-8 bg-pink-300 transform transition-transform  ${Object.keys(cart).length === 0 || currentPath === "/orderplaced" || currentPath === "/checkout" ? "translate-x-full": "translate-x-0"} `}>
