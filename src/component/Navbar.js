@@ -7,6 +7,10 @@ import { IoBagCheck } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
 import { usePathname } from 'next/navigation'
 import { IoMdSettings } from "react-icons/io";
+import { HiShoppingBag } from "react-icons/hi2";
+
+
+
 
 import Logo from "../component/Img/HLogo.png"
 import Image from 'next/image';
@@ -47,14 +51,15 @@ const Navbar = ({key, user, cart, addToCart, clearCart, removeFromCart, subTotal
     <div  className='absolute flex items-center right-0 mx-4 top-6'  >
     {<div id="dropdown" class="absolute  right-9 top-6 bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-pink-600">
     <ul class="py-2  text-sm font-bold text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-      <li className='ml-2 items-center flex row'> 
-      <IoMdSettings /> <a href="#" class=" px-1 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">My Account</a>
+      <li className='ml-2 items-center flex row dark:hover:text-gray-300'> 
+      <IoMdSettings /> <a href="#" class=" px-1 py-2 dark:hover:text-gray-300">My Account</a>
       </li>
-      <li>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Orders</a>
-      </li>
-      <li>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Log out</a>
+      <li className='ml-2 items-center flex row dark:hover:text-gray-300'>
+      <HiShoppingBag />
+      <a href="#" class="px-1 py-2 dark:hover:text-gray-300">Orders</a>
+      </li >
+      <li className='ml-2 items-center flex row dark:hover:text-gray-300'>
+        <a href="#" class="px-1 py-2 dark:hover:text-gray-300">Log out</a>
       </li>
     </ul>
 </div>}
