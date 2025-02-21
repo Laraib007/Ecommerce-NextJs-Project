@@ -7,6 +7,9 @@ import { useEffect, useState } from "react";
 export default function App({ Component, pageProps }) {
   const [cart, setcart] = useState({})
   const [subTotal, setsubTotal] = useState(0)
+  const [user, setUser] = useState({value: null})
+  const [key, setKey] = useState()
+
   const router = useRouter()
   useEffect(() => {
     try {
