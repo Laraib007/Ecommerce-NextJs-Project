@@ -22,6 +22,10 @@ export default function App({ Component, pageProps }) {
      localStorage.clear()
     }
     const token = localStorage.getItem("token")
+    if(token){
+      setUser({value: token})
+      setKey(Math.random())
+    }
   }, [])
   
 
@@ -79,7 +83,7 @@ saveCart({})
   return (
     <>
     <div className="mt-20">
-    <Navbar key={subTotal} cart={cart} addToCart={addToCart} clearCart={clearCart} removeFromCart={removeFromCart} subTotal={subTotal} />
+    <Navbar key={key} user={user} cart={cart} addToCart={addToCart} clearCart={clearCart} removeFromCart={removeFromCart} subTotal={subTotal} />
     <Component cart={cart} buyNow={buyNow} addToCart={addToCart} clearCart={clearCart} removeFromCart={removeFromCart} subTotal={subTotal} {...pageProps} />
     <Footer />
     </div>

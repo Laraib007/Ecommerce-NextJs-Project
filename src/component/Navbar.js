@@ -10,7 +10,7 @@ import { usePathname } from 'next/navigation'
 import Logo from "../component/Img/HLogo.png"
 import Image from 'next/image';
 
-const Navbar = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
+const Navbar = ({key, user, cart, addToCart, clearCart, removeFromCart, subTotal}) => {
   const currentPath = usePathname()
   const toggleCart = ()=>{
     if(ref.current.classList.contains('translate-x-full')){
