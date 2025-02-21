@@ -44,7 +44,7 @@ const Navbar = ({key, user, cart, addToCart, clearCart, removeFromCart, subTotal
       <Link href={'/stickers'} className="mr-4 hover:text-pink-600">Stickers</Link>
     </nav>
     <div  className='absolute flex items-center right-0 mx-4 top-6'  >
-    {dropDown && <div id="dropdown" class="z-10  bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
+    {<div id="dropdown" class="absolute  ml-5  bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
       <li>
         <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
@@ -61,8 +61,10 @@ const Navbar = ({key, user, cart, addToCart, clearCart, removeFromCart, subTotal
     </ul>
 </div>}
      {user.value && <CgProfile onMouseOver={mouseHover} onMouseLeave={mouseHover} className='text-2xl font-bold cursor-pointer text-pink-600 mr-3' />}
+     
      {!user.value && <Link href={'/login'}> <button class="flex ml-auto mx-2 text-sm text-white bg-pink-500 border-0 py-0.5 px-1 focus:outline-none hover:bg-pink-600 rounded">Login</button></Link>
           }
+          
     <FaCartShopping onClick={toggleCart} className='text-2xl cursor-pointer text-pink-600 ' />
     </div>
     <div ref={ref}   className={`absolute overflow-y-scroll w-72 h-[100vh] top-0 right-0 py-6 px-8 bg-pink-300 transform transition-transform  ${Object.keys(cart).length === 0 || currentPath === "/orderplaced" || currentPath === "/checkout" ? "translate-x-full": "translate-x-0"} `}>
