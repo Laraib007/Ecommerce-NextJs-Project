@@ -6,6 +6,7 @@ import { FaPlusCircle, FaMinusCircle } from "react-icons/fa"
 import { IoBagCheck } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
 import { usePathname } from 'next/navigation'
+import { IoMdSettings } from "react-icons/io";
 
 import Logo from "../component/Img/HLogo.png"
 import Image from 'next/image';
@@ -45,9 +46,9 @@ const Navbar = ({key, user, cart, addToCart, clearCart, removeFromCart, subTotal
     </nav>
     <div  className='absolute flex items-center right-0 mx-4 top-6'  >
     {<div id="dropdown" class="absolute  right-9 top-6 bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-pink-600">
-    <ul class="py-2 text-sm font-bold text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-      <li>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">My Account</a>
+    <ul class="py-2  text-sm font-bold text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+      <li> 
+       <a href="#" class="row px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"><IoMdSettings />My Account</a>
       </li>
       <li>
         <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Orders</a>
