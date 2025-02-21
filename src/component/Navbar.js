@@ -38,8 +38,8 @@ const Navbar = ({key, user, cart, addToCart, clearCart, removeFromCart, subTotal
       <Link href={'/stickers'} className="mr-4 hover:text-pink-600">Stickers</Link>
     </nav>
     <div  className='absolute flex items-center right-0 mx-4 top-6'  >
-     {user.value && <Link href={'/login'}><CgProfile  className='text-2xl font-bold cursor-pointer text-pink-600 mr-3' /></Link>}
-     {!user.value && <Link href={'/login'}> <button class="flex ml-auto mx-2 text-white bg-pink-500 border-0 py-0.5 px-1 focus:outline-none hover:bg-pink-600 rounded">Login</button></Link>
+     {user.value && <CgProfile  className='text-2xl font-bold cursor-pointer text-pink-600 mr-3' />}
+     {!user.value && <Link href={'/login'}> <button class="flex ml-auto mx-2 text-sm text-white bg-pink-500 border-0 py-0.5 px-1 focus:outline-none hover:bg-pink-600 rounded">Login</button></Link>
           }
     <FaCartShopping onClick={toggleCart} className='text-2xl cursor-pointer text-pink-600 ' />
     </div>
