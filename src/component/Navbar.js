@@ -58,14 +58,12 @@ const logout=()=>{
       <li className='ml-2 items-center flex row dark:hover:text-gray-300'><IoMdSettings /> <Link  class=" px-1 py-2 dark:hover:text-gray-300" href={'/myAccount'}>
        My Account</Link>
       </li>
-      {/* <li className='ml-2 items-center flex row dark:hover:text-gray-300'>
-      <HiShoppingBag />
-      <Link href={'/orders'} class="px-1 py-2 dark:hover:text-gray-300"><a href="#" class="px-1 py-2 dark:hover:text-gray-300">Orders</a></Link>
-      </li >
-      <li className='ml-2 items-center flex row dark:hover:text-gray-300'>
-      <RiLogoutBoxRFill  />
-      <Link onClick={logout}><a href="#" class="px-1 py-2 dark:hover:text-gray-300">Log out</a></Link>
-      </li> */}
+      <li className='ml-2 items-center flex row dark:hover:text-gray-300'><HiShoppingBag /> <Link  class=" px-1 py-2 dark:hover:text-gray-300" href={'/orders'}>
+      Orders</Link>
+      </li>
+      <li onClick={logout} className='ml-2 cursor-pointer items-center flex row dark:hover:text-gray-300'><IoMdSettings /> <p  class=" px-1 py-2 dark:hover:text-gray-300" >Log Out</p>
+      </li>
+    
     </ul>
 </div>}
      {user.value && <CgProfile onMouseOver={mouseHover} onMouseLeave={mouseHover} className='text-2xl font-bold cursor-pointer text-pink-600 mr-3' />}
