@@ -26,7 +26,7 @@ export default function App({ Component, pageProps }) {
       setUser({value: token})
       setKey(Math.random())
     }
-  }, [])
+  }, [router.query])
   
 
 const saveCart =(myCart)=>{
