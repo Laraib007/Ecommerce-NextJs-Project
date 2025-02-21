@@ -21,7 +21,7 @@ export default function App({ Component, pageProps }) {
       console.log(error)
      localStorage.clear()
     }
-   
+    const token = localStorage.getItem("token")
   }, [])
   
 
