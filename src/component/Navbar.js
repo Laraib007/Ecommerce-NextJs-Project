@@ -9,7 +9,7 @@ import { usePathname } from 'next/navigation'
 import { IoMdSettings } from "react-icons/io";
 import { HiShoppingBag } from "react-icons/hi2";
 import { RiLogoutBoxRFill  } from "react-icons/ri";
-
+import { ToastContainer, toast } from 'react-toastify';
 
 
 
@@ -20,7 +20,23 @@ import Image from 'next/image';
 const Navbar = ({logout, user, cart, addToCart, clearCart, removeFromCart, subTotal}) => {
   const [dropDown, setDropDown] = useState(false)
   
-
+const popUp =()=>{
+  
+  toast.error(' logged out successfully', {
+      position: "top-left",
+  autoClose: 1000,
+  hideProgressBar: false,
+  closeOnClick: false,
+  pauseOnHover: false,
+  draggable: true,
+  progress: undefined,
+  theme: "colored"
+      });
+      setTimeout(() => {
+        logout()
+      }, 1000);
+      
+}
 
   const currentPath = usePathname()
   const toggleCart = ()=>{
@@ -36,7 +52,18 @@ const Navbar = ({logout, user, cart, addToCart, clearCart, removeFromCart, subTo
   const ref = useRef()
   return (
     <div className=" text-gray-600 bg-slate-100 body-font ">
-      
+       <ToastContainer
+position="top-left"
+autoClose={3000}
+hideProgressBar={false}
+newestOnTop
+closeOnClick={false}
+rtl={false}
+pauseOnFocusLoss={false}
+draggable
+pauseOnHover={false}
+theme="colored"
+/>
   <div className=" flex-no-wrap fixed  top-0 flex w-full items-center justify-between bg-[#FBFBFB] py-2 shadow-md shadow-black/5 light:bg-neutral-600 dark:shadow-black/10 lg:flex-wrap lg:justify-start lg:py-4 mx-auto  flex-wrap p-5 flex-col md:flex-row  md:mr-60 ">
     <Link href={'/'}className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
         <Image src={Logo} height={10} width={100}  />
@@ -59,7 +86,7 @@ const Navbar = ({logout, user, cart, addToCart, clearCart, removeFromCart, subTo
       <li className='ml-2 items-center flex row dark:hover:text-gray-300'><HiShoppingBag /> <Link  class=" px-1 py-2 dark:hover:text-gray-300" href={'/orders'}>
       Orders</Link>
       </li>
-      <li onClick={logout} className='ml-2 cursor-pointer items-center flex row dark:hover:text-gray-300'><IoMdSettings /> <p  class=" px-1 py-2 dark:hover:text-gray-300" >Log Out</p>
+      <li  onClick={popUp} className='ml-2 cursor-pointer items-center flex row dark:hover:text-gray-300'><RiLogoutBoxRFill /> <p  class=" px-1 py-2 dark:hover:text-gray-300" >Log Out</p>
       </li>
     
     </ul>
