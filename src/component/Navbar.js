@@ -55,17 +55,17 @@ const logout=()=>{
     <div  className='absolute flex items-center right-0 mx-4 top-6'  >
     {<div id="dropdown" class="absolute  right-9 top-6 bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-pink-600">
     <ul class="py-2  text-sm font-bold text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-      <li className='ml-2 items-center flex row dark:hover:text-gray-300'> 
-      <IoMdSettings /> <Link href={'/myAccount'} class="px-1 py-2 dark:hover:text-gray-300">My Account</Link>
+      <li className='ml-2 items-center flex row dark:hover:text-gray-300'><IoMdSettings /> <Link  class=" px-1 py-2 dark:hover:text-gray-300" href={'/myAccount'}>
+       My Account</Link>
       </li>
-      <li className='ml-2 items-center flex row dark:hover:text-gray-300'>
+      {/* <li className='ml-2 items-center flex row dark:hover:text-gray-300'>
       <HiShoppingBag />
-      <Link href={'/orders'} class="px-1 py-2 dark:hover:text-gray-300">Orders</Link>
+      <Link href={'/orders'} class="px-1 py-2 dark:hover:text-gray-300"><a href="#" class="px-1 py-2 dark:hover:text-gray-300">Orders</a></Link>
       </li >
       <li className='ml-2 items-center flex row dark:hover:text-gray-300'>
       <RiLogoutBoxRFill  />
-      <Link onClick={logout} class="px-1 py-2 dark:hover:text-gray-300">Log out</Link>
-      </li>
+      <Link onClick={logout}><a href="#" class="px-1 py-2 dark:hover:text-gray-300">Log out</a></Link>
+      </li> */}
     </ul>
 </div>}
      {user.value && <CgProfile onMouseOver={mouseHover} onMouseLeave={mouseHover} className='text-2xl font-bold cursor-pointer text-pink-600 mr-3' />}
