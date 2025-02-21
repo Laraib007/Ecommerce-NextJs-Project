@@ -3,11 +3,12 @@ import React, { useRef, useState } from 'react'
 import { FaCartShopping } from "react-icons/fa6";
 import { MdCancel } from "react-icons/md";
 import { FaPlusCircle, FaMinusCircle } from "react-icons/fa"
-import { IoBagCheck, IoLogOut } from "react-icons/io5";
+import { IoBagCheck } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
 import { usePathname } from 'next/navigation'
 import { IoMdSettings } from "react-icons/io";
 import { HiShoppingBag } from "react-icons/hi2";
+import { RiLogoutBoxRFill  } from "react-icons/ri";
 
 
 
@@ -53,15 +54,15 @@ const Navbar = ({key, user, cart, addToCart, clearCart, removeFromCart, subTotal
     {<div id="dropdown" class="absolute  right-9 top-6 bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-pink-600">
     <ul class="py-2  text-sm font-bold text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
       <li className='ml-2 items-center flex row dark:hover:text-gray-300'> 
-      <IoMdSettings /> <a href="#" class=" px-1 py-2 dark:hover:text-gray-300">My Account</a>
+      <IoMdSettings /> <Link href={'/stickers'}><a href="#" class=" px-1 py-2 dark:hover:text-gray-300">My Account</a></Link>
       </li>
       <li className='ml-2 items-center flex row dark:hover:text-gray-300'>
       <HiShoppingBag />
-      <a href="#" class="px-1 py-2 dark:hover:text-gray-300">Orders</a>
+      <Link href={'/stickers'}><a href="#" class="px-1 py-2 dark:hover:text-gray-300">Orders</a></Link>
       </li >
       <li className='ml-2 items-center flex row dark:hover:text-gray-300'>
-      <IoLogOut />
-      <a href="#" class="px-1 py-2 dark:hover:text-gray-300">Log out</a>
+      <RiLogoutBoxRFill  />
+      <Link href={'/stickers'}><a href="#" class="px-1 py-2 dark:hover:text-gray-300">Log out</a></Link>
       </li>
     </ul>
 </div>}
