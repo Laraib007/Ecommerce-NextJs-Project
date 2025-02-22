@@ -3,15 +3,18 @@ import Navbar from "@/component/Navbar";
 import "@/styles/globals.css";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import LoadingBar from "react-top-loading-bar";
 
 export default function App({ Component, pageProps }) {
   const [cart, setcart] = useState({})
   const [subTotal, setsubTotal] = useState(0)
   const [user, setUser] = useState({value: null})
   const [key, setKey] = useState()
-
+  const [progress, setProgress] = useState(0);
+  
   const router = useRouter()
   useEffect(() => {
+    
     try {
       if(localStorage.getItem("cart")){
         setcart(JSON.parse(localStorage.getItem("cart")))
@@ -86,6 +89,11 @@ saveCart({})
 
   return (
     <>
+    <LoadingBar
+        color="#f11946"
+        progress={progress}
+        onLoaderFinished={() => setProgress(0)}
+      />
     <div className="mt-20">
     <Navbar key={key} logout={logout} user={user} cart={cart} addToCart={addToCart} clearCart={clearCart} removeFromCart={removeFromCart} subTotal={subTotal} />
     <Component cart={cart} buyNow={buyNow} addToCart={addToCart} clearCart={clearCart} removeFromCart={removeFromCart} subTotal={subTotal} {...pageProps} />
