@@ -15,9 +15,9 @@ export default function App({ Component, pageProps }) {
   const router = useRouter()
   useEffect(() => {
     router.events.on('routeChangeStart', ()=>{
-      setProgress(100)
+      setProgress(40)
     })
-    router.events.on('routeChangeStart', ()=>{
+    router.events.on('routeChangeComplete', ()=>{
       setProgress(100)
     })
     try {
@@ -97,6 +97,8 @@ saveCart({})
     <LoadingBar
         color="#f11946"
         progress={progress}
+        height={4}
+        waitingTime={600}
         onLoaderFinished={() => setProgress(0)}
       />
     <div className="mt-20">
