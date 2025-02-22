@@ -1,10 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import img from '../component/Img/Clogo.png'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 
 const forgotpass = () => {
+  const router = useRouter()
+    
+      useEffect(() => {
+        if(localStorage.getItem('token')){
+          router.push("/")
+        }
+      
+        
+      }, [])
   return (
     <div>
         <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
