@@ -95,7 +95,7 @@ saveCart({})
   return (
     <>
     <LoadingBar
-        color="#f11946"
+        color="#ff2d55"
         progress={progress}
         height={4}
         waitingTime={600}
