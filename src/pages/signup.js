@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import img from '../component/Img/Clogo.png'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -10,6 +10,14 @@ const Signup =  () => {
 
 
   const router = useRouter()
+  
+    useEffect(() => {
+      if(localStorage.getItem('token')){
+        router.push("/")
+      }
+    
+      
+    }, [])
 
 
   const [name, setName] = useState()
