@@ -11,10 +11,15 @@ export default function App({ Component, pageProps }) {
   const [user, setUser] = useState({value: null})
   const [key, setKey] = useState()
   const [progress, setProgress] = useState(0);
-  
+
   const router = useRouter()
   useEffect(() => {
-    
+    router.events.on('routeChangeStart', ()=>{
+      setProgress(100)
+    })
+    router.events.on('routeChangeStart', ()=>{
+      setProgress(100)
+    })
     try {
       if(localStorage.getItem("cart")){
         setcart(JSON.parse(localStorage.getItem("cart")))
