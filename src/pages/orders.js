@@ -1,4 +1,6 @@
 import React from 'react'
+import Orders from '../../models/Orders'
+import mongoose from 'mongoose'
 
 const orders = () => {
   return (
@@ -225,23 +227,13 @@ export async function getServerSideProps(context) {
     if(!mongoose.connections[0].readyState){
     await mongoose.connect(process.env.MONGOSSE_URI)
     }
-    let product = await Products.findOne({ slug: context.query.slug })
-    let varient =  await Products.find({title: product.title,  category: product.category})
+    let order = await Orders.findOne({ })
     
   
-    let colorSizeSlug = {}
-    for(let item of varient){
-      if(Object.keys(colorSizeSlug).includes(item.color)){
-        colorSizeSlug[item.color][item.size] = {slug: item.slug}
-      }
-      else {
-        colorSizeSlug[item.color] = {}
-        colorSizeSlug[item.color][item.size] = {slug: item.slug}
-      }
-    }
+   
 
     return {
-      props: {product: JSON.parse(JSON.stringify(product)), varient: JSON.parse(JSON.stringify(colorSizeSlug))},
+      props: {"Orders": "orders"},
     }
   }
 
