@@ -92,8 +92,9 @@ const Myaccount = () => {
       
     </div>
     {/* <!-- Account Information Modal --> */}
-    <div id="accountInformationModal2" tabIndex="-1" aria-hidden="false" class="max-h-auto fixed left-0 right-0 top-0 z-50  h-[calc(100%-1rem)] max-h-full w-full items-center items-center justify-center overflow-y-auto overflow-x-hidden antialiased md:inset-0">
-      <div class="max-h-auto relative max-h-full w-full max-w-lg p-4">
+    <div className='justify-center center'>
+    <div id="accountInformationModal2" tabIndex="-1" aria-hidden="false" class="max-h-auto fixed left-0 right-0 top-0 z-50  h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden antialiased md:inset-0">
+      <div class="max-h-auto my-auto mx-auto relative max-h-full w-full max-w-lg p-4">
         {/* <!-- Modal content --> */}
         <div class="relative rounded-lg bg-white shadow dark:bg-gray-800">
           {/* <!-- Modal header --> */}
@@ -436,6 +437,7 @@ const Myaccount = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
   </section>
   </div>
