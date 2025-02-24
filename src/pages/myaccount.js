@@ -465,7 +465,7 @@ const Myaccount = () => {
       </div>
     </div>
     {/* <!-- Account Information Modal --> */}
-    <div id="accountInformationModal2" tabindex="-1" aria-hidden="true" class="max-h-auto fixed left-0 right-0 top-0 z-50 hidden h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden antialiased md:inset-0">
+    <div id="accountInformationModal2" tabIndex="-1" aria-hidden="true" class="max-h-auto fixed left-0 right-0 top-0 z-50 hidden h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden antialiased md:inset-0">
       <div class="max-h-auto relative max-h-full w-full max-w-lg p-4">
         {/* <!-- Modal content --> */}
         <div class="relative rounded-lg bg-white shadow dark:bg-gray-800">
@@ -503,7 +503,7 @@ const Myaccount = () => {
                   <button id="dropdown_phone_input__button_billing_modal" data-dropdown-toggle="dropdown_phone_input_billing_modal" class="z-10 inline-flex shrink-0 items-center rounded-s-lg border border-gray-300 bg-gray-100 px-4 py-2.5 text-center text-sm font-medium text-gray-900 hover:bg-gray-200 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-700" type="button">
                     <svg fill="none" aria-hidden="true" class="me-2 h-4 w-4" viewBox="0 0 20 15">
                       <rect width="19.6" height="14" y=".5" fill="#fff" rx="2" />
-                      <mask id="a" style="mask-type:luminance" width="20" height="15" x="0" y="0" maskUnits="userSpaceOnUse">
+                      <mask id="a"  width="20" height="15" x="0" y="0" maskUnits="userSpaceOnUse">
                         <rect width="19.6" height="14" y=".5" fill="#fff" rx="2" />
                       </mask>
                       <g mask="url(#a)">
@@ -545,7 +545,7 @@ const Myaccount = () => {
                           <span class="inline-flex items-center">
                             <svg fill="none" aria-hidden="true" class="me-2 h-4 w-4" viewBox="0 0 20 15">
                               <rect width="19.6" height="14" y=".5" fill="#fff" rx="2" />
-                              <mask id="a" style="mask-type:luminance" width="20" height="15" x="0" y="0" maskUnits="userSpaceOnUse">
+                              <mask id="a"  width="20" height="15" x="0" y="0" maskUnits="userSpaceOnUse">
                                 <rect width="19.6" height="14" y=".5" fill="#fff" rx="2" />
                               </mask>
                               <g mask="url(#a)">
@@ -584,7 +584,7 @@ const Myaccount = () => {
                           <span class="inline-flex items-center">
                             <svg class="me-2 h-4 w-4" fill="none" viewBox="0 0 20 15">
                               <rect width="19.6" height="14" y=".5" fill="#fff" rx="2" />
-                              <mask id="a" style="mask-type:luminance" width="20" height="15" x="0" y="0" maskUnits="userSpaceOnUse">
+                              <mask id="a"  width="20" height="15" x="0" y="0" maskUnits="userSpaceOnUse">
                                 <rect width="19.6" height="14" y=".5" fill="#fff" rx="2" />
                               </mask>
                               <g mask="url(#a)">
@@ -603,7 +603,7 @@ const Myaccount = () => {
                           <span class="inline-flex items-center">
                             <svg class="me-2 h-4 w-4" fill="none" viewBox="0 0 20 15" xmlns="http://www.w3.org/2000/svg">
                               <rect width="19.6" height="14" y=".5" fill="#fff" rx="2" />
-                              <mask id="a" style="mask-type:luminance" width="20" height="15" x="0" y="0" maskUnits="userSpaceOnUse">
+                              <mask id="a"  width="20" height="15" x="0" y="0" maskUnits="userSpaceOnUse">
                                 <rect width="19.6" height="14" y=".5" fill="#fff" rx="2" />
                               </mask>
                               <g mask="url(#a)">
@@ -638,7 +638,7 @@ const Myaccount = () => {
                           <span class="inline-flex items-center">
                             <svg class="me-2 h-4 w-4" fill="none" viewBox="0 0 20 15">
                               <rect width="19.6" height="14" y=".5" fill="#fff" rx="2" />
-                              <mask id="a" style="mask-type:luminance" width="20" height="15" x="0" y="0" maskUnits="userSpaceOnUse">
+                              <mask id="a"  width="20" height="15" x="0" y="0" maskUnits="userSpaceOnUse">
                                 <rect width="19.6" height="14" y=".5" fill="#fff" rx="2" />
                               </mask>
                               <g mask="url(#a)">
@@ -678,7 +678,7 @@ const Myaccount = () => {
                           <span class="inline-flex items-center">
                             <svg class="me-2 h-4 w-4" fill="none" viewBox="0 0 20 15">
                               <rect width="19.1" height="13.5" x=".25" y=".75" fill="#fff" stroke="#F5F5F5" stroke-width=".5" rx="1.75" />
-                              <mask id="a" style="mask-type:luminance" width="20" height="15" x="0" y="0" maskUnits="userSpaceOnUse">
+                              <mask id="a"  width="20" height="15" x="0" y="0" maskUnits="userSpaceOnUse">
                                 <rect width="19.1" height="13.5" x=".25" y=".75" fill="#fff" stroke="#fff" stroke-width=".5" rx="1.75" />
                               </mask>
                               <g mask="url(#a)">
@@ -695,7 +695,7 @@ const Myaccount = () => {
                           <span class="inline-flex items-center">
                             <svg class="me-2 h-4 w-4" fill="none" viewBox="0 0 20 15">
                               <rect width="19.6" height="14" y=".5" fill="#fff" rx="2" />
-                              <mask id="a" style="mask-type:luminance" width="20" height="15" x="0" y="0" maskUnits="userSpaceOnUse">
+                              <mask id="a"  width="20" height="15" x="0" y="0" maskUnits="userSpaceOnUse">
                                 <rect width="19.6" height="14" y=".5" fill="#fff" rx="2" />
                               </mask>
                               <g mask="url(#a)">
@@ -787,7 +787,7 @@ const Myaccount = () => {
       </div>
     </div>
   
-    <div id="deleteOrderModal" tabindex="-1" aria-hidden="true" class="fixed left-0 right-0 top-0 z-50 hidden h-modal w-full items-center justify-center overflow-y-auto overflow-x-hidden md:inset-0 md:h-full">
+    <div id="deleteOrderModal" tabIndex="-1" aria-hidden="true" class="fixed left-0 right-0 top-0 z-50 hidden h-modal w-full items-center justify-center overflow-y-auto overflow-x-hidden md:inset-0 md:h-full">
         <div class="relative h-full w-full max-w-md p-4 md:h-auto">
           {/* <!-- Modal content --> */}
           <div class="relative rounded-lg bg-white p-4 text-center shadow dark:bg-gray-800 sm:p-5">
