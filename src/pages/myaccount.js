@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Myaccount = () => {
+    const [hidden, setHidden] = useState(false)
   return (
     <div><section class="bg-white py-8 antialiased  md:py-8">
     <div class="mx-auto max-w-screen-lg px-4 2xl:px-0">
@@ -82,7 +83,7 @@ const Myaccount = () => {
             </dl>
           </div>
         </div>
-        <button type="button" data-modal-target="accountInformationModal2" data-modal-toggle="accountInformationModal2" class="inline-flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-800 bg-blue-600 focus:outline-none focus:ring-4 focus:ring-primary-300  dark:hover:bg-primary-700 dark:focus:ring-primary-800 sm:w-auto">
+        <button onClick={()=>setHidden(true)} type="button" data-modal-target="accountInformationModal2" data-modal-toggle="accountInformationModal2" class="inline-flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-800 bg-blue-600 focus:outline-none focus:ring-4 focus:ring-primary-300  dark:hover:bg-primary-700 dark:focus:ring-primary-800 sm:w-auto">
           <svg class="-ms-0.5 me-1.5 h-4 w-4" aria-hidden="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14.304 4.844 2.852 2.852M7 7H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-4.5m2.409-9.91a2.017 2.017 0 0 1 0 2.853l-6.844 6.844L8 14l.713-3.565 6.844-6.844a2.015 2.015 0 0 1 2.852 0Z"></path>
           </svg>
@@ -93,7 +94,7 @@ const Myaccount = () => {
     </div>
     {/* <!-- Account Information Modal --> */}
     <div className='justify-center center'>
-    <div id="accountInformationModal2" tabIndex="-1" aria-hidden="false" class="max-h-auto fixed left-0 right-0 top-0 z-50  h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden antialiased md:inset-0">
+   {hidden && <div id="accountInformationModal2" tabIndex="-1" aria-hidden="false" class="max-h-auto fixed left-0 right-0 top-0 z-50  h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden antialiased md:inset-0">
       <div class="max-h-auto my-auto mx-auto relative max-h-full w-full max-w-lg p-4">
         {/* <!-- Modal content --> */}
         <div class="relative rounded-lg bg-white shadow dark:bg-gray-800">
@@ -169,7 +170,7 @@ const Myaccount = () => {
                   <div id="dropdown_phone_input_billing_modal" class="z-10 hidden w-56 divide-y divide-gray-100 rounded-lg bg-white shadow dark:bg-gray-700">
                     <ul class="p-2 text-sm font-medium text-gray-700 dark:text-gray-200" aria-labelledby="dropdown_phone_input__button_billing_modal">
                       <li>
-                        <button type="button" class="inline-flex w-full rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+                        <button type="button" class="inline-flex w-full rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-white dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
                           <span class="inline-flex items-center">
                             <svg fill="none" aria-hidden="true" class="me-2 h-4 w-4" viewBox="0 0 20 15">
                               <rect width="19.6" height="14" y=".5" fill="#fff" rx="2" />
@@ -208,7 +209,7 @@ const Myaccount = () => {
                         </button>
                       </li>
                       <li>
-                        <button type="button" class="inline-flex w-full rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+                        <button type="button" class="inline-flex w-full rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-white dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
                           <span class="inline-flex items-center">
                             <svg class="me-2 h-4 w-4" fill="none" viewBox="0 0 20 15">
                               <rect width="19.6" height="14" y=".5" fill="#fff" rx="2" />
@@ -227,7 +228,7 @@ const Myaccount = () => {
                         </button>
                       </li>
                       <li>
-                        <button type="button" class="inline-flex w-full rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+                        <button type="button" class="inline-flex w-full rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-white dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
                           <span class="inline-flex items-center">
                             <svg class="me-2 h-4 w-4" fill="none" viewBox="0 0 20 15" xmlns="http://www.w3.org/2000/svg">
                               <rect width="19.6" height="14" y=".5" fill="#fff" rx="2" />
@@ -262,7 +263,7 @@ const Myaccount = () => {
                         </button>
                       </li>
                       <li>
-                        <button type="button" class="inline-flex w-full rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+                        <button type="button" class="inline-flex w-full rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-white dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
                           <span class="inline-flex items-center">
                             <svg class="me-2 h-4 w-4" fill="none" viewBox="0 0 20 15">
                               <rect width="19.6" height="14" y=".5" fill="#fff" rx="2" />
@@ -302,7 +303,7 @@ const Myaccount = () => {
                         </button>
                       </li>
                       <li>
-                        <button type="button" class="inline-flex w-full rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+                        <button type="button" class="inline-flex w-full rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-white dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
                           <span class="inline-flex items-center">
                             <svg class="me-2 h-4 w-4" fill="none" viewBox="0 0 20 15">
                               <rect width="19.1" height="13.5" x=".25" y=".75" fill="#fff" stroke="#F5F5F5" stroke-width=".5" rx="1.75" />
@@ -319,7 +320,7 @@ const Myaccount = () => {
                         </button>
                       </li>
                       <li>
-                        <button type="button" class="inline-flex w-full rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+                        <button type="button" class="inline-flex w-full rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-white dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
                           <span class="inline-flex items-center">
                             <svg class="me-2 h-4 w-4" fill="none" viewBox="0 0 20 15">
                               <rect width="19.6" height="14" y=".5" fill="#fff" rx="2" />
@@ -361,16 +362,16 @@ const Myaccount = () => {
                     </ul>
                   </div>
                   <div class="relative w-full">
-                    <input type="text" id="phone-input" class="z-20 block w-full rounded-e-lg border border-s-0 border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:border-s-gray-700  dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required />
+                    <input type="text" id="phone-input" class="z-20 block w-full rounded-e-lg border border-s-0 border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:border-s-gray-700  dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required />
                   </div>
                 </div>
               </div>
   
               <div class="col-span-2 sm:col-span-1">
                 <div class="mb-2 flex items-center gap-2">
-                  <label for="select_country_input_billing_modal" class="block text-sm font-medium text-gray-900 "> Country* </label>
+                  <label for="select_country_input_billing_modal" class="block text-sm font-medium text-white "> Country* </label>
                 </div>
-                <select id="select_country_input_billing_modal" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500">
+                <select id="select_country_input_billing_modal" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500">
                   <option selected>United States</option>
                   <option value="AS">Australia</option>
                   <option value="FR">France</option>
@@ -381,9 +382,9 @@ const Myaccount = () => {
   
               <div class="col-span-2 sm:col-span-1">
                 <div class="mb-2 flex items-center gap-2">
-                  <label for="select_city_input_billing_modal" class="block text-sm font-medium text-gray-900 "> City* </label>
+                  <label for="select_city_input_billing_modal" class="block text-sm font-medium text-white "> City* </label>
                 </div>
-                <select id="select_city_input_billing_modal" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500">
+                <select id="select_city_input_billing_modal" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500">
                   <option selected>San Francisco</option>
                   <option value="NY">New York</option>
                   <option value="LA">Los Angeles</option>
@@ -393,51 +394,29 @@ const Myaccount = () => {
               </div>
   
               <div class="col-span-2">
-                <label for="address_billing_modal" class="mb-2 block text-sm font-medium text-gray-900 "> Delivery Address* </label>
-                <textarea id="address_billing_modal" rows="4" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="Enter here your address"></textarea>
+                <label for="address_billing_modal" class="mb-2 block text-sm font-medium text-white "> Delivery Address* </label>
+                <textarea id="address_billing_modal" rows="4" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="Enter here your address"></textarea>
               </div>
               <div class="col-span-2 sm:col-span-1">
-                <label for="company_name" class="mb-2 block text-sm font-medium text-gray-900 "> Company name </label>
-                <input type="text" id="company_name" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="Flowbite LLC" />
+                <label for="company_name" class="mb-2 block text-sm font-medium text-white "> Company name </label>
+                <input type="text" id="company_name" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="Flowbite LLC" />
               </div>
   
               <div class="col-span-2 sm:col-span-1">
-                <label for="vat_number" class="mb-2 block text-sm font-medium text-gray-900 "> VAT number </label>
-                <input type="text" id="vat_number" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="DE42313253" />
+                <label for="vat_number" class="mb-2 block text-sm font-medium text-white "> VAT number </label>
+                <input type="text" id="vat_number" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="DE42313253" />
               </div>
             </div>
             <div class="border-t border-gray-200 pt-4 dark:border-gray-700 md:pt-5">
-              <button type="submit" class="me-2 inline-flex items-center rounded-lg bg-primary-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300  dark:hover:bg-primary-700 dark:focus:ring-primary-800">Save information</button>
-              <button type="button" data-modal-toggle="accountInformationModal2" class="me-2 rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700">Cancel</button>
+              <button type="submit" class="me-2 inline-flex items-center rounded-lg bg-green-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-primary-300  dark:hover:bg-primary-700 dark:focus:ring-primary-800">Save information</button>
+              <button type="button" data-modal-toggle="accountInformationModal2" class="me-2 rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-white hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700">Cancel</button>
             </div>
           </form>
         </div>
       </div>
-    </div>
+    </div>}
   
-    <div id="deleteOrderModal" tabIndex="-1" aria-hidden="true" class="fixed left-0 right-0 top-0 z-50 hidden h-modal w-full items-center justify-center overflow-y-auto overflow-x-hidden md:inset-0 md:h-full">
-        <div class="relative h-full w-full max-w-md p-4 md:h-auto">
-          {/* <!-- Modal content --> */}
-          <div class="relative rounded-lg bg-white p-4 text-center shadow dark:bg-gray-800 sm:p-5">
-            <button type="button" class="absolute right-2.5 top-2.5 ml-auto inline-flex items-center rounded-lg bg-transparent p-1.5 text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="deleteOrderModal">
-              <svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-              <span class="sr-only">Close modal</span>
-            </button>
-            <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-gray-100 p-2 dark:bg-gray-700">
-              <svg class="h-8 w-8 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z" />
-              </svg>
-              <span class="sr-only">Danger icon</span>
-            </div>
-            <p class="mb-3.5 text-gray-900 "><a href="#" class="font-medium text-primary-700 hover:underline dark:text-primary-500">@heleneeng</a>, are you sure you want to delete this order from your account?</p>
-            <p class="mb-4 text-gray-500 dark:text-gray-300">This action cannot be undone.</p>
-            <div class="flex items-center justify-center space-x-4">
-              <button data-modal-toggle="deleteOrderModal" type="button" class="rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-900 focus:z-10 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:border-gray-500 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-600">No, cancel</button>
-              <button type="submit" class="rounded-lg bg-red-700 px-3 py-2 text-center text-sm font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Yes, delete</button>
-            </div>
-          </div>
-        </div>
-      </div>
+   
       </div>
   </section>
   </div>
