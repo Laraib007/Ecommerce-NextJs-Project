@@ -99,7 +99,7 @@ const Myaccount = () => {
         <div class="relative rounded-lg bg-white shadow dark:bg-gray-800">
           {/* <!-- Modal header --> */}
           <div class="flex items-center justify-between rounded-t border-b border-gray-200 p-4 dark:border-gray-700 md:p-5">
-            <h3 class="text-lg font-semibold text-gray-900 ">Account Information</h3>
+            <h3 class="text-lg font-semibold text-white ">Account Information</h3>
             <button type="button" class="ms-auto inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="accountInformationModal2">
               <svg class="h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
@@ -111,24 +111,24 @@ const Myaccount = () => {
           <form class="p-4 md:p-5">
             <div class="mb-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div class="col-span-2">
-                <label for="pick-up-point-input" class="mb-2 block text-sm font-medium text-gray-900 "> Pick-up point* </label>
-                <input type="text" id="pick-up-point-input" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="Enter the pick-up point name" required />
+                <label for="pick-up-point-input" class="mb-2 block text-sm font-medium text-white "> Pick-up point* </label>
+                <input type="text" id="pick-up-point-input" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="Enter the pick-up point name" required />
               </div>
   
               <div class="col-span-2 sm:col-span-1">
-                <label for="full_name_info_modal" class="mb-2 block text-sm font-medium text-gray-900 "> Your Full Name* </label>
-                <input type="text" id="full_name_info_modal" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="Enter your first name" required />
+                <label for="full_name_info_modal" class="mb-2 block text-sm font-medium text-white "> Your Full Name* </label>
+                <input type="text" id="full_name_info_modal" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="Enter your first name" required />
               </div>
   
               <div class="col-span-2 sm:col-span-1">
-                <label for="email_info_modal" class="mb-2 block text-sm font-medium text-gray-900 "> Your Email* </label>
-                <input type="text" id="email_info_modal" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="Enter your email here" required />
+                <label for="email_info_modal" class="mb-2 block text-sm font-medium text-white "> Your Email* </label>
+                <input type="text" id="email_info_modal" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="Enter your email here" required />
               </div>
   
               <div class="col-span-2">
-                <label for="phone-input_billing_modal" class="mb-2 block text-sm font-medium text-gray-900 "> Phone Number* </label>
+                <label for="phone-input_billing_modal" class="mb-2 block text-sm font-medium text-white "> Phone Number* </label>
                 <div class="flex items-center">
-                  <button id="dropdown_phone_input__button_billing_modal" data-dropdown-toggle="dropdown_phone_input_billing_modal" class="z-10 inline-flex shrink-0 items-center rounded-s-lg border border-gray-300 bg-gray-100 px-4 py-2.5 text-center text-sm font-medium text-gray-900 hover:bg-gray-200 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700  dark:hover:bg-gray-600 dark:focus:ring-gray-700" type="button">
+                  <button id="dropdown_phone_input__button_billing_modal" data-dropdown-toggle="dropdown_phone_input_billing_modal" class="z-10 inline-flex shrink-0 items-center rounded-s-lg border border-gray-300 bg-gray-100 px-4 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-200 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700  dark:hover:bg-gray-600 dark:focus:ring-gray-700" type="button">
                     <svg fill="none" aria-hidden="true" class="me-2 h-4 w-4" viewBox="0 0 20 15">
                       <rect width="19.6" height="14" y=".5" fill="#fff" rx="2" />
                       <mask id="a"  width="20" height="15" x="0" y="0" maskUnits="userSpaceOnUse">
