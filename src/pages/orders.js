@@ -13,7 +13,7 @@ const orders = () => {
               <label for="order-type" class="sr-only mb-2 block text-sm font-medium text-gray-900 ">Select order type</label>
               <select id="order-type" class="block w-full min-w-[8rem] rounded-lg border border-gray-300  p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600   dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500">
                 <option selected>All orders</option>
-                <option className='bg-black' value="pre-order">Pre-order</option>
+                <option value="pre-order">Pre-order</option>
                 <option value="transit">In transit</option>
                 <option value="confirmed">Confirmed</option>
                 <option value="cancelled">Cancelled</option>
@@ -57,7 +57,7 @@ const orders = () => {
   
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
                 <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Status:</dt>
-                <dd class="me-2 mt-1.5 inline-flex items-center rounded bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800 dark:bg-primary-900 dark:text-primary-300">
+                <dd class="me-2 mt-1.5 inline-flex items-center rounded bg-blue-300 px-2.5 py-0.5 text-xs font-medium text-primary-800 dark:text-primary-300">
                   <svg class="me-1 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.5 4h-13m13 16h-13M8 20v-3.333a2 2 0 0 1 .4-1.2L10 12.6a1 1 0 0 0 0-1.2L8.4 8.533a2 2 0 0 1-.4-1.2V4h8v3.333a2 2 0 0 1-.4 1.2L13.957 11.4a1 1 0 0 0 0 1.2l1.643 2.867a2 2 0 0 1 .4 1.2V20H8Z" />
                   </svg>
