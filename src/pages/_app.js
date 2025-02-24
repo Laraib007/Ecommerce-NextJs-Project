@@ -40,6 +40,7 @@ const logout=()=>{
   localStorage.removeItem("token")
   setKey(Math.random())
   setUser({value: null})
+  router.push("/")
 }
 const saveCart =(myCart)=>{
   localStorage.setItem("cart", JSON.stringify(myCart))
