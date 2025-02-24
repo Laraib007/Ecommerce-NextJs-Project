@@ -134,7 +134,7 @@ const orders = () => {
               </dl>
   
               <div class="w-full grid sm:grid-cols-2 lg:flex lg:w-64 lg:items-center lg:justify-end gap-4">
-                <button type="button" class="w-full rounded-lg bg-primary-700 px-3 py-2 text-sm font-medium text-black hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:hover:bg-primary-700 dark:focus:ring-blue-800 lg:w-auto">Order again</button>
+                <button type="button" class="w-full inline-flex justify-center rounded-lg  border border-gray-200 bg-blue px-3 py-2 text-sm font-medium  hover:bg-blue-100 hover:text-white-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-blue-800 dark:text-white-400 dark:hover:bg-blue-700 dark:hover:text-white dark:focus:ring-gray-700 lg:w-auto">Order again</button>
                 <a href="#" class="w-full inline-flex justify-center rounded-lg  border border-gray-200 bg-black px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-black dark:focus:ring-gray-700 lg:w-auto">View details</a>
               </div>
             </div>
@@ -168,7 +168,7 @@ const orders = () => {
               </dl>
   
               <div class="w-full grid sm:grid-cols-2 lg:flex lg:w-64 lg:items-center lg:justify-end gap-4">
-                <button type="button" class="w-full rounded-lg bg-primary-700 px-3 py-2 text-sm font-medium text-black hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:hover:bg-primary-700 dark:focus:ring-primary-800 lg:w-auto">Order again</button>
+                <button type="button" class="w-full rounded-lg bg-blue-700 px-3 py-2 text-sm font-medium text-black hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:hover:bg-blue-700 dark:focus:ring-primary-800 lg:w-auto">Order again</button>
                 <a href="#" class="w-full inline-flex justify-center rounded-lg  border border-gray-200 bg-black px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-black dark:focus:ring-gray-700 lg:w-auto">View details</a>
               </div>
             </div>
@@ -202,7 +202,7 @@ const orders = () => {
               </dl>
   
               <div class="w-full grid sm:grid-cols-2 lg:flex lg:w-64 lg:items-center lg:justify-end gap-4">
-                <button type="button" class="w-full rounded-lg bg-primary-700 px-3 py-2 text-sm font-medium text-black hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:hover:bg-primary-700 dark:focus:ring-primary-800 lg:w-auto">Order again</button>
+                <button type="button" class="w-full rounded-lg bg-blue-700 px-3 py-2 text-sm font-medium text-black hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:hover:bg-blue-700 dark:focus:ring-primary-800 lg:w-auto">Order again</button>
                 <a href="#" class="w-full inline-flex justify-center rounded-lg  border border-gray-200 bg-black px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-black dark:focus:ring-gray-700 lg:w-auto">View details</a>
               </div>
             </div>
@@ -236,7 +236,7 @@ const orders = () => {
               </dl>
   
               <div class="w-full grid sm:grid-cols-2 lg:flex lg:w-64 lg:items-center lg:justify-end gap-4">
-                <button type="button" class="w-full rounded-lg bg-primary-700 px-3 py-2 text-sm font-medium text-black hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:hover:bg-primary-700 dark:focus:ring-primary-800 lg:w-auto">Order again</button>
+                <button type="button" class="w-full rounded-lg bg-blue-700 px-3 py-2 text-sm font-medium text-black hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:hover:bg-blue-700 dark:focus:ring-primary-800 lg:w-auto">Order again</button>
                 <a href="#" class="w-full inline-flex justify-center rounded-lg  border border-gray-200 bg-black px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-black dark:focus:ring-gray-700 lg:w-auto">View details</a>
               </div>
             </div>
@@ -270,7 +270,7 @@ const orders = () => {
               </dl>
   
               <div class="w-full grid sm:grid-cols-2 lg:flex lg:w-64 lg:items-center lg:justify-end gap-4">
-                <button type="button" class="w-full rounded-lg bg-primary-700 px-3 py-2 text-sm font-medium text-black hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:hover:bg-primary-700 dark:focus:ring-primary-800 lg:w-auto">Order again</button>
+                <button type="button" class="w-full rounded-lg bg-blue-700 px-3 py-2 text-sm font-medium text-black hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:hover:bg-blue-700 dark:focus:ring-primary-800 lg:w-auto">Order again</button>
                 <a href="#" class="w-full inline-flex justify-center rounded-lg  border border-gray-200 bg-black px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-black dark:focus:ring-gray-700 lg:w-auto">View details</a>
               </div>
             </div>
@@ -304,7 +304,7 @@ const orders = () => {
               </dl>
   
               <div class="w-full grid sm:grid-cols-2 lg:flex lg:w-64 lg:items-center lg:justify-end gap-4">
-                <button type="button" class="w-full rounded-lg bg-primary-700 px-3 py-2 text-sm font-medium text-black hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:hover:bg-primary-700 dark:focus:ring-primary-800 lg:w-auto">Order again</button>
+                <button type="button" class="w-full rounded-lg bg-blue-700 px-3 py-2 text-sm font-medium text-black hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:hover:bg-blue-700 dark:focus:ring-primary-800 lg:w-auto">Order again</button>
                 <a href="#" class="w-full inline-flex justify-center rounded-lg  border border-gray-200 bg-black px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-black dark:focus:ring-gray-700 lg:w-auto">View details</a>
               </div>
             </div>
@@ -338,7 +338,7 @@ const orders = () => {
               </dl>
   
               <div class="w-full grid sm:grid-cols-2 lg:flex lg:w-64 lg:items-center lg:justify-end gap-4">
-                <button type="button" class="w-full rounded-lg bg-primary-700 px-3 py-2 text-sm font-medium text-black hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:hover:bg-primary-700 dark:focus:ring-primary-800 lg:w-auto">Order again</button>
+                <button type="button" class="w-full rounded-lg bg-blue-700 px-3 py-2 text-sm font-medium text-black hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:hover:bg-blue-700 dark:focus:ring-primary-800 lg:w-auto">Order again</button>
                 <a href="#" class="w-full inline-flex justify-center rounded-lg  border border-gray-200 bg-black px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-black dark:focus:ring-gray-700 lg:w-auto">View details</a>
               </div>
             </div>
@@ -372,7 +372,7 @@ const orders = () => {
               </dl>
   
               <div class="w-full grid sm:grid-cols-2 lg:flex lg:w-64 lg:items-center lg:justify-end gap-4">
-                <button type="button" class="w-full rounded-lg bg-primary-700 px-3 py-2 text-sm font-medium text-black hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:hover:bg-primary-700 dark:focus:ring-primary-800 lg:w-auto">Order again</button>
+                <button type="button" class="w-full rounded-lg bg-blue-700 px-3 py-2 text-sm font-medium text-black hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:hover:bg-blue-700 dark:focus:ring-primary-800 lg:w-auto">Order again</button>
                 <a href="#" class="w-full inline-flex justify-center rounded-lg  border border-gray-200 bg-black px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-black dark:focus:ring-gray-700 lg:w-auto">View details</a>
               </div>
             </div>
@@ -396,7 +396,7 @@ const orders = () => {
               <a href="#" class="flex h-8 items-center justify-center border border-gray-300 bg-black px-3 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-black">2</a>
             </li>
             <li>
-              <a href="#" aria-current="page" class="z-10 flex h-8 items-center justify-center border border-primary-300 bg-primary-50 px-3 leading-tight text-primary-600 hover:bg-primary-100 hover:text-primary-700 dark:border-gray-700  ">3</a>
+              <a href="#" aria-current="page" class="z-10 flex h-8 items-center justify-center border border-primary-300 bg-blue-50 px-3 leading-tight text-primary-600 hover:bg-blue-100 hover:text-primary-700 dark:border-gray-700  ">3</a>
             </li>
             <li>
               <a href="#" class="flex h-8 items-center justify-center border border-gray-300 bg-black px-3 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-black">...</a>
