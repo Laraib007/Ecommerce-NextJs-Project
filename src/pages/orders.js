@@ -11,7 +11,7 @@ const orders = () => {
           <div class="mt-6 gap-4 space-y-4 sm:mt-0 sm:flex sm:items-center sm:justify-end sm:space-y-0">
             <div>
               <label for="order-type" class="sr-only mb-2 block text-sm font-medium text-gray-900 ">Select order type</label>
-              <select id="order-type" class="block w-full min-w-[8rem] rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500">
+              <select id="order-type" class="block w-full min-w-[8rem] rounded-lg border border-gray-300  p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600   dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500">
                 <option selected>All orders</option>
                 <option value="pre-order">Pre-order</option>
                 <option value="transit">In transit</option>
@@ -24,7 +24,7 @@ const orders = () => {
   
             <div>
               <label for="duration" class="sr-only mb-2 block text-sm font-medium text-gray-900 ">Select duration</label>
-              <select id="duration" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500">
+              <select id="duration" class="block w-full rounded-lg border border-gray-300  p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600   dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500">
                 <option selected>this week</option>
                 <option value="this month">this month</option>
                 <option value="last 3 months">the last 3 months</option>
@@ -396,7 +396,7 @@ const orders = () => {
               <a href="#" class="flex h-8 items-center justify-center border border-gray-300 bg-white px-3 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
             </li>
             <li>
-              <a href="#" aria-current="page" class="z-10 flex h-8 items-center justify-center border border-primary-300 bg-primary-50 px-3 leading-tight text-primary-600 hover:bg-primary-100 hover:text-primary-700 dark:border-gray-700 dark:bg-gray-700 ">3</a>
+              <a href="#" aria-current="page" class="z-10 flex h-8 items-center justify-center border border-primary-300 bg-primary-50 px-3 leading-tight text-primary-600 hover:bg-primary-100 hover:text-primary-700 dark:border-gray-700  ">3</a>
             </li>
             <li>
               <a href="#" class="flex h-8 items-center justify-center border border-gray-300 bg-white px-3 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">...</a>
