@@ -2,11 +2,11 @@ import React from 'react'
 
 const Myaccount = () => {
   return (
-    <div><section class="bg-white py-8 antialiased dark:bg-gray-900 md:py-8">
+    <div><section class="bg-white py-8 antialiased  md:py-8">
     <div class="mx-auto max-w-screen-lg px-4 2xl:px-0">
       
       <h2 class="mb-4 text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl md:mb-6">General overview</h2>
-      <div class="grid grid-cols-2 gap-6 border-b border-t border-gray-200 py-4 dark:border-gray-700 md:py-8 lg:grid-cols-4 ">
+      <div class="  border-b border-t border-gray-200  dark:border-gray-700   ">
         </div>
       <div class="py-4 md:py-8">
         <div class="mb-4 grid gap-4 sm:grid-cols-2 sm:gap-8 lg:gap-16">
