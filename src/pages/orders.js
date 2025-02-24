@@ -2,16 +2,16 @@ import React from 'react'
 
 const orders = () => {
   return (
-    <div><section class="bg-white py-8 antialiased dark:bg-gray-900 md:py-16">
+    <div><section class="bg-white py-8 antialiased  md:py-16">
     <div class="mx-auto max-w-screen-xl px-4 2xl:px-0">
       <div class="mx-auto max-w-5xl">
         <div class="gap-4 sm:flex sm:items-center sm:justify-between">
-          <h2 class="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">My orders</h2>
+          <h2 class="text-xl font-semibold text-gray-900  sm:text-2xl">My orders</h2>
   
           <div class="mt-6 gap-4 space-y-4 sm:mt-0 sm:flex sm:items-center sm:justify-end sm:space-y-0">
             <div>
-              <label for="order-type" class="sr-only mb-2 block text-sm font-medium text-gray-900 dark:text-white">Select order type</label>
-              <select id="order-type" class="block w-full min-w-[8rem] rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500">
+              <label for="order-type" class="sr-only mb-2 block text-sm font-medium text-gray-900 ">Select order type</label>
+              <select id="order-type" class="block w-full min-w-[8rem] rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500">
                 <option selected>All orders</option>
                 <option value="pre-order">Pre-order</option>
                 <option value="transit">In transit</option>
@@ -23,8 +23,8 @@ const orders = () => {
             <span class="inline-block text-gray-500 dark:text-gray-400"> from </span>
   
             <div>
-              <label for="duration" class="sr-only mb-2 block text-sm font-medium text-gray-900 dark:text-white">Select duration</label>
-              <select id="duration" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500">
+              <label for="duration" class="sr-only mb-2 block text-sm font-medium text-gray-900 ">Select duration</label>
+              <select id="duration" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500">
                 <option selected>this week</option>
                 <option value="this month">this month</option>
                 <option value="last 3 months">the last 3 months</option>
@@ -40,19 +40,19 @@ const orders = () => {
             <div class="flex flex-wrap items-center gap-y-4 py-6">
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
                 <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">
+                <dd class="mt-1.5 text-base font-semibold text-gray-900 ">
                   <a href="#" class="hover:underline">#FWB127364372</a>
                 </dd>
               </dl>
   
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
                 <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Date:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">20.12.2023</dd>
+                <dd class="mt-1.5 text-base font-semibold text-gray-900 ">20.12.2023</dd>
               </dl>
   
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
                 <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Price:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">$4,756</dd>
+                <dd class="mt-1.5 text-base font-semibold text-gray-900 ">$4,756</dd>
               </dl>
   
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
@@ -74,19 +74,19 @@ const orders = () => {
             <div class="flex flex-wrap items-center gap-y-4 py-6">
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
                 <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">
+                <dd class="mt-1.5 text-base font-semibold text-gray-900 ">
                   <a href="#" class="hover:underline">#FWB125467980</a>
                 </dd>
               </dl>
   
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
                 <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Date:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">11.12.2023</dd>
+                <dd class="mt-1.5 text-base font-semibold text-gray-900 ">11.12.2023</dd>
               </dl>
   
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
                 <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Price:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">$499</dd>
+                <dd class="mt-1.5 text-base font-semibold text-gray-900 ">$499</dd>
               </dl>
   
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
@@ -108,19 +108,19 @@ const orders = () => {
             <div class="flex flex-wrap items-center gap-y-4 py-6">
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
                 <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">
+                <dd class="mt-1.5 text-base font-semibold text-gray-900 ">
                   <a href="#" class="hover:underline">#FWB139485607</a>
                 </dd>
               </dl>
   
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
                 <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Date:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">08.12.2023</dd>
+                <dd class="mt-1.5 text-base font-semibold text-gray-900 ">08.12.2023</dd>
               </dl>
   
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
                 <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Price:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">$85</dd>
+                <dd class="mt-1.5 text-base font-semibold text-gray-900 ">$85</dd>
               </dl>
   
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
@@ -142,19 +142,19 @@ const orders = () => {
             <div class="flex flex-wrap items-center gap-y-4 py-6">
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
                 <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">
+                <dd class="mt-1.5 text-base font-semibold text-gray-900 ">
                   <a href="#" class="hover:underline">#FWB137364371</a>
                 </dd>
               </dl> 
   
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
                 <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Date:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">16.11.2023</dd>
+                <dd class="mt-1.5 text-base font-semibold text-gray-900 ">16.11.2023</dd>
               </dl>
   
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
                 <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Price:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">$119</dd>
+                <dd class="mt-1.5 text-base font-semibold text-gray-900 ">$119</dd>
               </dl>
   
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
@@ -176,19 +176,19 @@ const orders = () => {
             <div class="flex flex-wrap items-center gap-y-4 py-6">
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
                 <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">
+                <dd class="mt-1.5 text-base font-semibold text-gray-900 ">
                   <a href="#" class="hover:underline">#FWB134567890</a>
                 </dd>
               </dl>
   
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
                 <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Date:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">02.11.2023</dd>
+                <dd class="mt-1.5 text-base font-semibold text-gray-900 ">02.11.2023</dd>
               </dl>
   
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
                 <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Price:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">$2,056</dd>
+                <dd class="mt-1.5 text-base font-semibold text-gray-900 ">$2,056</dd>
               </dl>
   
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
@@ -210,19 +210,19 @@ const orders = () => {
             <div class="flex flex-wrap items-center gap-y-4 py-6">
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
                 <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">
+                <dd class="mt-1.5 text-base font-semibold text-gray-900 ">
                   <a href="#" class="hover:underline">#FWB146284623</a>
                 </dd>
               </dl>
   
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
                 <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Date:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">26.09.2023</dd>
+                <dd class="mt-1.5 text-base font-semibold text-gray-900 ">26.09.2023</dd>
               </dl>
   
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
                 <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Price:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">$180</dd>
+                <dd class="mt-1.5 text-base font-semibold text-gray-900 ">$180</dd>
               </dl>
   
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
@@ -244,19 +244,19 @@ const orders = () => {
             <div class="flex flex-wrap items-center gap-y-4 py-6">
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
                 <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">
+                <dd class="mt-1.5 text-base font-semibold text-gray-900 ">
                   <a href="#" class="hover:underline">#FWB145967376</a>
                 </dd>
               </dl>
   
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
                 <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Date:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">17.07.2023</dd>
+                <dd class="mt-1.5 text-base font-semibold text-gray-900 ">17.07.2023</dd>
               </dl>
   
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
                 <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Price:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">$756</dd>
+                <dd class="mt-1.5 text-base font-semibold text-gray-900 ">$756</dd>
               </dl>
   
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
@@ -278,19 +278,19 @@ const orders = () => {
             <div class="flex flex-wrap items-center gap-y-4 py-6">
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
                 <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">
+                <dd class="mt-1.5 text-base font-semibold text-gray-900 ">
                   <a href="#" class="hover:underline">#FWB148756352</a>
                 </dd>
               </dl>
   
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
                 <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Date:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">30.06.2023</dd>
+                <dd class="mt-1.5 text-base font-semibold text-gray-900 ">30.06.2023</dd>
               </dl>
   
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
                 <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Price:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">$235</dd>
+                <dd class="mt-1.5 text-base font-semibold text-gray-900 ">$235</dd>
               </dl>
   
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
@@ -312,19 +312,19 @@ const orders = () => {
             <div class="flex flex-wrap items-center gap-y-4 py-6">
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
                 <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">
+                <dd class="mt-1.5 text-base font-semibold text-gray-900 ">
                   <a href="#" class="hover:underline">#FWB159873546</a>
                 </dd>
               </dl>
   
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
                 <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Date:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">04.06.2023</dd>
+                <dd class="mt-1.5 text-base font-semibold text-gray-900 ">04.06.2023</dd>
               </dl>
   
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
                 <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Price:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">$90</dd>
+                <dd class="mt-1.5 text-base font-semibold text-gray-900 ">$90</dd>
               </dl>
   
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
@@ -346,19 +346,19 @@ const orders = () => {
             <div class="flex flex-wrap items-center gap-y-4 py-6">
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
                 <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">
+                <dd class="mt-1.5 text-base font-semibold text-gray-900 ">
                   <a href="#" class="hover:underline">#FWB156475937</a>
                 </dd>
               </dl>
   
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
                 <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Date:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">11.02.2023</dd>
+                <dd class="mt-1.5 text-base font-semibold text-gray-900 ">11.02.2023</dd>
               </dl>
   
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
                 <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Price:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 dark:text-white">$1,845</dd>
+                <dd class="mt-1.5 text-base font-semibold text-gray-900 ">$1,845</dd>
               </dl>
   
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
@@ -396,7 +396,7 @@ const orders = () => {
               <a href="#" class="flex h-8 items-center justify-center border border-gray-300 bg-white px-3 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
             </li>
             <li>
-              <a href="#" aria-current="page" class="z-10 flex h-8 items-center justify-center border border-primary-300 bg-primary-50 px-3 leading-tight text-primary-600 hover:bg-primary-100 hover:text-primary-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
+              <a href="#" aria-current="page" class="z-10 flex h-8 items-center justify-center border border-primary-300 bg-primary-50 px-3 leading-tight text-primary-600 hover:bg-primary-100 hover:text-primary-700 dark:border-gray-700 dark:bg-gray-700 ">3</a>
             </li>
             <li>
               <a href="#" class="flex h-8 items-center justify-center border border-gray-300 bg-white px-3 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">...</a>
