@@ -11,7 +11,8 @@ const handler = async (req, res)=>{
                 email: req.body.email,
                 number: req.body.number,
                 altNumber: req.body.altNumber,
-                address: req.body.address
+                address: req.body.address,
+                amount: req.body.subTotal
                 })
                 await order.save()
             res.status(200).json({ sucess: "sucess" });
