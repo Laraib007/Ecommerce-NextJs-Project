@@ -1,5 +1,6 @@
-import Orders from "../../../models/Orders";
+
 import connectDB from "../../../middleware.js/mongoose";
+import Orders from "../../../models/Orders";
 
 const handler = async (req, res)=>{
     if(req.method == "POST"){
