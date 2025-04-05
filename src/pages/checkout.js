@@ -7,19 +7,17 @@ import Link from 'next/link';
 
 
 const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
+  u
+
+
+
   const handleChange = (e)=> {
-
-
     if(e.target.name == "email"){
      setEmail(e.target.value)
-     
-     }
-   
-     else if(e.target.name == "password"){
+          }
+    else if(e.target.name == "password"){
        setPassword(e.target.value)
-       
        }
-   
      }
 
 
@@ -38,35 +36,7 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
        console.log(result.sucess);
      
      
-     if(result.sucess){
-       console.log(result)
-       toast.success('You logged in successfully', {
-         position: "top-left",
-     autoClose: 1000,
-     hideProgressBar: false,
-     closeOnClick: false,
-     pauseOnHover: false,
-     draggable: true,
-     progress: undefined,
-     theme: "colored"
-         });
-     localStorage.setItem("token", result.token)
-         setTimeout(() => {
-           router.push("http://localhost:3000/")
-         }, 1500);
-       } else { toast.error('Wrong Credentials ', {
-         position: "top-left",
-         autoClose: 3000,
-         hideProgressBar: false,
-         closeOnClick: false,
-         pauseOnHover: false,
-         draggable: true,
-         progress: undefined,
-         theme: "colored"
-         });}
-     
-     setEmail('')
-     setPassword('')
+    
        }
   return (
     <div className='container mt-32'>
