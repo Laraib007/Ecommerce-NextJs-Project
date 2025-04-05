@@ -24,7 +24,7 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
        else if(e.target.name == "number"){
         setNumber(e.target.value)
         }
-        else if(e.target.name == "setAltNumber"){
+        else if(e.target.name == "altNumber"){
           setAltNumber(e.target.value)
           }
           else if(e.target.name == "address"){
@@ -73,14 +73,14 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
       </div>
       <div className='w-96 m-3 '>
         <label for="number" className=" text-sm font-medium ml-1 text-gray-900">Alt Cell No</label>
-          <input onChange={handleChange} value={altNumber} id="number" name="number" type="number" autocomplete="number" required className=" w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+          <input onChange={handleChange} value={altNumber} id="altNumber" name="altNumber" type="number" autocomplete="altNumber" required className=" w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
       </div>
       </div>
       <div className="mt-4 flex container justify-center ">
   
   <div className='w-2/3 '>
     <label for="address" className=" text-sm font-medium ml-1 text-gray-900">Address</label>
-      <textarea onChange={handleChange} id="address" name="address" type="text" autocomplete="address" required className=" w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+      <textarea onChange={handleChange} value={address} id="address" name="address" type="text" autocomplete="address" required className=" w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
   </div>
   {/* <-------CART ITEMS------> */}
   </div>
