@@ -1,4 +1,4 @@
-import Order from "../../../models/Order";
+import Order from "../../../models/Orders";
 import connectDB from "../../../middleware.js/mongoose";
 
 const handler = async (req, res)=>{

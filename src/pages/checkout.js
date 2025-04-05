@@ -18,6 +18,7 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
     if(e.target.name == "name"){
       setName(e.target.value)
           }
+          
     else if(e.target.name == "email"){
       setEmail(e.target.value)
        }
@@ -30,6 +31,7 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
           else if(e.target.name == "address"){
             setAddress(e.target.value)
             }
+            console.log(name)
      }
 
 
