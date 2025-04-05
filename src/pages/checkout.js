@@ -36,7 +36,7 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
      const onFormSubmit = async (e)=>{
      e.preventDefault()
        let data = {name, cart, email, number, altNumber, address}
-       let response = await fetch('http://localhost:3000/api/login', {
+       let response = await fetch('http://localhost:3000/api/order', {
          method: 'POST',
          headers: {
            'Content-Type': 'application/json',
@@ -47,8 +47,6 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
        const result = await response.json();
        console.log(result.sucess);
      
-     
-    
        }
   return (
     <div className='container mt-32'>
