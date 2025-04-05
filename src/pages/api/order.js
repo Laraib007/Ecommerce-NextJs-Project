@@ -1,19 +1,19 @@
-import Order from "../../../models/Orders";
+import Orders from "../../../models/Orders";
 import connectDB from "../../../middleware.js/mongoose";
 
 const handler = async (req, res)=>{
     if(req.method == "POST"){
         try {
-            let order = new Order({
+            let o = new Orders({
                 name: req.body.name,
-                product: req.body.cart,
+                cart: req.body.cart,
                 email: req.body.email,
                 number: req.body.number,
                 altNumber: req.body.altNumber,
                 address: req.body.address,
-                amount: req.body.subTotal
+                subTotal: req.body.subTotal
                 })
-                await order.save()
+                await o.save()
             res.status(200).json({ sucess: "sucess" });
     
         } catch (error) {
