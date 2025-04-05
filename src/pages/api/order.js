@@ -1,11 +1,10 @@
-
-import Orders from "../../../models/Orders";
+import Order from "../../../models/Orders";
 import connectDB from "../../../middleware.js/mongoose";
 
 const handler = async (req, res)=>{
     if(req.method == "POST"){
         try {
-            let order = new Orders({
+            let order = new Order({
                 name: req.body.name,
                 product: req.body.cart,
                 email: req.body.email,
@@ -18,7 +17,7 @@ const handler = async (req, res)=>{
             res.status(200).json({ sucess: "sucess" });
     
         } catch (error) {
-            res.status(404).json({ warning: "Email Already Exists" })
+            res.status(404).json({ warning: "Product not added" })
         }
        
     }
