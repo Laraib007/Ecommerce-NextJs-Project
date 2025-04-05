@@ -35,7 +35,7 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
 
      const onFormSubmit = async (e)=>{
      e.preventDefault()
-       let data = { email, password}
+       let data = {name, email, number, altNumber, address}
        let response = await fetch('http://localhost:3000/api/login', {
          method: 'POST',
          headers: {
@@ -102,7 +102,7 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
     </div>
     <div className='flex justify-center px-1'>
       <Link href={'/orderplaced'}>
-    <button type="submit" class="flex w-50 text-center  rounded-md bg-pink-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-pink-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-600">Confirm</button>
+    <button onSubmit={onFormSubmit} type="submit" class="flex w-50 text-center  rounded-md bg-pink-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-pink-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-600">Confirm</button>
     </Link>
     </div>
   </div>
