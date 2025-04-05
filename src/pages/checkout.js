@@ -48,7 +48,7 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
        });
      
        const result = await response.json();
-       console.log(result.sucess);
+       console.log(data);
      
        }
   return (
@@ -102,7 +102,7 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
     <div className=' text-center font-semibold my-2'>Sub Total: <span className='font-bold'> Rs.{subTotal}</span></div>
     </div>
     <div className='flex justify-center px-1'>
-    <button onSubmit={onFormSubmit} type="submit" class="flex w-50 text-center  rounded-md bg-pink-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-pink-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-600">Confirm</button>
+    <button onClick={onFormSubmit} type="submit" class="flex w-50 text-center  rounded-md bg-pink-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-pink-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-600">Confirm</button>
    
     </div>
   </div>
