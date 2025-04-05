@@ -6,12 +6,13 @@ const handler = async (req, res)=>{
         try {
             let order = new Order({
                 name: req.body.name,
+                product: req.body.cart,
                 email: req.body.email,
                 number: req.body.number,
                 altNumber: req.body.altNumber,
-                address: req.body.address,
+                address: req.body.address
                 })
-                await u.save()
+                await order.save()
             res.status(200).json({ sucess: "sucess" });
     
         } catch (error) {
