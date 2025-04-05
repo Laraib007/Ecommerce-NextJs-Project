@@ -37,7 +37,7 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
 
      const onFormSubmit = async (e)=>{
      e.preventDefault()
-       let data = {name, cart, email, number, altNumber, address}
+       let data = {name, cart, email, number, altNumber, address, subTotal}
        console.log(data)
        let response = await fetch('http://localhost:3000/api/order', {
          method: 'POST',
