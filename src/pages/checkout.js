@@ -7,6 +7,67 @@ import Link from 'next/link';
 
 
 const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
+  const handleChange = (e)=> {
+
+
+    if(e.target.name == "email"){
+     setEmail(e.target.value)
+     
+     }
+   
+     else if(e.target.name == "password"){
+       setPassword(e.target.value)
+       
+       }
+   
+     }
+
+
+     const onFormSubmit = async (e)=>{
+     e.preventDefault()
+       let data = { email, password}
+       let response = await fetch('http://localhost:3000/api/login', {
+         method: 'POST',
+         headers: {
+           'Content-Type': 'application/json',
+         },
+         body: JSON.stringify(data),
+       });
+     
+       const result = await response.json();
+       console.log(result.sucess);
+     
+     
+     if(result.sucess){
+       console.log(result)
+       toast.success('You logged in successfully', {
+         position: "top-left",
+     autoClose: 1000,
+     hideProgressBar: false,
+     closeOnClick: false,
+     pauseOnHover: false,
+     draggable: true,
+     progress: undefined,
+     theme: "colored"
+         });
+     localStorage.setItem("token", result.token)
+         setTimeout(() => {
+           router.push("http://localhost:3000/")
+         }, 1500);
+       } else { toast.error('Wrong Credentials ', {
+         position: "top-left",
+         autoClose: 3000,
+         hideProgressBar: false,
+         closeOnClick: false,
+         pauseOnHover: false,
+         draggable: true,
+         progress: undefined,
+         theme: "colored"
+         });}
+     
+     setEmail('')
+     setPassword('')
+       }
   return (
     <div className='container mt-32'>
       
