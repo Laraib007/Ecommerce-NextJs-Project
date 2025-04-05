@@ -31,13 +31,14 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
           else if(e.target.name == "address"){
             setAddress(e.target.value)
             }
-            console.log(name)
+            console.log(email)
      }
 
 
      const onFormSubmit = async (e)=>{
      e.preventDefault()
        let data = {name, cart, email, number, altNumber, address}
+       console.log(data)
        let response = await fetch('http://localhost:3000/api/order', {
          method: 'POST',
          headers: {

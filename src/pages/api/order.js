@@ -1,10 +1,10 @@
-import Order from "../../../models/Orders";
+import Orders from "../../../models/Orders";
 import connectDB from "../../../middleware.js/mongoose";
 
 const handler = async (req, res)=>{
     if(req.method == "POST"){
         try {
-            let order = new Order({
+            let order = new Orders({
                 name: req.body.name,
                 product: req.body.cart,
                 email: req.body.email,
