@@ -9,8 +9,8 @@ import Link from 'next/link';
 const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
   const [name, setName] = useState()
   const [email, setEmail] = useState()
-  const [cell, setCell] = useState()
-  const [altCell, setAltCell] = useState()
+  const [number, setNumber] = useState()
+  const [altNumber, setAltNumber] = useState()
   const [address, setAddress] = useState()
 
 
@@ -21,11 +21,11 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
     else if(e.target.name == "email"){
       setEmail(e.target.value)
        }
-       else if(e.target.name == "cell"){
-        setCell(e.target.value)
+       else if(e.target.name == "number"){
+        setNumber(e.target.value)
         }
-        else if(e.target.name == "altCell"){
-          setAltCell(e.target.value)
+        else if(e.target.name == "setAltNumber"){
+          setAltNumber(e.target.value)
           }
           else if(e.target.name == "address"){
             setAddress(e.target.value)
@@ -59,28 +59,28 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
   
       <div className='w-96 m-3 '>
         <label for="name" className=" text-sm font-medium ml-1 text-gray-900">Full Name</label>
-          <input onChange id="name" name="name" type="text" autocomplete="name" required className=" w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+          <input onChange={handleChange} value={name} id="name" name="name" type="text" autocomplete="name" required className=" w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
       </div>
       <div className='w-96 m-3 '>
         <label for="email" className=" text-sm font-medium ml-1 text-gray-900">Email Address</label>
-          <input onChange id="email" name="email" type="email" autocomplete="email" required className=" w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+          <input onChange={handleChange} value={email} id="email" name="email" type="email" autocomplete="email" required className=" w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
       </div>
       </div>
       <div className="mt-2 flex container justify-center ">
       <div className='w-96 m-3 '>
         <label for="number" className=" text-sm font-medium ml-1 text-gray-900">Cell No</label>
-          <input onChange id="number" name="number" type="number" autocomplete="number" required className=" w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+          <input onChange={handleChange} value={number} id="number" name="number" type="number" autocomplete="number" required className=" w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
       </div>
       <div className='w-96 m-3 '>
         <label for="number" className=" text-sm font-medium ml-1 text-gray-900">Alt Cell No</label>
-          <input onChange id="number" name="number" type="number" autocomplete="number" required className=" w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+          <input onChange={handleChange} value={altNumber} id="number" name="number" type="number" autocomplete="number" required className=" w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
       </div>
       </div>
       <div className="mt-4 flex container justify-center ">
   
   <div className='w-2/3 '>
     <label for="address" className=" text-sm font-medium ml-1 text-gray-900">Address</label>
-      <textarea onChange id="address" name="address" type="text" autocomplete="address" required className=" w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+      <textarea onChange={handleChange} id="address" name="address" type="text" autocomplete="address" required className=" w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
   </div>
   {/* <-------CART ITEMS------> */}
   </div>
