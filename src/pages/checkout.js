@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaCartShopping } from "react-icons/fa6";
 import { MdCancel } from "react-icons/md";
 import { FaPlusCircle, FaMinusCircle } from "react-icons/fa"
@@ -7,17 +7,29 @@ import Link from 'next/link';
 
 
 const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
-  u
-
+  const [name, setName] = useState()
+  const [email, setEmail] = useState()
+  const [cell, setCell] = useState()
+  const [altCell, setAltCell] = useState()
+  const [address, setAddress] = useState()
 
 
   const handleChange = (e)=> {
-    if(e.target.name == "email"){
-     setEmail(e.target.value)
+    if(e.target.name == "name"){
+      setName(e.target.value)
           }
-    else if(e.target.name == "password"){
-       setPassword(e.target.value)
+    else if(e.target.name == "email"){
+      setEmail(e.target.value)
        }
+       else if(e.target.name == "cell"){
+        setCell(e.target.value)
+        }
+        else if(e.target.name == "altCell"){
+          setAltCell(e.target.value)
+          }
+          else if(e.target.name == "address"){
+            setAddress(e.target.value)
+            }
      }
 
 
