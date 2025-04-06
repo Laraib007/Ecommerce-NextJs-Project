@@ -1,9 +1,27 @@
 import React from 'react'
 import Orders from '../../models/Orders'
+import { useRouter } from 'next/router';
 
 const orders = () => {
+  const orderFetch = async ()=>{
+  let response = await fetch('http://localhost:3000/api/orders', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({token: localStorage.getItem('token')}),
+  });
 
-  
+  const result = await response.json();
+  console.log(response)
+  }
+
+  if(!localStorage.getItem('token')){
+    useRouter.push('/')
+  }
+  else{
+    orderFetch()
+  }
   return (
     <div><section class="py-8 antialiased  md:py-16">
     <div class="mx-auto max-w-screen-xl px-4 2xl:px-0">
