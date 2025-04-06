@@ -227,7 +227,7 @@ export async function getServerSideProps(context) {
     if(!mongoose.connections[0].readyState){
     await mongoose.connect(process.env.MONGOSSE_URI)
     }
-    let order = await Orders.findOne({ })
+    let order = await Orders.findOne({email:  })
     
   
    
