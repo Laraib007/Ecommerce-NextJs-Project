@@ -49,7 +49,7 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
      
        const result = await response.json();
        console.log(data);
-     
+       localStorage.removeItem("cart")
        }
   return (
     <div className='container mt-32'>
