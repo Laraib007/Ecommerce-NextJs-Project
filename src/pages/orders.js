@@ -1,8 +1,9 @@
 import React from 'react'
 import Orders from '../../models/Orders'
-import mongoose from 'mongoose'
 
 const orders = () => {
+
+  
   return (
     <div><section class="py-8 antialiased  md:py-16">
     <div class="mx-auto max-w-screen-xl px-4 2xl:px-0">
@@ -219,23 +220,6 @@ const orders = () => {
   </section></div>
   )
 }
-
-
-
-export async function getServerSideProps(context) { 
-
-    if(!mongoose.connections[0].readyState){
-    await mongoose.connect(process.env.MONGOSSE_URI)
-    }
-    let order = await Orders.findOne({email:  })
-    
-  
-   
-
-    return {
-      props: {"Orders": "orders"},
-    }
-  }
 
 
 export default orders
