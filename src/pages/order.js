@@ -23,7 +23,7 @@ const orderplaced = ({order}) => {
         </div>
         {Object.keys(product).map((k)=>{return <div key={k}>
         <div class="flex border-t border-gray-200 py-2">
-          <span class="text-gray-500">{product.name}</span>
+          <span class="text-gray-500">{product[k].name}</span>
           <span class="ml-auto text-gray-900">{}</span>
           <span class="ml-auto text-gray-900">Rs.{}</span>
         </div>
