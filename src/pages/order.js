@@ -23,9 +23,9 @@ const orderplaced = ({order}) => {
         </div>
         {Object.keys(product).map((k)=>{return <div key={k}>
         <div class="flex border-t border-gray-200 py-2">
-          <span class="text-gray-500">{product[k].name}</span>
+          <span class="text-gray-500">{product[k].name} {product[k].size} / {product[k].varient}</span>
           <span class="ml-auto text-gray-900">{product[k].qty}</span>
-          <span class="ml-auto text-gray-900">Rs.{product[k].price} <p>Per piece</p></span>
+          <span class="ml-auto text-gray-900">Rs.{product[k].price} <p className='text-sm'>Per Piece</p></span>
         </div>
         </div>})}
         <div class="flex mt-5">
