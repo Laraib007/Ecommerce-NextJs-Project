@@ -107,6 +107,7 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
     {/* </Link> */}
     </div>
   </div>
+  
   )
 }
 
