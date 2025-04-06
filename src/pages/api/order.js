@@ -15,7 +15,7 @@ const handler = async (req, res)=>{
                 })
                 await o.save()
             res.status(200).json({ sucess: "sucess" });
-    
+                res.redirect("/order" + _id, 200)
         } catch (error) {
             res.status(404).json({ warning: "Product not added" })
         }
