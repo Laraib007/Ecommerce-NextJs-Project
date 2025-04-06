@@ -17,15 +17,15 @@ const orderplaced = ({order}) => {
        
         <p class="leading-relaxed mb-4">Best Quality - Premium Desings - Stylish Look - Better Experience</p>
         <div class="flex text-center mb-4">
-          <a class="flex-grow text-pink-500 border-b-2 border-pink-500 py-2 text-lg px-1 sm:ml-20  md:mr-40">Description</a>
+          <a class="flex-grow text-pink-500 border-b-2 border-pink-500 py-2 text-lg px-1  md:mr-40">Description</a>
           <a class="flex-grow text-pink-500 border-b-2 border-pink-500 py-2 text-lg px-1 md:mr-6">Qty</a>
           <a class="flex-grow text-pink-500 border-b-2 border-pink-500 py-2 text-lg px-1 ml-8">Price</a>
         </div>
         {Object.keys(product).map((k)=>{return <div key={k}>
         <div class="flex border-t border-gray-200 py-2">
           <span class="text-gray-500">{product[k].name} {product[k].size} / {product[k].varient}</span>
-          <span class="ml-auto text-gray-900">{product[k].qty}</span>
-          <span class="ml-auto text-gray-900">Rs.{product[k].price} <p className='text-sm'>Per Piece</p></span>
+          <span class="m-auto text-gray-900">{product[k].qty}</span>
+          <span class="m-auto text-gray-900">Rs.{product[k].price} <p className='text-sm'>Per Piece</p></span>
         </div>
         </div>})}
         <div class="flex mt-5">
