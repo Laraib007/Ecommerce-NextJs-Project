@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Orders from '../../models/Orders'
 import { useRouter } from 'next/router';
 
 const orders = () => {
+  const [order, setOrder] = useState()
   useEffect(() => {
     
   const orderFetch = async ()=>{
@@ -15,7 +16,7 @@ const orders = () => {
     });
   
     const result = await response.json();
-    console.log(result)
+    setOrder(result)
     }
   
     if(!localStorage.getItem('token')){
@@ -66,7 +67,7 @@ const orders = () => {
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
                 <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
                 <dd class="mt-1.5 text-base font-semibold text-gray-900 ">
-                  <a href="#" class="hover:underline">{</a>
+                  <a href="#" class="hover:underline">{}</a>
                 </dd>
               </dl>
   
