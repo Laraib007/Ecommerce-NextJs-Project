@@ -2,6 +2,9 @@ import { useRouter } from 'next/router'
 import mongoose from 'mongoose';
 import React from 'react'
 import Orders from '../../models/Orders';
+import Link from 'next/link';
+import { FaLocationArrow } from "react-icons/fa";
+
 
 const orderplaced = ({order}) => {
   let product = order.product
@@ -13,7 +16,7 @@ const orderplaced = ({order}) => {
     <div class="lg:w-4/5 mx-auto flex flex-wrap">
       <div class="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
         <h2 class="text-sm title-font text-gray-500 tracking-widest">FASHION WEAR</h2>
-        <h1 class="text-gray-900 text-3xl title-font font-medium mb-4">ORDER ID #312478</h1>
+        <h1 class="text-gray-900 text-3xl title-font font-medium mb-4">ORDER ID #{order.id}</h1>
        
         <p class="leading-relaxed mb-4">Best Quality - Premium Desings - Stylish Look - Better Experience</p>
         <div class="flex text-center mb-4">
@@ -32,6 +35,9 @@ const orderplaced = ({order}) => {
           <span class="title-font font-medium text-2xl text-gray-900">Total Amount Rs.{order.amount}</span>
           
         </div>
+        <Link href={'/orders'}>
+        <button class="flex mt-1 text-white bg-pink-500 border-0 py-2 px-3 focus:outline-none hover:bg-pink-600 rounded"><FaLocationArrow className='text-sd mt-1 mr-1 cursor-pointer text-white ' />Track Your Orders</button>
+        </Link>
       </div>
       <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://dummyimage.com/400x400"/>
     </div>
