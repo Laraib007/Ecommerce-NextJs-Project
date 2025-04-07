@@ -13,7 +13,8 @@ const handler = async (req, res)=>{
                 altNumber: req.body.altNumber,
                 address: req.body.address,
                 amount: req.body.subTotal,
-                id:  req.body.id
+                id:  req.body.id,
+                date:  req.body.date
                 })
                 await o.save()
             res.status(200).json({ sucess: "sucess" });
