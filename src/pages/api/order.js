@@ -2,6 +2,7 @@ import Orders from "../../../models/Orders";
 import connectDB from "../../../middleware.js/mongoose";
 
 const handler = async (req, res)=>{
+   
     if(req.method == "POST"){
         try {
             let o = new Orders({
@@ -11,7 +12,8 @@ const handler = async (req, res)=>{
                 number: req.body.number,
                 altNumber: req.body.altNumber,
                 address: req.body.address,
-                amount: req.body.subTotal
+                amount: req.body.subTotal,
+                id:  req.body.id
                 })
                 await o.save()
             res.status(200).json({ sucess: "sucess" });
