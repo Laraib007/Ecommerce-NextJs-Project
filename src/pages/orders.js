@@ -69,13 +69,13 @@ const orders = () => {
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
                 <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
                 <dd class="mt-1.5 text-base font-semibold text-gray-900 ">
-                  <a href="#" class="hover:underline">{item._id}</a>
+                  <a href="#" class="hover:underline">{item.id}</a>
                 </dd>
               </dl>
   
               <dl class="w-1/2 sm:w-1/4 ml-4 lg:w-auto lg:flex-1">
                 <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Date:</dt>
-                <dd class="mt-1.5 text-base font-semibold text-gray-900 ">{item.createdAt}</dd>
+                <dd class="mt-1.5 text-base font-semibold text-gray-900 ">{item.date}</dd>
               </dl>
   
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
@@ -92,7 +92,7 @@ const orders = () => {
                   {item.status}
                 </dd>
               </dl>
-              <Link href={'/order?id=' + item._id}>
+              <Link href={'/order?id=' + item.id}>
               <div class="w-full grid sm:grid-cols-2 lg:flex lg:w-64 lg:items-center lg:justify-end gap-4">
                   <a href="#" class="w-full inline-flex justify-center rounded-lg  border border-gray-200  px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-black dark:focus:ring-gray-700 lg:w-auto">View details</a>
               </div></Link>
