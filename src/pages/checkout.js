@@ -37,10 +37,14 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
 
      const onFormSubmit = async (e)=>{
     //  e.preventDefault()
-    const date = Date.now() 
-    const id = date + Math.round(Math.random() * 1000)
-
-       let data = {name, cart, email, number, altNumber, address, subTotal, id}
+    const idData = Date.now() 
+    const id = idData + Math.round(Math.random() * 1000)
+    const d = new Date();
+    let day = d.getDate();
+    let days = d.getMonth()
+    let dayss = d.getFullYear()
+    let date = day.toString() + "-"+ days.toString() + "-" + dayss.toString()
+       let data = {name, cart, email, number, altNumber, address, subTotal, id, date}
        console.log(data)
        let response = await fetch('http://localhost:3000/api/order', {
          method: 'POST',
