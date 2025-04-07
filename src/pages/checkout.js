@@ -12,7 +12,7 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
   const [number, setNumber] = useState()
   const [altNumber, setAltNumber] = useState()
   const [address, setAddress] = useState()
-
+  const [id, setId] = useState()
 
   const handleChange = (e)=> {
     if(e.target.name == "name"){
@@ -39,9 +39,10 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
     //  e.preventDefault()
     const idData = Date.now() 
     const id = idData + Math.round(Math.random() * 1000)
+    setId((id=> id))
     const d = new Date();
     let day = d.getDate();
-    let days = d.getMonth()
+    let days = d.getMonth()+1
     let dayss = d.getFullYear()
     let date = day.toString() + "-"+ days.toString() + "-" + dayss.toString()
        let data = {name, cart, email, number, altNumber, address, subTotal, id, date}
@@ -110,7 +111,7 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
     <div className=' text-center font-semibold my-2'>Sub Total: <span className='font-bold'> Rs.{subTotal}</span></div>
     </div>
     <div className='flex justify-center px-1'>
-    <Link href={'/orders'}>
+    <Link href={'/orders?id='+ id}>
     <button onClick={onFormSubmit} type="submit" class="flex w-50 text-center  rounded-md bg-pink-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-pink-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-600">Confirm</button>
     </Link>
     </div>
