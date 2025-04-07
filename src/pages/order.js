@@ -5,7 +5,7 @@ import Orders from '../../models/Orders';
 
 const orderplaced = ({order}) => {
   let product = order.product
-  console.log(product)
+  console.log(order)
   return (
     <div className='h-3/4 mb-2'>
         <section class="text-gray-600 body-font overflow-hidden ">
@@ -48,8 +48,8 @@ export async function getServerSideProps(context) {
     if(!mongoose.connections[0].readyState){
     await mongoose.connect(process.env.MONGOSSE_URI)
     }
-    let order = await Orders.findById(context.query.id)
-
+    let order = await Orders.findOne({id: context.query.id})
+    console.log(order)
     return {
       props: {order: JSON.parse(JSON.stringify(order))}
     }
