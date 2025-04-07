@@ -4,6 +4,7 @@ import { MdCancel } from "react-icons/md";
 import { FaPlusCircle, FaMinusCircle } from "react-icons/fa"
 import { IoBagCheck } from "react-icons/io5";
 import Link from 'next/link';
+import { redirect, useRouter } from 'next/navigation';
 
 
 const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
@@ -13,7 +14,7 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
   const [altNumber, setAltNumber] = useState()
   const [address, setAddress] = useState()
   const [id, setId] = useState()
-
+  const { push } = useRouter()
   const handleChange = (e)=> {
     if(e.target.name == "name"){
       setName(e.target.value)
@@ -36,10 +37,11 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
 
 
      const onFormSubmit = async (e)=>{
+      
     //  e.preventDefault()
     const idData = Date.now() 
     const id = idData + Math.round(Math.random() * 1000)
-     setId((id)=> id)
+     setId(()=> id)
     const d = new Date();
     let day = d.getDate();
     let days = d.getMonth()+1
@@ -59,7 +61,9 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
        console.log(data);
        localStorage.removeItem("cart")
        clearCart()
+       push('/order?id='+ id)
        }
+       
   return (
     <div className='container mt-32'>
       
@@ -111,9 +115,9 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
     <div className=' text-center font-semibold my-2'>Sub Total: <span className='font-bold'> Rs.{subTotal}</span></div>
     </div>
     <div className='flex justify-center px-1'>
-    <Link href={'/order?id='+ id}>
+    
     <button onClick={onFormSubmit} type="submit" class="flex w-50 text-center  rounded-md bg-pink-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-pink-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-600">Confirm</button>
-    </Link>
+    
     </div>
   </div>
   
