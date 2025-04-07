@@ -17,6 +17,7 @@ const orders = () => {
   
     const result = await response.json();
     setOrder(result)
+    // console.log(result)
     }
   
     if(!localStorage.getItem('token')){
@@ -26,7 +27,7 @@ const orders = () => {
       orderFetch()
     }
   }, [])
-  
+  console.log(order)
   return (
     <div><section class="py-8 antialiased  md:py-16">
     <div class="mx-auto max-w-screen-xl px-4 2xl:px-0">
