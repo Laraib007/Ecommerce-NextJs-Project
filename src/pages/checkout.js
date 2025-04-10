@@ -5,6 +5,7 @@ import { FaPlusCircle, FaMinusCircle } from "react-icons/fa"
 import { IoBagCheck } from "react-icons/io5";
 import Link from 'next/link';
 import { redirect, useRouter } from 'next/navigation';
+import Products from '../../models/Products';
 
 
 const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
@@ -57,8 +58,9 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
          body: JSON.stringify(data),
        });
      
-       const result = await response.json();
-       console.log(data);
+       for(let item in cart){
+        let product = Products.findOne({slug: item})
+       }
        localStorage.removeItem("cart")
        clearCart()
        push('/order?id='+ id)
