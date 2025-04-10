@@ -67,7 +67,7 @@ if(itemCode in cart){
 
 const buyNow =(itemCode, name, price, qty, size, varient)=>{
   let newCart = {}
-  newCart = {itemCode:{qty: 1, name, price, size, varient }}
+  newCart[itemCode] = {qty: 1, name, price, size, varient }
   setcart(newCart)
   saveCart(newCart)
   router.push("/checkout")
