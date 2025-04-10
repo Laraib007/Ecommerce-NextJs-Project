@@ -7,17 +7,18 @@ const handler = async (req, res)=>{
     if(req.method == "POST"){
         try {
             let product, sumTotal=0
-      for(let item in cart){
-       sumTotal = cart[item].price * cart[item].qty
-       product = await Products.findOne({slug: item})
-       if(product.price !== cart[item].price){ 
-         console.log("Sorry!, Some Item of Your Cart is changed. Please Try Again")
-         return
-       }
-       if(sumTotal !== subTotal){
-         console.log("Sorry!, Some Item of Your Cart is changed. Please Try Again")
-         return
-       }
+            let cart = req.body.cart
+            for(let item in cart){
+            sumTotal = cart[item].price * cart[item].qty
+            product = await Products.findOne({slug: item})
+            if(product.price !== cart[item].price){ 
+                console.log("Sorry!, Some Item of Your Cart is changed. Please Try Again")
+                return
+                    }
+                    if(sumTotal !== req.body.subTotal){
+                        console.log("Sorry!, Some Item of Your Cart is changed. Please Try Again")
+                        return
+                    }
       }
             let o = new Orders({
                 name: req.body.name,
