@@ -64,6 +64,9 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
         if(product.price !== cart[item].price){
           console.log("Sorry!, Some Item of Your Cart is changed. Please Try Again")
         }
+        if(sumTotal !== subTotal){
+          console.log("Sorry!, Some Item of Your Cart is changed. Please Try Again")
+        }
        }
        localStorage.removeItem("cart")
        clearCart()
