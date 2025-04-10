@@ -18,7 +18,6 @@ const orders = () => {
   
     const result = await response.json();
     setOrder(result)
-    // console.log(result)
     }
   
     if(!localStorage.getItem('token')){
