@@ -1,9 +1,5 @@
 import React, { useState } from 'react'
-import { FaCartShopping } from "react-icons/fa6";
-import { MdCancel } from "react-icons/md";
 import { FaPlusCircle, FaMinusCircle } from "react-icons/fa"
-import { IoBagCheck, IoLogoYahoo } from "react-icons/io5";
-import Link from 'next/link';
 import { redirect, useRouter } from 'next/navigation';
 import { ToastContainer, toast } from 'react-toastify';
 
@@ -32,7 +28,6 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
           else if(e.target.name == "address"){
             setAddress(e.target.value)
             }
-            console.log(email)
      }
 
 
@@ -49,7 +44,6 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
     let dayss = d.getFullYear()
     let date = day.toString() + "-"+ days.toString() + "-" + dayss.toString()
        let data = {name, cart, email, number, altNumber, address, subTotal, id, date}
-       console.log(data)
        let response = await fetch('http://localhost:3000/api/order', {
          method: 'POST',
          headers: {
