@@ -1,5 +1,5 @@
 import Orders from "../../../models/Orders";
-import Products from '../../models/Products';
+import Products from '../../../models/Products';
 import connectDB from "../../../middleware.js/mongoose";
 
 const handler = async (req, res)=>{
