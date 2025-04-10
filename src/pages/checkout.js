@@ -60,9 +60,9 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
        });
        
        if(response.status == "404"){
-        toast.success('Sorry!, Some Item of Your Cart is changed. Please Try Again', {
+        toast.error('Sorry!, Some Item of Your Cart is changed. Please Try Again', {
             position: "top-left",
-        autoClose: 1000,
+        autoClose: 2400,
         hideProgressBar: false,
         closeOnClick: false,
         pauseOnHover: false,
@@ -70,11 +70,13 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
         progress: undefined,
         theme: "colored"
             });
+            
        }
-      
-      //  localStorage.removeItem("cart")
-      //  clearCart()
-      //  push('/order?id='+ id)
+       if(response.status == "200"){
+       localStorage.removeItem("cart")
+       clearCart()
+       push('/order?id='+ id)
+      }
        }
        
   return (
@@ -148,15 +150,6 @@ theme="colored"
   )
 }
 
-// export async function getServerSideProps(context) { 
 
-//     if(!mongoose.connections[0].readyState){
-//     await mongoose.connect(process.env.MONGOSSE_URI)
-//     }
-//     let product = await Products.findOne({id: context.query.id})
-//     return {
-//       props: {order: JSON.parse(JSON.stringify(order))}
-//     }
-//   }
 
 export default Checkout
