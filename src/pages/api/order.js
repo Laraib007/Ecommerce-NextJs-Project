@@ -12,13 +12,14 @@ const handler = async (req, res)=>{
             sumTotal = cart[item].price * cart[item].qty
             product = await Products.findOne({slug: item})
             if(product.price !== cart[item].price){ 
-                console.log("Sorry!, Some Item of Your Cart is changed. Please Try Again")
+                res.status(404).json({err: "Sorry!, Some Item of Your Cart is changed. Please Try Again"})
                 return
                     }
                     if(sumTotal !== req.body.subTotal){
-                        console.log("Sorry!, Some Item of Your Cart is changed. Please Try Again")
+                        res.status(404).json({err: "Sorry!, Some Item of Your Cart is changed. Please Try Again"})
                         return
                     }
+                    return
       }
             let o = new Orders({
                 name: req.body.name,

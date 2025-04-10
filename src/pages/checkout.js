@@ -56,13 +56,14 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
            'Content-Type': 'application/json',
          },
          body: JSON.stringify(data),
+         
        });
-
+       console.log(response)
 
       
        localStorage.removeItem("cart")
        clearCart()
-       push('/order?id='+ id)
+      //  push('/order?id='+ id)
        }
        
   return (
