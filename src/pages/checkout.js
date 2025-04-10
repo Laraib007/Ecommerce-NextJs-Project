@@ -2,10 +2,9 @@ import React, { useState } from 'react'
 import { FaCartShopping } from "react-icons/fa6";
 import { MdCancel } from "react-icons/md";
 import { FaPlusCircle, FaMinusCircle } from "react-icons/fa"
-import { IoBagCheck } from "react-icons/io5";
+import { IoBagCheck, IoLogoYahoo } from "react-icons/io5";
 import Link from 'next/link';
 import { redirect, useRouter } from 'next/navigation';
-import Products from '../../models/Products';
 
 
 const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
@@ -39,19 +38,7 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
 
      const onFormSubmit = async (e)=>{
 
-      let product, sumTotal=0
-      for(let item in cart){
-       sumTotal = cart[item].price * cart[item].qty
-       product = await Products.findOne({slug: item})
-       if(product.price !== cart[item].price){ 
-         console.log("Sorry!, Some Item of Your Cart is changed. Please Try Again")
-         return
-       }
-       if(sumTotal !== subTotal){
-         console.log("Sorry!, Some Item of Your Cart is changed. Please Try Again")
-         return
-       }
-      }
+      
     //  e.preventDefault()
     const idData = Date.now() 
     const id = idData + Math.round(Math.random() * 1000)
