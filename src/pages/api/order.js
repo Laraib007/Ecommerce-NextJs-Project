@@ -1,10 +1,24 @@
 import Orders from "../../../models/Orders";
+import Products from '../../models/Products';
 import connectDB from "../../../middleware.js/mongoose";
 
 const handler = async (req, res)=>{
    
     if(req.method == "POST"){
         try {
+            let product, sumTotal=0
+      for(let item in cart){
+       sumTotal = cart[item].price * cart[item].qty
+       product = await Products.findOne({slug: item})
+       if(product.price !== cart[item].price){ 
+         console.log("Sorry!, Some Item of Your Cart is changed. Please Try Again")
+         return
+       }
+       if(sumTotal !== subTotal){
+         console.log("Sorry!, Some Item of Your Cart is changed. Please Try Again")
+         return
+       }
+      }
             let o = new Orders({
                 name: req.body.name,
                 product: req.body.cart,
