@@ -51,11 +51,9 @@ e.preventDefault()
   });
 
   const result = await response.json();
-  console.log(result.sucess);
 
 
 if(result.sucess){
-  console.log(result)
   toast.success('You logged in successfully', {
     position: "top-left",
 autoClose: 1000,
