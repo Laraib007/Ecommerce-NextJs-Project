@@ -38,7 +38,20 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
 
 
      const onFormSubmit = async (e)=>{
-      
+
+      let product, sumTotal=0
+      for(let item in cart){
+       sumTotal = cart[item].price * cart[item].qty
+       product = await Products.findOne({slug: item})
+       if(product.price !== cart[item].price){ 
+         console.log("Sorry!, Some Item of Your Cart is changed. Please Try Again")
+         return
+       }
+       if(sumTotal !== subTotal){
+         console.log("Sorry!, Some Item of Your Cart is changed. Please Try Again")
+         return
+       }
+      }
     //  e.preventDefault()
     const idData = Date.now() 
     const id = idData + Math.round(Math.random() * 1000)
@@ -57,17 +70,9 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
          },
          body: JSON.stringify(data),
        });
-       let product, sumTotal=0
-       for(let item in cart){
-        sumTotal = cart[item].price * cart[item].qty
-        product = Products.findOne({slug: item})
-        if(product.price !== cart[item].price){
-          console.log("Sorry!, Some Item of Your Cart is changed. Please Try Again")
-        }
-        if(sumTotal !== subTotal){
-          console.log("Sorry!, Some Item of Your Cart is changed. Please Try Again")
-        }
-       }
+
+
+      
        localStorage.removeItem("cart")
        clearCart()
        push('/order?id='+ id)
@@ -132,5 +137,16 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
   
   )
 }
+
+// export async function getServerSideProps(context) { 
+
+//     if(!mongoose.connections[0].readyState){
+//     await mongoose.connect(process.env.MONGOSSE_URI)
+//     }
+//     let product = await Products.findOne({id: context.query.id})
+//     return {
+//       props: {order: JSON.parse(JSON.stringify(order))}
+//     }
+//   }
 
 export default Checkout
