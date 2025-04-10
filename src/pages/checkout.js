@@ -57,9 +57,13 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
          },
          body: JSON.stringify(data),
        });
-     
+       let product, sumTotal=0
        for(let item in cart){
-        let product = Products.findOne({slug: item})
+        sumTotal = cart[item].price * cart[item].qty
+        product = Products.findOne({slug: item})
+        if(product.price !== cart[item].price){
+          console.log("Sorry!, Some Item of Your Cart is changed. Please Try Again")
+        }
        }
        localStorage.removeItem("cart")
        clearCart()
