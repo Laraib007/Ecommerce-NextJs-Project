@@ -36,7 +36,7 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
       
     //  e.preventDefault()
     const idData = Date.now() 
-    const id = idData + Math.round(Math.random() * 1000)
+    const id = idData * Math.round(Math.random() * 10)
      setId(()=> id)
     const d = new Date();
     let day = d.getDate();
