@@ -19,7 +19,7 @@ const handler = async (req, res)=>{
                         res.status(404).json({err: "Sorry!, Some Item of Your Cart is changed. Please Try Again"})
                         return
                     }
-                    return
+                    
       }
             let o = new Orders({
                 name: req.body.name,
