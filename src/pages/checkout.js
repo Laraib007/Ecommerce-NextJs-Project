@@ -5,7 +5,7 @@ import { FaPlusCircle, FaMinusCircle } from "react-icons/fa"
 import { IoBagCheck, IoLogoYahoo } from "react-icons/io5";
 import Link from 'next/link';
 import { redirect, useRouter } from 'next/navigation';
-
+import { ToastContainer, toast } from 'react-toastify';
 
 const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
   const [name, setName] = useState()
@@ -58,17 +58,39 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
          body: JSON.stringify(data),
          
        });
-       console.log(response)
-
+       
+       if(response.status == "404"){
+        toast.success('Sorry!, Some Item of Your Cart is changed. Please Try Again', {
+            position: "top-left",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "colored"
+            });
+       }
       
-       localStorage.removeItem("cart")
-       clearCart()
+      //  localStorage.removeItem("cart")
+      //  clearCart()
       //  push('/order?id='+ id)
        }
        
   return (
     <div className='container mt-32'>
-      
+      <ToastContainer
+position="top-left"
+autoClose={2000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick={false}
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="colored"
+/>
       <h1 className='m-2 font-bold text-center'>CHECKOUT</h1>
       <h1 className='m-2 text-xl font-bold text-gray-700 text-center'>ENTER YOUR COMPELETE DETAILS AND ADDRESS</h1>
      <div className="mt-4 flex container justify-center ">
