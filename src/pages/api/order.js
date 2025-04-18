@@ -41,7 +41,6 @@ const handler = async (req, res)=>{
             let order = await Orders.findOne({id: req.body.id})
             let products = order.product
             for(let slug in cart){
-                console.log( products[slug])
                  await Products.findOneAndUpdate({slug: slug}, { $inc:{"avalibleQty": - products[slug].qty}})
             }
         } catch (error) {
