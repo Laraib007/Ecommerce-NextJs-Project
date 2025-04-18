@@ -65,6 +65,7 @@ progress: undefined,
 theme: "colored"
     });
 localStorage.setItem("token", result.token)
+localStorage.setItem("email", result.email)
     setTimeout(() => {
       router.push("http://localhost:3000/")
     }, 1500);
