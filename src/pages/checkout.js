@@ -66,6 +66,19 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
             });
             
        }
+       if(response.status == "403"){
+        toast.error('Sorry!, Some Item of Your Cart is out of stock!', {
+            position: "top-left",
+        autoClose: 2400,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "colored"
+            });
+            
+       }
        if(response.status == "200"){
        localStorage.removeItem("cart")
        clearCart()
