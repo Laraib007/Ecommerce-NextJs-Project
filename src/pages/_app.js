@@ -38,6 +38,7 @@ export default function App({ Component, pageProps }) {
   
 const logout=()=>{
   localStorage.removeItem("token")
+  localStorage.removeItem("email")
   setKey(Math.random())
   setUser({value: null})
   router.push("/")
