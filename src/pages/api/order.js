@@ -39,9 +39,8 @@ const handler = async (req, res)=>{
             res.status(200).json({ sucess: "sucess" });
             let order = await Orders.findOneAndUpdate({id: req.body.id})
             let products = order.product
-            console.log(products)
             for(let slug in cart){
-                 await Products.findOneAndUpdate({slug: slug}, { $inc:{"avalibleQty": - product[slug].qty}})
+                 await Products.findOneAndUpdate({slug: slug}, { $inc:{"avalibleQty": - products[slug].qty}})
             }
         } catch (error) {
             res.status(404).json({ warning: "Product not added" })
