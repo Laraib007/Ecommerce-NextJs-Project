@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaPlusCircle, FaMinusCircle } from "react-icons/fa"
 import { redirect, useRouter } from 'next/navigation';
 import { ToastContainer, toast } from 'react-toastify';
@@ -10,7 +10,18 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
   const [altNumber, setAltNumber] = useState()
   const [address, setAddress] = useState()
   const [id, setId] = useState()
+  const [user, setUser] = useState()
   const { push } = useRouter()
+
+
+  useEffect(() => {
+    const user = localStorage.getItem("email")
+    if(user){
+      setEmail(user) 
+      setUser(user)  
+           }
+  }, [])
+
   const handleChange = (e)=> {
     if(e.target.name == "name"){
       setName(e.target.value)
@@ -110,7 +121,7 @@ theme="colored"
       </div>
       <div className='w-96 m-3 '>
         <label for="email" className=" text-sm font-medium ml-1 text-gray-900">Email Address</label>
-          <input onChange={handleChange} value={email} id="email" name="email" type="email" autocomplete="email" required className=" w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+          {user?<input value={email} id="email" name="email" type="email" autocomplete="email" required className=" w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 readOnly" />: <input onChange={handleChange} value={email} id="email" name="email" type="email" autocomplete="email" required className=" w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />}
       </div>
       </div>
       <div className="mt-2 flex container justify-center ">
