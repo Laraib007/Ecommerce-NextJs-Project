@@ -11,7 +11,7 @@ const handler = async (req, res)=>{
               if(u){
                     if(req.body.email ==  u.email && req.body.password  == originalText){
                         var token = jwt.sign({email:u.email, name:u.name },'topsecret');
-                        res.status(200).json({ sucess: "sucess", token });
+                        res.status(200).json({ sucess: "sucess", token, email: req.body.email });
                         console.log(token)
                     }
                     else{
