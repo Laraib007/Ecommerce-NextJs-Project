@@ -10,16 +10,12 @@ import { IoMdSettings } from "react-icons/io";
 import { HiShoppingBag } from "react-icons/hi2";
 import { RiLogoutBoxRFill  } from "react-icons/ri";
 import { ToastContainer, toast } from 'react-toastify';
-
-
-
-
 import Logo from "../component/Img/HLogo.png"
 import Image from 'next/image';
 
 const Navbar = ({logout, user, cart, addToCart, clearCart, removeFromCart, subTotal}) => {
   const [dropDown, setDropDown] = useState(false)
-  
+  const [disabled, setDisabled] = useState(null)
 const popUp =()=>{
   
   toast.error(' logged out successfully', {
@@ -114,7 +110,7 @@ theme="colored"
     <div className='font-semibold my-2'>Sub Total: <span className='font-bold'> Rs.{subTotal}</span></div>
     <div className='flex'>
       <Link href={'/checkout'}> 
-    <button class="flex mt-8 text-white bg-pink-500 border-0 py-1.5 px-2.5 focus:outline-none hover:bg-pink-600 rounded text-sm"><IoBagCheck  className='text-lg md-1 mr-1 ' />Checkout</button> </Link>
+    <button disabled class={ `flex mt-8 text-white bg-pink-500 border-0 py-1.5 px-2.5 focus:outline-none hover:bg-pink-600 rounded text-sm`}><IoBagCheck  className='text-lg md-1 mr-1 ' />Checkout</button> </Link>
     <button onClick={clearCart} class="flex mt-8 ml-2 text-white bg-pink-500 border-0 py-1 px-3 focus:outline-none hover:bg-pink-600 rounded text-sm">Clear Cart</button>
     </div>
     </div>
