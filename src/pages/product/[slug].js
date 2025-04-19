@@ -10,7 +10,7 @@ import { ToastContainer, toast } from 'react-toastify';
  
 const Slugs = ({ addToCart, buyNow, product, varient, price})=> {
 const [pin, setPin] = useState()
-
+const router = useRouter()
 const [service, setService] = useState()
   const zipChecker = async()=>{
   const pins = await fetch("http://localhost:3000/api/zipCode")
@@ -39,7 +39,8 @@ const refreshVariants =(newsize, newcolor)=>{
   // window.history.replaceState(null, "", `http://localhost:3000/product/${varient[newcolor][newsize]["slug"]}`)
 
   let url = `http://localhost:3000/product/${varient[newcolor][newsize]["slug"]}`
-  window.location = url
+  // window.location = url
+  router.push(url)
 }
 
 
