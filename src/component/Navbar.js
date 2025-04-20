@@ -35,11 +35,12 @@ const popUp =()=>{
       }, 1000);
       
 }
+const ref = useRef()
 const cartNotAppear = ["/login", '/tshirt', '/mugs']
 
   const currentPath = usePathname()
   if(cartNotAppear.includes(currentPath)){
-
+   
   }
   const toggleCart = ()=>{
     if(ref.current.classList.contains('translate-x-full')){
@@ -51,7 +52,7 @@ const cartNotAppear = ["/login", '/tshirt', '/mugs']
     }
   }
  
-  const ref = useRef()
+  
   return (
     <div className=" text-gray-600 bg-slate-100 body-font ">
        <ToastContainer
