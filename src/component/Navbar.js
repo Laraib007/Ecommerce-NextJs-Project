@@ -15,7 +15,7 @@ import Image from 'next/image';
 
 const Navbar = ({logout, user, cart, addToCart, clearCart, removeFromCart, subTotal}) => {
   const [dropDown, setDropDown] = useState(false)
-  
+  const userCart = localStorage.getItem("cart")
 const popUp =()=>{
   
   toast.error(' logged out successfully', {
@@ -37,7 +37,7 @@ const popUp2 =()=>{
   if(cart){
     clearCart()
     return
-  } else {
+  } else if(!cart == {}) {
   toast.error(' Your Cart is already empty', {
       position: "top-left",
   autoClose: 1000,
