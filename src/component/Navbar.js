@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { FaCartShopping } from "react-icons/fa6";
 import { MdCancel } from "react-icons/md";
 import { FaPlusCircle, FaMinusCircle } from "react-icons/fa"
@@ -15,7 +15,9 @@ import Image from 'next/image';
 
 const Navbar = ({logout, user, cart, addToCart, clearCart, removeFromCart, subTotal}) => {
   const [dropDown, setDropDown] = useState(false)
-  const userCart = localStorage.getItem("cart")
+
+  
+  
 const popUp =()=>{
   
   toast.error(' logged out successfully', {
@@ -33,26 +35,7 @@ const popUp =()=>{
       }, 1000);
       
 }
-const popUp2 =()=>{
-  if(cart){
-    clearCart()
-    return
-  } else if(!cart == {}) {
-  toast.error(' Your Cart is already empty', {
-      position: "top-left",
-  autoClose: 1000,
-  hideProgressBar: false,
-  closeOnClick: false,
-  pauseOnHover: false,
-  draggable: true,
-  progress: undefined,
-  theme: "colored"
-      });
-      setTimeout(() => {
-        logout()
-      }, 1000);
-    }
-}
+
 
   const currentPath = usePathname()
   const toggleCart = ()=>{
@@ -131,7 +114,7 @@ theme="colored"
     <div className='flex'>
       <Link href={`${Object.keys(cart).length === 0 ? "/": '/checkout'}`}> 
     <button  className={  `flex mt-8 text-white border-0 py-1.5 px-2.5 focus:outline-none hover:bg-pink-600 rounded text-sm ${Object.keys(cart).length === 0 ? "bg-pink-200 cursor-not-allowed": "bg-pink-500" }`}><IoBagCheck  className='text-lg md-1 mr-1 ' />Checkout</button> </Link>
-    <button onClick={popUp2} className={`flex mt-8 ml-2 text-white  border-0 py-1 px-3 focus:outline-none hover:bg-pink-600 rounded text-sm ${Object.keys(cart).length === 0 ? "bg-pink-200 cursor-not-allowed": "bg-pink-500" }`}>Clear Cart</button>
+    <button onClick={clearCart} className={`flex mt-8 ml-2 text-white  border-0 py-1 px-3 focus:outline-none hover:bg-pink-600 rounded text-sm ${Object.keys(cart).length === 0 ? "bg-pink-200 cursor-not-allowed": "bg-pink-500" }`}>Clear Cart</button>
     </div>
     </div>
   </div>
