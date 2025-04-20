@@ -15,8 +15,11 @@ import Image from 'next/image';
 
 const Navbar = ({logout, user, cart, addToCart, clearCart, removeFromCart, subTotal}) => {
   const [dropDown, setDropDown] = useState(false)
-
+const [sidecart, setSidecart] = useState(false)
   
+  useEffect(() => {
+    Object.keys(cart).length !== 0 && setSidecart(true)
+  }, [])
   
 const popUp =()=>{
   
@@ -43,13 +46,14 @@ const cartNotAppear = ["/login", '/tshirt', '/mugs']
    
   }
   const toggleCart = ()=>{
-    if(ref.current.classList.contains('translate-x-full')){
-      ref.current.classList.remove('translate-x-full')
-      ref.current.classList.add('translate-x-0')
-    } else if(!ref.current.classList.contains('translate-x-full')){
-      ref.current.classList.remove('translate-x-0')
-      ref.current.classList.add('translate-x-full')
-    }
+    setSidecart(!sidecart)
+    // if(ref.current.classList.contains('translate-x-full')){
+    //   ref.current.classList.remove('translate-x-full')
+    //   ref.current.classList.add('translate-x-0')
+    // } else if(!ref.current.classList.contains('translate-x-full')){
+    //   ref.current.classList.remove('translate-x-0')
+    //   ref.current.classList.add('translate-x-full')
+    // }
   }
  
   
