@@ -34,7 +34,10 @@ const popUp =()=>{
       
 }
 const popUp2 =()=>{
-  
+  if(cart){
+    clearCart()
+    return
+  } else {
   toast.error(' Your Cart is already empty', {
       position: "top-left",
   autoClose: 1000,
@@ -48,7 +51,7 @@ const popUp2 =()=>{
       setTimeout(() => {
         logout()
       }, 1000);
-      
+    }
 }
 
   const currentPath = usePathname()
@@ -128,7 +131,7 @@ theme="colored"
     <div className='flex'>
       <Link href={`${Object.keys(cart).length === 0 ? "/": '/checkout'}`}> 
     <button  className={  `flex mt-8 text-white border-0 py-1.5 px-2.5 focus:outline-none hover:bg-pink-600 rounded text-sm ${Object.keys(cart).length === 0 ? "bg-pink-200 cursor-not-allowed": "bg-pink-500" }`}><IoBagCheck  className='text-lg md-1 mr-1 ' />Checkout</button> </Link>
-    <button onClick={`${clearCart}`} className={`flex mt-8 ml-2 text-white  border-0 py-1 px-3 focus:outline-none hover:bg-pink-600 rounded text-sm ${Object.keys(cart).length === 0 ? "bg-pink-200 cursor-not-allowed": "bg-pink-500" }`}>Clear Cart</button>
+    <button onClick={popUp2} className={`flex mt-8 ml-2 text-white  border-0 py-1 px-3 focus:outline-none hover:bg-pink-600 rounded text-sm ${Object.keys(cart).length === 0 ? "bg-pink-200 cursor-not-allowed": "bg-pink-500" }`}>Clear Cart</button>
     </div>
     </div>
   </div>
