@@ -35,9 +35,13 @@ const popUp =()=>{
       }, 1000);
       
 }
-
+const cartNotAppear = ["/login", '/tshirt']
 
   const currentPath = usePathname()
+  // console.log(currentPath)
+  if(cartNotAppear.includes(currentPath)){
+    console.log("Labi bhai")
+  }
   const toggleCart = ()=>{
     if(ref.current.classList.contains('translate-x-full')){
       ref.current.classList.remove('translate-x-full')
