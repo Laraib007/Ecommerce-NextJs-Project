@@ -15,7 +15,6 @@ const [service, setService] = useState()
   const zipChecker = async()=>{
   const pins = await fetch("http://localhost:3000/api/zipCode")
   const pinJson = await pins.json();
-  console.log(pinJson)
   if(pinJson.includes(Number(pin))){
     setService(true)
     toast("Yay we Deliver!");
@@ -33,7 +32,6 @@ const [size, setSize] = useState(product.size)
 
 const productSlug =varient[color][size]["slug"]
 const refreshVariants =(newsize, newcolor)=>{
-  console.log(product.price)
   const a = setSize(newsize)
   const b = setColor(newcolor)
   // window.history.replaceState(null, "", `http://localhost:3000/product/${varient[newcolor][newsize]["slug"]}`)
@@ -42,7 +40,6 @@ const refreshVariants =(newsize, newcolor)=>{
   // window.location = url
   router.push(url)
 }
-
 
   const src = product.img
   return <>
@@ -125,7 +122,7 @@ const refreshVariants =(newsize, newcolor)=>{
         </div> 
         <div class="flex">
           <span class="title-font font-medium text-2xl text-gray-900">Rs.{product.price}</span>
-          <button onClick={()=>addToCart(productSlug, product.title, product.price, 1, size, color)} class="flex ml-3 text-white bg-pink-500 border-0 py-2 px-3 focus:outline-none hover:bg-pink-600 rounded"><FaCartShopping className='text-sd mt-1 mr-1 cursor-pointer text-white ' />Add to Cart</button>
+          <button onClick={()=>addToCart(productSlug, product.title, product.price, 1, size, color)} class="flex ml-3 text-white bg-pink-500 border-0 py-2 px-3 focus:outline-none hover:bg-pink-600 rounded"><FaCartShopping className='text-sd mt-1 mr-1 cursor-pointer text-white ' />{product.avalibleQty < 1 ? "Out of Stock": "Add to Cart"}</button>
           <button onClick={()=> buyNow(productSlug, product.title, product.price, 1, size, color)} class="flex ml-2 text-white bg-pink-500 border-0 py-2 px-2 focus:outline-none hover:bg-pink-600 rounded"><IoBagCheck className='text-sd mt-1 mr-1 ' />Buy Now</button>
           <button class="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
             <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
