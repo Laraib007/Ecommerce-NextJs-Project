@@ -19,7 +19,8 @@ const [sidecart, setSidecart] = useState(false)
   
   useEffect(() => {
     Object.keys(cart).length !== 0 && setSidecart(true)
-  }, [])
+    console.log(Object.keys(cart).length)
+  }, [Object.keys(cart).length])
   
 const popUp =()=>{
   
