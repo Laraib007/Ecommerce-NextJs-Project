@@ -42,18 +42,20 @@ const ref = useRef()
 const cartNotAppear = ["/login", '/tshirt', '/mugs']
 
   const currentPath = usePathname()
-  if(cartNotAppear.includes(currentPath)){
+ 
+    if(cartNotAppear.includes(currentPath)){
    
   }
+
   const toggleCart = ()=>{
     setSidecart(!sidecart)
-    // if(ref.current.classList.contains('translate-x-full')){
-    //   ref.current.classList.remove('translate-x-full')
-    //   ref.current.classList.add('translate-x-0')
-    // } else if(!ref.current.classList.contains('translate-x-full')){
-    //   ref.current.classList.remove('translate-x-0')
-    //   ref.current.classList.add('translate-x-full')
-    // }
+    if(ref.current.classList.contains('translate-x-full')){
+      ref.current.classList.remove('translate-x-full')
+      ref.current.classList.add('translate-x-0')
+    } else if(!ref.current.classList.contains('translate-x-full')){
+      ref.current.classList.remove('translate-x-0')
+      ref.current.classList.add('translate-x-full')
+    }
   }
  
   
