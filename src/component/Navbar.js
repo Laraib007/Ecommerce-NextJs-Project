@@ -19,7 +19,6 @@ const [sidecart, setSidecart] = useState(false)
   
   useEffect(() => {
     Object.keys(cart).length !== 0 && setSidecart(true)
-    console.log(Object.keys(cart).length)
   }, [Object.keys(cart).length])
   
 const popUp =()=>{
@@ -44,19 +43,21 @@ const cartNotAppear = ["/login", '/tshirt', '/mugs']
 
   const currentPath = usePathname()
  
-    if(cartNotAppear.includes(currentPath)){
-   
-  }
+  if(cartNotAppear.includes(currentPath)){
+    setSidecart(false)
+    return
+   }
 
   const toggleCart = ()=>{
+   
     setSidecart(!sidecart)
-    if(ref.current.classList.contains('translate-x-full')){
-      ref.current.classList.remove('translate-x-full')
-      ref.current.classList.add('translate-x-0')
-    } else if(!ref.current.classList.contains('translate-x-full')){
-      ref.current.classList.remove('translate-x-0')
-      ref.current.classList.add('translate-x-full')
-    }
+    // if(ref.current.classList.contains('translate-x-full')){
+    //   ref.current.classList.remove('translate-x-full')
+    //   ref.current.classList.add('translate-x-0')
+    // } else if(!ref.current.classList.contains('translate-x-full')){
+    //   ref.current.classList.remove('translate-x-0')
+    //   ref.current.classList.add('translate-x-full')
+    // }
   }
  
   
