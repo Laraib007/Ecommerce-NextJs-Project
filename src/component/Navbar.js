@@ -16,8 +16,15 @@ import Image from 'next/image';
 const Navbar = ({logout, user, cart, addToCart, clearCart, removeFromCart, subTotal}) => {
   const [dropDown, setDropDown] = useState(false)
 const [sidecart, setSidecart] = useState(false)
-  
+
+const ref = useRef()
+const cartNotAppear = ["/login", '/tshirt', '/mugs']
+const currentPath = usePathname()
   useEffect(() => {
+      if(cartNotAppear.includes(currentPath)){
+    setSidecart(false)
+    return
+   }
     Object.keys(cart).length !== 0 && setSidecart(true)
   }, [Object.keys(cart).length])
   
@@ -38,15 +45,7 @@ const popUp =()=>{
       }, 1000);
       
 }
-const ref = useRef()
-const cartNotAppear = ["/login", '/tshirt', '/mugs']
 
-  const currentPath = usePathname()
- 
-  if(cartNotAppear.includes(currentPath)){
-    setSidecart(false)
-    return
-   }
 
   const toggleCart = ()=>{
    
