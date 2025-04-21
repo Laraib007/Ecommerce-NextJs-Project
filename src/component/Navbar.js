@@ -18,7 +18,7 @@ const Navbar = ({logout, user, cart, addToCart, clearCart, removeFromCart, subTo
 const [sidecart, setSidecart] = useState(false)
 
 const ref = useRef()
-const cartNotAppear = ["/login", '/tshirt', '/mugs']
+const cartNotAppear = ["/login", '/tshirt', '/mugs', '/hoodies']
 const currentPath = usePathname()
   useEffect(() => {
       if(cartNotAppear.includes(currentPath)){
