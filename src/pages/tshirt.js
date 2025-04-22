@@ -42,6 +42,7 @@ const Tshirt = ({products}) => {
                     {products[items].color.includes("purple") && <button class="border-2 bg-purple-500 rounded-full w-6 h-6 focus:outline-none"></button>}
                     {products[items].color.includes("blue") && <button class="border-2 bg-blue-500 rounded-full w-6 h-6 focus:outline-none"></button>}
                     {products[items].color.includes("red") && <button class="border-2 bg-red-500 rounded-full w-6 h-6 focus:outline-none"></button>}
+
                     {products[items].color.includes("black") && <button class="border-2 bg-black rounded-full w-6 h-6 focus:outline-none"></button>}
 
                     </div>
@@ -61,6 +62,9 @@ export async function getServerSideProps(products) {
     mongoose.connect(process.env.MONGOSSE_URI)
     }
     let product = await Products.find({category: "tshirt"})
+    if(!product){
+      router.push("/")
+    }
     let tshirts = {}
   for(let item of product){
   
