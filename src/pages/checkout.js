@@ -77,7 +77,7 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
             });
             
        }
-       console.log(response)
+       console.log(response.json())
        if(response.status == "403"){
         toast.error('Sorry!, Some Item of Your Cart is out of stock!', {
             position: "top-left",
