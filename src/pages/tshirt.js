@@ -6,7 +6,6 @@ import { useRouter } from 'next/router';
 
 const Tshirt = ({products}) => {
   const router = useRouter()
-    console.log(products)
   return (
     <div>
 
@@ -23,7 +22,7 @@ const Tshirt = ({products}) => {
                     <a onClick={()=>router.push(`/product/${products[items].slug}`) } className=" relative rounded overflow-hidden contents">
                       
           <img alt="ecommerce" className="object-cover object-center w-72 h-72 block " src={products[items].img}/>
-                    </a>
+                    </a> 
                     <div className="mt-4">
                         <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">{products[items].title}</h3>
                         <h2 className="text-gray-900 title-font text-lg font-medium">{products[items].title}</h2>
