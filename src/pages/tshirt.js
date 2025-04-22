@@ -66,10 +66,10 @@ export async function getServerSideProps(products) {
   for(let item of product){
   
     if(item.title in tshirts){
-        if(!tshirts[item.title].color.includes(item.color) && item.avalibleQty > 0){
+        if(!tshirts[item.title].color.includes(item.color) ){
           tshirts[item.title].color.push(item.color)
         }
-        if(!tshirts[item.title].size.includes(item.size) && item.avalibleQty > 0){
+        if(!tshirts[item.title].size.includes(item.size) ){
           tshirts[item.title].size.push(item.size)
         }
     }
