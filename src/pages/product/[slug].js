@@ -32,8 +32,8 @@ const [size, setSize] = useState(product.size)
 
 const productSlug =varient[color][size]["slug"]
 const refreshVariants =(newsize, newcolor)=>{
-  const a = setSize(newsize)
-  const b = setColor(newcolor)
+  setSize(newsize)
+  setColor(newcolor)
   // window.history.replaceState(null, "", `http://localhost:3000/product/${varient[newcolor][newsize]["slug"]}`)
 
   let url = `http://localhost:3000/product/${varient[newcolor][newsize]["slug"]}`
