@@ -75,7 +75,7 @@ export async function getServerSideProps(products) {
     }
     else {
       tshirts[item.title] = JSON.parse(JSON.stringify(item))
-      if(item.avalibleQty > 0){
+      if(item.avalibleQty >= 0){
         tshirts[item.title].color = [item.color]
         tshirts[item.title].size = [item.size]
       }
