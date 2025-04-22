@@ -15,11 +15,11 @@ const handler = async (req, res)=>{
                 return res.status(403).json({"error": "Sorry!, Some Item of Your Cart are out of stock. Please Try Again!"})
             }
             if(product.price !== cart[item].price){ 
-                res.status(404).json({err: "Sorry!, Some Item of Your Cart is changed. Please Try Again"})
+                res.status(404).json({"error": "Sorry!, Some Item of Your Cart is changed. Please Try Again!"})
                 return
                     }
                     if(sumTotal !== req.body.subTotal){
-                        res.status(404).json({err: "Sorry!, Some Item of Your Cart is changed. Please Try Again"})
+                        res.status(404).json({"error": "Sorry!, Some Item of Your Cart is changed. Please Try Again!"})
                         return
                     }
                     
