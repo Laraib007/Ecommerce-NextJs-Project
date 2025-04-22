@@ -64,8 +64,9 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
          
        });
        let err = await response.json()
+       console.log(err.error)
        if(response.status == "404"){
-        toast.error('Sorry!, Some Item of Your Cart is changed. Please Try Again', {
+        toast.error(err.error, {
             position: "top-left",
         autoClose: 2400,
         hideProgressBar: false,
@@ -79,7 +80,7 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
        }
        
        if(response.status == "403"){
-        toast.error(err, {
+        toast.error(err.error, {
             position: "top-left",
         autoClose: 2400,
         hideProgressBar: false,
