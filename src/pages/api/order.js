@@ -6,7 +6,7 @@ const handler = async (req, res)=>{
    
     if(req.method == "POST"){
         try {
-            let product, sumTotal=0
+            let product; sumTotal=0
             let cart = req.body.cart
             for(let item in cart){
                     sumTotal = cart[item].price * cart[item].qty
