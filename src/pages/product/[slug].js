@@ -9,10 +9,13 @@ import Link from 'next/link';
 import { ToastContainer, toast } from 'react-toastify';
 import { redirect } from 'next/navigation';
  
-const Slugs = ({ addToCart, buyNow, product, varient, price})=> {
+const Slugs = ({error, addToCart, buyNow, product, varient, price})=> {
 const [pin, setPin] = useState()
 const router = useRouter()
 const [service, setService] = useState()
+if(error){
+  return console.log("error")
+}
   const zipChecker = async()=>{
   const pins = await fetch("http://localhost:3000/api/zipCode")
   const pinJson = await pins.json();
@@ -148,14 +151,15 @@ console.log(product.avalibleQty)
 
 
 export async function getServerSideProps(context) { 
-
+let error;
     if(!mongoose.connections[0].readyState){
     await mongoose.connect(process.env.MONGOSSE_URI)
     }
     let product = await Products.findOne({ slug: context.query.slug })
-    if(!product){
-      let error = "error"
-      return 
+    if(product == null){
+      return {
+        props: {error: 404},
+      }
      }
     let varient =  await Products.find({title: product.title,  category: product.category})
     
@@ -172,7 +176,7 @@ export async function getServerSideProps(context) {
     }
 
     return {
-      props: {error={error}, product: JSON.parse(JSON.stringify(product)), varient: JSON.parse(JSON.stringify(colorSizeSlug))},
+      props: {error: error, product: JSON.parse(JSON.stringify(product)), varient: JSON.parse(JSON.stringify(colorSizeSlug))},
     }
   }
 
