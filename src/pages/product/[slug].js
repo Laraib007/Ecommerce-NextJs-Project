@@ -151,7 +151,7 @@ console.log(product.avalibleQty)
 
 
 export async function getServerSideProps(context) { 
-let error;
+let error = null;
     if(!mongoose.connections[0].readyState){
     await mongoose.connect(process.env.MONGOSSE_URI)
     }
