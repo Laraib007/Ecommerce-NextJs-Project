@@ -10,7 +10,7 @@ const handler = async (req, res)=>{
             let cart = req.body.cart
             for(let item in cart){
                     sumTotal = cart[item].price * cart[item].qty
-                console.log(cart[item])
+                console.log(item.price)
             product = await Products.findOne({slug: item})
             if(product.avalibleQty < cart[item].qty){
                 return res.status(403).json({"error":product.title + " (" + product.size  + "/" + product.color + ")" + " is out of stock. Please Try Again! Please reduce quantity or remove the product"})
