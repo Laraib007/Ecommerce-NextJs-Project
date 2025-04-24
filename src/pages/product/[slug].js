@@ -7,7 +7,7 @@ import mongoose from 'mongoose';
 import Products from '../../../models/Products';
 import Link from 'next/link';
 import { ToastContainer, toast } from 'react-toastify';
-import { redirect } from 'next/navigation';
+import Error from 'next/error'
  
 const Slugs = ({error, addToCart, buyNow, product, varient, price})=> {
 const [pin, setPin] = useState()
