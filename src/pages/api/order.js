@@ -8,7 +8,7 @@ const handler = async (req, res)=>{
         try {
             let product, sumTotal=0
             let cart = req.body.cart
-            for(let item of cart){
+            for(let item in cart){
                     sumTotal = cart[item].price * cart[item].qty
                 console.log(cart[item])
             product = await Products.findOne({slug: item})
