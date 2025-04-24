@@ -28,7 +28,7 @@ const orderplaced = ({order}) => {
         <div class="flex border-t border-gray-200 py-2">
           <span class="text-gray-500">{product[k].name} {product[k].size} / {product[k].varient}</span>
           <span class="m-auto text-gray-900">{product[k].qty}</span>
-          <span class="m-auto text-gray-900">Rs.{product[k].price} <p className='text-sm'>Per Piece</p></span>
+          <span class="m-auto text-gray-900">Rs.{product[k].price} X {product[k].qty} = {product[k].price * product[k].qty} <p className='text-sm'>Per Piece</p></span>
         </div>
         </div>})}
         <div class="flex mt-5">
