@@ -7,6 +7,7 @@ import mongoose from 'mongoose';
 import Products from '../../../models/Products';
 import Link from 'next/link';
 import { ToastContainer, toast } from 'react-toastify';
+import { redirect } from 'next/navigation';
  
 const Slugs = ({ addToCart, buyNow, product, varient, price})=> {
 const [pin, setPin] = useState()
@@ -152,9 +153,13 @@ export async function getServerSideProps(context) {
     await mongoose.connect(process.env.MONGOSSE_URI)
     }
     let product = await Products.findOne({ slug: context.query.slug })
+    if(!product){
+      let error = "error"
+      return 
+     }
     let varient =  await Products.find({title: product.title,  category: product.category})
     
-  
+    
     let colorSizeSlug = {}
     for(let item of varient){
       if(Object.keys(colorSizeSlug).includes(item.color)){
@@ -167,7 +172,7 @@ export async function getServerSideProps(context) {
     }
 
     return {
-      props: {product: JSON.parse(JSON.stringify(product)), varient: JSON.parse(JSON.stringify(colorSizeSlug))},
+      props: {error={error}, product: JSON.parse(JSON.stringify(product)), varient: JSON.parse(JSON.stringify(colorSizeSlug))},
     }
   }
 
