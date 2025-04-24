@@ -13,8 +13,8 @@ const Slugs = ({error, addToCart, buyNow, product, varient, price})=> {
 const [pin, setPin] = useState()
 const router = useRouter()
 const [service, setService] = useState()
-if(error){
-  return console.log("error")
+if(error == 404){
+  return <Error statusCode={404} />
 }
   const zipChecker = async()=>{
   const pins = await fetch("http://localhost:3000/api/zipCode")
