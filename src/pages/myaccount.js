@@ -1,7 +1,45 @@
 import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+
 
 const Myaccount = () => {
     const [hidden, setHidden] = useState(false)
+      const [name, setName] = useState()
+      const [email, setEmail] = useState()
+      const [number, setNumber] = useState()
+      const [altNumber, setAltNumber] = useState()
+      const [address, setAddress] = useState()
+      const [id, setId] = useState()
+      const [user, setUser] = useState()
+      const { push } = useRouter()
+    
+    
+      useEffect(() => {
+        const user = localStorage.getItem("email")
+        if(user){
+          setEmail(user) 
+          setUser(user)  
+               }
+      }, [])
+    
+      const handleChange = (e)=> {
+        if(e.target.name == "name"){
+          setName(e.target.value)
+              }
+              
+        else if(e.target.name == "email"){
+          setEmail(e.target.value)
+           }
+           else if(e.target.name == "number"){
+            setNumber(e.target.value)
+            }
+            else if(e.target.name == "altNumber"){
+              setAltNumber(e.target.value)
+              }
+              else if(e.target.name == "address"){
+                setAddress(e.target.value)
+                }
+         }
   return (
     <div><section class="bg-white py-8 antialiased  md:py-8">
     <div class="mx-auto max-w-screen-lg px-4 2xl:px-0">
