@@ -26,7 +26,6 @@ export default function App({ Component, pageProps }) {
         saveCart(JSON.parse(localStorage.getItem("cart")))
       }
     } catch (error) {
-      console.log(error)
      localStorage.clear()
     }
     const token = localStorage.getItem("token")
@@ -61,7 +60,6 @@ if(itemCode in cart){
   else (
     newCart[itemCode] = {qty: 1, name, price, size, varient }
   )
-  console.log(newCart[itemCode])
   setcart(newCart)
   saveCart(newCart)
 }
