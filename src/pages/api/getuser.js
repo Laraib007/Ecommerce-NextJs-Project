@@ -5,8 +5,10 @@ var jwt = require('jsonwebtoken');
 
 const handler = async (req, res)=>{
     if(req.method == "POST"){
-        var token = jwt.verify({user: req.body.user},'topsecret');
-        res.status(200).json({ sucess: "sucess", token, email: req.body.email });
+        var token = req.body.token
+        let user = jwt.verify(token,'topsecret');
+        res.status(200).json({ sucess: "sucess", token});
+        console.log(user)
         // let u = await Users.findOne({email: req.body.email})
               
     
