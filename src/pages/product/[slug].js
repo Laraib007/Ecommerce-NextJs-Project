@@ -44,7 +44,6 @@ const refreshVariants =(newsize, newcolor)=>{
   // window.location = url
   router.push(url)
 }
-console.log(product.avalibleQty)
   const src = product.img
   return <>
 
