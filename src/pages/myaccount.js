@@ -93,7 +93,11 @@ const Myaccount = () => {
               <div class="col-span-2 sm:col-span-1">
                 <label for="full_name_info_modal" class="mb-2 block text-sm font-medium text-white "> Your Full Name* </label>
                 <input type="text" id="full_name_info_modal" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="Enter your first name" required />
-              </div>
+                
+                  <label for="select_city_input_billing_modal" class="block text-sm font-medium text-white "> City* </label>
+                </div>
+                <input type="text" id="phone-input" class="z-20 block w-full rounded-e-lg border border-s-0 border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:border-s-gray-700  dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="City" required />
+             
   
               
               <div class="col-span-2">
@@ -105,15 +109,6 @@ const Myaccount = () => {
                     <input type="text" id="phone-input" class="z-20 block w-full rounded-e-lg border border-s-0 border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:border-s-gray-700  dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required />
                   </div>
                 </div>
-              </div>
-  
-            
-  
-              <div class="col-span-2 sm:col-span-1">
-                <div class="mb-2 flex items-center gap-2">
-                  <label for="select_city_input_billing_modal" class="block text-sm font-medium text-white "> City* </label>
-                </div>
-                <input type="text" id="phone-input" class="z-20 block w-full rounded-e-lg border border-s-0 border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:border-s-gray-700  dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="City" required />
               </div>
   
               <div class="col-span-2">
