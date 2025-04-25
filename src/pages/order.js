@@ -41,9 +41,9 @@ const orderplaced = ({order}) => {
       </div>
       <Image alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
       src={img}
-      width={500}
-      height={500}
-      alt="Picture of the author"
+      width={400}
+      height={400}
+      
     />
     </div>
   </div>
