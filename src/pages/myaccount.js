@@ -6,14 +6,14 @@ const Myaccount = () => {
     <div><section class="bg-white py-8 antialiased  md:py-8">
     <div class="mx-auto max-w-screen-lg px-4 2xl:px-0">
       
-      <h2 class="mb-4 text-xl font-semibold text-gray-900  sm:text-2xl md:mb-6">General overview</h2>
+      <h2 class="mb-4 text-xl font-semibold text-gray-900  sm:text-2xl md:mb-6">Account Overview</h2>
       <div class="  border-b border-t border-gray-200  dark:border-gray-700   ">
         </div>
       <div class="py-4 md:py-8">
         <div class="mb-4 grid gap-4 sm:grid-cols-2 sm:gap-8 lg:gap-16">
           <div class="space-y-4">
             <div class="flex space-x-4">
-              <img class="h-16 w-16 rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/helene-engels.png" alt="Helene avatar" />
+              <img class="h-16 w-29 rounded-lg" src="https://cdn-icons-png.freepik.com/512/12124/12124771.png?ga=GA1.1.947249077.1739984762" alt="Helene avatar" />
               <div>
                 <h2 class="flex items-center text-xl font-bold leading-none text-gray-900  sm:text-2xl">Helene Engels</h2>
               </div>
