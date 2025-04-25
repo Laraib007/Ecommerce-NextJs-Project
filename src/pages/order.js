@@ -4,7 +4,8 @@ import React from 'react'
 import Orders from '../../models/Orders';
 import Link from 'next/link';
 import { FaLocationArrow } from "react-icons/fa";
-
+import Image from 'next/image'
+import img from "../component/Img/Thanks_for_ shoping.jpg"
 
 const orderplaced = ({order}) => {
   let product = order.product
@@ -39,7 +40,7 @@ const orderplaced = ({order}) => {
         </Link>
       </div>
       <Image
-      src="/profile.png"
+      src={img}
       width={500}
       height={500}
       alt="Picture of the author"
