@@ -39,7 +39,7 @@ const orderplaced = ({order}) => {
         <button class="flex mt-1 text-white bg-pink-500 border-0 py-2 px-3 focus:outline-none hover:bg-pink-600 rounded"><FaLocationArrow className='text-sd mt-1 mr-1 cursor-pointer text-white ' />Track Your Orders</button>
         </Link>
       </div>
-      <Image
+      <Image alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
       src={img}
       width={500}
       height={500}
