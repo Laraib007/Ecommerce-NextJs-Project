@@ -44,7 +44,7 @@ const Myaccount = () => {
          const onFormSubmit = async (e)=>{
           e.preventDefault()
             let data = { email, password}
-            let response = await fetch('http://localhost:3000/api/login', {
+            let response = await fetch('http://localhost:3000/api/getuser', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
