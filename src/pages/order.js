@@ -8,7 +8,6 @@ import { FaLocationArrow } from "react-icons/fa";
 
 const orderplaced = ({order}) => {
   let product = order.product
-  console.log(order)
   return (
     <div className='h-3/4 mb-2'>
         <section class="text-gray-600 body-font overflow-hidden ">
@@ -28,7 +27,7 @@ const orderplaced = ({order}) => {
         <div class="flex border-t border-gray-200 py-2">
           <span class="text-gray-500">{product[k].name} {product[k].size} / {product[k].varient}</span>
           <span class="m-auto text-gray-900">{product[k].qty}</span>
-          <span class="m-auto text-gray-900">Rs.{product[k].price} x {product[k].qty} = {product[k].price * product[k].qty}</span>
+          <span class="m-auto text-gray-900">Rs.{product[k].price} x {product[k].qty} = Rs. {product[k].price * product[k].qty}</span>
         </div>
         </div>})}
         <div class="flex mt-5">
@@ -55,7 +54,6 @@ export async function getServerSideProps(context) {
     await mongoose.connect(process.env.MONGOSSE_URI)
     }
     let order = await Orders.findOne({id: context.query.id})
-    console.log(order)
     return {
       props: {order: JSON.parse(JSON.stringify(order))}
     }
