@@ -64,7 +64,6 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
          
        });
        let err = await response.json()
-       console.log(err.error)
        if(response.status == "404"){
         toast.error(err.error, {
             position: "top-left",
