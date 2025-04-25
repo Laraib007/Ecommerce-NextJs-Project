@@ -6,7 +6,6 @@ import { useRouter } from 'next/router';
 
 const Hoodies = ({products}) => {
     const router = useRouter()
-    console.log(products)
   return (
     <div>
 
