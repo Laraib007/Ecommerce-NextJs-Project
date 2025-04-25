@@ -22,10 +22,8 @@ const handler = async (req, res)=>{
       }
       if(sumTotal !== req.body.subTotal){
         res.status(404).json({"error": "Sorry!, Some Item of Your Cart is changed. Please Try Again"})
-        console.log(sumTotal)
         return
     }
-      console.log(sumTotal)
             let o = new Orders({
                 name: req.body.name,
                 product: req.body.cart,
