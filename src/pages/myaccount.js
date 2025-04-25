@@ -107,44 +107,18 @@ const Myaccount = () => {
                 </div>
               </div>
   
-              <div class="col-span-2 sm:col-span-1">
-                <div class="mb-2 flex items-center gap-2">
-                  <label for="select_country_input_billing_modal" class="block text-sm font-medium text-white "> Country* </label>
-                </div>
-                <select id="select_country_input_billing_modal" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500">
-                  <option selected>United States</option>
-                  <option value="AS">Australia</option>
-                  <option value="FR">France</option>
-                  <option value="ES">Spain</option>
-                  <option value="UK">United Kingdom</option>
-                </select>
-              </div>
+            
   
               <div class="col-span-2 sm:col-span-1">
                 <div class="mb-2 flex items-center gap-2">
                   <label for="select_city_input_billing_modal" class="block text-sm font-medium text-white "> City* </label>
                 </div>
-                <select id="select_city_input_billing_modal" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500">
-                  <option selected>San Francisco</option>
-                  <option value="NY">New York</option>
-                  <option value="LA">Los Angeles</option>
-                  <option value="CH">Chicago</option>
-                  <option value="HU">Houston</option>
-                </select>
+                <input type="text" id="phone-input" class="z-20 block w-full rounded-e-lg border border-s-0 border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:border-s-gray-700  dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="City" required />
               </div>
   
               <div class="col-span-2">
                 <label for="address_billing_modal" class="mb-2 block text-sm font-medium text-white "> Delivery Address* </label>
                 <textarea id="address_billing_modal" rows="4" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="Enter here your address"></textarea>
-              </div>
-              <div class="col-span-2 sm:col-span-1">
-                <label for="company_name" class="mb-2 block text-sm font-medium text-white "> Company name </label>
-                <input type="text" id="company_name" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="Flowbite LLC" />
-              </div>
-  
-              <div class="col-span-2 sm:col-span-1">
-                <label for="vat_number" class="mb-2 block text-sm font-medium text-white "> VAT number </label>
-                <input type="text" id="vat_number" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="DE42313253" />
               </div>
             </div>
             <div class="border-t border-gray-200 pt-4 dark:border-gray-700 md:pt-5">
