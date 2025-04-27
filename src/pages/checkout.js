@@ -126,39 +126,39 @@ theme="colored"
   
       <div className='w-96 m-1 '>
         <label for="name" className=" text-sm font-medium ml-1 text-gray-900">Full Name</label>
-          <input onChange={handleChange} value={name} id="name" name="name" type="text" autocomplete="name" required className=" w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+          <input onChange={handleChange} value={name} id="name" name="name" type="text" autocomplete="name" required className=" w-full rounded-md border-0 px-1.5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
       </div>
       <div className='w-96 m-1 '>
         
-          {user?<><label for="email" className=" text-sm font-medium ml-1 text-gray-900">Email Address <span>(Email cannot be edit)</span> </label><input value={email} id="email" name="email" type="email" autocomplete="email" required className=" w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 readOnly" /> </>: <>  <label for="email" className=" text-sm font-medium ml-1 text-gray-900">Email Address </label> <input onChange={handleChange} value={email} id="email" name="email" type="email" autocomplete="email" required className=" w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" /></>}
+          {user?<><label for="email" className=" text-sm font-medium ml-1 text-gray-900">Email Address <span>(Email cannot be edit)</span> </label><input value={email} id="email" name="email" type="email" autocomplete="email" required className=" w-full rounded-md border-0 px-1.5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 readOnly" /> </>: <>  <label for="email" className=" text-sm font-medium ml-1 text-gray-900">Email Address </label> <input onChange={handleChange} value={email} id="email" name="email" type="email" autocomplete="email" required className=" w-full rounded-md border-0 px-1.5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" /></>}
       </div>
       </div>
       <div className="mt-2 flex container justify-center ">
       <div className='w-96 m-1 '>
         <label for="number" className=" text-sm font-medium ml-1 text-gray-900">Cell No</label>
-          <input onChange={handleChange} value={number} id="number" name="number" type="number" autocomplete="number" required className=" w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+          <input onChange={handleChange} value={number} id="number" name="number" type="number" autocomplete="number" required className=" w-full rounded-md border-0 px-1.5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
       </div>
       <div className='w-96 m-1 '>
         <label for="number" className=" text-sm font-medium ml-1 text-gray-900">Alt Cell No</label>
-          <input onChange={handleChange} value={altNumber} id="altNumber" name="altNumber" type="number" autocomplete="altNumber" required className=" w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+          <input onChange={handleChange} value={altNumber} id="altNumber" name="altNumber" type="number" autocomplete="altNumber" required className=" w-full rounded-md border-0 px-1.5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
       </div>
      
       </div>
       <div className="mt-2 flex container justify-center ">
       <div className='w-96 m-1 '>
         <label for="city" className=" text-sm font-medium ml-1 text-gray-900">City</label>
-          <input onChange={handleChange} value={city} id="city" name="city" type="text" autocomplete="city" required className=" w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+          <input onChange={handleChange} value={city} id="city" name="city" type="text" autocomplete="city" required className=" w-full rounded-md border-0 px-1.5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
       </div>
       <div className='w-96 m-1 '>
         <label for="nearBy" className=" text-sm font-medium ml-1 text-gray-900">Nearby Place</label>
-          <input onChange={handleChange} value={nearBy} id="nearBy" name="nearBy" type="text" autocomplete="nearBy" required className=" w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+          <input onChange={handleChange} value={nearBy} id="nearBy" name="nearBy" type="text" autocomplete="nearBy" required className=" w-full rounded-md border-0 px-1.5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
       </div>
       </div>
       <div className="mt-4 flex container justify-center ">
   
   <div className='w-2/3 '>
     <label for="address" className=" text-sm font-medium ml-1 text-gray-900">Address</label>
-      <textarea onChange={handleChange} value={address} id="address" name="address" type="text" autocomplete="address" required className=" w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+      <textarea onChange={handleChange} value={address} id="address" name="address" type="text" autocomplete="address" required className=" w-full rounded-md border-0 px-1.5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
   </div>
   {/* <-------CART ITEMS------> */}
   </div>
