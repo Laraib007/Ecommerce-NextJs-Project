@@ -43,8 +43,9 @@ const Myaccount = () => {
 
          const onFormSubmit = async (e)=>{
           e.preventDefault()
-          let token = localStorage.getItem("email")
-            let data = { token}
+          let email = localStorage.getItem("email")
+            let data =  {email}
+            
             let response = await fetch('http://localhost:3000/api/getuser', {
               method: 'POST',
               headers: {
@@ -54,7 +55,7 @@ const Myaccount = () => {
             });
           
             const result = await response.json();
-            
+            console.log(data)
 }          
   return (
     <div><section class="bg-white py-8 antialiased  md:py-8">
