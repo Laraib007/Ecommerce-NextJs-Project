@@ -4,14 +4,14 @@ var CryptoJS = require("crypto-js");
 var jwt = require('jsonwebtoken');
 
 const handler = async (req, res)=>{
-    if(req.method == "POST"){email
+    if(req.method == "POST"){
         let u = await Users.findOne({email: req.body.email})
-        
+        let {name, email, city, address, nearby, cellNumber} = u
         // let user = jwt.verify(token,'topsecret');
-        // res.status(200).json({ sucess: "sucess", user});
              if(u){
-                console.log("work")
-             } console.log(u)
+               res.status(200).json({ sucess: "sucess", name, email, city, address, nearby, cellNumber});
+             } 
+            
     
         } else {
             res.status(404).json({ warning: "Invalid Request" })
