@@ -55,7 +55,7 @@ const Myaccount = () => {
             });
           
             const result = await response.json();
-            console.log(data)
+            console.log(result)
 }          
   return (
     <div><section class="bg-white py-8 antialiased  md:py-8">
