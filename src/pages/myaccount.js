@@ -11,6 +11,7 @@ const Myaccount = () => {
       const [nearBy, setNearBy] = useState()
       const [address, setAddress] = useState()
       const [user, setUser] = useState()
+      const [userInfo, setUserInfo] = useState('')
       const { push } = useRouter()
     
     
@@ -56,7 +57,8 @@ const Myaccount = () => {
             });
           
             const result = await response.json();
-            console.log(result)
+            setUserInfo(result)
+            console.log(userInfo)
 }          
   return (
     <div><section class="bg-white py-8 antialiased  md:py-8">
@@ -71,7 +73,7 @@ const Myaccount = () => {
             <div class="flex space-x-4">
               <img class="h-16 w-29 rounded-lg" src="https://cdn-icons-png.freepik.com/512/12124/12124771.png?ga=GA1.1.947249077.1739984762" alt="Helene avatar" />
               <div>
-                <h2 class="flex items-center text-xl font-bold leading-none text-gray-900  sm:text-2xl">Helene Engels</h2>
+                <h2 class="flex items-center text-xl font-bold leading-none text-gray-900  sm:text-2xl">{userInfo.name} </h2>
               </div>
             </div>
             <dl class="">
