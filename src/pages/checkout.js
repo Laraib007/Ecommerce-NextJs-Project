@@ -107,7 +107,7 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
        }
        
   return (
-    <div className='container mt-32'>
+    <div className='container mt-28'>
       <ToastContainer
 position="top-left"
 autoClose={2000}
@@ -120,7 +120,7 @@ draggable
 pauseOnHover
 theme="colored"
 />
-      <h1 className='m-1 font-bold text-center'>CHECKOUT</h1>
+      <h1 className='m-1 text-2xl font-bold text-center'>CHECKOUT</h1>
       <h1 className='m-1 text-xl font-bold text-gray-700 text-center'>ENTER YOUR COMPELETE DETAILS AND ADDRESS</h1>
      <div className="mt-4 flex container justify-center ">
   
@@ -129,8 +129,8 @@ theme="colored"
           <input onChange={handleChange} value={name} id="name" name="name" type="text" autocomplete="name" required className=" w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
       </div>
       <div className='w-96 m-1 '>
-        <label for="email" className=" text-sm font-medium ml-1 text-gray-900">Email Address</label>
-          {user?<input value={email} id="email" name="email" type="email" autocomplete="email" required className=" w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 readOnly" />: <input onChange={handleChange} value={email} id="email" name="email" type="email" autocomplete="email" required className=" w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />}
+        
+          {user?<><label for="email" className=" text-sm font-medium ml-1 text-gray-900">Email Address <span>(Email cannot be edit)</span> </label><input value={email} id="email" name="email" type="email" autocomplete="email" required className=" w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 readOnly" /> </>: <>  <label for="email" className=" text-sm font-medium ml-1 text-gray-900">Email Address </label> <input onChange={handleChange} value={email} id="email" name="email" type="email" autocomplete="email" required className=" w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" /></>}
       </div>
       </div>
       <div className="mt-2 flex container justify-center ">
@@ -145,11 +145,11 @@ theme="colored"
      
       </div>
       <div className="mt-2 flex container justify-center ">
-      <div className='w-96 m-3 '>
+      <div className='w-96 m-1 '>
         <label for="city" className=" text-sm font-medium ml-1 text-gray-900">City</label>
           <input onChange={handleChange} value={city} id="city" name="city" type="text" autocomplete="city" required className=" w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
       </div>
-      <div className='w-96 m-3 '>
+      <div className='w-96 m-1 '>
         <label for="nearBy" className=" text-sm font-medium ml-1 text-gray-900">Nearby Place</label>
           <input onChange={handleChange} value={nearBy} id="nearBy" name="nearBy" type="text" autocomplete="nearBy" required className=" w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
       </div>
