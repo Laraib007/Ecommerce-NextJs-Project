@@ -9,7 +9,7 @@ const handler = async (req, res)=>{
         let user = jwt.verify(token,'topsecret');
         res.status(200).json({ sucess: "sucess", user});
         // let u = await Users.findOne({email: req.body.email})
-              
+              console.log(user)
     
         } else {
             res.status(404).json({ warning: "Invalid Request" })
