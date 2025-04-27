@@ -19,6 +19,7 @@ const Myaccount = () => {
         if(user){
           setEmail(user) 
           setUser(user)  
+          onFormSubmit()
                }
       }, [])
     
@@ -42,7 +43,7 @@ const Myaccount = () => {
          }
 
          const onFormSubmit = async (e)=>{
-          e.preventDefault()
+          // e.preventDefault()
           let email = localStorage.getItem("email")
             let data =  {email}
             
