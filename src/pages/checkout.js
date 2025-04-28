@@ -21,6 +21,7 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
     if(user){
       setEmail(user) 
       setUser(user)  
+      getUserInfo()
            }
   }, [])
 
@@ -51,8 +52,7 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
 
 const getUserInfo = async()=>{
   let token = localStorage.getItem("token")
-    let data =  {token, name, email, city, address, nearby, cellNumber}
-    setHidden(false)
+    let data =  {token}
     let response = await fetch('http://localhost:3000/api/updateuser', {
       method: 'POST',
       headers: {
@@ -60,6 +60,8 @@ const getUserInfo = async()=>{
       },
       body: JSON.stringify(data),
     });
+    const result = await response.json();
+    console.log(result)
 }
      const onFormSubmit = async (e)=>{
 
