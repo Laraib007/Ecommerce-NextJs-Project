@@ -10,11 +10,10 @@ const handler = async (req, res)=>{
          let user = jwt.verify(token,'topsecret');
          
                 let u = await Users.findOne({email: user.email})
-                // let {name, email, city, address, nearby, cellNumber} = u
-                console.log(u)
-            //  if(u){
-            //    res.status(200).json({ sucess: "sucess", name, email, city, address, nearby, cellNumber});
-            //  } 
+                let {name, email, city, address, nearby, cellNumber} = u
+             if(u){
+               res.status(200).json({ sucess: "sucess", name, email, city, address, nearby, cellNumber});
+             } 
             
     
         } else {
