@@ -162,17 +162,17 @@ const Myaccount = () => {
   
               <div class="col-span-2 ">
                 <label for="full_name_info_modal" class="mb-2 block text-sm font-medium text-white "> Your Full Name* </label>
-                <input onChange={handleChange} value={name} type="text" id="full_name_info_modal" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="Enter your first name" required />
+                <input onChange={handleChange} value={userInfo.name} type="text" id="full_name_info_modal" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="Enter your first name" required />
                 <div class="col-span-2 sm:col-span-1">
                 <div class="mb-2 flex items-center gap-2">
                   <label for="select_city_input_billing_modal" class="block text-sm font-medium text-white "> City* </label>
                 </div>
-                <input onChange={handleChange} value={city} type="text" id="phone-input" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="City" required />
+                <input onChange={handleChange} value={userInfo.city} type="text" id="phone-input" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="City" />
               </div>
               </div>
               <div class="col-span-2">
                 <label for="pick-up-point-input" class="mb-2 block text-sm font-medium text-white "> Nearby point* </label>
-                <input onChange={handleChange} value={nearBy} type="text" id="pick-up-point-input" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="Enter the pick-up point name" required />
+                <input onChange={handleChange} value={userInfo.nearby} type="text" id="pick-up-point-input" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="Enter the pick-up point name" required />
               </div>
               
               <div class="col-span-2">
@@ -181,14 +181,14 @@ const Myaccount = () => {
                 
                  
                   <div class="relative w-full">
-                    <input onChange={handleChange} value={number} type="text" id="phone-input" class="z-20 block w-full rounded-e-lg border border-s-0 border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:border-s-gray-700  dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required />
+                    <input onChange={handleChange} value={userInfo.cellNumber} type="text" id="phone-input" class="z-20 block w-full rounded-e-lg border border-s-0 border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:border-s-gray-700  dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500" placeholder="123-456-7890" required />
                   </div>
                 </div>
               </div>
   
               <div class="col-span-2">
                 <label for="address_billing_modal" class="mb-2 block text-sm font-medium text-white "> Delivery Address* </label>
-                <textarea onChange={handleChange} value={address} id="address_billing_modal" rows="4" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="Enter here your address"></textarea>
+                <textarea onChange={handleChange} value={userInfo.address} id="address_billing_modal" rows="4" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="Enter here your address"></textarea>
               </div>
             </div>
             <div class="border-t border-gray-200 pt-4 dark:border-gray-700 md:pt-5">
