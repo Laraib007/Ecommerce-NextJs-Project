@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
-
+import { ToastContainer, toast } from 'react-toastify';
 
 const Myaccount = () => {
     const [hidden, setHidden] = useState(false)
@@ -79,10 +79,33 @@ const updateUser = async (e)=>{
       body: JSON.stringify(data),
     });
     const result = await response.json();
+    if(response.status == "403"){
+      toast.error(err.error, {
+          position: "top-left",
+      autoClose: 2400,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "colored"
+          });
     
   }
   return (
     <div><section class="bg-white py-8 antialiased  md:py-8">
+         <ToastContainer
+position="top-left"
+autoClose={2000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick={false}
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="colored"
+/>
     <div class="mx-auto max-w-screen-lg px-4 2xl:px-0">
       
       <h2 class="mb-4 text-xl font-semibold text-gray-900  sm:text-2xl md:mb-6">Account Overview</h2>
