@@ -11,7 +11,6 @@ const Myaccount = () => {
       const [nearBy, setNearBy] = useState()
       const [address, setAddress] = useState()
       const [user, setUser] = useState()
-      const [userInfo, setUserInfo] = useState('')
       const { push } = useRouter()
     
     
@@ -57,9 +56,13 @@ const Myaccount = () => {
             });
           
             const result = await response.json();
-            setUserInfo(result)
-            if(result){
+            if(response.status == "200"){
               setName(result.name)
+              setEmail(result.email)
+              setAddress(result.address)
+              setNumber(result.cellNumber)
+              setNearBy(result.nearby)
+              setCity(result.city)
               
             }
             console.log(name)
