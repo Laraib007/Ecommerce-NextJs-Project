@@ -45,7 +45,7 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
             else if(e.target.name == "city"){
               setCity(e.target.value)
               }
-              else if(e.target.name == "nereBy"){
+              else if(e.target.name == "nearBy"){
                 setNearBy(e.target.value)
                 }
      }
@@ -53,7 +53,7 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
 const getUserInfo = async()=>{
   let token = localStorage.getItem("token")
     let data =  {token}
-    let response = await fetch('http://localhost:3000/api/updateuser', {
+    let response = await fetch('http://localhost:3000/api/getuser', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -61,7 +61,15 @@ const getUserInfo = async()=>{
       body: JSON.stringify(data),
     });
     const result = await response.json();
-    console.log(result)
+    if(response.status == "200"){
+      setName(result.name)
+      setEmail(result.email)
+      setAddress(result.address)
+      setNumber(result.cellNumber)
+      setNearBy(result.nearby)
+      setCity(result.city)
+      
+    }
 }
      const onFormSubmit = async (e)=>{
 
@@ -143,7 +151,7 @@ theme="colored"
       </div>
       <div className='w-96 m-1 '>
         
-          {user?<><label for="email" className=" text-sm font-medium ml-1 text-gray-900">Email Address <span>(Email cannot be edit)</span> </label><input value={email} id="email" name="email" type="email" autocomplete="email" required className=" w-full rounded-md border-0 px-1.5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 readOnly" /> </>: <>  <label for="email" className=" text-sm font-medium ml-1 text-gray-900">Email Address </label> <input onChange={handleChange} value={email} id="email" name="email" type="email" autocomplete="email" required className=" w-full rounded-md border-0 px-1.5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" /></>}
+          {user?<><label for="email" className=" text-sm font-medium ml-1 text-gray-900">Email Address <span>(Email cannot be edit)</span> </label><input value={email} id="email" name="email" type="email" autocomplete="email" required className=" disabled w-full rounded-md border-0 px-1.5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 readOnly" /> </>: <>  <label for="email" className=" text-sm font-medium ml-1 text-gray-900">Email Address </label> <input onChange={handleChange} value={email} id="email" name="email" type="email" autocomplete="email" required className=" w-full rounded-md border-0 px-1.5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" /></>}
       </div>
       </div>
       <div className="mt-2 flex container justify-center ">
