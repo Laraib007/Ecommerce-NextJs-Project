@@ -28,14 +28,14 @@ const Myaccount = () => {
           setName(e.target.value)
               }
               
-        else if(e.target.name == "email"){
-          setEmail(e.target.value)
+        else if(e.target.name == "city"){
+          setCity(e.target.value)
            }
            else if(e.target.name == "number"){
             setNumber(e.target.value)
             }
-            else if(e.target.name == "altNumber"){
-              setAltNumber(e.target.value)
+            else if(e.target.name == "nearBy"){
+              setNearBy(e.target.value)
               }
               else if(e.target.name == "address"){
                 setAddress(e.target.value)
@@ -65,8 +65,20 @@ const Myaccount = () => {
               setCity(result.city)
               
             }
-            console.log(name)
 }          
+const updateUser = async (e)=>{
+  // e.preventDefault()
+  let token = localStorage.getItem("token")
+    let data =  {token}
+    
+    let response = await fetch('http://localhost:3000/api/getuser', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+  }
   return (
     <div><section class="bg-white py-8 antialiased  md:py-8">
     <div class="mx-auto max-w-screen-lg px-4 2xl:px-0">
@@ -188,7 +200,7 @@ const Myaccount = () => {
                 
                  
                   <div class="relative w-full">
-                    <input onChange={handleChange} value={number} name='number' type="text" id="phone-input" class="z-20 block w-full rounded-e-lg border border-s-0 border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:border-s-gray-700  dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500" placeholder="123-456-7890" required />
+                    <input onChange={handleChange} value={number} name='number' type="number" id="phone-input" class="z-20 block w-full rounded-e-lg border border-s-0 border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:border-s-gray-700  dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500" placeholder="123-456-7890" required />
                   </div>
                 </div>
               </div>
@@ -199,7 +211,7 @@ const Myaccount = () => {
               </div>
             </div>
             <div class="border-t border-gray-200 pt-4 dark:border-gray-700 md:pt-5">
-              <button type="submit" class="me-2 inline-flex items-center rounded-lg bg-green-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-primary-300  dark:hover:bg-primary-700 dark:focus:ring-primary-800">Save information</button>
+              <button onClick={updateUser} type="submit" class="me-2 inline-flex items-center rounded-lg bg-green-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-primary-300  dark:hover:bg-primary-700 dark:focus:ring-primary-800">Save information</button>
               <button onClick={()=>setHidden(false)} type="button" data-modal-toggle="accountInformationModal2" class="me-2 rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-white hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700">Cancel</button>
             </div>
           </form>
