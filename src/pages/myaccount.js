@@ -81,7 +81,7 @@ const updateUser = async (e)=>{
     const result = await response.json();
     if(response.status == "200"){
       console.log(result)
-      toast.error(result.sucess, {
+      toast.success(result.sucess, {
           position: "top-left",
       autoClose: 2400,
       hideProgressBar: false,
