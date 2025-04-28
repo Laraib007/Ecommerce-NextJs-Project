@@ -7,8 +7,8 @@ const Myaccount = () => {
       const [name, setName] = useState()
       const [email, setEmail] = useState()
       const [city, setCity] = useState()
-      const [number, setNumber] = useState()
-      const [nearBy, setNearBy] = useState()
+      const [cellNumber, setNumber] = useState()
+      const [nearby, setNearBy] = useState()
       const [address, setAddress] = useState()
       const [user, setUser] = useState()
       const { push } = useRouter()
@@ -31,10 +31,10 @@ const Myaccount = () => {
         else if(e.target.name == "city"){
           setCity(e.target.value)
            }
-           else if(e.target.name == "number"){
+           else if(e.target.name == "cellNumber"){
             setNumber(e.target.value)
             }
-            else if(e.target.name == "nearBy"){
+            else if(e.target.name == "nearby"){
               setNearBy(e.target.value)
               }
               else if(e.target.name == "address"){
@@ -71,13 +71,15 @@ const updateUser = async (e)=>{
   let token = localStorage.getItem("token")
     let data =  {token, name, email, city, address, nearby, cellNumber}
     
-    let response = await fetch('http://localhost:3000/api/getuser', {
+    let response = await fetch('http://localhost:3000/api/updateuser', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(data),
     });
+    const result = await response.json();
+    console.log(result)
   }
   return (
     <div><section class="bg-white py-8 antialiased  md:py-8">
@@ -113,7 +115,7 @@ const updateUser = async (e)=>{
           <div class="space-y-4">
             <dl>
               <dt class="font-semibold text-gray-900 ">Phone Number</dt>
-              <dd class="text-gray-500 dark:text-gray-400">{number}</dd>
+              <dd class="text-gray-500 dark:text-gray-400">{cellNumber}</dd>
             </dl>
             <dl>
               <dt class="font-semibold text-gray-900 ">Nearby point</dt>
@@ -127,7 +129,7 @@ const updateUser = async (e)=>{
                     d="M6 12c.263 0 .524-.06.767-.175a2 2 0 0 0 .65-.491c.186-.21.333-.46.433-.734.1-.274.15-.568.15-.864a2.4 2.4 0 0 0 .586 1.591c.375.422.884.659 1.414.659.53 0 1.04-.237 1.414-.659A2.4 2.4 0 0 0 12 9.736a2.4 2.4 0 0 0 .586 1.591c.375.422.884.659 1.414.659.53 0 1.04-.237 1.414-.659A2.4 2.4 0 0 0 16 9.736c0 .295.052.588.152.861s.248.521.434.73a2 2 0 0 0 .649.488 1.809 1.809 0 0 0 1.53 0 2.03 2.03 0 0 0 .65-.488c.185-.209.332-.457.433-.73.1-.273.152-.566.152-.861 0-.974-1.108-3.85-1.618-5.121A.983.983 0 0 0 17.466 4H6.456a.986.986 0 0 0-.93.645C5.045 5.962 4 8.905 4 9.736c.023.59.241 1.148.611 1.567.37.418.865.667 1.389.697Zm0 0c.328 0 .651-.091.94-.266A2.1 2.1 0 0 0 7.66 11h.681a2.1 2.1 0 0 0 .718.734c.29.175.613.266.942.266.328 0 .651-.091.94-.266.29-.174.537-.427.719-.734h.681a2.1 2.1 0 0 0 .719.734c.289.175.612.266.94.266.329 0 .652-.091.942-.266.29-.174.536-.427.718-.734h.681c.183.307.43.56.719.734.29.174.613.266.941.266a1.819 1.819 0 0 0 1.06-.351M6 12a1.766 1.766 0 0 1-1.163-.476M5 12v7a1 1 0 0 0 1 1h2v-5h3v5h7a1 1 0 0 0 1-1v-7m-5 3v2h2v-2h-2Z"
                   />
                 </svg>
-                {nearBy}
+                {nearby}
               </dd>
             </dl>
             <dl>
@@ -191,7 +193,7 @@ const updateUser = async (e)=>{
               </div>
               <div class="col-span-2">
                 <label for="pick-up-point-input" class="mb-2 block text-sm font-medium text-white "> Nearby point* </label>
-                <input onChange={handleChange} value={nearBy} name='nearBy' type="text" id="pick-up-point-input" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="Enter the pick-up point name" required />
+                <input onChange={handleChange} value={nearby} name='nearby' type="text" id="pick-up-point-input" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="Enter the pick-up point name" required />
               </div>
               
               <div class="col-span-2">
@@ -200,7 +202,7 @@ const updateUser = async (e)=>{
                 
                  
                   <div class="relative w-full">
-                    <input onChange={handleChange} value={number} name='number' type="number" id="phone-input" class="z-20 block w-full rounded-e-lg border border-s-0 border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:border-s-gray-700  dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500" placeholder="123-456-7890" required />
+                    <input onChange={handleChange} value={cellNumber} name='number' type="cellNumber" id="phone-input" class="z-20 block w-full rounded-e-lg border border-s-0 border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:border-s-gray-700  dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500" placeholder="123-456-7890" required />
                   </div>
                 </div>
               </div>
