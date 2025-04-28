@@ -49,7 +49,18 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
                 }
      }
 
-
+const getUserInfo = async()=>{
+  let token = localStorage.getItem("token")
+    let data =  {token, name, email, city, address, nearby, cellNumber}
+    setHidden(false)
+    let response = await fetch('http://localhost:3000/api/updateuser', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+}
      const onFormSubmit = async (e)=>{
 
       
