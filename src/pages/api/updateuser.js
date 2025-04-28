@@ -5,10 +5,16 @@ var jwt = require('jsonwebtoken');
 
 const handler = async (req, res)=>{
     if(req.method == "POST"){
-        // let user = jwt.verify(token,'topsecret');
-        let u = await Users.findOne({email: req.body.email})
-        let {name, email, city, address, nearby, cellNumber} = u
-        // console.log(user)
+        let token = req.body.token
+        let name = req.bodu.name
+        let email =  req.body.email
+         let city = req.body.city
+         let address = req.body.address
+         let nearby = req.body.nearby
+         let cellNumber =  req.body.cellNumber
+         let user = jwt.verify(token,'topsecret');
+                let u = await Users.findOneAndUpdate({email: user.email}, name, email, city, address, nearby, cellNumber)
+                
              if(u){
                res.status(200).json({ sucess: "sucess", name, email, city, address, nearby, cellNumber});
              } 
