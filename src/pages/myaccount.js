@@ -45,7 +45,7 @@ const Myaccount = () => {
 
          const getUserInfo = async (e)=>{
           // e.preventDefault()
-          let token = localStorage.getItem("email")
+          let token = localStorage.getItem("token")
             let data =  {token}
             
             let response = await fetch('http://localhost:3000/api/getuser', {
