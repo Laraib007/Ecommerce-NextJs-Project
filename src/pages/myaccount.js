@@ -79,8 +79,9 @@ const updateUser = async (e)=>{
       body: JSON.stringify(data),
     });
     const result = await response.json();
-    if(response.status == "403"){
-      toast.error(err.error, {
+    if(response.status == "200"){
+      console.log(result)
+      toast.error(result.sucess, {
           position: "top-left",
       autoClose: 2400,
       hideProgressBar: false,
@@ -90,7 +91,7 @@ const updateUser = async (e)=>{
       progress: undefined,
       theme: "colored"
           });
-    
+    }
   }
   return (
     <div><section class="bg-white py-8 antialiased  md:py-8">
