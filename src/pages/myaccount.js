@@ -69,7 +69,7 @@ const Myaccount = () => {
 const updateUser = async (e)=>{
   // e.preventDefault()
   let token = localStorage.getItem("token")
-    let data =  {token}
+    let data =  {token, name, email, city, address, nearby, cellNumber}
     
     let response = await fetch('http://localhost:3000/api/getuser', {
       method: 'POST',
