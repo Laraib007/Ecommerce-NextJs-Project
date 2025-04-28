@@ -58,7 +58,11 @@ const Myaccount = () => {
           
             const result = await response.json();
             setUserInfo(result)
-            console.log(userInfo)
+            if(result){
+              setName(result.name)
+              
+            }
+            console.log(name)
 }          
   return (
     <div><section class="bg-white py-8 antialiased  md:py-8">
@@ -162,7 +166,7 @@ const Myaccount = () => {
   
               <div class="col-span-2 ">
                 <label for="full_name_info_modal" class="mb-2 block text-sm font-medium text-white "> Your Full Name* </label>
-                <input onChange={handleChange} value={userInfo.name} type="text" id="full_name_info_modal" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="Enter your first name" required />
+                <input onChange={handleChange} value={name} name='name' type="text" id="full_name_info_modal" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="Enter your first name" required />
                 <div class="col-span-2 sm:col-span-1">
                 <div class="mb-2 flex items-center gap-2">
                   <label for="select_city_input_billing_modal" class="block text-sm font-medium text-white "> City* </label>
