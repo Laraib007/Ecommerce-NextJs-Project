@@ -16,7 +16,6 @@ const handler = async (req, res)=>{
                 
              if(u){
               let t = res.status(200).json({ sucess: "Profile Update Sucessfully"}, {name, city, address, nearby, cellNumber});
-              console.log(name, city, address, nearby, cellNumber )
              } 
             
              
