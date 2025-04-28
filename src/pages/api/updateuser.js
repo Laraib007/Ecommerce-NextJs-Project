@@ -15,8 +15,7 @@ const handler = async (req, res)=>{
                 let u = await Users.findOneAndUpdate({email: user.email}, {name, city, address, nearby, cellNumber})
                 
              if(u){
-               let t = res.status(200).json({ sucess: "Profile Update Sucessfully"});
-               console.log(t)
+               res.status(200).json({ sucess: "Profile Update Sucessfully"});
              } 
             
              
