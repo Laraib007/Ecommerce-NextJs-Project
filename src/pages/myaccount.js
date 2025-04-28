@@ -31,7 +31,7 @@ const Myaccount = () => {
         else if(e.target.name == "city"){
           setCity(e.target.value)
            }
-           else if(e.target.name == "cellNumber"){
+           else if(e.target.name == "number"){
             setNumber(e.target.value)
             }
             else if(e.target.name == "nearby"){
@@ -67,10 +67,10 @@ const Myaccount = () => {
             }
 }          
 const updateUser = async (e)=>{
-  // e.preventDefault()
+  e.preventDefault()
   let token = localStorage.getItem("token")
     let data =  {token, name, email, city, address, nearby, cellNumber}
-    
+    setHidden(false)
     let response = await fetch('http://localhost:3000/api/updateuser', {
       method: 'POST',
       headers: {
@@ -79,7 +79,7 @@ const updateUser = async (e)=>{
       body: JSON.stringify(data),
     });
     const result = await response.json();
-    console.log(result)
+    
   }
   return (
     <div><section class="bg-white py-8 antialiased  md:py-8">
