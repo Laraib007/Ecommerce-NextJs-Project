@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@roketid/windmill-react-ui": "^0.1.1",
     "crypto-js": "^4.2.0",
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.13.0",

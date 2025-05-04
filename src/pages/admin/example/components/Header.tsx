@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react'
-import SidebarContext from 'context/SidebarContext'
+import SidebarContext from '../../context/SidebarContext'
 import {
   SearchIcon,
   MoonIcon,
@@ -9,7 +9,7 @@ import {
   OutlinePersonIcon,
   OutlineCogIcon,
   OutlineLogoutIcon,
-} from 'icons'
+} from '../../icons'
 import { Avatar, Badge, Input, Dropdown, DropdownItem, WindmillContext } from '@roketid/windmill-react-ui'
 
 function Header() {
