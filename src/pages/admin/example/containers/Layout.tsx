@@ -1,7 +1,7 @@
 import { useContext } from 'react'
-import SidebarContext, { SidebarProvider } from 'context/SidebarContext'
-import Sidebar from 'example/components/Sidebar'
-import Header from 'example/components/Header'
+import SidebarContext, { SidebarProvider } from '../../context/SidebarContext'
+import Sidebar from '../components/Sidebar'
+import Header from '../components/Header'
 import Main from './Main'
 
 interface ILayout{
