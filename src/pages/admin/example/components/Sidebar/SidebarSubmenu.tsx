@@ -5,7 +5,7 @@ import { DropdownIcon, IIcon } from 'icons'
 import * as Icons from 'icons'
 import { Transition } from '@roketid/windmill-react-ui'
 import { IRoute, routeIsActive } from 'routes/sidebar'
-import SidebarContext from 'context/SidebarContext'
+import SidebarContext from '../../../context/SidebarContext'
 
 function Icon({ icon, ...props }: IIcon) {
   // @ts-ignore
