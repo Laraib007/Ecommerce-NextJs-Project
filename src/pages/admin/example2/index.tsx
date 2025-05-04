@@ -29,7 +29,7 @@ import {
   lineOptions,
   doughnutLegends,
   lineLegends,
-} from 'utils/demo/chartsData'
+} from '../utils/demo/chartsData'
 
 import {
   Chart,
