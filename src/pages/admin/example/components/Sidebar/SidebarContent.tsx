@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import routes, { routeIsActive } from 'routes/sidebar'
-import * as Icons from 'icons'
+import * as Icons from '../icons'
 import { IIcon } from 'icons'
 import SidebarSubmenu from './SidebarSubmenu'
 import { Button } from '@roketid/windmill-react-ui'
