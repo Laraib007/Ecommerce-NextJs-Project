@@ -4,7 +4,6 @@ import "@/styles/globals.css";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import LoadingBar from "react-top-loading-bar";
-import { Windmill } from '@roketid/windmill-react-ui'
 
 export default function App({ Component, pageProps }) {
   const [cart, setcart] = useState({})
@@ -104,9 +103,7 @@ saveCart({})
       />
     <div className="mt-20">
     <Navbar key={key} logout={logout} user={user} cart={cart} addToCart={addToCart} clearCart={clearCart} removeFromCart={removeFromCart} subTotal={subTotal} />
-    <Windmill usePreferences={true}>
     <Component cart={cart} buyNow={buyNow} addToCart={addToCart} clearCart={clearCart} removeFromCart={removeFromCart} subTotal={subTotal} {...pageProps} />
-    </Windmill>
     <Footer />
     </div>
     </>
