@@ -2,7 +2,7 @@
 import { Fragment } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Highlight, { defaultProps } from 'prism-react-renderer';
-import theme from 'prism-react-renderer/themes/nightOwl';
+import { theme } from 'prism-react-renderer/themes/nightOwl';
 
 const HighlightCode = ({ code }) => {
 	const copyAction = (event) => {
