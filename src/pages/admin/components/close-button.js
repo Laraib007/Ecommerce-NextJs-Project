@@ -3,14 +3,14 @@ import { Fragment } from 'react';
 import { Col, Row, Card, CloseButton, Nav, Tab, Container } from 'react-bootstrap';
 
 // import widget/custom components
-import { HighlightCode }  from 'widgets';
+import { HighlightCode }  from '../info/widgets';
 
 // import react code data file
 import {
 	GenericCloseButtonCode,
 	DisabledStateCode,
 	WhiteVariantCode
-} from 'data/code/CloseCode';
+} from '../info/data/code/CloseCode';
 
 const CloseButtons = () => {
 	return (

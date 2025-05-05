@@ -13,7 +13,7 @@ import {
 } from "react-bootstrap";
 
 // import widget/custom components
-import { HighlightCode } from "widgets";
+import { HighlightCode } from "../info/widgets";
 
 // import react code data file
 import {
@@ -29,7 +29,7 @@ import {
   TextAlignmentCode,
   ImagesTopBottomCode,
   ImageOverlaysCode,
-} from "data/code/CardsCode";
+} from "../info/data/code/CardsCode";
 
 const Cards = () => {
   return (

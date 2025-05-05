@@ -3,7 +3,7 @@ import { Fragment } from 'react';
 import { Col, Row, Card, Table, Nav, Tab, Container } from 'react-bootstrap';
 
 // import widget/custom components
-import { HighlightCode }  from 'widgets';
+import { HighlightCode }  from '../info/widgets';
 
 // import react code data file
 import {
@@ -18,7 +18,7 @@ import {
 	SmallTableCode,
 	ContextualClassesCode,
 	ResponsiveTableCode
-} from 'data/code/TablesCode';
+} from '../info/data/code/TablesCode';
 
 const Tables = () => {
 	return (

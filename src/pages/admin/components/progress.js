@@ -3,7 +3,7 @@ import { Fragment } from 'react';
 import { Card, Col, Row, ProgressBar, Tab, Nav, Container } from 'react-bootstrap';
 
 // import widget/custom components
-import { HighlightCode }  from 'widgets';
+import { HighlightCode }  from '../info/widgets';
 
 // import react code data file
 import {
@@ -14,7 +14,7 @@ import {
 	MultipleBarsCode,
 	StripedCode,
 	AnimatedCode
-} from 'data/code/ProgressCode';
+} from '../info/data/code/ProgressCode';
 
 const Progress = () => {
 	return (

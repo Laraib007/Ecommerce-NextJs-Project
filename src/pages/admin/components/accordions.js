@@ -2,13 +2,13 @@
 import { Col, Row, Card, Accordion, Nav, Tab, Container } from 'react-bootstrap';
 
 // import widget/custom components
-import { HighlightCode }  from 'widgets';
+import { HighlightCode }  from '../info/widgets';
 
 // import react code data file
 import {
 	AccordionBasicCode,
 	AccordionFlushCode
-} from 'data/code/AccordionCode';
+} from '../info/data/code/AccordionCode';
 
 const Accordions = () => {
 	return (

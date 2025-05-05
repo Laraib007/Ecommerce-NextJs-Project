@@ -13,10 +13,10 @@ import {
 } from 'react-bootstrap';
 
 // import widget/custom components
-import { HighlightCode }  from 'widgets';
+import { HighlightCode }  from '../info/widgets';
 
 // import react code data file
-import { BasicTooltip } from 'data/code/TooltipsCode';
+import { BasicTooltip } from '../info/data/code/TooltipsCode';
 
 const Tooltips = () => {
 	return (

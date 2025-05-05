@@ -2,14 +2,14 @@
 import { Col, Row, Card, Button, Badge, Tab, Nav, Container } from 'react-bootstrap';
 
 // import widget/custom components
-import { HighlightCode }  from 'widgets';
+import { HighlightCode }  from '../info/widgets';
 
 // import react code data file
 import {
 	SimpleBadgeCode,
 	BadgeWithButtonCode,
 	PillBadgesCode
-} from 'data/code/BadgesCode';
+} from '../info/data/code/BadgesCode';
 
 const Badges = () => {
 	return (

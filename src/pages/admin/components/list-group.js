@@ -14,10 +14,10 @@ import {
 import { PlayCircle, Award, Calendar, Video, Clock } from "react-feather";
 
 // import sub custom components
-import DotBadge from "components/bootstrap/DotBadge";
+import DotBadge from "../info/components/bootstrap/DotBadge";
 
 // import widget/custom components
-import { HighlightCode } from "widgets";
+import { HighlightCode } from "../info/widgets";
 
 // import react code data file
 import {
@@ -34,7 +34,7 @@ import {
   CustomContentCode,
   WithIconCode,
   GroupWithIconCode,
-} from "data/code/ListgroupsCode";
+} from "../info/data/code/ListgroupsCode";
 
 const Listgroups = () => {
   function alertClicked() {

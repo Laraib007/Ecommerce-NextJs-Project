@@ -10,7 +10,7 @@ import {
 } from 'react-feather';
 
 // import widget/custom components
-import { HighlightCode }  from 'widgets';
+import { HighlightCode }  from '../info/widgets';
 
 // import react code data file
 import {
@@ -21,7 +21,7 @@ import {
 	PaginationSizingSmallCode,
 	AlignmentCode,
 	JustifyContentEndCode
-} from 'data/code/PaginationsCode';
+} from '../info/data/code/PaginationsCode';
 
 const Paginations = () => {
 	return (

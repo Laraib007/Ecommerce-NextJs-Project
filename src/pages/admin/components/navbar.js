@@ -13,14 +13,14 @@ import {
 } from "react-bootstrap";
 
 // import widget/custom components
-import { HighlightCode } from "widgets";
+import { HighlightCode } from "../info/widgets";
 
 // import data files
 import {
   DefaultNavbar,
   BrandNavbar,
   ColorSchemesCode,
-} from "data/code/NavbarsCode";
+} from "../info/data/code/NavbarsCode";
 
 const Navbars = () => {
   return (

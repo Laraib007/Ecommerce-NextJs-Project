@@ -3,7 +3,7 @@ import { Fragment } from 'react';
 import { Col, Row, Card, Spinner, Button, Nav, Tab, Container } from 'react-bootstrap';
 
 // import widget/custom components
-import { HighlightCode }  from 'widgets';
+import { HighlightCode }  from '../info/widgets';
 
 // import react code data file
 import {
@@ -20,7 +20,7 @@ import {
 	StyleCSSCode,
 	ButtonsCode,
 	Buttons2Code
-} from 'data/code/SpinnersCode';
+} from '../info/data/code/SpinnersCode';
 
 const Spinners = () => {
 	return (

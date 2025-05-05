@@ -13,14 +13,14 @@ import {
 } from 'react-bootstrap';
 
 // import widget/custom components
-import { HighlightCode }  from 'widgets';
+import { HighlightCode }  from '../info/widgets';
 
 // import react code data file
 import {
 	DefaultPopoverCode,
 	FourDirectionsCode,
 	DismissableCode
-} from 'data/code/PopoversCode';
+} from '../info/data/code/PopoversCode';
 
 const Popovers = () => {
 	return (

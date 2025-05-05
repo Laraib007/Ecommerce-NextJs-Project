@@ -2,10 +2,10 @@
 import { Col, Row, Card, Breadcrumb, Nav, Tab, Container } from 'react-bootstrap';
 
 // import widget/custom components
-import { HighlightCode }  from 'widgets';
+import { HighlightCode }  from '../info/widgets';
 
 // import react code data file
-import { BasicBreadcrumb } from 'data/code/BreadcrumbCode';
+import { BasicBreadcrumb } from '../info/data/code/BreadcrumbCode';
 
 const Breadcrumbs = () => {
 	return (

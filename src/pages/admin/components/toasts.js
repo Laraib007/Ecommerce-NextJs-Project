@@ -15,7 +15,7 @@ import {
 } from "react-bootstrap";
 
 // import widget/custom components
-import { HighlightCode } from "widgets";
+import { HighlightCode } from "../info/widgets";
 
 // import react code data file
 import {
@@ -26,7 +26,7 @@ import {
   PlacementCode2,
   PlacementCode3,
   DismissibleCode,
-} from "data/code/ToastsCode";
+} from "../info/data/code/ToastsCode";
 
 const Toasts = () => {
   const [showA, setShowA] = useState(true);
