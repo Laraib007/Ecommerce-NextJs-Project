@@ -4,13 +4,13 @@ import Link from 'next/link';
 import { Container, Col, Row } from 'react-bootstrap';
 
 // import widget/custom components
-import { StatRightTopIcon } from "widgets";
+import { StatRightTopIcon } from "../admin/info/widgets";
 
 // import sub components
-import { ActiveProjects, Teams, TasksPerformance } from "sub-components";
+import { ActiveProjects, Teams, TasksPerformance } from "../admin/info/sub-components";
 
 // import required data files
-import ProjectsStatsData from "data/dashboard/ProjectsStatsData";
+import ProjectsStatsData from "./info/data/dashboard/ProjectsStatsData";
 
 const Home = () => {
     return (
