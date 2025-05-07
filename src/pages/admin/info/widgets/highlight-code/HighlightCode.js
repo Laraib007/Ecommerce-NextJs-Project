@@ -1,7 +1,8 @@
 // import node module libraries
 import { Fragment } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { Highlight, themes } from 'prism-react-renderer';
+import Highlight, { defaultProps } from 'prism-react-renderer';
+import {nightOwl} from 'prism-react-renderer';
 
 const HighlightCode = ({ code }) => {
 	const copyAction = (event) => {
@@ -18,7 +19,7 @@ const HighlightCode = ({ code }) => {
 					Copy
 				</button>
 			</CopyToClipboard>
-			<Highlight  theme={themes.shadesOfPurple} code={code} language="jsx">
+			<Highlight {...defaultProps} theme={nightOwl} code={code} language="jsx">
 				{({ className, style, tokens, getLineProps, getTokenProps }) => (
 					<pre className={className} style={style}>
 						{tokens.map((line, i) => (
