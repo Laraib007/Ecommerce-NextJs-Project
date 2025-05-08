@@ -12,11 +12,19 @@ import { RiLogoutBoxRFill  } from "react-icons/ri";
 import { ToastContainer, toast } from 'react-toastify';
 import Logo from "../component/Img/HLogo.png"
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 const Navbar = ({logout, user, cart, addToCart, clearCart, removeFromCart, subTotal}) => {
   const [dropDown, setDropDown] = useState(false)
 const [sidecart, setSidecart] = useState(false)
-
+const [router, setRouter] = useState(true)
+let routerUrl = useRouter()
+if(routerUrl.route == "/admin"){
+  return (()=>{
+    setRouter(false)
+  })
+}
+console.log(router.route)
 const ref = useRef()
 const cartNotAppear = ["/login", '/tshirt', '/mugs', '/hoodies', '/checkout', '/stickers', '/myaccount', '/orders', '/signup']
 const currentPath = usePathname()
@@ -74,7 +82,7 @@ draggable
 pauseOnHover={false}
 theme="colored"
 />
-  <div className=" flex-no-wrap fixed  top-0 flex w-full items-center justify-between bg-[#FBFBFB] py-2 shadow-md shadow-black/5 light:bg-neutral-600 dark:shadow-black/10 lg:flex-wrap lg:justify-start lg:py-4 mx-auto  flex-wrap p-5 flex-col md:flex-row  md:mr-60 ">
+  {router && <div className=" flex-no-wrap fixed  top-0 flex w-full items-center justify-between bg-[#FBFBFB] py-2 shadow-md shadow-black/5 light:bg-neutral-600 dark:shadow-black/10 lg:flex-wrap lg:justify-start lg:py-4 mx-auto  flex-wrap p-5 flex-col md:flex-row  md:mr-60 ">
     <Link href={'/'}className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
         <Image src={Logo} height={10} width={100}  />
     
@@ -128,7 +136,7 @@ theme="colored"
     <button onClick={clearCart} className={`flex mt-8 ml-2 text-white  border-0 py-1 px-3 focus:outline-none hover:bg-pink-600 rounded text-sm ${Object.keys(cart).length === 0 ? "bg-pink-200 cursor-not-allowed": "bg-pink-500" }`}>Clear Cart</button>
     </div>
     </div>
-  </div>
+  </div>}
 
     </div>
   )
