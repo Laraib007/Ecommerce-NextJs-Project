@@ -62,7 +62,7 @@ const index = () => {
             </ul>
        </div>
     </aside>
-    <h1 style={{marginTop: "-4%"}} class=" ml-52 text-3xl font-bold title-font text-black mb-2  text-center">ADMIN DASHBOARD</h1>
+    <h1 style={{marginTop: "-4%"}} class=" ml-54 text-3xl font-bold title-font text-black mb-2  text-center">ADMIN DASHBOARD</h1>
     <div class="p-4 sm:ml-64">
        <div class="p-2 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
        <section class="text-gray-400 bg-gray-900 body-font">
@@ -76,7 +76,7 @@ const index = () => {
           <a class="inline-flex items-center">
           
             <span class="flex-grow flex flex-col pl-4">
-              <span class="inline-flex items-center justify-center w-24 h-24 mr-8 m-4 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 text-xl dark:text-blue-300">3</span>
+              <span class="inline-flex items-center justify-center w-24 h-24 mr-8 m-4 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 text-xl dark:text-blue-100">3</span>
             </span>
           </a>
           <h3>--FaishonWears--</h3>
@@ -85,11 +85,11 @@ const index = () => {
       <div class="p-4 md:w-1/3 w-full">
         <div class="h-full bg-gray-800 text-center bg-opacity-40 p-8 rounded">
          
-         <h2 class="title-font font-bold text-2xl text-white">Total Orders</h2>
+         <h2 class="title-font font-bold text-2xl text-white">Pending Orders</h2>
           <a class="inline-flex items-center">
           
             <span class="flex-grow flex flex-col pl-4">
-              <span class="inline-flex items-center justify-center w-24 h-24 mr-8 m-4 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 text-xl dark:text-blue-300">3</span>
+              <span class="inline-flex items-center justify-center w-24 h-24 mr-8 m-4 p-3 ms-3 text-sm font-medium text-red-800 bg-red-100 rounded-full dark:bg-red-900 text-xl dark:text-red-100">3</span>
             </span>
           </a>
           <h3>--FaishonWears--</h3>
@@ -98,11 +98,11 @@ const index = () => {
       <div class="p-4 md:w-1/3 w-full">
         <div class="h-full bg-gray-800 text-center bg-opacity-40 p-8 rounded">
          
-         <h2 class="title-font font-bold text-2xl text-white">Total Orders</h2>
+         <h2 class="title-font font-bold text-2xl text-white">Completed Orders</h2>
           <a class="inline-flex items-center">
           
             <span class="flex-grow flex flex-col pl-4">
-              <span class="inline-flex items-center justify-center w-24 h-24 mr-8 m-4 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 text-xl dark:text-blue-300">3</span>
+              <span class="inline-flex items-center justify-center w-24 h-24 mr-8 m-4 p-3 ms-3 text-sm font-medium text-green-800 bg-green-100 rounded-full dark:bg-green-900 text-xl dark:text-green-100">3</span>
             </span>
           </a>
           <h3>--FaishonWears--</h3>
@@ -124,7 +124,7 @@ const index = () => {
                                     <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
                                 </svg>
                             </div>
-                            <input type="text" id="simple-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Search" required=""/>
+                            <input type="text" id="simple-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Search Product ID" required=""/>
                         </div>
                     </form>
                 </div>
