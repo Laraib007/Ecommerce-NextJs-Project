@@ -4,7 +4,7 @@ const AddProduct = () => {
   return (
     <div className='text-gray-400 min-h-screen  ml-56 bg-gray-900 body-font'>
       <Sidebar/>
-      <h1 style={{marginTop: "-4%"}} class=" ml-56 text-3xl font-bold title-font text-black mb-2  text-center">ADMIN DASHBOARD</h1>
+      <h1 style={{marginTop: "-4%"}} class="  text-3xl font-bold title-font  mb-2  text-center">ADMIN DASHBOARD</h1>
 <form class="max-w-md mx-auto mt-16 p-4 text-gray-400 bg-gray-900 body-font">
   <div class="relative z-0 w-full mb-5 group">
       <input type="text" name="title" id="title" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
@@ -33,6 +33,7 @@ const AddProduct = () => {
             <span class="ml-6 mr-3 ">Size</span>
             <div class="">
               <select  value={"M"} class="rounded bg-gray-900 border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10">
+              <option value={"nosize"}>No Size</option>
                <option value={"S"}>S</option>
                <option value={"M"}>M</option>
                 <option value={'L'}>L</option>
@@ -51,6 +52,7 @@ const AddProduct = () => {
             <span class=" mt-0 mr-3 ">Category</span>
             <div class="">
               <select  value={"tshirts"} class="rounded mt-1 bg-gray-900 border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10">
+               <option value={"nosize"}>No Size</option>
                <option value={"mugs"}>mugs</option>
                <option value={"stickers"}>stickers</option>
                 <option value={'hoodies'}>hoodies</option>
