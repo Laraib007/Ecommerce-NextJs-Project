@@ -19,7 +19,10 @@ const Navbar = ({logout, user, cart, addToCart, clearCart, removeFromCart, subTo
 const [sidecart, setSidecart] = useState(false)
 const [router, setRouter] = useState(true)
 let routerUrl = useRouter()
-if(routerUrl.route == "/admin"){
+const currentPath = usePathname()
+const navNotAppr = ["/admin", '/admin/products', '/admin/users', '/admin/addproduct']
+
+if(navNotAppr.includes(currentPath)){
   return (()=>{
     setRouter(false)
   })
@@ -27,7 +30,7 @@ if(routerUrl.route == "/admin"){
 console.log(router.route)
 const ref = useRef()
 const cartNotAppear = ["/login", '/tshirt', '/mugs', '/hoodies', '/checkout', '/stickers', '/myaccount', '/orders', '/signup']
-const currentPath = usePathname()
+
   useEffect(() => {
       if(cartNotAppear.includes(currentPath)){
     setSidecart(false)
