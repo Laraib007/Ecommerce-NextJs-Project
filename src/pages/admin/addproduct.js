@@ -26,11 +26,11 @@ const AddProduct = () => {
     </div>
   </div>
   <div class="flex mb-4 items-center">
-  <div class="relative z-0 w-full mb-5 group">
+  <div class="relative z-0  w-2/3 mb-5 group">
         <input type="text" name="color" id="color" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
         <label for="color" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Product Color (stay blank if no color)</label>
     </div>
-            <span class="mr-3">Size</span>
+            <span class="ml-6 mr-3 ">Size</span>
             <div class="">
               <select  value={"M"} class="rounded bg-gray-900 border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10">
                <option value={"S"}>S</option>
