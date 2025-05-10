@@ -2,7 +2,7 @@ import React from 'react'
 import Sidebar from './sideBar'
 const AddProduct = () => {
   return (
-    <div className='text-gray-400 min-h-screen  ml-56 bg-gray-900 body-font'>
+    <div className='text-gray-200 min-h-screen  ml-56 bg-gray-900 body-font'>
       <Sidebar/>
       <h1 style={{marginTop: "-4%"}} class="  text-3xl font-bold title-font  mb-2  text-center">ADMIN DASHBOARD</h1>
 <form class="max-w-md mx-auto mt-16 p-4 text-gray-400 bg-gray-900 body-font">
