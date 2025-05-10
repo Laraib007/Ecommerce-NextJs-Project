@@ -6,37 +6,28 @@ import { ToastContainer, toast } from 'react-toastify';
 import { useRouter } from 'next/router';
 
 const Login = () => {
-  
+   const [email, setEmail] = useState()
+  const [password, setPassword] = useState()
   
   const router = useRouter()
 
   useEffect(() => {
     if(localStorage.getItem('token')){
-      router.push("/")
+      router.push("/admin/")
     }
   
     
   }, [])
-  const [email, setEmail] = useState()
-  const [password, setPassword] = useState()
+ 
 
   const handleChange = (e)=> {
-
-
  if(e.target.name == "email"){
   setEmail(e.target.value)
-  
   }
-
   else if(e.target.name == "password"){
     setPassword(e.target.value)
-    
     }
-
   }
-
-
-
 
 
 const onFormSubmit = async (e)=>{
@@ -67,8 +58,8 @@ theme: "colored"
 localStorage.setItem("token", result.token)
 localStorage.setItem("email", result.email)
     setTimeout(() => {
-      router.push("http://localhost:3000/")
-    }, 1500);
+      router.push("http://localhost:3000/admin/")
+    }, 2000);
   } else { toast.error('Wrong Credentials ', {
     position: "top-left",
     autoClose: 3000,
