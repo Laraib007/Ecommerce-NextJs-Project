@@ -5,7 +5,8 @@ import jwt from 'jsonwebtoken';
 const handler = async (req, res)=>{
     if(req.method == "POST"){
     const token = req.body.token
-    const data = jwt.verify(token, 'topsecret')    
+    const data = jwt.verify(token, 'topsecret')
+    console.log(Orders)    
     let orders = await Orders.find({email: data.email})
     res.status(200).json(orders)
     } 
