@@ -18,17 +18,12 @@ const Navbar = ({logout, user, cart, addToCart, clearCart, removeFromCart, subTo
   const [dropDown, setDropDown] = useState(false)
 const [sidecart, setSidecart] = useState(false)
 const [router, setRouter] = useState(true)
-let routerUrl = useRouter()
-const currentPath = usePathname()
-const navNotAppr = ["/admin", '/admin/products', '/admin/users', '/admin/addproduct']
-
-if(navNotAppr.includes(currentPath)){
-  return (()=>{
-    setRouter(false)
-  })
-}
-console.log(router.route)
+let routerUrl = useRouter() 
 const ref = useRef()
+const currentPath = usePathname()
+
+console.log(router.route)
+
 const cartNotAppear = ["/login", '/tshirt', '/mugs', '/hoodies', '/checkout', '/stickers', '/myaccount', '/orders', '/signup']
 
   useEffect(() => {
@@ -39,6 +34,13 @@ const cartNotAppear = ["/login", '/tshirt', '/mugs', '/hoodies', '/checkout', '/
     Object.keys(cart).length !== 0 && setSidecart(true)
   }, [Object.keys(cart).length])
   
+  const navNotAppr = ["/admin", '/admin/products', '/admin/users', '/admin/addproduct']
+
+if(navNotAppr.includes(currentPath)){
+  return (()=>{
+    setRouter(false)
+  })
+}
 const popUp =()=>{
   
   toast.error(' logged out successfully', {
