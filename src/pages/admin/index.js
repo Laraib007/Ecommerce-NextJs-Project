@@ -28,15 +28,17 @@ const index = () => {
           orderFetch()
         }
       }, [])
-      let pendingOrd
-      for (let i of order) {
-        pendingOrd = order[i].status
-        
-         if(pendingOrd == "pending"){
-         ()=> setPendingOrders(pendingOrd)
-         }
+      let pendingOrd = {}
+      let pendSt;
+      for (let i in order) {
+        pendingOrd += order[i].status
+        pendSt = order[i].status
+         console.log(order[i].status)
       }
-      console.log(pendingOrd)
+      if(pendSt == "pending"){
+            
+        //  ()=> setPendingOrders(pendingOrd.length)
+         }
       if(order.status == "pending"){
         console.log(order.length)
       }
