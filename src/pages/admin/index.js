@@ -37,12 +37,11 @@ const index = () => {
          
       }
       if(pendSt == "pending"){
-            console.log(pendingOrd)
-        //  ()=> setPendingOrders(pendingOrd.length)
+            pendingOrd = pendingOrd.length - 1
+        (()=> setPendingOrders(pendingOrd.length))
+        
          }
-      if(order.status == "pending"){
-        console.log(order.length)
-      }
+     console.log(pendingOrders)
   return (
     <>
     <Sidebar/>
