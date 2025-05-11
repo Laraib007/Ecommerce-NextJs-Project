@@ -34,14 +34,20 @@ const index = () => {
       for (let i in order) {
         pendingOrd += order[i].status
         pendSt = order[i].status
-         
       }
-      if(pendSt == "pending"){
-            pendingOrd = pendingOrd.length - 1
-        (()=> setPendingOrders(pendingOrd.length))
-        
+      useEffect(() => {
+        if(pendSt == "pending"){
+            pendingOrd = pendingOrd.length - 1;
+          let a = pendingOrd / 7;
+     () =>{ setPendingOrders(a)}
+
+          
+        console.log(pendingOrders)
          }
-     console.log(pendingOrders)
+      }, [])
+      
+      
+     
   return (
     <>
     <Sidebar/>
@@ -72,7 +78,7 @@ const index = () => {
           <a class="inline-flex items-center">
           
             <span class="flex-grow flex flex-col pl-4">
-              <span class="inline-flex items-center justify-center w-24 h-24 mr-8 m-4 p-3 ms-3 text-sm font-medium text-red-800 bg-red-100 rounded-full dark:bg-red-900 text-xl dark:text-red-100">3</span>
+              <span class="inline-flex items-center justify-center w-24 h-24 mr-8 m-4 p-3 ms-3 text-sm font-medium text-red-800 bg-red-100 rounded-full dark:bg-red-900 text-xl dark:text-red-100">{pendingOrders}</span>
             </span>
           </a>
           <h3>--FaishonWears--</h3>
