@@ -1,7 +1,31 @@
-import React from 'react'
 import Sidebar from './sideBar'
-
+import React, { useEffect, useState } from 'react'
+import { useRouter } from 'next/router';
+import Link from 'next/link'
 const index = () => {
+    const [order, setOrder] = useState([])
+      useEffect(() => {
+        
+      const orderFetch = async ()=>{
+        let response = await fetch('http://localhost:3000/api/orders', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({token: localStorage.getItem('token')}),
+        });
+      
+        const result = await response.json();
+        setOrder(result)
+        }
+      
+        if(!localStorage.getItem('token')){
+          useRouter.push('/')
+        }
+        else{
+          orderFetch()
+        }
+      }, [])
   return (
     <>
     <Sidebar/>
