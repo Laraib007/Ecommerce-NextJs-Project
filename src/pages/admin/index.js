@@ -19,7 +19,8 @@ const index = () => {
         });
       
         const result = await response.json();
-        setOrder(result)
+        setOrder(result.u)
+        setPendingOrders(result.a)
         }
       
         if(!localStorage.getItem('token')){
@@ -29,22 +30,7 @@ const index = () => {
           orderFetch()
         }
       }, [])
-      let pendingOrd = 0
-      let pendSt;
-        let a;
-      for (let i in order) {
-        pendingOrd += order[i].status
-        pendSt = order[i].status
-      }
       
-      if(pendSt == "pending"){
-            pendingOrd = pendingOrd.length - 1;
-            a =  pendingOrd / 7;
-         setPendingOrders(a)
-
-          
-        console.log(pendingOrders)
-         }
      
   return (
     <>
