@@ -21,6 +21,7 @@ const index = () => {
         const result = await response.json();
         setOrder(result.u)
         setPendingOrders(result.a)
+        setCompletedOrders(result.b)
         }
       
         if(!localStorage.getItem('token')){
