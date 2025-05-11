@@ -28,6 +28,18 @@ const index = () => {
           orderFetch()
         }
       }, [])
+      let pendingOrd
+      for (let i of order) {
+        pendingOrd = order[i].status
+        
+         if(pendingOrd == "pending"){
+         ()=> setPendingOrders(pendingOrd)
+         }
+      }
+      console.log(pendingOrd)
+      if(order.status == "pending"){
+        console.log(order.length)
+      }
   return (
     <>
     <Sidebar/>
@@ -45,7 +57,7 @@ const index = () => {
           <a class="inline-flex items-center">
           
             <span class="flex-grow flex flex-col pl-4">
-              <span class="inline-flex items-center justify-center w-24 h-24 mr-8 m-4 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 text-xl dark:text-blue-100">3</span>
+              <span class="inline-flex items-center justify-center w-24 h-24 mr-8 m-4 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 text-xl dark:text-blue-100">{order.length}</span>
             </span>
           </a>
           <h3>--FaishonWears--</h3>
