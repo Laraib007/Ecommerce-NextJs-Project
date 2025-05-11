@@ -30,11 +30,18 @@ const index = () => {
       }, [])
       let pendingOrd = {}
       let pendSt;
-      for (let i in order) {
-        pendingOrd += order[i].status
-        pendSt = order[i].status
-         console.log(order[i].status)
+
+      for (let i = 0; i <= order.status; i++) {
+        pendingOrd += order.status
+        pendSt = order.status
+         console.log(i)
+        
       }
+    //   for (let i in order) {
+    //     pendingOrd += order[i].status
+    //     pendSt = order[i].status
+    //      console.log(order[i].status)
+    //   }
       if(pendSt == "pending"){
             
         //  ()=> setPendingOrders(pendingOrd.length)
