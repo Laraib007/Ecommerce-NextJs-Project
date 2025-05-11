@@ -11,25 +11,19 @@ const handler = async (req, res)=>{
         if(admin){
             let u = await Orders.find()
              let pendingOrd = 0
-             let compOrd = 0
              let pendSt;
              let a;
-             let compOrdlnt
              for (let i in u) {
                 pendingOrd += u[i].status
                 pendSt = u[i].status
                 }
-      
+      console.log(pendSt)
       if(pendSt == "pending"){
             pendingOrd = pendingOrd.length - 1;
             a =  pendingOrd / 7;
          }
-         if(pendSt == "completed"){
-            compOrd = compOrd.length - 1;
-            compOrdlnt =  compOrd / 7;
-         }
-         console.log(a)
-         res.status(200).json({u: u, a: a, b: compOrdlnt})
+         
+         res.status(200).json({u: u, a: a})
         }
         else{
             let orders = await Orders.find({email: data.email})
