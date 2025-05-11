@@ -39,8 +39,8 @@ const index = () => {
       
       if(pendSt == "pending"){
             pendingOrd = pendingOrd.length - 1;
-           a =  pendingOrd / 7;
-     ()=> setPendingOrders(a)
+            a =  pendingOrd / 7;
+         setPendingOrders(a)
 
           
         console.log(pendingOrders)
