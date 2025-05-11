@@ -22,6 +22,7 @@ const index = () => {
         setOrder(result.u)
         setPendingOrders(result.a)
         setCompletedOrders(result.b)
+        console.log(result)
         }
       
         if(!localStorage.getItem('token')){
