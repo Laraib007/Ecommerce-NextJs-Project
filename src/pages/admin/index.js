@@ -4,8 +4,9 @@ import { useRouter } from 'next/router';
 import Link from 'next/link'
 const index = () => {
     const [order, setOrder] = useState([])
-    const [pendingOrders, setPendingOrders] = useState()
-    const [completedOrders, setCompletedOrders] = useState()
+    const [pendingOrders, setPendingOrders] = useState(0)
+    const [completedOrders, setCompletedOrders] = useState(0)
+    
       useEffect(() => {
         
       const orderFetch = async ()=>{
@@ -30,23 +31,20 @@ const index = () => {
       }, [])
       let pendingOrd = 0
       let pendSt;
-
+        let a;
       for (let i in order) {
         pendingOrd += order[i].status
         pendSt = order[i].status
       }
-      useEffect(() => {
-        if(pendSt == "pending"){
+      
+      if(pendSt == "pending"){
             pendingOrd = pendingOrd.length - 1;
-          let a = pendingOrd / 7;
-     () =>{ setPendingOrders(a)}
+           a =  pendingOrd / 7;
+     ()=> setPendingOrders(a)
 
           
         console.log(pendingOrders)
          }
-      }, [])
-      
-      
      
   return (
     <>
@@ -91,7 +89,7 @@ const index = () => {
           <a class="inline-flex items-center">
           
             <span class="flex-grow flex flex-col pl-4">
-              <span class="inline-flex items-center justify-center w-24 h-24 mr-8 m-4 p-3 ms-3 text-sm font-medium text-green-800 bg-green-100 rounded-full dark:bg-green-900 text-xl dark:text-green-100">3</span>
+              <span class="inline-flex items-center justify-center w-24 h-24 mr-8 m-4 p-3 ms-3 text-sm font-medium text-green-800 bg-green-100 rounded-full dark:bg-green-900 text-xl dark:text-green-100">{completedOrders}</span>
             </span>
           </a>
           <h3>--FaishonWears--</h3>
