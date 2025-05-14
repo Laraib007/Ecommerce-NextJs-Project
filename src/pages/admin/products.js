@@ -176,9 +176,9 @@ const Products = () => {
                     <tbody>
                         {Object.keys(product).map((item)=>{ 
                         return      <tr class="border-b dark:border-gray-700">
-                            <th scope="row" class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">{item.name}</th>
-                            <td class="px-4 py-3">{item.category}</td>
-                            <td class="px-4 py-3">{item.id}</td>
+                            <th scope="row" class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">{item.title}</th>
+                            <td class="px-4 py-3">{item.size}</td>
+                            <td class="px-4 py-3">{item.color}</td>
                             <td class="px-4 py-3">{item.date}</td>
                             <td class="px-4 py-3">Rs.{item.amount}</td>
                             <td class="px-4 py-3 flex items-center justify-end">
