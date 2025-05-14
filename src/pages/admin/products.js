@@ -9,6 +9,7 @@ import { VscGoToSearch } from "react-icons/vsc";
 const Products = () => {
     
     const [product, setProduct] = useState([])
+    const [totalProducts, setTotalProducts] = useState(0)
     const [outOfstock, setOutOfstock] = useState(0)
     const [avalibleStock, setAvalibleStock] = useState(0)
       useEffect(() => {
@@ -22,7 +23,8 @@ const Products = () => {
         });
       
         const result = await response.json();
-        setProduct(result.totalProducts)
+        setProduct(result.product)
+        setTotalProducts(result.totalProducts)
         setOutOfstock(result.outOfStock)
         setAvalibleStock(result.outOfStock)
         console.log(result.totalProducts)
@@ -54,7 +56,7 @@ const Products = () => {
           <a class="inline-flex items-center">
           
             <span class="flex-grow flex flex-col pl-4">
-              <span class="inline-flex items-center justify-center w-24 h-24 mr-8 m-4 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 text-xl dark:text-blue-100">{product}</span>
+              <span class="inline-flex items-center justify-center w-24 h-24 mr-8 m-4 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 text-xl dark:text-blue-100">{totalProducts}</span>
             </span>
           </a>
           <h3>--FaishonWears--</h3>
@@ -161,8 +163,8 @@ const Products = () => {
                 <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
-                            <th scope="col" class="px-4 py-3">User name</th>
-                            <th scope="col" class="px-4 py-3">Category</th>
+                            <th scope="col" class="px-4 py-3">Product Title</th>
+                            <th scope="col" class="px-4 py-3">Size / Color</th>
                             <th scope="col" class="px-4 py-3">product ID</th>
                             <th scope="col" class="px-4 py-3">Description</th>
                             <th scope="col" class="px-4 py-3">Price</th>
