@@ -51,7 +51,7 @@ const Products = () => {
       <div class="p-4 md:w-1/3 w-full">
         <div class="h-full bg-gray-800 text-center bg-opacity-40 p-8 rounded">
          
-         <h2 class="title-font font-bold text-2xl text-white">Total Orders</h2>
+         <h2 class="title-font font-bold text-2xl text-white">Total Products</h2>
           <a class="inline-flex items-center">
           
             <span class="flex-grow flex flex-col pl-4">
@@ -64,7 +64,7 @@ const Products = () => {
       <div class="p-4 md:w-1/3 w-full">
         <div class="h-full bg-gray-800 text-center bg-opacity-40 p-8 rounded">
          
-         <h2 class="title-font font-bold text-2xl text-white">Pending Orders</h2>
+         <h2 class="title-font font-bold text-2xl text-white">Out Of Stock</h2>
           <a class="inline-flex items-center">
           
             <span class="flex-grow flex flex-col pl-4">
@@ -77,7 +77,7 @@ const Products = () => {
       <div class="p-4 md:w-1/3 w-full">
         <div class="h-full bg-gray-800 text-center bg-opacity-40 p-8 rounded">
          
-         <h2 class="title-font font-bold text-2xl text-white">Completed Orders</h2>
+         <h2 class="title-font font-bold text-2xl text-white">Products in Stock</h2>
           <a class="inline-flex items-center">
           
             <span class="flex-grow flex flex-col pl-4">
