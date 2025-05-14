@@ -163,9 +163,9 @@ const index = () => {
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
                             <th scope="col" class="px-4 py-3">User name</th>
-                            <th scope="col" class="px-4 py-3">Category</th>
+                            <th scope="col" class="px-4 py-3">Status</th>
                             <th scope="col" class="px-4 py-3">Order ID</th>
-                            <th scope="col" class="px-4 py-3">Description</th>
+                            <th scope="col" class="px-4 py-3">Placed Date</th>
                             <th scope="col" class="px-4 py-3">Price</th>
                             <th scope="col" class="px-4 py-3">
                                 <span class="sr-only">Actions</span>
@@ -176,7 +176,7 @@ const index = () => {
                         {order.map((item)=>{ 
                         return      <tr class="border-b dark:border-gray-700">
                             <th scope="row" class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">{item.name}</th>
-                            <td class="px-4 py-3">{item.category}</td>
+                            <td class="px-4 py-3">{item.status}</td>
                             <td class="px-4 py-3">{item.id}</td>
                             <td class="px-4 py-3">{item.date}</td>
                             <td class="px-4 py-3">Rs.{item.amount}</td>
