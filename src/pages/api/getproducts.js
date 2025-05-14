@@ -7,11 +7,11 @@ const handler = async (req, res)=>{
   let outOfStock = 0;
   let inStock = 0;
   for(let item of product){
-  if(item.avalibleQty <= 0){
-    outOfStock += item[i].avalibleQty.includes(0)
-    
+  if(item.avalibleQty == 0){
+    outOfStock += item.avalibleQty == 0
+    console.log(outOfStock)
   }
-  console.log(outOfStock)
+  
     if(item.title in tshirts){
         if(!tshirts[item.title].color.includes(item.color) && item.avalibleQty > 0){
           tshirts[item.title].color.push(item.color)
