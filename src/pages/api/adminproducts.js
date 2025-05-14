@@ -13,7 +13,7 @@ const handler = async (req, res)=>{
   }
   }
   console.log(totalProducts)
-  res.status(200).json({ outOfStock, totalProducts} );
+  res.status(200).json({ outOfStock, totalProducts, product} );
 }
 }
 export default connectDB(handler)
