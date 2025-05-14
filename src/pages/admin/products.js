@@ -14,12 +14,11 @@ const Products = () => {
       useEffect(() => {
         
       const orderFetch = async ()=>{
-        let response = await fetch('http://localhost:3000/api/getproducts', {
+        let response = await fetch('http://localhost:3000/api/adminproducts', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({token: localStorage.getItem('token')}),
+          }
         });
       
         const result = await response.json();
