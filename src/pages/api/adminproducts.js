@@ -12,7 +12,7 @@ const handler = async (req, res)=>{
     outOfStock += item.avalibleQty == 0
   }
   }
-  console.log(totalProducts)
+  console.log(product)
   res.status(200).json({ outOfStock, totalProducts, product} );
 }
 }
