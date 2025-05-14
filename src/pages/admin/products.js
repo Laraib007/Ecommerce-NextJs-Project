@@ -22,10 +22,10 @@ const Products = () => {
         });
       
         const result = await response.json();
-        setProduct(result.u)
-        setOutOfstock(result.a)
-        setAvalibleStock(result.b)
-        console.log(result)
+        setProduct(result.totalProducts)
+        setOutOfstock(result.outOfstock)
+        setAvalibleStock(result.outOfstock)
+        console.log(result.totalProducts)
         }
       
         if(!localStorage.getItem('token')){
@@ -54,7 +54,7 @@ const Products = () => {
           <a class="inline-flex items-center">
           
             <span class="flex-grow flex flex-col pl-4">
-              <span class="inline-flex items-center justify-center w-24 h-24 mr-8 m-4 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 text-xl dark:text-blue-100">{product.length}</span>
+              <span class="inline-flex items-center justify-center w-24 h-24 mr-8 m-4 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 text-xl dark:text-blue-100">{product}</span>
             </span>
           </a>
           <h3>--FaishonWears--</h3>
@@ -172,7 +172,7 @@ const Products = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {product.map((item)=>{ 
+                        {Object.keys(product).map((item)=>{ 
                         return      <tr class="border-b dark:border-gray-700">
                             <th scope="row" class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">{item.name}</th>
                             <td class="px-4 py-3">{item.category}</td>
