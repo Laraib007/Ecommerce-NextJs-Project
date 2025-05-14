@@ -23,8 +23,8 @@ const Products = () => {
       
         const result = await response.json();
         setProduct(result.totalProducts)
-        setOutOfstock(result.outOfstock)
-        setAvalibleStock(result.outOfstock)
+        setOutOfstock(result.outOfStock)
+        setAvalibleStock(result.outOfStock)
         console.log(result.totalProducts)
         }
       
@@ -36,7 +36,7 @@ const Products = () => {
         }
       }, [])
       
-     
+     console.log()
   return (
     <>
     <Sidebar/>
