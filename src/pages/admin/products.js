@@ -14,7 +14,7 @@ const Products = () => {
       useEffect(() => {
         
       const orderFetch = async ()=>{
-        let response = await fetch('http://localhost:3000/api/orders', {
+        let response = await fetch('http://localhost:3000/api/getproducts', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
