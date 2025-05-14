@@ -26,7 +26,7 @@ const Products = () => {
         setProduct(result.product)
         setTotalProducts(result.totalProducts)
         setOutOfstock(result.outOfStock)
-        setAvalibleStock(result.outOfStock)
+        setAvalibleStock(result.inStock)
         console.log(result.totalProducts)
         }
       
@@ -38,7 +38,6 @@ const Products = () => {
         }
       }, [])
       
-     console.log()
   return (
     <>
     <Sidebar/>
@@ -163,10 +162,9 @@ const Products = () => {
                 <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
-                            <th scope="col" class="px-4 py-3">Product Title</th>
-                            <th scope="col" class="px-4 py-3">Size / Color</th>
+                            <th scope="col" class="px-4 py-3">Product Title - Size / Color</th>
+                            <th scope="col" class="px-4 py-3">Avalaible Qty</th>
                             <th scope="col" class="px-4 py-3">product ID</th>
-                            <th scope="col" class="px-4 py-3">Description</th>
                             <th scope="col" class="px-4 py-3">Price</th>
                             <th scope="col" class="px-4 py-3">
                                 <span class="sr-only">Actions</span>
@@ -174,13 +172,12 @@ const Products = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {Object.keys(product).map((item)=>{ 
+                        {product.map((item)=>{ 
                         return      <tr class="border-b dark:border-gray-700">
-                            <th scope="row" class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">{item.title}</th>
-                            <td class="px-4 py-3">{item.size}</td>
-                            <td class="px-4 py-3">{item.color}</td>
-                            <td class="px-4 py-3">{item.date}</td>
-                            <td class="px-4 py-3">Rs.{item.amount}</td>
+                            <th scope="row" class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">{item.title} - ({item.size} / {item.color})</th>
+                            <td class="px-4 py-3">{item.avalibleQty}</td>
+                            <td class="px-4 py-3">{item._id}</td>
+                            <td class="px-4 py-3">Rs.{item.price}</td>
                             <td class="px-4 py-3 flex items-center justify-end">
                                
                                 
