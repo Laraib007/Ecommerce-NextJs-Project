@@ -1,6 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Sidebar from './sideBar'
+import cloudinary from '../../../middleware.js/cloudinary'
 const AddProduct = () => {
+  const [image, setImage] = useState('')
+onSubmit = async () =>{
+
+ const uploadResult = await cloudinary.uploader.upload(image, {
+  folder: product
+ })
+}
+
   return (
     <div className='text-gray-200 min-h-screen  ml-56 bg-gray-900 body-font'>
       <Sidebar/>
