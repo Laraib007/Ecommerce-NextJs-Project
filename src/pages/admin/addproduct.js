@@ -17,15 +17,12 @@ data.append("cloud_name", "dspvvrcfp")
   body: data
  })
 const uploadedImg = await res.json()
-//  setImage(file)
- console.log(uploadedImg.url)
+ setImage(uploadedImg.url)
+//  console.log(uploadedImg.url)
 }
 const onSubmit = async () =>{
  
- const uploadResult = await cloudinary.uploader.upload(image, {
-  folder: "product"
- })
- console.log(uploadResult)
+ 
 }
 
   return (
