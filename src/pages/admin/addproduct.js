@@ -3,7 +3,7 @@ import Sidebar from './sideBar'
 import cloudinary from '../../../middleware.js/cloudinary'
 const AddProduct = () => {
   const [image, setImage] = useState('')
-onSubmit = async () =>{
+const onSubmit = async () =>{
 
  const uploadResult = await cloudinary.uploader.upload(image, {
   folder: product
