@@ -10,15 +10,15 @@ const AddProduct = () => {
  const data = new FormData()
 
 data.append("file", file)
-data.append("upload_presets", "FashionWear")
+data.append("upload_preset", "FashionWear")
 data.append("cloud_name", "dspvvrcfp")
- await fetch("https://api.cloudinary.com/v1_1/dspvvrcfp/image/upload",{
+ const res = await fetch("https://api.cloudinary.com/v1_1/dspvvrcfp/image/upload",{
   method: "POST",
   body: data
  })
-
- setImage(file)
- console.log(file)
+const uploadedImg = await res.json()
+//  setImage(file)
+ console.log(uploadedImg.url)
 }
 const onSubmit = async () =>{
  
