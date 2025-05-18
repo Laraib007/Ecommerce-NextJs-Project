@@ -63,7 +63,7 @@ const orders = () => {
   
         <div class="mt-6 flow-root sm:mt-8">
           <div class="divide-y divide-gray-200 dark:divide-gray-700">
-            {order.map((item)=>{ 
+            { order.map((item)=>{ 
               return <div class="flex flex-wrap items-center gap-y-4 py-6">
               <dl class="w-1/2 sm:w-1/4 lg:w-auto lg:flex-1">
                 <dt class="text-base font-medium text-gray-500 dark:text-gray-400">Order ID:</dt>
