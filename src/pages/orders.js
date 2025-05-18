@@ -19,7 +19,7 @@ const orders = () => {
     const result = await response.json();
     setOrder(result)
     }
-  
+  console.log(order)
     if(!localStorage.getItem('token')){
       useRouter.push('/')
     }
