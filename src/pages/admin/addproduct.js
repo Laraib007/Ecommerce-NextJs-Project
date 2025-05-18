@@ -4,7 +4,7 @@ import cloudinary from '../../../middleware.js/cloudinary'
 const AddProduct = () => {
   const [image, setImage] = useState('')
   const [size, setSize] = useState()
-  const [color, setColor] = useState()
+  const [cat, setCat] = useState()
   const handleChange = async(e)=>{
  const file = e.target.files[0]
  if(!file) return
@@ -24,11 +24,11 @@ const uploadedImg = await res.json()
 }
 const onSubmit = async () =>{
  
- console.log(size)
+ console.log(cat)
 }
-const refreshVariants =(newsize, newcolor)=>{
+const refreshVariants =(newsize, newcat)=>{
   setSize(newsize)
-  setColor(newcolor)
+  setCat(newcat)
 
 }
   return (
@@ -81,7 +81,7 @@ const refreshVariants =(newsize, newcolor)=>{
             <div className='column'>
             <span class=" mt-0 mr-3 ">Category</span>
             <div class="">
-              <select  value={"tshirts"} class="rounded mt-1 bg-gray-900 border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10">
+              <select  onChange={(e)=>refreshVariants(e.target.value)}  value={cat} class="rounded mt-1 bg-gray-900 border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10">
                <option value={"nosize"}>No Size</option>
                <option value={"mugs"}>mugs</option>
                <option value={"stickers"}>stickers</option>
