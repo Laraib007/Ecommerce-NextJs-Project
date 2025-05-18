@@ -3,11 +3,12 @@ import connectDB from "../../../middleware.js/mongoose";
 
 const handler = async (req, res)=>{
     if(req.method == "POST"){
+        let slug = req.body.title + Math.round(Math.random() * 53475237)
         for (let i = 0; i < req.body.length; i++) {
         let p = new Products({
            
                 title:  req.body[i].title,
-                slug:  req.body[i].slug,
+                slug:  slug,
                 desc:  req.body[i].desc,
                 img:   req.body[i].img,
                 category: req.body[i].category,
