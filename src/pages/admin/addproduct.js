@@ -2,14 +2,16 @@ import React, { useState } from 'react'
 import Sidebar from './sideBar'
 import cloudinary from '../../../middleware.js/cloudinary'
 const AddProduct = () => {
-  const [image, setImage] = useState('')
+  const [img, setImage] = useState('')
   const [size, setSize] = useState()
-  const [cat, setCat] = useState()
+  const [category, setCat] = useState()
   const [title, setTitle] = useState()
   const [desc, setDesc] = useState()
   const [price, setPrice] = useState()
-  const [avlQty, setAvlQty] = useState()
+  const [avalibleQty, setAvlQty] = useState()
   const [color, setColor] = useState()
+
+
   const handleChange = async(e)=>{
  const file = e.target.files[0]
  if(!file) return
@@ -41,7 +43,7 @@ else if(e.target.name == "desc"){
     setPrice(e.target.value)
     
     }
- else if(e.target.name == "avlQty"){
+ else if(e.target.name == "avalibleQty"){
     setAvlQty(e.target.value)
     
     }
@@ -53,14 +55,25 @@ else if(e.target.name == "desc"){
     setSize(e.target.value)
     
     }
-     else if(e.target.name == "cat"){
+     else if(e.target.name == "category"){
     setCat(e.target.value)
     
     }
   }
 
-const onSubmit = async () =>{
-console.log(title, desc, price, avlQty, color, size, cat)
+const onSubmit = async (e) =>{
+  e.preventDefault()
+  let data = {title, desc, price, avalibleQty, color, size, category, img}
+  let response = await fetch('http://localhost:3000/api/addproducts', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  });
+
+  const result = await response.json();
+  console.log(result)
 }
 const refreshVariants =(newsize, newcat)=>{
   setSize(newsize)
@@ -86,8 +99,8 @@ const refreshVariants =(newsize, newcat)=>{
         <label for="price" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Product Price</label>
     </div>
     <div class="relative z-0 w-full mb-2 group">
-        <input onChange={handleChangeDetail} value={avlQty} type="number" name="avlQty" id="avlQty" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-        <label for="avlQty" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Available Quantity</label>
+        <input onChange={handleChangeDetail} value={avalibleQty} type="number" name="avalibleQty" id="avalibleQty" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+        <label for="avalibleQty" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Available Quantity</label>
     </div>
   </div>
   <div class="flex mb-2 items-center">
@@ -97,7 +110,7 @@ const refreshVariants =(newsize, newcat)=>{
     </div>
             <span class="ml-6 mr-3 ">Size</span>
             <div class="">
-              <select  onChange={(e)=>refreshVariants(e.target.value, cat)} name='size' id='size' value={size} class="rounded bg-gray-900 border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10">
+              <select  onChange={(e)=>refreshVariants(e.target.value, category)} name='size' id='size' value={size} class="rounded bg-gray-900 border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10">
               <option value={"-"}>No Size</option>
                <option value={"S"}>S</option>
                <option value={"M"}>M</option>
@@ -116,7 +129,7 @@ const refreshVariants =(newsize, newcat)=>{
             <div className='column'>
             <span class=" mt-0 mr-3 ">Category</span>
             <div class="">
-              <select  onChange={(e)=>refreshVariants(e.target.value, size)} name='cat' id='cat' value={cat} class="rounded mt-1 bg-gray-900 border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10">
+              <select  onChange={(e)=>refreshVariants(e.target.value, size)} name='category' id='category' value={category} class="rounded mt-1 bg-gray-900 border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10">
                <option value={"nosize"}>No Size</option>
                <option value={"mugs"}>mugs</option>
                <option value={"stickers"}>stickers</option>
