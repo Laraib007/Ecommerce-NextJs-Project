@@ -24,6 +24,7 @@ const uploadedImg = await res.json()
 }
 const onSubmit = async () =>{
  
+ console.log(size)
  console.log(cat)
 }
 const refreshVariants =(newsize, newcat)=>{
@@ -61,7 +62,7 @@ const refreshVariants =(newsize, newcat)=>{
     </div>
             <span class="ml-6 mr-3 ">Size</span>
             <div class="">
-              <select onChange={(e)=>refreshVariants(e.target.value)}  value={size} class="rounded bg-gray-900 border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10">
+              <select onChange={(e)=>refreshVariants(e.target.value, cat)}  value={size} class="rounded bg-gray-900 border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10">
               <option value={"-"}>No Size</option>
                <option value={"S"}>S</option>
                <option value={"M"}>M</option>
@@ -80,7 +81,7 @@ const refreshVariants =(newsize, newcat)=>{
             <div className='column'>
             <span class=" mt-0 mr-3 ">Category</span>
             <div class="">
-              <select  onChange={(e)=>refreshVariants(e.target.value)}  value={cat} class="rounded mt-1 bg-gray-900 border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10">
+              <select  onChange={(e)=>refreshVariants(e.target.value, size)}  value={cat} class="rounded mt-1 bg-gray-900 border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10">
                <option value={"nosize"}>No Size</option>
                <option value={"mugs"}>mugs</option>
                <option value={"stickers"}>stickers</option>
