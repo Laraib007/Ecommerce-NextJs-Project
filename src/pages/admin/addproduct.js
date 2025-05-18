@@ -24,7 +24,7 @@ const uploadedImg = await res.json()
 }
 const onSubmit = async () =>{
  
- 
+ console.log(size)
 }
 const refreshVariants =(newsize, newcolor)=>{
   setSize(newsize)
@@ -62,8 +62,8 @@ const refreshVariants =(newsize, newcolor)=>{
     </div>
             <span class="ml-6 mr-3 ">Size</span>
             <div class="">
-              <select onChange={refreshVariants}  value={size} class="rounded bg-gray-900 border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10">
-              <option value={"nosize"}>No Size</option>
+              <select onChange={(e)=>refreshVariants(e.target.value)}  value={size} class="rounded bg-gray-900 border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10">
+              <option value={"-"}>No Size</option>
                <option value={"S"}>S</option>
                <option value={"M"}>M</option>
                 <option value={'L'}>L</option>
