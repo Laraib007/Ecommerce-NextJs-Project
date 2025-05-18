@@ -29,7 +29,6 @@ const onSubmit = async () =>{
 const refreshVariants =(newsize, newcat)=>{
   setSize(newsize)
   setCat(newcat)
-
 }
   return (
     <div className='text-gray-200 min-h-screen  ml-56 bg-gray-900 body-font'>
