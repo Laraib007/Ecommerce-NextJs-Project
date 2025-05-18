@@ -3,6 +3,8 @@ import Sidebar from './sideBar'
 import cloudinary from '../../../middleware.js/cloudinary'
 const AddProduct = () => {
   const [image, setImage] = useState('')
+  const [size, setSize] = useState()
+  const [color, setColor] = useState()
   const handleChange = async(e)=>{
  const file = e.target.files[0]
  if(!file) return
@@ -24,7 +26,11 @@ const onSubmit = async () =>{
  
  
 }
+const refreshVariants =(newsize, newcolor)=>{
+  setSize(newsize)
+  setColor(newcolor)
 
+}
   return (
     <div className='text-gray-200 min-h-screen  ml-56 bg-gray-900 body-font'>
       <Sidebar/>
@@ -56,7 +62,7 @@ const onSubmit = async () =>{
     </div>
             <span class="ml-6 mr-3 ">Size</span>
             <div class="">
-              <select  value={"M"} class="rounded bg-gray-900 border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10">
+              <select onChange={refreshVariants}  value={size} class="rounded bg-gray-900 border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10">
               <option value={"nosize"}>No Size</option>
                <option value={"S"}>S</option>
                <option value={"M"}>M</option>
