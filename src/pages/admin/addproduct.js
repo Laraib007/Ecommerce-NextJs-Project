@@ -63,7 +63,7 @@ else if(e.target.name == "desc"){
 
 const onSubmit = async (e) =>{
   e.preventDefault()
-  let data = {title, desc, price, avalibleQty, color, size, category, img}
+  let data = {title, desc, img, category, size, color, price, avalibleQty}
   let response = await fetch('http://localhost:3000/api/addproducts', {
     method: 'POST',
     headers: {
