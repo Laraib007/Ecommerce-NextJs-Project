@@ -134,7 +134,7 @@ const refreshVariants =(newsize, newcat)=>{
                <option value={"mugs"}>mugs</option>
                <option value={"stickers"}>stickers</option>
                 <option value={'hoodies'}>hoodies</option>
-                 <option value={"tshirts"}>tshirts</option>
+                 <option value={"tshirt"}>tshirt</option>
                 
               </select>
               <span class="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
