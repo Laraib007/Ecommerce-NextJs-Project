@@ -5,6 +5,11 @@ const AddProduct = () => {
   const [image, setImage] = useState('')
   const [size, setSize] = useState()
   const [cat, setCat] = useState()
+  const [title, setTitle] = useState()
+  const [desc, setDesc] = useState()
+  const [price, setPrice] = useState()
+  const [avlQty, setAvlQty] = useState()
+  const [color, setColor] = useState()
   const handleChange = async(e)=>{
  const file = e.target.files[0]
  if(!file) return
@@ -22,10 +27,40 @@ const uploadedImg = await res.json()
  setImage(uploadedImg.url)
 //  console.log(uploadedImg.url)
 }
+const handleChangeDetail = (e)=> {
+if(e.target.name == "title"){
+setTitle(e.target.value)
+
+}
+else if(e.target.name == "desc"){
+  setDesc(e.target.value)
+  
+  }
+
+  else if(e.target.name == "price"){
+    setPrice(e.target.value)
+    
+    }
+ else if(e.target.name == "avlQty"){
+    setAvlQty(e.target.value)
+    
+    }
+     else if(e.target.name == "color"){
+    setColor(e.target.value)
+    
+    }
+     else if(e.target.name == "size"){
+    setSize(e.target.value)
+    
+    }
+     else if(e.target.name == "cat"){
+    setCat(e.target.value)
+    
+    }
+  }
+
 const onSubmit = async () =>{
- 
- console.log(size)
- console.log(cat)
+console.log(title, desc, price, avlQty, color, size, cat)
 }
 const refreshVariants =(newsize, newcat)=>{
   setSize(newsize)
@@ -37,32 +72,32 @@ const refreshVariants =(newsize, newcat)=>{
       <h1 style={{marginTop: "-4%"}} class="  text-3xl font-bold title-font  mb-2  text-center">ADMIN DASHBOARD</h1>
 <form class="max-w-md mx-auto mt-16 p-4 text-gray-400 bg-gray-900 body-font">
   <div class="relative z-0 w-full mb-5 group">
-      <input type="text" name="title" id="title" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <input onChange={handleChangeDetail} type="text" value={title} name="title" id="title" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
       <label for="title" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Product Title</label>
   </div>
   <div class="relative z-0 w-full mb-5 group">
-      <input type="text" name="description" id="description" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <input onChange={handleChangeDetail} value={desc} type="text" name="desc" id="desc" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
       <label for="description" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Product Description</label>
   </div>
 
   <div class="grid md:grid-cols-2 md:gap-6">
     <div class="relative z-0 w-full mb-2 group">
-        <input type="number" name="price" id="price" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+        <input onChange={handleChangeDetail} value={price} type="number" name="price" id="price" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
         <label for="price" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Product Price</label>
     </div>
     <div class="relative z-0 w-full mb-2 group">
-        <input type="number" name="avlQty" id="avlQty" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+        <input onChange={handleChangeDetail} value={avlQty} type="number" name="avlQty" id="avlQty" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
         <label for="avlQty" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Available Quantity</label>
     </div>
   </div>
   <div class="flex mb-2 items-center">
   <div class="relative z-0  w-2/3 mb-2 group">
-        <input type="text" name="color" id="color" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+        <input onChange={handleChangeDetail} value={color} type="text" name="color" id="color" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
         <label for="color" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Product Color (stay blank if no color)</label>
     </div>
             <span class="ml-6 mr-3 ">Size</span>
             <div class="">
-              <select onChange={(e)=>refreshVariants(e.target.value, cat)}  value={size} class="rounded bg-gray-900 border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10">
+              <select  onChange={(e)=>refreshVariants(e.target.value, cat)} name='size' id='size' value={size} class="rounded bg-gray-900 border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10">
               <option value={"-"}>No Size</option>
                <option value={"S"}>S</option>
                <option value={"M"}>M</option>
@@ -81,7 +116,7 @@ const refreshVariants =(newsize, newcat)=>{
             <div className='column'>
             <span class=" mt-0 mr-3 ">Category</span>
             <div class="">
-              <select  onChange={(e)=>refreshVariants(e.target.value, size)}  value={cat} class="rounded mt-1 bg-gray-900 border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10">
+              <select  onChange={(e)=>refreshVariants(e.target.value, size)} name='cat' id='cat' value={cat} class="rounded mt-1 bg-gray-900 border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10">
                <option value={"nosize"}>No Size</option>
                <option value={"mugs"}>mugs</option>
                <option value={"stickers"}>stickers</option>
