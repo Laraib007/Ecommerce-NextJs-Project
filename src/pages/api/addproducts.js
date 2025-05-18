@@ -3,8 +3,9 @@ import connectDB from "../../../middleware.js/mongoose";
 
 const handler = async (req, res)=>{
     if(req.method == "POST"){
-        let slug = req.body.title + Math.round(Math.random() * 53475237)
+        
         for (let i = 0; i < req.body.length; i++) {
+            let slug = req.body[i].title + Math.round(Math.random() * 53475237)
         let p = new Products({
            
                 title:  req.body[i].title,
@@ -17,9 +18,10 @@ const handler = async (req, res)=>{
                 price:   req.body[i].price,
                 avalibleQty:  req.body[i].avalibleQty,        
         })
-      const product = await p.save()
-    }
+       await p.save()
        
+    }
+       console.log(req.body)
         res.status(200).json({ "sucess": "sucess" });
     } else {
         res.status(400).json({err: "bad request"})
