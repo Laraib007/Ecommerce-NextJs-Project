@@ -11,8 +11,11 @@ const index = () => {
     const [order, setOrder] = useState([])
     const [pendingOrders, setPendingOrders] = useState(0)
     const [completedOrders, setCompletedOrders] = useState(0)
-    const [deleteOrd, setDeleteOrd] = useState(true)
+    const [deleteOrd, setDeleteOrd] = useState(false)
 
+    const toggleDelete =() =>{
+        setDeleteOrd(!deleteOrd)
+    }
       useEffect(() => {
         
       const orderFetch = async ()=>{
@@ -187,7 +190,7 @@ const index = () => {
                                
                                 
                                <div className='flex space-x-4 text-xl'>
-                                  {item.status != "completed"? <MdModeEditOutline className=' hover:bg-green-500' />: ""} 
+                                  {item.status != "completed"? <MdModeEditOutline onClick={toggleDelete} className=' hover:bg-green-500' />: ""} 
                                   {/* <!-- https://medium.com/@mimranisrar6/creating-a-custom-confirmation-dialog-for-an-anchor-tag-4223514a7b0f --> */}
  {deleteOrd && <div class="fixed inset-0 flex items-center justify-center z-50 backdrop-blur confirm-dialog ">
     <div class="relative px-4 min-h-screen md:flex md:items-center md:justify-center">
