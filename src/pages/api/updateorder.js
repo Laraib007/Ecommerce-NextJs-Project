@@ -4,8 +4,9 @@ import Orders from "../../../models/Orders";
 const handler = async (req, res)=>{
     if(req.method == "POST"){
         const token = req.body.token
-        let o = await Orders.findByIdAndUpdate(token, {status: "completed"})
-
+        console.log(token)
+        let o = await Orders.updateOne({id: token.id}, {$set: {'status.${completed}': true}})
+console.log(o)
        await o.save()
        
         res.status(200).json({ "sucess": "sucess" });
