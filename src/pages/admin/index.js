@@ -21,6 +21,10 @@ const ref = useRef()
         setOrderId(params)
         setEditOrd(!editOrd)
     }
+    const toggleDeleteOrd =(params) =>{
+        setOrderId(params)
+        setDeleteOrd(!deleteOrd)
+    }
 
     const confirmOrder = async ( e)=>{
         //   e.preventDefault()
@@ -75,7 +79,7 @@ const ref = useRef()
               body: JSON.stringify(data),
             });
             const result = await response.json();
-        setDeleteOrd(!deleteOrd)
+        setDeleteOrd(true)
         if(result.sucess){
           toast.success('Order Status Updated Sucessfully', {
             position: "top-left",
@@ -316,7 +320,8 @@ const ref = useRef()
         </div>
     </div>
 </div>}
-{deleteOrd && <div class="fixed inset-0 flex items-center justify-center z-50 backdrop-blur confirm-dialog ">
+           {item.status != "completed"? <MdDelete onClick={()=>toggleDeleteOrd(item.id)} className=' hover:bg-red-500' />: ""} 
+           {deleteOrd && <div class="fixed inset-0 flex items-center justify-center z-50 backdrop-blur confirm-dialog ">
     <div class="relative px-4 min-h-screen md:flex md:items-center md:justify-center">
         <div class=" opacity-25 w-full h-full absolute z-10 inset-0"></div>
         <div class="bg-white rounded-lg md:max-w-md md:mx-auto p-4 fixed inset-x-0 bottom-0 z-50 mb-4 mx-4 md:relative shadow-lg">
@@ -343,7 +348,6 @@ const ref = useRef()
         </div>
     </div>
 </div>}
-                                   {item.status != "completed"? <MdDelete  className=' hover:bg-red-500' />: ""} 
                                     <VscGoToSearch  className=' hover:bg-blue-500' />
                               </div>
                             </td>
