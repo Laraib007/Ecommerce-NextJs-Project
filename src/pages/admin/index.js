@@ -1,5 +1,5 @@
 import Sidebar from './sideBar'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/router';
 import Link from 'next/link'
 import { MdModeEditOutline } from "react-icons/md";
@@ -12,10 +12,29 @@ const index = () => {
     const [pendingOrders, setPendingOrders] = useState(0)
     const [completedOrders, setCompletedOrders] = useState(0)
     const [deleteOrd, setDeleteOrd] = useState(false)
-
-    const toggleDelete =() =>{
+    const [orderId, setOrderId] = useState()
+const ref = useRef()
+    const toggleDelete =(params) =>{
+        setOrderId(params)
         setDeleteOrd(!deleteOrd)
     }
+
+    const confirmOrder = async (params, e)=>{
+          e.preventDefault()
+          let token = orderId
+            let data =  {token}
+            
+            let response = await fetch('http://localhost:3000/api/updateorder', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(data),
+            });
+            const result = await response.json();
+        console.log(result)
+        setDeleteOrd(!deleteOrd)
+            }
       useEffect(() => {
         
       const orderFetch = async ()=>{
@@ -190,7 +209,7 @@ const index = () => {
                                
                                 
                                <div className='flex space-x-4 text-xl'>
-                                  {item.status != "completed"? <MdModeEditOutline onClick={toggleDelete} className=' hover:bg-green-500' />: ""} 
+                                  {item.status != "completed"? <MdModeEditOutline onClick={()=>toggleDelete(item.id)} className=' hover:bg-green-500' />: ""} 
                                   {/* <!-- https://medium.com/@mimranisrar6/creating-a-custom-confirmation-dialog-for-an-anchor-tag-4223514a7b0f --> */}
  {deleteOrd && <div class="fixed inset-0 flex items-center justify-center z-50 backdrop-blur confirm-dialog ">
     <div class="relative px-4 min-h-screen md:flex md:items-center md:justify-center">
@@ -198,19 +217,19 @@ const index = () => {
         <div class="bg-white rounded-lg md:max-w-md md:mx-auto p-4 fixed inset-x-0 bottom-0 z-50 mb-4 mx-4 md:relative shadow-lg">
             <div class="md:flex items-center">
                 <div class="rounded-full border border-gray-300 flex items-center justify-center w-16 h-16 flex-shrink-0 mx-auto">
-                <i class="bx bx-error text-3xl">
-                &#9888;
+                <i class="bx bx-confirm text-3xl">
+               &#9745;
                 </i>
                 </div>
                 <div class="mt-4 md:mt-0 md:ml-6 text-center md:text-left">
-                <p class="font-bold">Warning!</p>
-                <p class="text-sm text-gray-700 mt-1">You will lose all of your data by deleting this. This action cannot be undone.
+                <p class="font-bold text-gray-700">Confirm Order</p>
+                <p class="text-sm text-gray-700 mt-1">Are you sure this Order has been Shipped?. This action cannot be undone.
                 </p>
                 </div>
             </div>
             <div class="text-center md:text-right mt-4 md:flex md:justify-end">
-                <button id="confirm-delete-btn" class="block w-full md:inline-block md:w-auto px-4 py-3 md:py-2 bg-red-200 text-red-700 rounded-lg font-semibold text-sm md:ml-2 md:order-2">
-                    Delete
+                <button onClick={confirmOrder}   id="confirm-delete-btn" class="block w-full md:inline-block md:w-auto px-4 py-3 md:py-2 bg-green-200 text-green-700 rounded-lg font-semibold text-sm md:ml-2 md:order-2">
+                    Confirmed
                 </button>
                 <button onClick={()=>setDeleteOrd(false)} id="confirm-cancel-btn" class="block w-full md:inline-block md:w-auto px-4 py-3 md:py-2 bg-gray-200 rounded-lg font-semibold text-sm mt-4 md:mt-0 md:order-1">
                 Cancel
