@@ -27,7 +27,8 @@ const Products = () => {
         setTotalProducts(result.totalProducts)
         setOutOfstock(result.outOfStock)
         setAvalibleStock(result.inStock)
-        console.log(result.totalProducts)
+        // console.log(result.totalProducts)
+        // console.log(result)
         }
       
         if(!localStorage.getItem('token')){
