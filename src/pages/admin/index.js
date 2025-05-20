@@ -79,9 +79,10 @@ const ref = useRef()
               body: JSON.stringify(data),
             });
             const result = await response.json();
+            console.log(result)
         setDeleteOrd(true)
         if(result.sucess){
-          toast.success('Order Status Updated Sucessfully', {
+          toast.success('Order Deleted Sucessfully', {
             position: "top-left",
         autoClose: 1500,
         hideProgressBar: false,
