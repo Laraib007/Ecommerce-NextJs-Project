@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { MdModeEditOutline } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
 import { VscGoToSearch } from "react-icons/vsc";
+import { ToastContainer, toast } from 'react-toastify';
 
 const index = () => {
     
@@ -34,6 +35,30 @@ const ref = useRef()
             const result = await response.json();
         console.log(result)
         setDeleteOrd(!deleteOrd)
+        if(result.sucess){
+          toast.success('Order Status Updated Sucessfully', {
+            position: "top-left",
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "colored"
+            });
+            setTimeout(() => {
+                  router.push("http://localhost:3000/admin")
+                }, 1500);
+              } else { toast.error('Some Error Occurred ', {
+                position: "top-left",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: false,
+                draggable: true,
+                progress: undefined,
+                theme: "colored"
+                });}
             }
       useEffect(() => {
         
@@ -64,6 +89,18 @@ const ref = useRef()
      
   return (
     <>
+     <ToastContainer
+    position="top-left"
+    autoClose={3000}
+    hideProgressBar={false}
+    newestOnTop
+    closeOnClick={false}
+    rtl={false}
+    pauseOnFocusLoss={false}
+    draggable
+    pauseOnHover={false}
+    theme="colored"
+    />
     <Sidebar/>
 
     <h1 style={{marginTop: "-4%"}} class=" ml-56 text-3xl font-bold title-font text-black mb-2  text-center">ADMIN DASHBOARD</h1>
