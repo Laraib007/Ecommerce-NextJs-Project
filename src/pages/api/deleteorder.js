@@ -5,7 +5,7 @@ const handler = async (req, res)=>{
     if(req.method == "POST"){
         const token = req.body.token
         console.log(token)
-        let o = await Orders.findOneAndUpdate({id: token}, {status: "completed"})
+        let o = await Orders.findOneAndDelete({id: token})
        await o.save()
        
         res.status(200).json({ "sucess": "sucess" });
