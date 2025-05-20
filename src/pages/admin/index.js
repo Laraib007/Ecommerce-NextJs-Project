@@ -19,8 +19,8 @@ const ref = useRef()
         setDeleteOrd(!deleteOrd)
     }
 
-    const confirmOrder = async (params, e)=>{
-          e.preventDefault()
+    const confirmOrder = async ( e)=>{
+        //   e.preventDefault()
           let token = orderId
             let data =  {token}
             
