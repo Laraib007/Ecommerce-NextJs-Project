@@ -80,7 +80,7 @@ const ref = useRef()
             });
             const result = await response.json();
             console.log(result)
-        setDeleteOrd(true)
+        setDeleteOrd(false)
         if(result.sucess){
           toast.success('Order Deleted Sucessfully', {
             position: "top-left",
@@ -130,7 +130,7 @@ const ref = useRef()
         else{
           orderFetch()
         }
-      }, [editOrd])
+      }, [editOrd, deleteOrd])
       
      
   return (
