@@ -6,9 +6,9 @@ const handler = async (req, res)=>{
         const token = req.body.token
         console.log(token)
         let o = await Orders.findOneAndDelete({id: token})
-       await o.save()
        
         res.status(200).json({ "sucess": "sucess" });
+        console.log(res)
     } else {
         res.status(400).json({err: "bad request"})
     }
