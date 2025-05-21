@@ -1,12 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Logo from "../component/Img/Clogo.png"
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 
 
 const Footer = () => {
+
+  const [router, setRouter] = useState(true)
+
+  const currentPath = usePathname()
+  
+   const footNotAppr = ["/admin", '/admin/products', '/admin/users', '/admin/addproduct']
+
+if(footNotAppr.includes(currentPath)){
+  return (()=>{
+    setRouter(false)
+  })
+}
   return (
     <div>
-        <footer className="text-gray-600 bg-slate-100 body-font body-font">
+        {router && <footer className="text-gray-600 bg-slate-100 body-font body-font">
   <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
     <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
       <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
@@ -117,7 +130,7 @@ const Footer = () => {
       </span>
     </div>
   </div>
-</footer>
+</footer>}
     </div>
   )
 }
