@@ -73,7 +73,6 @@ const onSubmit = async (e) =>{
   });
 
   const result = await response.json();
-  console.log(result)
 }
 const refreshVariants =(newsize, newcat)=>{
   setSize(newsize)
