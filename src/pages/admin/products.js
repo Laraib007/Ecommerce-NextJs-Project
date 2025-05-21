@@ -35,7 +35,6 @@ const Products = () => {
         setTotalProducts(result.totalProducts)
         setOutOfstock(result.outOfStock)
         setAvalibleStock(result.inStock)
-        // console.log(result)
         }
         if(!localStorage.getItem('token')){
           useRouter.push('/')
@@ -85,6 +84,10 @@ const updateUser = async (event)=>{
                     theme: "colored"
                         });
                   }
+                  setTitle("")
+                  setAvlQty("" )
+                  setPrice('')
+                 
                 }
   return (
     <>
