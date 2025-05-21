@@ -18,8 +18,8 @@ const Products = () => {
     const [avlQty, setAvlQty] = useState()
     const [price, setPrice] = useState()
     const [productId, setProductId] = useState()
-
-
+    const [prodrId, setProdrId] = useState()
+    const [deleteProd, setDeleteProd] = useState(false)
       useEffect(() => {
         
       const orderFetch = async ()=>{
@@ -42,7 +42,7 @@ const Products = () => {
         else{
           orderFetch()
         }
-      }, [title, avlQty, price])
+      }, [title, avlQty, price, deleteProd])
        const handleChange = (e)=> {
         if(e.target.name == "title"){
           setTitle(e.target.value)
@@ -87,8 +87,53 @@ const updateUser = async (event)=>{
                   setTitle("")
                   setAvlQty("" )
                   setPrice('')
+                  setProdrId('')
                  
                 }
+                 const deleteOrder = async ( e)=>{
+                        //   e.preventDefault()
+                          let token = prodrId
+                            let data =  {token}
+                            
+                            let response = await fetch('http://localhost:3000/api/deleteproduct', {
+                              method: 'POST',
+                              headers: {
+                                'Content-Type': 'application/json',
+                              },
+                              body: JSON.stringify(data),
+                            });
+                            const result = await response.json();
+                            console.log(result)
+                        setDeleteProd(false)
+                        if(result.sucess){
+                          toast.success('Order Deleted Sucessfully', {
+                            position: "top-left",
+                        autoClose: 1500,
+                        hideProgressBar: false,
+                        closeOnClick: false,
+                        pauseOnHover: false,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "colored"
+                            });
+                            // setTimeout(() => {
+                            //       router.push("http://localhost:3000/admin")
+                            //     }, 1500);
+                              } else { toast.error('Some Error Occurred ', {
+                                position: "top-left",
+                                autoClose: 3000,
+                                hideProgressBar: false,
+                                closeOnClick: false,
+                                pauseOnHover: false,
+                                draggable: true,
+                                progress: undefined,
+                                theme: "colored"
+                                });}
+                            }
+                            const toggleDeleteProd =(params) =>{
+        setProdrId(params)
+        setDeleteProd(!deleteProd)
+    }
   return (
     <>
       <ToastContainer
@@ -292,7 +337,34 @@ const updateUser = async (event)=>{
         </div>
       </div>
     </div>}
-                                    <MdDelete  className=' hover:bg-red-500' />
+                                    <MdDelete onClick={()=>toggleDeleteProd(item._id)} className=' hover:bg-red-500' />
+                                     {deleteProd && <div class="fixed inset-0 flex items-center justify-center z-50 backdrop-blur confirm-dialog ">
+    <div class="relative px-4 min-h-screen md:flex md:items-center md:justify-center">
+        <div class=" opacity-25 w-full h-full absolute z-10 inset-0"></div>
+        <div class="bg-white rounded-lg md:max-w-md md:mx-auto p-4 fixed inset-x-0 bottom-0 z-50 mb-4 mx-4 md:relative shadow-lg">
+            <div class="md:flex items-center">
+                <div class="rounded-full border border-gray-300 flex items-center justify-center w-16 h-16 flex-shrink-0 mx-auto">
+                <i class="bx bx-confirm text-3xl">
+               &#9745;
+                </i>
+                </div>
+                <div class="mt-4 md:mt-0 md:ml-6 text-center md:text-left">
+                <p class="font-bold text-gray-700">Delete Order</p>
+                <p class="text-sm text-gray-700 mt-1">Are you sure you want to delete this Order?. This action cannot be undone.
+                </p>
+                </div>
+            </div>
+            <div class="text-center md:text-right mt-4 md:flex md:justify-end">
+                <button onClick={deleteOrder}   id="confirm-delete-btn" class="block w-full md:inline-block md:w-auto px-4 py-3 md:py-2 bg-green-200 text-green-700 rounded-lg font-semibold text-sm md:ml-2 md:order-2">
+                    Confirmed
+                </button>
+                <button onClick={()=>setDeleteProd(false)} id="confirm-cancel-btn" class="block w-full md:inline-block md:w-auto px-4 py-3 md:py-2 bg-gray-200 rounded-lg font-semibold text-sm mt-4 md:mt-0 md:order-1">
+                Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+</div>}
                                     <VscGoToSearch  className=' hover:bg-blue-500' />
                                     </div>
                               </div>
