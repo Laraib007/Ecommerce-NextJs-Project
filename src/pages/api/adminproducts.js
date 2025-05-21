@@ -15,7 +15,6 @@ const handler = async (req, res)=>{
     inStock += item.avalibleQty == item.avalibleQty
   }
   }
-  console.log(res)
   res.status(200).json({ outOfStock, totalProducts, product, inStock} );
 }
 }
