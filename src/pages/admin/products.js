@@ -35,17 +35,15 @@ const Products = () => {
         setTotalProducts(result.totalProducts)
         setOutOfstock(result.outOfStock)
         setAvalibleStock(result.inStock)
-        // console.log(result.totalProducts)
         // console.log(result)
         }
-      
         if(!localStorage.getItem('token')){
           useRouter.push('/')
         }
         else{
           orderFetch()
         }
-      }, [])
+      }, [title, avlQty, price])
        const handleChange = (e)=> {
         if(e.target.name == "title"){
           setTitle(e.target.value)
@@ -63,11 +61,10 @@ const Products = () => {
         setProductId(params)
         setHidden(!hidden)
     }
-const updateUser = async (e)=>{
-                e.preventDefault()
+const updateUser = async (event)=>{
+                event.preventDefault()
                   let data =  {productId, title, avlQty, price}
-                  console.log(productId)
-                //   setHidden(false)
+                  setHidden(false)
                   let response = await fetch('http://localhost:3000/api/updateproducts', {
                     method: 'POST',
                     headers: {
@@ -77,7 +74,6 @@ const updateUser = async (e)=>{
                   });
                   const result = await response.json();
                   if(response.status == "200"){
-                    console.log(result)
                     toast.success(result.sucess, {
                         position: "top-left",
                     autoClose: 2400,
@@ -286,7 +282,7 @@ const updateUser = async (e)=>{
               
                          </div>
             <div class="border-t border-gray-200 pt-4 dark:border-gray-700 md:pt-5">
-              <button onClick={()=>updateUser(e)} class="me-2 inline-flex items-center rounded-lg bg-green-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-primary-300  dark:hover:bg-primary-700 dark:focus:ring-primary-800">Update Product</button>
+              <button onClick={()=>updateUser(event)} class="me-2 inline-flex items-center rounded-lg bg-green-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-primary-300  dark:hover:bg-primary-700 dark:focus:ring-primary-800">Update Product</button>
               <button onClick={()=>setHidden(false)} class="me-2 rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-white hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700">Cancel</button>
             </div>
           </form>
