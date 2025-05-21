@@ -8,7 +8,6 @@ const handler = async (req, res)=>{
          let avlQty = req.body.avlQty
          let price = req.body.price
 
-        console.log(_id, title, avlQty, price)
         let p = await Products.findByIdAndUpdate(_id, {title, "avalibleQty": avlQty, price})
        await p.save()
        
