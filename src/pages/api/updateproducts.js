@@ -3,11 +3,16 @@ import connectDB from "../../../middleware.js/mongoose";
 
 const handler = async (req, res)=>{
     if(req.method == "POST"){
-        let {title, avlQty, price} = req.body
-        let p = await Products.findOneAndUpdate(req.body._id, {title, avlQty, price})
+         let _id = req.body.productId
+        let title = req.body.title
+         let avlQty = req.body.avlQty
+         let price = req.body.price
+
+        console.log(_id, title, avlQty, price)
+        let p = await Products.findByIdAndUpdate(_id, {title, "avalibleQty": avlQty, price})
        await p.save()
        
-        res.status(200).json({ "sucess": "sucess" });
+        res.status(200).json({ "sucess": "Product Update Sucessfully" });
     } else {
         res.status(400).json({err: "bad request"})
     }
