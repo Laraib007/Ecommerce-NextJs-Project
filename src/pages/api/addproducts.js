@@ -21,7 +21,6 @@ const handler = async (req, res)=>{
        await p.save()
        
     }
-       console.log(req.body)
         res.status(200).json({ "sucess": "sucess" });
     } else {
         res.status(400).json({err: "bad request"})
