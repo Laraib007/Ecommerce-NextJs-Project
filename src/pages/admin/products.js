@@ -246,15 +246,8 @@ const updateUser = async (e)=>{
                                
                                 
                                <div className='flex space-x-4 text-xl'>
-                                   <MdModeEditOutline className=' hover:bg-green-500' />
-                                   <button  onClick={()=>toggleEdit(item._id) } type="button" data-modal-target="accountInformationModal2" data-modal-toggle="accountInformationModal2" class="inline-flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-800 bg-blue-600 focus:outline-none focus:ring-4 focus:ring-primary-300  dark:hover:bg-primary-700 dark:focus:ring-primary-800 sm:w-auto">
-          <svg class="-ms-0.5 me-1.5 h-4 w-4" aria-hidden="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14.304 4.844 2.852 2.852M7 7H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-4.5m2.409-9.91a2.017 2.017 0 0 1 0 2.853l-6.844 6.844L8 14l.713-3.565 6.844-6.844a2.015 2.015 0 0 1 2.852 0Z"></path>
-          </svg>
-          Update Your Info
-        </button>
-      </div>
-      
+                                   <MdModeEditOutline  onClick={()=>toggleEdit(item._id) } className=' hover:bg-green-500' />
+         
     {/* <!-- Account Information Modal --> */}
     <div className='justify-center center'>
    {hidden && <div id="accountInformationModal2" tabIndex="-1" aria-hidden="false" class="max-h-auto fixed left-0 right-0 top-0 z-50  h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden antialiased md:inset-0">
@@ -293,8 +286,8 @@ const updateUser = async (e)=>{
               
                          </div>
             <div class="border-t border-gray-200 pt-4 dark:border-gray-700 md:pt-5">
-              <button onClick={()=>updateUser()} type="submit" class="me-2 inline-flex items-center rounded-lg bg-green-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-primary-300  dark:hover:bg-primary-700 dark:focus:ring-primary-800">Update Product</button>
-              <button onClick={()=>setHidden(false)} type="button" data-modal-toggle="accountInformationModal2" class="me-2 rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-white hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700">Cancel</button>
+              <button onClick={()=>updateUser()} class="me-2 inline-flex items-center rounded-lg bg-green-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-primary-300  dark:hover:bg-primary-700 dark:focus:ring-primary-800">Update Product</button>
+              <button onClick={()=>setHidden(false)} class="me-2 rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-white hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700">Cancel</button>
             </div>
           </form>
         </div>
@@ -302,9 +295,12 @@ const updateUser = async (e)=>{
     </div>}
                                     <MdDelete  className=' hover:bg-red-500' />
                                     <VscGoToSearch  className=' hover:bg-blue-500' />
+                                    </div>
                               </div>
+                                
                             </td>
                         </tr>
+                        
                         })}
                     </tbody>
                 </table>
