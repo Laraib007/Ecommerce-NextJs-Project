@@ -33,7 +33,7 @@ const Users = () => {
             else{
               orderFetch()
             }
-          }, [])
+          }, [deleteUser])
           const deleteUserFunc = async ( e)=>{
                                   //   e.preventDefault()
                                     let token = userdrId
