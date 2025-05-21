@@ -4,7 +4,7 @@ import Users from "../../../models/Users";
 const handler = async (req, res)=>{
     if(req.method == "POST"){
         const token = req.body.token
-        let o = await Users.findOneAndDelete({id: token})
+        let o = await Users.findOneAndDelete({_id: token})
        
         res.status(200).json({ "sucess": "User Delete Successfully" });
     } else {
