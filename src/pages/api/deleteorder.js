@@ -4,7 +4,7 @@ import Orders from "../../../models/Orders";
 const handler = async (req, res)=>{
     if(req.method == "POST"){
         const token = req.body.token
-        let o = await Orders.findOneAndDelete({id: token})
+        let o = await Orders.findByIdAndDelete({_id: token})
        
         res.status(200).json({ "sucess": "sucess" });
     } else {
