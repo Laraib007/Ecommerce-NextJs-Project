@@ -4,7 +4,6 @@ import Orders from "../../../models/Orders";
 const handler = async (req, res)=>{
     if(req.method == "POST"){
         const token = req.body.token
-        console.log(token)
         let o = await Orders.findOneAndUpdate({id: token}, {status: "completed"})
        await o.save()
        
