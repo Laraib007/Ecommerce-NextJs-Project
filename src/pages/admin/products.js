@@ -64,7 +64,7 @@ const Products = () => {
         setHidden(!hidden)
     }
 const updateUser = async (e)=>{
-                // e.preventDefault()
+                e.preventDefault()
                   let data =  {productId, title, avlQty, price}
                   console.log(productId)
                 //   setHidden(false)
