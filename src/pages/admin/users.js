@@ -1,6 +1,6 @@
 import Sidebar from './sideBar'
 import React, { useEffect, useState } from 'react'
-import { useRouter } from 'next/router';
+import Router from 'next/router';
 import Link from 'next/link'
 import { MdModeEditOutline } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
@@ -27,8 +27,8 @@ const Users = () => {
             console.log(result.totalProducts)
             }
           
-            if(!localStorage.getItem('token')){
-              useRouter.push('/')
+            if(!localStorage.getItem('admintoken')){
+             Router.push('/')
             }
             else{
               orderFetch()
