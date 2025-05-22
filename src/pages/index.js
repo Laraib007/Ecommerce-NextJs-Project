@@ -48,17 +48,17 @@ pagination: {
 <div class="swiper-wrapper">
 <div class="swiper-slide">
   <div class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center">
-    <span class="text-3xl font-semibold text-indigo-600">Slide 1 </span>
+    <Image src={slider1} height={1000} width={1300} />
   </div>
 </div>
 <div class="swiper-slide">
   <div class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center">
-    <span class="text-3xl font-semibold text-indigo-600">Slide 2 </span>
+     <Image src={slider2} height={1000} width={1300} />
   </div>
 </div>
 <div class="swiper-slide">
   <div class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center">
-    <span class="text-3xl font-semibold text-indigo-600">Slide 3 </span>
+     <Image src={slider3} height={1000} width={1300} />
   </div>
 </div>
 </div>
