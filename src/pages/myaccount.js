@@ -12,6 +12,9 @@ const Myaccount = () => {
       const [nearby, setNearBy] = useState()
       const [address, setAddress] = useState()
       const [user, setUser] = useState()
+      const [ppass, setPpass] = useState()
+      const [pass, setPass] = useState()
+      const [cpass, setCpass] = useState()
       const { push } = useRouter()
     
     
@@ -40,6 +43,15 @@ const Myaccount = () => {
               }
               else if(e.target.name == "address"){
                 setAddress(e.target.value)
+                }
+                else if(e.target.name == "ppass"){
+                setPpass(e.target.value)
+                }
+                else if(e.target.name == "pass"){
+                setPass(e.target.value)
+                }
+                else if(e.target.name == "cpass"){
+                setCpass(e.target.value)
                 }
          }
 
@@ -94,6 +106,8 @@ const updateUser = async (e)=>{
           });
     }
   }
+
+  const updatePass =()=>{}
   return (
     <div><section class="bg-white py-8 antialiased  md:py-8">
          <ToastContainer
@@ -258,12 +272,12 @@ theme="colored"
         <div class="relative rounded-lg bg-white shadow dark:bg-gray-800">
           {/* <!-- Modal header --> */}
           <div class="flex items-center justify-between rounded-t border-b border-gray-200 p-4 dark:border-gray-700 md:p-5">
-            <h3 class="text-lg font-semibold text-white ">Account Information</h3>
-            <button onClick={()=>setHidden(false)} type="button" class="ms-auto inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="accountInformationModal2">
+            <h3 class="text-lg font-semibold text-white ">Password Update</h3>
+            <button onClick={()=>setHiddenpass(false)} type="button" class="ms-auto inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="accountInformationModal2">
               <svg class="h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
               </svg>
-              <span class="sr-only">Close modal</span>
+              <span class="sr-only">Close</span>
             </button>
           </div>
           {/* <!-- Modal body --> */}
@@ -272,21 +286,24 @@ theme="colored"
              
   
               <div class="col-span-2 ">
-                <label for="full_name_info_modal" class="mb-2 block text-sm font-medium text-white "> Your Full Name* </label>
-                <input onChange={handleChange} value={name} name='name' type="text" id="full_name_info_modal" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="Enter your first name" required />
+                <label for="full_name_info_modal" class="mb-2 block text-sm font-medium text-white "> Your Previous Password* </label>
+                <input onChange={handleChange} value={ppass} name='ppass' type="text" id="full_name_info_modal" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="Enter your first name" required />
                 <div class="col-span-2 sm:col-span-1">
                 <div class="mb-2 flex items-center gap-2">
                   <label for="select_city_input_billing_modal" class="block text-sm font-medium text-white "> City* </label>
                 </div>
-                <input onChange={handleChange} value={city} name='city' type="text" id="phone-input" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="City" />
+                <input onChange={handleChange} value={pass} name='pass' type="text" id="pass" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="City" />
               </div>
               </div>
               <div class="col-span-2">
                 <label for="pick-up-point-input" class="mb-2 block text-sm font-medium text-white "> Nearby point* </label>
-                <input onChange={handleChange} value={nearby} name='nearby' type="text" id="pick-up-point-input" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="Enter the pick-up point name" required />
+                <input onChange={handleChange} value={cpass} name='cpass' type="text" id="cpass" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="Enter the pick-up point name" required />
               </div>
               
-             
+              <div class="border-t border-gray-200 pt-4 dark:border-gray-700 md:pt-5">
+              <button onClick={updatePass} type="submit" class="me-2 inline-flex items-center rounded-lg bg-green-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-primary-300  dark:hover:bg-primary-700 dark:focus:ring-primary-800">Update Password</button>
+              <button onClick={()=>setHiddenpass(false)} type="button" data-modal-toggle="accountInformationModal2" class="me-2 rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-white hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700">Cancel</button>
+            </div>
                 </div>
                 
                 
