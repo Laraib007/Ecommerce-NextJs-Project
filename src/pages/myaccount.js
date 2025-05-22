@@ -14,7 +14,7 @@ const Myaccount = () => {
       const [address, setAddress] = useState()
       const [user, setUser] = useState()
       const [ppass, setPpass] = useState()
-      const [pass, setPass] = useState()
+      const [password, setPass] = useState()
       const [cpass, setCpass] = useState()
       const { push } = useRouter()
     
@@ -48,7 +48,7 @@ const Myaccount = () => {
                 else if(e.target.name == "ppass"){
                 setPpass(e.target.value)
                 }
-                else if(e.target.name == "pass"){
+                else if(e.target.name == "password"){
                 setPass(e.target.value)
                 }
                 else if(e.target.name == "cpass"){
@@ -110,7 +110,7 @@ const updateUser = async (e)=>{
 
   const updatePass = async (event)=>{
     event.preventDefault()
-    if(pass !== cpass){
+    if(password !== cpass){
       toast.error("Password and Confirm Password not Matched", {
           position: "top-left",
       autoClose: 2400,
@@ -134,6 +134,19 @@ const updateUser = async (e)=>{
   });
 
   const result = await response.json();
+  console.log(result)
+  if(result.sucess){
+    toast.error("Password Updated Sucessfully", {
+          position: "top-left",
+      autoClose: 2400,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "colored"
+          });
+  }
 }
   }
   return (
@@ -320,7 +333,7 @@ theme="colored"
                 <div class="mb-2 flex items-center gap-2">
                   <label for="select_city_input_billing_modal" class="block text-sm font-medium text-white "> New Password* </label>
                 </div>
-                <input onChange={handleChange} value={pass} name='pass' type="text" id="pass" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="New Password" />
+                <input onChange={handleChange} value={password} name='password' type="text" id="password" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="New Password" />
               </div>
               </div>
               <div class="col-span-2">
