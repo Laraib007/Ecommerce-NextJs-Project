@@ -3,17 +3,16 @@ import img from '../../component/Img/Clogo.png'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ToastContainer, toast } from 'react-toastify';
-import { useRouter } from 'next/router';
+import  Router  from 'next/router';
 
 const Login = () => {
    const [email, setEmail] = useState()
   const [password, setPassword] = useState()
   
-  const router = useRouter()
 
   useEffect(() => {
-    if(localStorage.getItem('token')){
-      router.push("/admin/")
+    if(localStorage.getItem('admintoken')){
+      Router.push("/admin/")
     }
   
     
@@ -55,10 +54,10 @@ draggable: true,
 progress: undefined,
 theme: "colored"
     });
-localStorage.setItem("token", result.token)
+localStorage.setItem("admintoken", result.token)
 localStorage.setItem("email", result.email)
     setTimeout(() => {
-      router.push("http://localhost:3000/admin/")
+      Router.push("http://localhost:3000/admin/")
     }, 2000);
   } else { toast.error('Wrong Credentials ', {
     position: "top-left",
