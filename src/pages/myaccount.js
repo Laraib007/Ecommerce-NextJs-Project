@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
+var jwt = require('jsonwebtoken');
 
 const Myaccount = () => {
     const [hidden, setHidden] = useState(false)
@@ -107,7 +108,7 @@ const updateUser = async (e)=>{
     }
   }
 
-  const updatePass =(event)=>{
+  const updatePass = async (event)=>{
     event.preventDefault()
     if(pass !== cpass){
       toast.error("Password and Confirm Password not Matched", {
@@ -122,6 +123,18 @@ const updateUser = async (e)=>{
           });
           return
     }
+    if(localStorage.getItem("token")){
+  let data = {email, password}
+  let response = await fetch('http://localhost:3000/api/updatepassword', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  });
+
+  const result = await response.json();
+}
   }
   return (
     <div><section class="bg-white py-8 antialiased  md:py-8">
