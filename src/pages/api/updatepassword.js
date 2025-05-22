@@ -5,15 +5,13 @@ var jwt = require('jsonwebtoken');
 
 const handler = async (req, res)=>{
     if(req.method == "POST"){
-      
-
         let u = await Users.findOne({email: req.body.email})
         var bytes  = CryptoJS.AES.decrypt(u.password, 'topsecret');
         var originalText = bytes.toString(CryptoJS.enc.Utf8);
               if(u){
                     if(req.body.email ==  u.email && req.body.password  == originalText){
-                        var token = jwt.sign({email:u.email, name:u.name },'topsecret');
-                        res.status(200).json({ sucess: "sucess", token, email: req.body.email });
+                         await Users.findOneAndUpdate({email: req.body.email}, {password: CryptoJS.AES.encrypt(req.body.password, 'topsecret').toString()});
+                        res.status(200).json({ sucess: "sucess", email: req.body.email });
                     }
                     else{
                         res.status(404).json({ warning: "Invalid Creditionals" })
