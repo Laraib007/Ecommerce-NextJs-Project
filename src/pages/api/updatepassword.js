@@ -9,7 +9,7 @@ const handler = async (req, res)=>{
         var bytes  = CryptoJS.AES.decrypt(u.password, 'topsecret');
         var originalText = bytes.toString(CryptoJS.enc.Utf8);
               if(u){
-                    if(req.body.email ==  u.email && req.body.password  == originalText){
+                    if(req.body.email ==  u.email && req.body.ppass  == originalText){
                          await Users.findOneAndUpdate({email: req.body.email}, {password: CryptoJS.AES.encrypt(req.body.password, 'topsecret').toString()});
                         res.status(200).json({ sucess: "sucess", email: req.body.email });
                     }
