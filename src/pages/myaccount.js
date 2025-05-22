@@ -124,7 +124,7 @@ const updateUser = async (e)=>{
           return
     }
     if(localStorage.getItem("token")){
-  let data = {email, password}
+  let data = {email, password, ppass}
   let response = await fetch('http://localhost:3000/api/updatepassword', {
     method: 'POST',
     headers: {
@@ -136,7 +136,7 @@ const updateUser = async (e)=>{
   const result = await response.json();
   console.log(result)
   if(result.sucess){
-    toast.error("Password Updated Sucessfully", {
+    toast.success("Password Updated Sucessfully", {
           position: "top-left",
       autoClose: 2400,
       hideProgressBar: false,
