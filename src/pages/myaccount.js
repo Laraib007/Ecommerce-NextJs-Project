@@ -107,7 +107,22 @@ const updateUser = async (e)=>{
     }
   }
 
-  const updatePass =()=>{}
+  const updatePass =(event)=>{
+    event.preventDefault()
+    if(pass !== cpass){
+      toast.error("Password and Confirm Password not Matched", {
+          position: "top-left",
+      autoClose: 2400,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "colored"
+          });
+          return
+    }
+  }
   return (
     <div><section class="bg-white py-8 antialiased  md:py-8">
          <ToastContainer
@@ -290,14 +305,14 @@ theme="colored"
                 <input onChange={handleChange} value={ppass} name='ppass' type="text" id="full_name_info_modal" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="Enter your first name" required />
                 <div class="col-span-2 sm:col-span-1">
                 <div class="mb-2 flex items-center gap-2">
-                  <label for="select_city_input_billing_modal" class="block text-sm font-medium text-white "> City* </label>
+                  <label for="select_city_input_billing_modal" class="block text-sm font-medium text-white "> New Password* </label>
                 </div>
-                <input onChange={handleChange} value={pass} name='pass' type="text" id="pass" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="City" />
+                <input onChange={handleChange} value={pass} name='pass' type="text" id="pass" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="New Password" />
               </div>
               </div>
               <div class="col-span-2">
-                <label for="pick-up-point-input" class="mb-2 block text-sm font-medium text-white "> Nearby point* </label>
-                <input onChange={handleChange} value={cpass} name='cpass' type="text" id="cpass" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="Enter the pick-up point name" required />
+                <label for="pick-up-point-input" class="mb-2 block text-sm font-medium text-white ">Confirm Password* </label>
+                <input onChange={handleChange} value={cpass} name='cpass' type="text" id="cpass" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-white focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700  dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="Confirm Password" required />
               </div>
               
               <div class="border-t border-gray-200 pt-4 dark:border-gray-700 md:pt-5">
