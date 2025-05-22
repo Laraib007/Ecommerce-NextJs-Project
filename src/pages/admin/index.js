@@ -1,6 +1,6 @@
 import Sidebar from './sideBar'
 import React, { useEffect, useRef, useState } from 'react'
-import { useRouter } from 'next/router';
+import Router from 'next/router';
 import Link from 'next/link'
 import { MdModeEditOutline } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
@@ -114,7 +114,7 @@ const ref = useRef()
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({token: localStorage.getItem('token')}),
+          body: JSON.stringify({token: localStorage.getItem('admintoken')}),
         });
       
         const result = await response.json();
@@ -124,8 +124,8 @@ const ref = useRef()
         console.log(result)
         }
       
-        if(!localStorage.getItem('token')){
-          useRouter.push('/')
+        if(!localStorage.getItem('admintoken')){
+          Router.push('/')
         }
         else{
           orderFetch()
