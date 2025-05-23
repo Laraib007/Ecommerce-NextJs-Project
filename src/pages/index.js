@@ -3,6 +3,9 @@ import localFont from "next/font/local";
 import slider1 from "../component/Img/slider1.jpg"
 import slider2 from "../component/Img/slider2.jpg"
 import slider3 from "../component/Img/slider3.jpg"
+import Swiper from 'swiper';
+// import Swiper styles
+import 'swiper/css';
 import Head from "next/head";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -16,25 +19,18 @@ const geistMono = localFont({
 });
 
 export default function Home() {
-// set the modal menu element
-const $targetEl = document.getElementById('modalEl');
-
-// options with default values
-const options = {
-  placement: 'bottom-right',
-  backdrop: 'dynamic',
-  backdropClasses: 'bg-gray-900/50 dark:bg-gray-900/80 fixed inset-0 z-40',
-  closable: true,
-  onHide: () => {
-      console.log('modal is hidden');
-  },
-  onShow: () => {
-      console.log('modal is shown');
-  },
-  onToggle: () => {
-      console.log('modal has been toggled');
-  }
-};
+  var swiper = new Swiper(".progress-slide-carousel", {
+loop: true,
+fraction: true,
+autoplay: {
+  delay: 1200,
+  disableOnInteraction: false,
+},
+pagination: {
+  el: ".progress-slide-carousel .swiper-pagination",
+  type: "progressbar",
+},
+});
   return (
     <>
     <Head>
@@ -51,38 +47,17 @@ const options = {
 
 
 
-
-<div id="default-carousel" class="relative w-full" data-carousel="slide">
+<div id="gallery" class="relative w-full" data-carousel="slide">
     {/* <!-- Carousel wrapper --> */}
     <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
          {/* <!-- Item 1 --> */}
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-1.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+        <div class=" duration-700 ease-in-out" data-carousel-item>
+            <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt=""/>
         </div>
         {/* <!-- Item 2 --> */}
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-2.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
-        </div>
-        {/* <!-- Item 3 --> */}
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-3.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
-        </div>
-        {/* <!-- Item 4 --> */}
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-4.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
-        </div>
-        {/* <!-- Item 5 --> */}
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-5.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
-        </div>
+        <div class=" duration-700 ease-in-out" data-carousel-item="active">
+            <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt=""/>
     </div>
-    {/* <!-- Slider indicators --> */}
-    <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
     </div>
     {/* <!-- Slider controls --> */}
     <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
@@ -102,8 +77,6 @@ const options = {
         </span>
     </button>
 </div>
-
-
 
 
     <div className="flex flex-wrap -m-4">
@@ -179,7 +152,6 @@ const options = {
     </div>
   </div>
 </section>
-<script src="../path/to/flowbite/dist/flowbite.min.js"></script>
     </>
   );
 }
