@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-  @import url('keen-slider/keen-slider.css');
-
 body{
     overflow-x: hidden;
 }
