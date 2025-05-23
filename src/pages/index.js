@@ -4,16 +4,6 @@ import slider1 from "../component/Img/slider1.jpg"
 import slider2 from "../component/Img/slider2.jpg"
 import slider3 from "../component/Img/slider3.jpg"
 
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-
 import Head from "next/head";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,6 +20,10 @@ export default function Home() {
 
   return (
     <>
+    <Head>
+      <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    </Head>
      <section className="text-gray-600 body-font">
   <div className="container px-5 py-24 mx-auto">
     <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center">
@@ -39,26 +33,6 @@ export default function Home() {
     
 
 
-
-
-
- <Swiper
-      // install Swiper modules
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={50}
-      slidesPerView={1}
-      navigation
-      pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
-    >
-      <SwiperSlide><Image src={slider1} width={100} height={100}/></SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
-      ...
-    </Swiper>
 
 
 
