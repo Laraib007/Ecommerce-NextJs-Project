@@ -4,7 +4,8 @@ import slider1 from "../component/Img/slider1.jpg"
 import slider2 from "../component/Img/slider2.jpg"
 import slider3 from "../component/Img/slider3.jpg"
 
-
+import 'keen-slider/keen-slider.min.css'
+import KeenSlider from 'keen-slider'
 
 import Head from "next/head";
 const geistSans = localFont({
@@ -19,7 +20,18 @@ const geistMono = localFont({
 });
 
 export default function Home() {
-
+var slider = new KeenSlider(
+  '#my-slider',
+  {
+    loop: true,
+    created: () => {
+      console.log('created')
+    },
+  },
+  [
+    // add plugins here
+  ]
+)
   return (
     <>
      <section className="text-gray-600 body-font">
@@ -33,7 +45,16 @@ export default function Home() {
 
 
 
-
+<template>
+  <div ref="container" class="keen-slider">
+    <div class="keen-slider__slide number-slide1">1</div>
+    <div class="keen-slider__slide number-slide2">2</div>
+    <div class="keen-slider__slide number-slide3">3</div>
+    <div class="keen-slider__slide number-slide4">4</div>
+    <div class="keen-slider__slide number-slide5">5</div>
+    <div class="keen-slider__slide number-slide6">6</div>
+  </div>
+</template>
 
 
 
