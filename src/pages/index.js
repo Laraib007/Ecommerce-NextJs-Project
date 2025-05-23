@@ -3,9 +3,10 @@ import localFont from "next/font/local";
 import slider1 from "../component/Img/slider1.jpg"
 import slider2 from "../component/Img/slider2.jpg"
 import slider3 from "../component/Img/slider3.jpg"
-import Swiper from 'swiper';
-// import Swiper styles
-import 'swiper/css';
+import {  Carousel,  initTWE,} from "tw-elements";
+
+
+
 import Head from "next/head";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -36,29 +37,49 @@ export default function Home() {
 
 
 
-{/* <!--HTML CODE--> */}
-<div class="w-full relative">
-<div class="swiper progress-slide-carousel swiper-container relative">
-<div class="swiper-wrapper">
-<div class="swiper-slide">
-  <div class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center">
-    <span class="text-3xl font-semibold text-indigo-600">Slide 1 </span>
+<div
+  id="carouselExampleSlidesOnly"
+  class="relative"
+  data-twe-carousel-init
+  data-twe-ride="carousel">
+  {/* <!--Carousel items--> */}
+  <div
+    class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+    {/* <!--First item--> */}
+    <div
+      class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+      data-twe-carousel-item
+      data-twe-carousel-active>
+      <img
+        src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"
+        class="block w-full"
+        alt="Wild Landscape" />
+    </div>
+    {/* <!--Second item--> */}
+    <div
+      class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+      data-twe-carousel-item>
+      <img
+        src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp"
+        class="block w-full"
+        alt="Camera" />
+    </div>
+    {/* <!--Third item--> */}
+    <div
+      class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+      data-twe-carousel-item>
+      <img
+        src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp"
+        class="block w-full"
+        alt="Exotic Fruits" />
+    </div>
   </div>
 </div>
-<div class="swiper-slide">
-  <div class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center">
-    <span class="text-3xl font-semibold text-indigo-600">Slide 2 </span>
-  </div>
-</div>
-<div class="swiper-slide">
-  <div class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center">
-    <span class="text-3xl font-semibold text-indigo-600">Slide 3 </span>
-  </div>
-</div>
-</div>
-<div class="swiper-pagination !bottom-2 !top-auto !w-80 right-0 mx-auto bg-gray-100"></div>
-</div>
-</div>
+
+
+
+
+
 
 
     <div className="flex flex-wrap -m-4">
