@@ -1,6 +1,4 @@
-const withFlowbiteReact = require("flowbite-react/plugin/nextjs");
-
-module.exports = withFlowbiteReact({)
+module.exports = {
   webpack5: true,
   webpack: (config) => {
     config.resolve.fallback = { fs: false };
