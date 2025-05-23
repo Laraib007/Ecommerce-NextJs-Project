@@ -52,7 +52,7 @@ export default function Home() {
     
 
 
-
+<div className="">
  <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -77,7 +77,7 @@ export default function Home() {
         <SwiperSlide>Slide 8</SwiperSlide>
         <SwiperSlide>Slide 9</SwiperSlide>
       </Swiper>
-
+</div>
 
     <div className="flex flex-wrap -m-4">
       <div className="xl:w-1/3 md:w-1/2 p-4">
