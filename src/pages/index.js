@@ -3,10 +3,8 @@ import localFont from "next/font/local";
 import slider1 from "../component/Img/slider1.jpg"
 import slider2 from "../component/Img/slider2.jpg"
 import slider3 from "../component/Img/slider3.jpg"
-import React from 'react'
-import useEmblaCarousel from 'embla-carousel-react'
 
-import Autoplay from 'embla-carousel-autoplay'
+
 
 import Head from "next/head";
 const geistSans = localFont({
@@ -21,7 +19,7 @@ const geistMono = localFont({
 });
 
 export default function Home() {
-const [emblaRef] = useEmblaCarousel({ loop: false }, [Autoplay()])
+
   return (
     <>
      <section className="text-gray-600 body-font">
@@ -34,13 +32,7 @@ const [emblaRef] = useEmblaCarousel({ loop: false }, [Autoplay()])
 
 
 
- <div className="embla" ref={emblaRef}>
-      <div className="embla__container">
-        <div className="embla__slide">Slide 1</div>
-        <div className="embla__slide">Slide 2</div>
-        <div className="embla__slide">Slide 3</div>
-      </div>
-    </div>
+
 
 
 
