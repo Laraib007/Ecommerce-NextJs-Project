@@ -19,18 +19,7 @@ const geistMono = localFont({
 });
 
 export default function Home() {
-var swiper = new Swiper(".progress-slide-carousel", {
-loop: true,
-fraction: true,
-autoplay: {
-  delay: 1200,
-  disableOnInteraction: false,
-},
-pagination: {
-  el: ".progress-slide-carousel .swiper-pagination",
-  type: "progressbar",
-},
-});
+
   return (
     <>
     <Head>
@@ -49,7 +38,7 @@ pagination: {
 
 {/* <!--HTML CODE--> */}
 <div class="w-full relative">
-<div class={"swiper progress-slide-carousel swiper-container relative"}>
+<div class="swiper progress-slide-carousel swiper-container relative">
 <div class="swiper-wrapper">
 <div class="swiper-slide">
   <div class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center">
