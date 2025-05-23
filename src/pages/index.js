@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import slider1 from "../component/Img/slider1.jpg"
 import slider2 from "../component/Img/slider2.jpg"
 import slider3 from "../component/Img/slider3.jpg"
-import {  Carousel,  initTWE,} from "tw-elements";
 
 
 
@@ -23,10 +22,6 @@ export default function Home() {
 
   return (
     <>
-    <Head>
-      <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    </Head>
      <section className="text-gray-600 body-font">
   <div className="container px-5 py-24 mx-auto">
     <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center">
@@ -37,44 +32,6 @@ export default function Home() {
 
 
 
-<div
-  id="carouselExampleSlidesOnly"
-  class="relative"
-  data-twe-carousel-init
-  data-twe-ride="carousel">
-  {/* <!--Carousel items--> */}
-  <div
-    class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
-    {/* <!--First item--> */}
-    <div
-      class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-      data-twe-carousel-item
-      data-twe-carousel-active>
-      <img
-        src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"
-        class="block w-full"
-        alt="Wild Landscape" />
-    </div>
-    {/* <!--Second item--> */}
-    <div
-      class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-      data-twe-carousel-item>
-      <img
-        src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp"
-        class="block w-full"
-        alt="Camera" />
-    </div>
-    {/* <!--Third item--> */}
-    <div
-      class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-      data-twe-carousel-item>
-      <img
-        src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp"
-        class="block w-full"
-        alt="Exotic Fruits" />
-    </div>
-  </div>
-</div>
 
 
 
