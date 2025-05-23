@@ -52,7 +52,7 @@ export default function Home() {
     
 
 
-<div className="">
+<div className=" z-10">
  <Swiper
         spaceBetween={30}
         centeredSlides={true}
