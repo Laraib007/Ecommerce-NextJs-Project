@@ -16,7 +16,25 @@ const geistMono = localFont({
 });
 
 export default function Home() {
+// set the modal menu element
+const $targetEl = document.getElementById('modalEl');
 
+// options with default values
+const options = {
+  placement: 'bottom-right',
+  backdrop: 'dynamic',
+  backdropClasses: 'bg-gray-900/50 dark:bg-gray-900/80 fixed inset-0 z-40',
+  closable: true,
+  onHide: () => {
+      console.log('modal is hidden');
+  },
+  onShow: () => {
+      console.log('modal is shown');
+  },
+  onToggle: () => {
+      console.log('modal has been toggled');
+  }
+};
   return (
     <>
     <Head>
@@ -161,6 +179,7 @@ export default function Home() {
     </div>
   </div>
 </section>
+<script src="../path/to/flowbite/dist/flowbite.min.js"></script>
     </>
   );
 }
