@@ -5,7 +5,7 @@ import slider2 from "../component/Img/slider2.jpg"
 import slider3 from "../component/Img/slider3.jpg"
 
 import 'keen-slider/keen-slider.min.css'
-import KeenSlider from 'keen-slider'
+import { useKeenSlider } from 'keen-slider/react'
 
 import Head from "next/head";
 const geistSans = localFont({
@@ -20,18 +20,17 @@ const geistMono = localFont({
 });
 
 export default function Home() {
-var slider = new KeenSlider(
-  '#my-slider',
-  {
-    loop: true,
-    created: () => {
-      console.log('created')
+ const [sliderRef, instanceRef] = useKeenSlider(
+    {
+      slideChanged() {
+        console.log('slide changed')
+      },
     },
-  },
-  [
-    // add plugins here
-  ]
-)
+    [
+      // add plugins here
+    ]
+  )
+
   return (
     <>
      <section className="text-gray-600 body-font">
@@ -45,16 +44,11 @@ var slider = new KeenSlider(
 
 
 
-<template>
-  <div ref="container" class="keen-slider">
-    <div class="keen-slider__slide number-slide1">1</div>
-    <div class="keen-slider__slide number-slide2">2</div>
-    <div class="keen-slider__slide number-slide3">3</div>
-    <div class="keen-slider__slide number-slide4">4</div>
-    <div class="keen-slider__slide number-slide5">5</div>
-    <div class="keen-slider__slide number-slide6">6</div>
-  </div>
-</template>
+  <div ref={sliderRef} className="keen-slider">
+      <div className="keen-slider__slide">1</div>
+      <div className="keen-slider__slide">2</div>
+      <div className="keen-slider__slide">3</div>
+    </div>
 
 
 
