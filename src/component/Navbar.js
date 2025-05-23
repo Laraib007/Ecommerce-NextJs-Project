@@ -74,7 +74,7 @@ const popUp =()=>{
  
   
   return (
-    <div className="bg-blend-screen text-gray-600 bg-slate-100 body-font ">
+    <div className="absolute z-20 text-gray-600 bg-slate-100 body-font ">
        <ToastContainer
 position="top-left"
 autoClose={3000}
