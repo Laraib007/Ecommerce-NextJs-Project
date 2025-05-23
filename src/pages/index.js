@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import slider1 from "../component/Img/slider1.jpg"
 import slider2 from "../component/Img/slider2.jpg"
 import slider3 from "../component/Img/slider3.jpg"
+import slider4 from "../component/Img/slider4.jpg"
+import slider5 from "../component/Img/slider5.jpg"
 import Head from "next/head";
 
 
@@ -44,15 +46,15 @@ export default function Home() {
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     </Head>
      <section className="text-gray-600 body-font">
-  <div className="container px-5 py-24 mx-auto">
-    <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center">
+  <div className="container px-5  mx-auto">
+    {/* <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center">
     <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Welcome to Our Ecommerce Store</h1>
       <p className="lg:w-1/2 w-full leading-relaxed text-gray-500">Wear Whatever you want! you want to wear the Latest Fashion? wear it with FashionWear.com</p>
-    </div>
+    </div> */}
     
 
 
-<div className=" z-10">
+<div className=" z-10 ">
  <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -67,15 +69,11 @@ export default function Home() {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        <SwiperSlide><Image src={slider1} width={"1600"} height={100} /></SwiperSlide>
+        <SwiperSlide><Image src={slider2} width={"1500"} height={100} /></SwiperSlide>
+        <SwiperSlide><Image src={slider3} width={"1600"} height={100} /></SwiperSlide>
+        <SwiperSlide><Image src={slider4} width={"1600"} height={100} /></SwiperSlide>
+        <SwiperSlide><Image src={slider5} width={"1600"} height={100} /></SwiperSlide>
       </Swiper>
 </div>
 
