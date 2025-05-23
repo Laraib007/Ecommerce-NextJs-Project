@@ -19,7 +19,7 @@ const geistMono = localFont({
 });
 
 export default function Home() {
-  var swiper = new Swiper(".progress-slide-carousel", {
+var swiper = new Swiper(".progress-slide-carousel", {
 loop: true,
 fraction: true,
 autoplay: {
