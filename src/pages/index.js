@@ -86,18 +86,16 @@ export default function Home() {
            <TbHanger className="w-8 h-8" />
           </div>
           <h2 className="text-lg text-gray-900 font-medium title-font mb-2">Premium Cloths</h2>
-          <p className="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.</p>
+          <p className="leading-relaxed text-base">Our T-Shirts are 100% made of cotton.</p>
         </div>
       </div>
       <div className="xl:w-1/3 md:w-1/2 p-4">
         <div className="border border-gray-200 p-6 rounded-lg">
           <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-pink-100 text-pink-500 mb-4">
-            <svg fill="none" stroke="currentColor" strokeLinecap="round" stroke-linejoin="round" strokWidth="2" className="w-6 h-6" viewBox="0 0 24 24">
-              <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
-            </svg>
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" class="text-3xl" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M624 352h-16V243.9c0-12.7-5.1-24.9-14.1-33.9L494 110.1c-9-9-21.2-14.1-33.9-14.1H416V48c0-26.5-21.5-48-48-48H112C85.5 0 64 21.5 64 48v48H8c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h272c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8H40c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h208c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8H8c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h208c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8H64v128c0 53 43 96 96 96s96-43 96-96h128c0 53 43 96 96 96s96-43 96-96h48c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zM160 464c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm320 0c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm80-208H416V144h44.1l99.9 99.9V256z"></path></svg>
           </div>
-          <h2 className="text-lg text-gray-900 font-medium title-font mb-2">Bunker</h2>
-          <p className="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.</p>
+          <h2 className="text-lg text-gray-900 font-medium title-font mb-2">Free Shipping</h2>
+          <p className="leading-relaxed text-base">We ship all over Pakistan for FREE.</p>
         </div>
       </div>
       <div className="xl:w-1/3 md:w-1/2 p-4">
