@@ -95,16 +95,20 @@ export default function Home() {
     </div>
     <div class="flex flex-wrap items-center justify-center -m-4">
       <div class="xl:w-2/5 md:w-1/2 p-4 ">
+      <Link href={"/tshirt"}>
         <div class="bg-gray-100  p-6 rounded-lg">
           <Image className="mx-auto" src={tshirt} height={600} width={250}/>
           <h3 class="tracking-widest text-indigo-500 text-xs  text-center font-medium title-font">TSHIRTS</h3>
         </div>
+        </Link>
       </div>
           <div class="xl:w-2/5 md:w-1/2 p-4 ">
+          <Link href={"/mugs"}>
         <div class="bg-gray-100  p-6 rounded-lg">
           <Image className="mx-auto" src={mugs} height={600} width={295}/>
           <h3 class="tracking-widest text-indigo-500 text-xs  text-center font-medium title-font">MUGS</h3>
         </div>
+        </Link>
       </div>
       
        <div class="xl:w-2/5 md:w-1/2 p-4 ">
@@ -117,10 +121,12 @@ export default function Home() {
       </div>
      
             <div class="xl:w-2/5 md:w-1/2 p-4 ">
+            <Link href={"/stickers"}>
         <div class="bg-gray-100  p-6 rounded-lg">
           <Image className="mx-auto" src={stickers} height={600} width={300}/>
           <h3 class="tracking-widest text-indigo-500  text-center text-xs font-medium title-font">STICKERS</h3>
         </div>
+        </Link>
       </div>
     </div>
   </div>
