@@ -9,6 +9,9 @@ import Head from "next/head";
 import { TbHanger } from "react-icons/tb";
 import { IoBagCheck } from "react-icons/io5";
 import tshirt from "../component/Img/tshirt.jpg"
+import mugs from "../component/Img/mugs.jpg"
+import hoodies from "../component/Img/hoodie.jpg"
+import stickers from "../component/Img/stickres.jpg"
 
 
 
@@ -25,6 +28,7 @@ import 'swiper/css/navigation';
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import Link from "next/link";
 
 
 
@@ -93,33 +97,29 @@ export default function Home() {
       <div class="xl:w-2/5 md:w-1/2 p-4 ">
         <div class="bg-gray-100  p-6 rounded-lg">
           <Image className="mx-auto" src={tshirt} height={600} width={250}/>
-          <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">SUBTITLE</h3>
-          <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Chichen Itza</h2>
-          <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+          <h3 class="tracking-widest text-indigo-500 text-xs  text-center font-medium title-font">TSHIRTS</h3>
         </div>
       </div>
-      <div class="xl:w-2/5 md:w-1/2 p-4">
-        <div class="bg-gray-100 p-6 rounded-lg">
-          <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://dummyimage.com/721x401" alt="content"/>
-          <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">SUBTITLE</h3>
-          <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Colosseum Roma</h2>
-          <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+          <div class="xl:w-2/5 md:w-1/2 p-4 ">
+        <div class="bg-gray-100  p-6 rounded-lg">
+          <Image className="mx-auto" src={mugs} height={600} width={295}/>
+          <h3 class="tracking-widest text-indigo-500 text-xs  text-center font-medium title-font">MUGS</h3>
         </div>
       </div>
-      <div class="xl:w-2/5 md:w-1/2 p-4">
-        <div class="bg-gray-100 p-6 rounded-lg">
-          <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://dummyimage.com/722x402" alt="content"/>
-          <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">SUBTITLE</h3>
-          <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Great Pyramid of Giza</h2>
-          <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+      
+       <div class="xl:w-2/5 md:w-1/2 p-4 ">
+       <Link href={"/hoodies"}>
+        <div class="bg-gray-100  p-6 rounded-lg">
+          <Image className="mx-auto" src={hoodies} height={600} width={320}/>
+          <h3 class="tracking-widest text-indigo-500 text-xs text-center font-medium title-font">HOODIES</h3>
         </div>
+         </Link>
       </div>
-      <div class="xl:w-2/5 md:w-1/2 p-4">
-        <div class="bg-gray-100 p-6 rounded-lg">
-          <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://dummyimage.com/723x403" alt="content"/>
-          <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">SUBTITLE</h3>
-          <h2 class="text-lg text-gray-900 font-medium title-font mb-4">San Francisco</h2>
-          <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+     
+            <div class="xl:w-2/5 md:w-1/2 p-4 ">
+        <div class="bg-gray-100  p-6 rounded-lg">
+          <Image className="mx-auto" src={stickers} height={600} width={300}/>
+          <h3 class="tracking-widest text-indigo-500  text-center text-xs font-medium title-font">STICKERS</h3>
         </div>
       </div>
     </div>
