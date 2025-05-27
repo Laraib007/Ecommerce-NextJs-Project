@@ -72,6 +72,18 @@ const getUserInfo = async()=>{
     }
 }
      const onFormSubmit = async (e)=>{
+if(name.length == 0 || address.length == 0 || nearBy.length == 0 || city.length == 0 || number.length == 0 || email.length == 0 ){
+   toast.error("Please Provide your Complete Details", {
+            position: "top-left",
+        autoClose: 2400,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "colored"})
+        return
+}
 
       
     //  e.preventDefault()
