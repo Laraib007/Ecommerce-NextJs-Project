@@ -29,7 +29,7 @@ if(footNotAppr.includes(currentPath)){
       <p className="mt-2 text-sm text-gray-500">Wear your Fashion, with FashionWear.com. FashionWear provide's you the lastest Fashion designs!</p>
     </div>
     <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
-      <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+      <div className="lg:w-1/6 md:w-1/2 w-full px-1">
         <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">SHOP</h2>
         <nav className="list-none mb-10">
           <li>
@@ -49,7 +49,7 @@ if(footNotAppr.includes(currentPath)){
           </li>
         </nav>
       </div>
-      <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+      <div className="lg:w-1/5 md:w-1/2 w-full px-1">
         <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CUSTOMER SERVICE
 </h2>
         <nav className="list-none mb-10">
@@ -83,7 +83,7 @@ if(footNotAppr.includes(currentPath)){
           </li>
         </nav>
       </div>
-     <Image src={allbank} height={100} width={100}/>
+     <Image src={allbank} height={50} width={330}/>
     </div>
   </div>
   <div className="bg-gray-100">
