@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Logo from "../component/Img/Clogo.png"
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import allbank from "@/component/Img/allbank.png"
+import allbank from "@/component/Img/allBanks.png"
 
 const Footer = () => {
 
