@@ -5,7 +5,7 @@ const orderSchema = new mongoose.Schema({
   product: {type: Object, required: true},
   email: {type: String, required: true},
   number: {type: Number, required: true},
-  altNumber: {type: Number, required: true},
+  altNumber: {type: Number},
   address: {type: String, required: true},
   amount: {type: Number, required: true},
   status: {type: String, default: "pending"},
