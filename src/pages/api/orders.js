@@ -6,7 +6,7 @@ import Admin from "../../../backend/models/Admin";
 const handler = async (req, res)=>{
     if(req.method == "POST"){
         const token = req.body.token
-         const data = jwt.verify(token, 'topsecret')
+         const data = jwt.verify(token,  process.env.NEXT_PUBLIC_SECRECT)
         let admin = await Admin.findOne({email: data.email})
         if(admin){
             let u = await Orders.find()

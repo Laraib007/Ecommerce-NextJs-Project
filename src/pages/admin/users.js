@@ -15,7 +15,7 @@ const Users = () => {
           useEffect(() => {
             
           const orderFetch = async ()=>{
-            let response = await fetch('http://localhost:3000/api/adminusers', {
+            let response = await fetch(`${process.env.NEXT_PUBLIC_HOST_URL}/api/adminusers`, {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ const Users = () => {
                                     let token = userdrId
                                       let data =  {token}
                                       
-                                      let response = await fetch('http://localhost:3000/api/deleteuser', {
+                                      let response = await fetch(`${process.env.NEXT_PUBLIC_HOST_URL}/api/deleteuser`, {
                                         method: 'POST',
                                         headers: {
                                           'Content-Type': 'application/json',
@@ -61,7 +61,7 @@ const Users = () => {
                                   theme: "colored"
                                       });
                                       // setTimeout(() => {
-                                      //       router.push("http://localhost:3000/admin")
+                                      //       router.push("`${process.env.NEXT_PUBLIC_HOST_URL}/admin")
                                       //     }, 1500);
                                         } else { toast.error('Some Error Occurred ', {
                                           position: "top-left",

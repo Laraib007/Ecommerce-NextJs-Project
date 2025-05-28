@@ -31,7 +31,7 @@ const ref = useRef()
           let token = orderId
             let data =  {token}
             
-            let response = await fetch('http://localhost:3000/api/updateorder', {
+            let response = await fetch(`${process.env.NEXT_PUBLIC_HOST_URL}/api/updateorder`, {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ const ref = useRef()
         theme: "colored"
             });
             // setTimeout(() => {
-            //       router.push("http://localhost:3000/admin")
+            //       router.push("`${process.env.NEXT_PUBLIC_HOST_URL}/admin")
             //     }, 1500);
               } else { toast.error('Some Error Occurred ', {
                 position: "top-left",
@@ -71,7 +71,7 @@ const ref = useRef()
           let token = orderId
             let data =  {token}
             
-            let response = await fetch('http://localhost:3000/api/deleteorder', {
+            let response = await fetch(`${process.env.NEXT_PUBLIC_HOST_URL}/api/deleteorder`, {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
@@ -93,7 +93,7 @@ const ref = useRef()
         theme: "colored"
             });
             // setTimeout(() => {
-            //       router.push("http://localhost:3000/admin")
+            //       router.push("`${process.env.NEXT_PUBLIC_HOST_URL}/admin")
             //     }, 1500);
               } else { toast.error('Some Error Occurred ', {
                 position: "top-left",
@@ -109,7 +109,7 @@ const ref = useRef()
       useEffect(() => {
         
       const orderFetch = async ()=>{
-        let response = await fetch('http://localhost:3000/api/orders', {
+        let response = await fetch(`${process.env.NEXT_PUBLIC_HOST_URL}/api/orders`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

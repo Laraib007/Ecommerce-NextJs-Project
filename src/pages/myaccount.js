@@ -61,7 +61,7 @@ const Myaccount = () => {
           let token = localStorage.getItem("token")
             let data =  {token}
             
-            let response = await fetch('http://localhost:3000/api/getuser', {
+            let response = await fetch(`${process.env.NEXT_PUBLIC_HOST_URL}/api/getuser`, {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
@@ -85,7 +85,7 @@ const updateUser = async (e)=>{
   let token = localStorage.getItem("token")
     let data =  {token, name, email, city, address, nearby, cellNumber}
     setHidden(false)
-    let response = await fetch('http://localhost:3000/api/updateuser', {
+    let response = await fetch(`${process.env.NEXT_PUBLIC_HOST_URL}/api/updateuser`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -125,7 +125,7 @@ const updateUser = async (e)=>{
     }
     if(localStorage.getItem("token")){
   let data = {email, password, ppass}
-  let response = await fetch('http://localhost:3000/api/updatepassword', {
+  let response = await fetch(`${process.env.NEXT_PUBLIC_HOST_URL}/api/updatepassword`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

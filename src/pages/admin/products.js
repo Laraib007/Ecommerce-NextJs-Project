@@ -23,7 +23,7 @@ const Products = () => {
       useEffect(() => {
         
       const orderFetch = async ()=>{
-        let response = await fetch('http://localhost:3000/api/adminproducts', {
+        let response = await fetch(`${process.env.NEXT_PUBLIC_HOST_URL}/api/adminproducts`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ const updateUser = async (event)=>{
                 event.preventDefault()
                   let data =  {productId, title, avlQty, price}
                   setHidden(false)
-                  let response = await fetch('http://localhost:3000/api/updateproducts', {
+                  let response = await fetch(`${process.env.NEXT_PUBLIC_HOST_URL}/api/updateproducts`, {
                     method: 'POST',
                     headers: {
                       'Content-Type': 'application/json',
@@ -95,7 +95,7 @@ const updateUser = async (event)=>{
                           let token = prodrId
                             let data =  {token}
                             
-                            let response = await fetch('http://localhost:3000/api/deleteproduct', {
+                            let response = await fetch(`${process.env.NEXT_PUBLIC_HOST_URL}/api/deleteproduct`, {
                               method: 'POST',
                               headers: {
                                 'Content-Type': 'application/json',
@@ -117,7 +117,7 @@ const updateUser = async (event)=>{
                         theme: "colored"
                             });
                             // setTimeout(() => {
-                            //       router.push("http://localhost:3000/admin")
+                            //       router.push("`${process.env.NEXT_PUBLIC_HOST_URL}/admin")
                             //     }, 1500);
                               } else { toast.error('Some Error Occurred ', {
                                 position: "top-left",

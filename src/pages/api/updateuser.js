@@ -11,7 +11,7 @@ const handler = async (req, res)=>{
          let address = req.body.address
          let nearby = req.body.nearby
          let cellNumber =  req.body.cellNumber
-         let user = jwt.verify(token,'topsecret');
+         let user = jwt.verify(token, process.env.NEXT_PUBLIC_SECRECT);
                 let u = await Users.findOneAndUpdate({email: user.email}, {name, city, address, nearby, cellNumber})
                 
              if(u){

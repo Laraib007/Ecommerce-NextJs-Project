@@ -64,7 +64,7 @@ else if(e.target.name == "desc"){
 const onSubmit = async (e) =>{
   e.preventDefault()
   let data = [{title, desc, img, category, size, color, price, avalibleQty}]
-  let response = await fetch('http://localhost:3000/api/addproducts', {
+  let response = await fetch(`${process.env.NEXT_PUBLIC_HOST_URL}/api/addproducts`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

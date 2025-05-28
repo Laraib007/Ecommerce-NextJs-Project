@@ -7,7 +7,7 @@ const handler = async (req, res)=>{
     if(req.method == "POST"){
         let token = req.body.token
         
-         let user = jwt.verify(token,'topsecret');
+         let user = jwt.verify(token, process.env.NEXT_PUBLIC_SECRECT);
          
                 let u = await Users.findOne({email: user.email})
                 let {name, email, city, address, nearby, cellNumber} = u

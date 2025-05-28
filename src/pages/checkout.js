@@ -53,7 +53,7 @@ const Checkout = ({cart, addToCart, clearCart, removeFromCart, subTotal}) => {
 const getUserInfo = async()=>{
   let token = localStorage.getItem("token")
     let data =  {token}
-    let response = await fetch('http://localhost:3000/api/getuser', {
+    let response = await fetch(`${process.env.NEXT_PUBLIC_HOST_URL}/api/getuser`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -96,7 +96,7 @@ if(name.length == 0 || address.length == 0 || nearBy.length == 0 || city.length 
     let dayss = d.getFullYear()
     let date = day.toString() + "-"+ days.toString() + "-" + dayss.toString()
        let data = {name, cart, email, number, altNumber, address, subTotal, id, date}
-       let response = await fetch('http://localhost:3000/api/order', {
+       let response = await fetch(`${process.env.NEXT_PUBLIC_HOST_URL}/api/order`, {
          method: 'POST',
          headers: {
            'Content-Type': 'application/json',

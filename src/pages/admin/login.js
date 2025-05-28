@@ -32,7 +32,7 @@ const Login = () => {
 const onFormSubmit = async (e)=>{
 e.preventDefault()
   let data = { email, password}
-  let response = await fetch('http://localhost:3000/api/adminlogin', {
+  let response = await fetch(`${process.env.NEXT_PUBLIC_HOST_URL}/api/adminlogin`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ theme: "colored"
 localStorage.setItem("admintoken", result.token)
 localStorage.setItem("email", result.email)
     setTimeout(() => {
-      Router.push("http://localhost:3000/admin/")
+      Router.push(`${process.env.NEXT_PUBLIC_HOST_URL}/admin/`)
     }, 2000);
   } else { toast.error('Wrong Credentials ', {
     position: "top-left",

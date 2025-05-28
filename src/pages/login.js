@@ -42,7 +42,7 @@ const Login = () => {
 const onFormSubmit = async (e)=>{
 e.preventDefault()
   let data = { email, password}
-  let response = await fetch(`${process.env.HOST_URL}/api/login`, {
+  let response = await fetch(`${process.env.NEXT_PUBLIC_HOST_URL}/api/login`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -67,7 +67,7 @@ theme: "colored"
 localStorage.setItem("token", result.token)
 localStorage.setItem("email", result.email)
     setTimeout(() => {
-      router.push(`${process.env.HOST_URL}/`)
+      router.push(`${process.env.NEXT_PUBLIC_HOST_URL}/`)
     }, 1500);
   } else { toast.error('Wrong Credentials ', {
     position: "top-left",

@@ -17,7 +17,7 @@ if(error == 404){
   return <Error statusCode={404} />
 }
   const zipChecker = async()=>{
-  const pins = await fetch("http://localhost:3000/api/zipCode")
+  const pins = await fetch(`${process.env.NEXT_PUBLIC_HOST_URL}/api/zipCode`)
   const pinJson = await pins.json();
   if(pinJson.includes(Number(pin))){
     setService(true)
@@ -38,9 +38,9 @@ const productSlug =varient[color][size]["slug"]
 const refreshVariants =(newsize, newcolor)=>{
   setSize(newsize)
   setColor(newcolor)
-  // window.history.replaceState(null, "", `http://localhost:3000/product/${varient[newcolor][newsize]["slug"]}`)
+  // window.history.replaceState(null, "", ``${process.env.NEXT_PUBLIC_HOST_URL}/product/${varient[newcolor][newsize]["slug"]}`)
 
-  let url = `http://localhost:3000/product/${varient[newcolor][newsize]["slug"]}`
+  let url = `${process.env.NEXT_PUBLIC_HOST_URL}/product/${varient[newcolor][newsize]["slug"]}`
   // window.location = url
   router.push(url)
 }

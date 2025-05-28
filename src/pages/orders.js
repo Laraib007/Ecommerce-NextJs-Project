@@ -8,7 +8,7 @@ const orders = () => {
   useEffect(() => {
     
   const orderFetch = async ()=>{
-    let response = await fetch('http://localhost:3000/api/orders', {
+    let response = await fetch(`${process.env.NEXT_PUBLIC_HOST_URL}/api/orders`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
