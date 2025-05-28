@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import mongoose from 'mongoose';
 import React from 'react'
-import Orders from '../../models/Orders';
+import Orders from '../../backend/models/Orders';
 import Link from 'next/link';
 import { FaLocationArrow } from "react-icons/fa";
 import Image from 'next/image'
