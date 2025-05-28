@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import mongoose from "mongoose";
-import Products from '../../models/Products';
+import Products from '../../backend/models/Products';
 import { useRouter } from 'next/router';
 
 const Tshirt = ({products}) => {

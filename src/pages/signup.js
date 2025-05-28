@@ -48,7 +48,7 @@ else if(e.target.name == "email"){
 const onFormSubmit = async (e)=>{
 e.preventDefault()
   let data = {name, email, password}
-  let response = await fetch('http://localhost:3000/api/signup', {
+  let response = await fetch(`${process.env.HOST_URL}/api/signup`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ theme: "colored"
     });
 
     setTimeout(() => {
-      router.push("http://localhost:3000/login")
+      router.push(`${process.env.MONGOSSE_URI}/login`)
     }, 1500);
   } else { toast.error('Email Already Exists ', {
     position: "top-left",
