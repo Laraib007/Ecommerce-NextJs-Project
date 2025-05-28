@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { FaCartShopping } from "react-icons/fa6";
 import { IoBagCheck } from "react-icons/io5";
 import mongoose from 'mongoose';
-import Products from '../../../models/Products';
+import Products from '../../../backend/models/Products';
 import Link from 'next/link';
 import { ToastContainer, toast } from 'react-toastify';
 import Error from 'next/error'
