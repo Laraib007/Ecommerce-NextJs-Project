@@ -1,5 +1,5 @@
-import connectDB from "../../../middleware.js/mongoose";
-import Users from "../../../models/Users";
+import connectDB from "../../../backend/middleware.js/mongoose";
+import Users from "../../../backend/models/Users";
 
 const handler = async (req, res)=>{
     if(req.method == "POST"){

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Sidebar from './sideBar'
-import cloudinary from '../../../middleware.js/cloudinary'
+import cloudinary from '../../../backend/middleware.js/cloudinary'
 const AddProduct = () => {
   const [img, setImage] = useState('')
   const [size, setSize] = useState()

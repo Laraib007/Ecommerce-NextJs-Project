@@ -1,5 +1,5 @@
-import Products from "../../../models/Products";
-import connectDB from "../../../middleware.js/mongoose";
+import Products from "../../../backend/models/Products";
+import connectDB from "../../../backend/middleware.js/mongoose";
 
 const handler = async (req, res)=>{
   if(req.method == "POST"){
