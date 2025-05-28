@@ -1,7 +1,7 @@
-import Orders from "../../../models/Orders";
-import connectDB from "../../../middleware.js/mongoose";
+import Orders from "../../../backend/models/Orders";
+import connectDB from "../../../backend/middleware.js/mongoose";
 import jwt from 'jsonwebtoken';
-import Admin from "../../../models/Admin";
+import Admin from "../../../backend/models/Admin";
 
 const handler = async (req, res)=>{
     if(req.method == "POST"){
