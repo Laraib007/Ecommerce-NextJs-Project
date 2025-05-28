@@ -1,5 +1,5 @@
-import Users from "../../../models/Users";
-import connectDB from "../../../middleware.js/mongoose";
+import Users from "../../../backend/models/Users";
+import connectDB from "../../../backend/middleware.js/mongoose";
 var CryptoJS = require("crypto-js");
 
 const handler = async (req, res)=>{
